@@ -1,0 +1,1 @@
+<?php get_header(); ?><main id="main" class="wrap section"><p class="eyebrow">404 / PAGE NOT FOUND</p><h1>Let’s find the right connection.</h1><p>This address is unavailable. Search the site or return to the catalogue.</p><?php get_search_form(); ?><a class="text-link" href="<?php echo yaybmt_url('/shop/'); ?>">Explore products →</a></main><?php get_footer(); ?>
