@@ -8,3 +8,6 @@ public/
 *.zip
 .local-admin.json
 __pycache__/
+
+# Public, installable theme package; private backup ZIPs stay ignored.
+!delivery/yaybmt-wordpress-theme.zip

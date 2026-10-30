@@ -1,5 +1,7 @@
 # YAYBMT WordPress redesign
 
+**Download the latest theme:** [installation ZIP and instructions](delivery/README.md). Theme source is under `wp-content/themes/yaybmt`; the installable ZIP uses the separate folder `yaybmt-modern`.
+
 First design and theme implementation for Yusuf Al Yousfi Building Materials Trading LLC. This is a development draft, not a completed content migration or deployed website.
 
 ## Included
@@ -38,3 +40,7 @@ Firebase Hosting serves static assets; it does not run WordPress PHP or MySQL. R
 `firebase.json` is a starting configuration for the eventual export, with the audit's marine-lock redirect and basic headers. It has no catch-all SPA rewrite: missing URLs must return real 404s. No Firebase project is selected and no deploy command has been run. Do not deploy the design preview as the migrated website.
 
 See `docs/migration.md` for release gates and required access. No rankings or index coverage have been measured or guaranteed.
+
+## Restored original catalogue
+
+The supplied database now runs separately on loopback port 8086 with the new theme and the four supplied plugins available. See [restored catalogue instructions](docs/restored-catalogue.md) for startup, validation, local repairs and remaining launch work. This copy contains the real catalogue; the original empty development instance remains on port 8085. Nothing was deployed to the live site.

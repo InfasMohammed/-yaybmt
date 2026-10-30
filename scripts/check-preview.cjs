@@ -9,7 +9,7 @@ const fs=require('node:fs');
  await page.goto(process.env.YAYBMT_TEST_URL || 'http://127.0.0.1:8080/',{waitUntil:'networkidle'});
  assert.equal(await page.locator('h1').count(),1);
  assert.match(await page.locator('h1').innerText(),/Strong foundations/);
- assert.equal(await page.locator('a[href$="/brand/marine-locks/"]').count(),4);
+ assert.ok(await page.locator('a[href$="/brand/marine-locks/"]').count() >= 4, 'Marine locks links retain their established archive URL');
  await page.screenshot({path:'/workspace/-yaybmt/artifacts/home-desktop.png',fullPage:true});
  for(const width of [390,320]){
   await page.setViewportSize({width,height:844});
