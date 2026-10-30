@@ -1,46 +1,49 @@
-# YAYBMT WordPress redesign
+# YAYBMT WordPress website
 
-**Download the latest theme:** [installation ZIP and instructions](delivery/README.md). Theme source is under `wp-content/themes/yaybmt`; the installable ZIP uses the separate folder `yaybmt-modern`.
+Modern WordPress theme for Yusuf Al Yousfi Building Materials Trading LLC, with responsive product/brand/category layouts, the original company logos, consistent product-image frames, email enquiries and floating WhatsApp.
 
-First design and theme implementation for Yusuf Al Yousfi Building Materials Trading LLC. This is a development draft, not a completed content migration or deployed website.
+## Download the theme
 
-## Included
+**[Download and installation instructions](delivery/README.md)**
 
-- Responsive custom WordPress theme under `wp-content/themes/yaybmt`.
-- Homepage, existing-content template, archives/search, WooCommerce wrapper, accessible mobile navigation and 404 template.
-- Original, local SVG artwork (illustration, not a product photograph), system fonts and no autoplay video.
-- Standalone homepage design at `preview/index.html`. It is noindexed; its navigation points to planned WordPress routes which do not exist in the static preview.
-- Local WordPress/MariaDB development stack and Firebase static-host configuration.
+The ready-to-install ZIP is [`delivery/yaybmt-wordpress-theme.zip`](delivery/yaybmt-wordpress-theme.zip). Open that file on GitHub and choose **Download raw file**. Install the theme ZIP on WordPress staging using **Appearance → Themes → Add New → Upload Theme**. The ZIP installs as `yaybmt-modern`, preserving the old `yaybmt` theme folder.
 
-## Local WordPress
+This repository contains theme code and public design assets. Products, pages, private database backups, credentials, uploaded plugin packages and the product-photo library are not included. Existing products and images remain in your WordPress database and uploads folder; database/SEO repairs are separate from installing the theme.
 
-Use the existing checkout; do not create a worktree. From this directory:
+## Source and development
+
+- `wp-content/themes/yaybmt/` — editable theme source. The packaging script changes only the installation folder name to `yaybmt-modern`.
+- `preview/` — static homepage/catalogue layout previews. Catalogue navigation needs WordPress to serve the real routes.
+- `delivery/` — installable theme ZIP, checksum and instructions.
+- `scripts/` — packaging, local development setup, validation and staging-only database repairs.
+- `docs/` — validation results, restoration notes and migration requirements.
+- `artifacts/` — current desktop/mobile screenshots.
+
+Build the installable theme from the repository root:
+
+```sh
+python3 scripts/package-theme.py
+```
+
+For an empty isolated WordPress/MariaDB development site, use the existing checkout rather than a worktree:
 
 ```sh
 python3 scripts/init-local.py
-docker compose up -d
+docker --host=unix:///var/run/docker.sock compose up -d --wait
 ```
 
-The local server listens on loopback port 8085. This instance is already installed with the theme active and indexing disabled. Local login details are stored in ignored `.local-admin.json`. On a fresh instance, run `node scripts/install-dev.cjs` once (requires Node.js and Docker), or complete the WordPress installer and activate **YAYBMT Enterprise** manually. The installer refuses an existing database. Import a backup only into this isolated development site. Never import over production. Retain existing permalink settings, taxonomy registrations and SEO plugin. Install the existing WooCommerce/plugin versions from the backup before updating them separately. Assign the primary menu to existing pages; homepage fallback routes for About and Contact are provisional and must be checked against the imported site. Configure a static homepage using WordPress Reading settings. The homepage currently uses curated theme copy; existing inner-page and product content renders from WordPress. Content editing blocks for the homepage are future work.
+If that isolated database is fresh, run `node scripts/install-dev.cjs` once. It refuses an already installed WordPress site. Never run the installer against production. Local credentials are kept in ignored `.local-admin.json`; database configuration is kept in ignored `.env`.
 
-The quote links currently lead to the contact page; a real enquiry destination, confirmed business phone/WhatsApp, and form handling must be configured after importing the site. No fake form submission is provided. The logo is a provisional wordmark pending brand approval.
+The prepared cloud environment also contains a separate, private restoration of the supplied catalogue. See [restored catalogue instructions](docs/restored-catalogue.md). Its database is deliberately outside Git and is not recreated by cloning this repository.
 
-## Design preview
+For the static design preview:
 
 ```sh
 python3 -m http.server 8080 --bind 127.0.0.1 --directory preview
 ```
 
-Request `/` internally to review the homepage. This static preview is not a public deployment and does not include the catalogue.
+## Validation and launch
 
-## WordPress + Firebase
+[Validation notes](docs/validation.md) record the completed browser and PHP checks. Browser checks use runtime-provided Playwright and Chromium. Real product photos, priority-product specifications and remaining production SEO/integration checks are still pending. No code in this repository has been deployed to the live website.
 
-Firebase Hosting serves static assets; it does not run WordPress PHP or MySQL. Recommended for a quote catalogue: keep WordPress on a separate PHP/database host as the editing system, and export complete HTML/assets to the ignored `public/` folder for Firebase Hosting. The export plugin/workflow is not yet selected or implemented. Dynamic search, enquiry forms, preview, admin login, carts and accounts need separate handling. If checkout/accounts are required, decide the architecture before deployment; a static export alone is insufficient.
-
-`firebase.json` is a starting configuration for the eventual export, with the audit's marine-lock redirect and basic headers. It has no catch-all SPA rewrite: missing URLs must return real 404s. No Firebase project is selected and no deploy command has been run. Do not deploy the design preview as the migrated website.
-
-See `docs/migration.md` for release gates and required access. No rankings or index coverage have been measured or guaranteed.
-
-## Restored original catalogue
-
-The supplied database now runs separately on loopback port 8086 with the new theme and the four supplied plugins available. See [restored catalogue instructions](docs/restored-catalogue.md) for startup, validation, local repairs and remaining launch work. This copy contains the real catalogue; the original empty development instance remains on port 8085. Nothing was deployed to the live site.
+`firebase.json` is an optional, preparatory static-hosting configuration from the migration planning. Firebase Hosting does not run WordPress PHP/MySQL; the installable deliverable here is a WordPress theme.

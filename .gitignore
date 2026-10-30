@@ -11,3 +11,10 @@ __pycache__/
 
 # Public, installable theme package; private backup ZIPs stay ignored.
 !delivery/yaybmt-wordpress-theme.zip
+
+# Keep only the current delivery previews in Git, not intermediate screenshots.
+/artifacts/*.png
+!/artifacts/home-desktop.png
+!/artifacts/home-mobile.png
+!/artifacts/catalogue-desktop-charcoal.png
+!/artifacts/catalogue-mobile-charcoal.png
