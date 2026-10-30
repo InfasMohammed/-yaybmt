@@ -10,7 +10,7 @@ Download **[yaybmt-wordpress-theme.zip](yaybmt-wordpress-theme.zip)** from this 
 
 The ZIP installs into **yaybmt-modern**, so it does not overwrite the old **yaybmt** theme folder. Use this theme ZIP, rather than uploading GitHub's whole-repository ZIP to WordPress.
 
-Included: the modern theme, exact original green header/white footer logos, responsive catalogue layout, image alignment, contact details, footer social icons and floating WhatsApp. The header has no contact bar, social icons or WhatsApp button.
+Included: the modern theme, original white logo over the homepage hero, green logo on inner pages and white footer logo, responsive catalogue layout, image alignment, contact details, footer social icons and floating WhatsApp. The header has no contact bar, social icons or WhatsApp button.
 
 The ZIP is theme code and public design assets only. It contains no SQL database, passwords, private backups, uploaded plugin packages or product-photo library. Existing products and images stay in the WordPress database and uploads folder. Local database repairs and disabling the overlapping schema plugin are separate from theme installation; see [restored catalogue notes](../docs/restored-catalogue.md).
 

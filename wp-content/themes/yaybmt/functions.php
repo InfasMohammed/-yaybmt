@@ -9,8 +9,8 @@ add_action('after_setup_theme', function () {
     register_nav_menus(['primary' => 'Primary navigation']);
 });
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('yaybmt', get_theme_file_uri('/assets/site.css'), [], '0.9.1');
-    wp_enqueue_script('yaybmt', get_theme_file_uri('/assets/site.js'), [], '0.9.1', true);
+    wp_enqueue_style('yaybmt', get_theme_file_uri('/assets/site.css'), [], '0.9.2');
+    wp_enqueue_script('yaybmt', get_theme_file_uri('/assets/site.js'), [], '0.9.2', true);
 }, 20);
 // Keep canonical URLs and metadata owned by WordPress / the existing SEO plugin.
 // Never generate prices, ratings, or reviews from unverified catalogue data.

@@ -43,3 +43,7 @@ Removed the top contact strip. Floating WhatsApp is icon-only on desktop and mob
 ## Original logos installed
 
 The uploaded Desktop.zip supplied yaybmt-logo.jpg (200×114) and footer-logo1.png (399×224). Both originals were copied unchanged, with SHA-256 equality verified against the uploaded files. The green image is the header logo; the transparent white image is the footer logo. Browser checks confirmed both native image dimensions on homepage/catalogue pages, no desktop/mobile overflow, and the previously requested contact/nav behavior. The top contact bar and header social icons remain removed; the floating WhatsApp control remains icon-only. Fresh previews end in -original-logos.png; existing -charcoal.png names and the theme ZIP were also refreshed. The earlier missing-original-logo limitation is resolved.
+
+## Homepage overlay navigation
+
+Removed the separate light homepage header strip. The original white logo and bold navigation now overlay the hero photograph; the green original stays on light inner-page headers. The header contains no WhatsApp button; the icon-only floating WhatsApp control remains. Mobile menus open as a dark panel with keyboard/touch support. Passed contact/navigation regression checks at six widths plus desktop/mobile assertions for a transparent absolute header, hero at page top, heading clear of navigation, white original logo, navigation weight 700, no header WhatsApp and no horizontal overflow. Refreshed homepage screenshots and static preview; theme version 0.9.2.
