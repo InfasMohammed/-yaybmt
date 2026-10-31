@@ -1,49 +1,48 @@
-# YAYBMT WordPress website
+# YAYBMT — Next.js static catalogue
 
-Modern WordPress theme for Yusuf Al Yousfi Building Materials Trading LLC, with responsive product/brand/category layouts, the original company logos, consistent product-image frames, email enquiries and floating WhatsApp.
+Review branch: Next.js + TypeScript, exported to `out/` for Firebase Hosting. No WordPress runtime, admin, database, Firestore, Authentication or Storage. Nothing has been deployed. Earlier WordPress work is preserved in Git history and `legacy/`; it is never copied into the export.
 
-## Download the theme
+## Setup and review
 
-**[Download and installation instructions](delivery/README.md)**
-
-The ready-to-install ZIP is [`delivery/yaybmt-wordpress-theme.zip`](delivery/yaybmt-wordpress-theme.zip). Open that file on GitHub and choose **Download raw file**. Install the theme ZIP on WordPress staging using **Appearance → Themes → Add New → Upload Theme**. The ZIP installs as `yaybmt-modern`, preserving the old `yaybmt` theme folder.
-
-This repository contains theme code and public design assets. Products, pages, private database backups, credentials, uploaded plugin packages and the product-photo library are not included. Existing products and images remain in your WordPress database and uploads folder; database/SEO repairs are separate from installing the theme.
-
-## Source and development
-
-- `wp-content/themes/yaybmt/` — editable theme source. The packaging script changes only the installation folder name to `yaybmt-modern`.
-- `preview/` — static homepage/catalogue layout previews. Catalogue navigation needs WordPress to serve the real routes.
-- `delivery/` — installable theme ZIP, checksum and instructions.
-- `scripts/` — packaging, local development setup, validation and staging-only database repairs.
-- `docs/` — validation results, restoration notes and migration requirements.
-- `artifacts/` — current desktop/mobile screenshots.
-
-Build the installable theme from the repository root:
+Node.js 22+ and npm:
 
 ```sh
-python3 scripts/package-theme.py
+npm ci
+npm run dev
+npm run typecheck
+npm run build
+npm run preview
+npm run test:browser
 ```
 
-For an empty isolated WordPress/MariaDB development site, use the existing checkout rather than a worktree:
+`npm run preview` serves the actual export at http://127.0.0.1:8080 with real 404 responses and the specific Marine Locks redirect. The browser script requires runtime-provided Playwright and Chromium. It does not contact external enquiry services or send messages.
+
+Review `/shop/` (catalogue), `/product/fc-110cs/` (detail), and `/` (homepage brand treatment). Product links resolve to generated static detail pages. The same catalogue sample is available at the established `/brand/daelim/` URL. Email actions use the visitor's email application; WhatsApp opens a product-specific draft. No delivery backend is claimed.
+
+## Content editing
+
+Edit `data/products.ts`, `data/brands.ts`, `data/categories.ts`, and `data/articles.ts` manually. Preserve slugs. Product records include their source and explicit empty specifications/images when evidence is absent. Put approved images in `public/images/`. Image frames use `object-fit: contain`; `images.unoptimized` is enabled, so no image server is required. Current placeholders are intentional, and are not product photographs.
+
+The current data is a labelled subset extracted from `legacy/preview/catalogue.html`, not a restoration of the database. Category and brand lists preserve public reference labels and paths; category assignments are unverified and unused by the sample filter. No article text has been invented. See `docs/nextjs-migration.md` for missing inputs and URL work.
+
+## Firebase Hosting — only after approval
+
+Install Firebase CLI separately and use an approved project ID. Do not select a project implicitly.
 
 ```sh
-python3 scripts/init-local.py
-docker --host=unix:///var/run/docker.sock compose up -d --wait
+npm ci
+npm run build
+firebase emulators:start --only hosting --project YOUR_REVIEW_PROJECT_ID
+# Only after explicit deployment approval:
+firebase deploy --only hosting --project YOUR_APPROVED_PROJECT_ID
 ```
 
-If that isolated database is fresh, run `node scripts/install-dev.cjs` once. It refuses an already installed WordPress site. Never run the installer against production. Local credentials are kept in ignored `.local-admin.json`; database configuration is kept in ignored `.env`.
+`firebase.json` serves only `out/`, with no SPA catch-all. Unknown URLs return the exported `404.html` and HTTP 404. `/product-category/marine-locks/` redirects specifically to `/brand/marine-locks/`.
 
-The prepared cloud environment also contains a separate, private restoration of the supplied catalogue. See [restored catalogue instructions](docs/restored-catalogue.md). Its database is deliberately outside Git and is not recreated by cloning this repository.
-
-For the static design preview:
+Review is noindexed in page metadata, robots.txt, and Firebase's X-Robots-Tag. Review sitemap contains no URLs. Before an approved production release, complete the URL/content migration and remove the `X-Robots-Tag: noindex, nofollow` header from `firebase.json`, then build with:
 
 ```sh
-python3 -m http.server 8080 --bind 127.0.0.1 --directory preview
+YAYBMT_PRODUCTION=true npm run build
 ```
 
-## Validation and launch
-
-[Validation notes](docs/validation.md) record the completed browser and PHP checks. Browser checks use runtime-provided Playwright and Chromium. Real product photos, priority-product specifications and remaining production SEO/integration checks are still pending. No code in this repository has been deployed to the live website.
-
-`firebase.json` is an optional, preparatory static-hosting configuration from the migration planning. Firebase Hosting does not run WordPress PHP/MySQL; the installable deliverable here is a WordPress theme.
+This switches metadata and robots to indexable and generates the sitemap from actual exported routes, with `https://yaybmt.com` canonicals. Review both switches together; verify final headers, robots, sitemap and canonical tags before cutover. Do not publish this incomplete sample as the production catalogue.

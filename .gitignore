@@ -2,7 +2,6 @@ node_modules/
 .env
 .env.*
 !.env.example
-public/
 .firebase/
 *.log
 *.zip
@@ -10,7 +9,7 @@ public/
 __pycache__/
 
 # Public, installable theme package; private backup ZIPs stay ignored.
-!delivery/yaybmt-wordpress-theme.zip
+!legacy/delivery/yaybmt-wordpress-theme.zip
 
 # Keep only the current delivery previews in Git, not intermediate screenshots.
 /artifacts/*.png
@@ -18,3 +17,9 @@ __pycache__/
 !/artifacts/home-mobile.png
 !/artifacts/catalogue-desktop-charcoal.png
 !/artifacts/catalogue-mobile-charcoal.png
+
+node_modules/
+.next/
+out/
+work/
+*.tsbuildinfo
