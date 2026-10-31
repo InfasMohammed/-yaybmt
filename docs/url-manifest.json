@@ -1,0 +1,2469 @@
+{
+  "canonicalOrigin": "https://yaybmt.com",
+  "reviewNoindex": true,
+  "routes": [
+    {
+      "path": "/",
+      "kind": "page",
+      "indexable": true,
+      "source": "supplied SQL page 5"
+    },
+    {
+      "path": "/10-must-have-marine-safety-items-required-on-every-vessel/",
+      "kind": "article",
+      "indexable": true,
+      "source": "supplied SQL article 999"
+    },
+    {
+      "path": "/about-us/",
+      "kind": "page",
+      "indexable": true,
+      "source": "supplied SQL page 83"
+    },
+    {
+      "path": "/best-marine-locks-for-boats-yachts-features-benefits/",
+      "kind": "article",
+      "indexable": true,
+      "source": "supplied SQL article 1277"
+    },
+    {
+      "path": "/best-materials-for-marine-fasteners/",
+      "kind": "article",
+      "indexable": true,
+      "source": "supplied SQL article 1375"
+    },
+    {
+      "path": "/blog/",
+      "kind": "page",
+      "indexable": true,
+      "source": "supplied SQL page 72"
+    },
+    {
+      "path": "/brand/bn-cosmo/",
+      "kind": "brand",
+      "indexable": true,
+      "source": "supplied SQL term 23"
+    },
+    {
+      "path": "/brand/daelim/",
+      "kind": "brand",
+      "indexable": true,
+      "source": "supplied SQL term 21"
+    },
+    {
+      "path": "/brand/daelim/page/2/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/brand/daelim/"
+    },
+    {
+      "path": "/brand/horse/",
+      "kind": "brand",
+      "indexable": true,
+      "source": "supplied SQL term 80"
+    },
+    {
+      "path": "/brand/kopat/",
+      "kind": "brand",
+      "indexable": true,
+      "source": "supplied SQL term 22"
+    },
+    {
+      "path": "/brand/marine-locks/",
+      "kind": "brand",
+      "indexable": true,
+      "source": "supplied SQL term 83"
+    },
+    {
+      "path": "/brand/marine-locks/page/2/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/brand/marine-locks/"
+    },
+    {
+      "path": "/brand/marine-sanitary-fittings/",
+      "kind": "brand",
+      "indexable": true,
+      "source": "supplied SQL term 195"
+    },
+    {
+      "path": "/brand/royal-co/",
+      "kind": "brand",
+      "indexable": true,
+      "source": "supplied SQL term 24"
+    },
+    {
+      "path": "/brand/staco/",
+      "kind": "brand",
+      "indexable": true,
+      "source": "supplied SQL term 81"
+    },
+    {
+      "path": "/brand/sungmi-locks/",
+      "kind": "brand",
+      "indexable": true,
+      "source": "supplied SQL term 82"
+    },
+    {
+      "path": "/brands/",
+      "kind": "directory",
+      "indexable": true,
+      "source": "New catalogue directory"
+    },
+    {
+      "path": "/cart/",
+      "kind": "page",
+      "indexable": false,
+      "source": "supplied SQL page 9"
+    },
+    {
+      "path": "/categories/",
+      "kind": "directory",
+      "indexable": true,
+      "source": "New catalogue directory"
+    },
+    {
+      "path": "/checkout/",
+      "kind": "page",
+      "indexable": false,
+      "source": "supplied SQL page 10"
+    },
+    {
+      "path": "/choose-right-abrasives-for-metal-and-wood/",
+      "kind": "article",
+      "indexable": true,
+      "source": "supplied SQL article 1240"
+    },
+    {
+      "path": "/common-fastener-failures-and-how-to-avoid-them/",
+      "kind": "article",
+      "indexable": true,
+      "source": "supplied SQL article 1328"
+    },
+    {
+      "path": "/contact-us/",
+      "kind": "page",
+      "indexable": true,
+      "source": "supplied SQL page 86"
+    },
+    {
+      "path": "/marine-supply-in-uae-encompass-offshore-and-onshore/",
+      "kind": "article",
+      "indexable": true,
+      "source": "supplied SQL article 1134"
+    },
+    {
+      "path": "/my-account/",
+      "kind": "page",
+      "indexable": false,
+      "source": "supplied SQL page 11"
+    },
+    {
+      "path": "/product-category/abrasives/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 42"
+    },
+    {
+      "path": "/product-category/abrasives/abrasive-brushes/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 74"
+    },
+    {
+      "path": "/product-category/abrasives/abrasive-papers-sheets/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 73"
+    },
+    {
+      "path": "/product-category/abrasives/cutting-grinding-discs/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 72"
+    },
+    {
+      "path": "/product-category/abrasives/page/2/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/abrasives/"
+    },
+    {
+      "path": "/product-category/abrasives/polishing-buffing-tools/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 71"
+    },
+    {
+      "path": "/product-category/abrasives/sanding-discs-belts/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 70"
+    },
+    {
+      "path": "/product-category/cp-fittings/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 88"
+    },
+    {
+      "path": "/product-category/cp-fittings/page/2/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/cp-fittings/"
+    },
+    {
+      "path": "/product-category/fasteners/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 41"
+    },
+    {
+      "path": "/product-category/fasteners/anchors-dowels/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 69"
+    },
+    {
+      "path": "/product-category/fasteners/bolts/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 65"
+    },
+    {
+      "path": "/product-category/fasteners/nuts-washers/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 66"
+    },
+    {
+      "path": "/product-category/fasteners/page/2/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/fasteners/"
+    },
+    {
+      "path": "/product-category/fasteners/page/3/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/fasteners/"
+    },
+    {
+      "path": "/product-category/fasteners/rivets/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 68"
+    },
+    {
+      "path": "/product-category/fasteners/screws/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 67"
+    },
+    {
+      "path": "/product-category/flush-valve/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 87"
+    },
+    {
+      "path": "/product-category/general-hardware/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 40"
+    },
+    {
+      "path": "/product-category/general-hardware/electrical-hardware/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 64"
+    },
+    {
+      "path": "/product-category/general-hardware/hand-tools/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 44"
+    },
+    {
+      "path": "/product-category/general-hardware/ladders-step-stools/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 51"
+    },
+    {
+      "path": "/product-category/general-hardware/page/2/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/general-hardware/"
+    },
+    {
+      "path": "/product-category/general-hardware/plumbing-hardware/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 57"
+    },
+    {
+      "path": "/product-category/marine-furniture-fittings/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 84"
+    },
+    {
+      "path": "/product-category/marine-furniture-fittings/page/2/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/marine-furniture-fittings/"
+    },
+    {
+      "path": "/product-category/marine-furniture-fittings/page/3/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/marine-furniture-fittings/"
+    },
+    {
+      "path": "/product-category/marine-furniture-fittings/page/4/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/marine-furniture-fittings/"
+    },
+    {
+      "path": "/product-category/marine-hardware-fittings/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 25"
+    },
+    {
+      "path": "/product-category/marine-hardware-fittings/marine-anchors-chains/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 28"
+    },
+    {
+      "path": "/product-category/marine-hardware-fittings/marine-clamps-brackets/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 29"
+    },
+    {
+      "path": "/product-category/marine-hardware-fittings/marine-fasteners/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 30"
+    },
+    {
+      "path": "/product-category/marine-hardware-fittings/marine-flanges/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 27"
+    },
+    {
+      "path": "/product-category/marine-hardware-fittings/marine-valves/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 26"
+    },
+    {
+      "path": "/product-category/marine-hardware-fittings/page/2/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/marine-hardware-fittings/"
+    },
+    {
+      "path": "/product-category/marine-hardware-fittings/page/3/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/marine-hardware-fittings/"
+    },
+    {
+      "path": "/product-category/mirror-cabinets/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 86"
+    },
+    {
+      "path": "/product-category/oil-field-industrial-pipe-fittings/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 32"
+    },
+    {
+      "path": "/product-category/oil-field-industrial-pipe-fittings/carbon-steel-fittings/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 33"
+    },
+    {
+      "path": "/product-category/oil-field-industrial-pipe-fittings/flanges/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 36"
+    },
+    {
+      "path": "/product-category/oil-field-industrial-pipe-fittings/other-fittings/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 38"
+    },
+    {
+      "path": "/product-category/oil-field-industrial-pipe-fittings/page/2/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/oil-field-industrial-pipe-fittings/"
+    },
+    {
+      "path": "/product-category/oil-field-industrial-pipe-fittings/page/3/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/oil-field-industrial-pipe-fittings/"
+    },
+    {
+      "path": "/product-category/oil-field-industrial-pipe-fittings/pipes-tubes/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 35"
+    },
+    {
+      "path": "/product-category/oil-field-industrial-pipe-fittings/stainless-steel-fittings/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 34"
+    },
+    {
+      "path": "/product-category/oil-field-industrial-pipe-fittings/valves/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 37"
+    },
+    {
+      "path": "/product-category/ppr-upvc-pipes-fittings/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 43"
+    },
+    {
+      "path": "/product-category/ppr-upvc-pipes-fittings/page/2/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/ppr-upvc-pipes-fittings/"
+    },
+    {
+      "path": "/product-category/ppr-upvc-pipes-fittings/ppr-accessories/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 78"
+    },
+    {
+      "path": "/product-category/ppr-upvc-pipes-fittings/ppr-pipes-fittings/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 75"
+    },
+    {
+      "path": "/product-category/ppr-upvc-pipes-fittings/ppr-valves/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 77"
+    },
+    {
+      "path": "/product-category/ppr-upvc-pipes-fittings/upvc-pipes-fittings/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 76"
+    },
+    {
+      "path": "/product-category/ppr-upvc-pipes-fittings/upvc-pressure-fittings/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 79"
+    },
+    {
+      "path": "/product-category/uncategorized/",
+      "kind": "category",
+      "indexable": true,
+      "source": "supplied SQL term 15"
+    },
+    {
+      "path": "/product-category/uncategorized/page/2/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/uncategorized/"
+    },
+    {
+      "path": "/product-category/uncategorized/page/3/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/uncategorized/"
+    },
+    {
+      "path": "/product-category/uncategorized/page/4/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/uncategorized/"
+    },
+    {
+      "path": "/product-category/uncategorized/page/5/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/uncategorized/"
+    },
+    {
+      "path": "/product-category/uncategorized/page/6/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/product-category/uncategorized/"
+    },
+    {
+      "path": "/product/1103/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 588"
+    },
+    {
+      "path": "/product/1105/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 586"
+    },
+    {
+      "path": "/product/1131/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 589"
+    },
+    {
+      "path": "/product/1144/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 769"
+    },
+    {
+      "path": "/product/1151/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 590"
+    },
+    {
+      "path": "/product/1156/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 591"
+    },
+    {
+      "path": "/product/1161/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 593"
+    },
+    {
+      "path": "/product/1165/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 594"
+    },
+    {
+      "path": "/product/1176/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 770"
+    },
+    {
+      "path": "/product/1181/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 771"
+    },
+    {
+      "path": "/product/1232/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 772"
+    },
+    {
+      "path": "/product/1241/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 773"
+    },
+    {
+      "path": "/product/1246/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 775"
+    },
+    {
+      "path": "/product/1247/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 777"
+    },
+    {
+      "path": "/product/1251/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 778"
+    },
+    {
+      "path": "/product/1263/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 779"
+    },
+    {
+      "path": "/product/1361/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 780"
+    },
+    {
+      "path": "/product/1403/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 781"
+    },
+    {
+      "path": "/product/3231/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 782"
+    },
+    {
+      "path": "/product/4224/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 783"
+    },
+    {
+      "path": "/product/4225/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 784"
+    },
+    {
+      "path": "/product/4226/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 785"
+    },
+    {
+      "path": "/product/4251/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 786"
+    },
+    {
+      "path": "/product/5481/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 787"
+    },
+    {
+      "path": "/product/5491/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 788"
+    },
+    {
+      "path": "/product/5522/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 789"
+    },
+    {
+      "path": "/product/5531/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 791"
+    },
+    {
+      "path": "/product/5600/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 182"
+    },
+    {
+      "path": "/product/5601/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 1158"
+    },
+    {
+      "path": "/product/5603/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 1161"
+    },
+    {
+      "path": "/product/5751/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 792"
+    },
+    {
+      "path": "/product/6201/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 793"
+    },
+    {
+      "path": "/product/6202/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 794"
+    },
+    {
+      "path": "/product/6203/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 795"
+    },
+    {
+      "path": "/product/6204/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 796"
+    },
+    {
+      "path": "/product/6211/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 797"
+    },
+    {
+      "path": "/product/6232/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 799"
+    },
+    {
+      "path": "/product/6321/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 800"
+    },
+    {
+      "path": "/product/6323/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 801"
+    },
+    {
+      "path": "/product/6331/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 802"
+    },
+    {
+      "path": "/product/6401/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 804"
+    },
+    {
+      "path": "/product/7000/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 583"
+    },
+    {
+      "path": "/product/7141/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 805"
+    },
+    {
+      "path": "/product/82007/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 806"
+    },
+    {
+      "path": "/product/alloy-steel-pipes/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 321"
+    },
+    {
+      "path": "/product/aluminum-ladders/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 464"
+    },
+    {
+      "path": "/product/anchor-bolts/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 599"
+    },
+    {
+      "path": "/product/anchor-buoys/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 244"
+    },
+    {
+      "path": "/product/anchor-chain-assemblies/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 230"
+    },
+    {
+      "path": "/product/angle-grinder-discs/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 683"
+    },
+    {
+      "path": "/product/ball-valve/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 983"
+    },
+    {
+      "path": "/product/ball-valves-2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 351"
+    },
+    {
+      "path": "/product/ball-valves/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 210"
+    },
+    {
+      "path": "/product/bend-pipe-cp/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 937"
+    },
+    {
+      "path": "/product/blind-flanges-2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 331"
+    },
+    {
+      "path": "/product/blind-flanges/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 218"
+    },
+    {
+      "path": "/product/blind-rivets/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 636"
+    },
+    {
+      "path": "/product/boliver-clamp/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 969"
+    },
+    {
+      "path": "/product/buffing-compounds-car-metal/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 671"
+    },
+    {
+      "path": "/product/buffing-wheels/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 673"
+    },
+    {
+      "path": "/product/butt-weld-fittings/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 311"
+    },
+    {
+      "path": "/product/butterfly-valves/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 211"
+    },
+    {
+      "path": "/product/c-5/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 835"
+    },
+    {
+      "path": "/product/c-p-elbow/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 970"
+    },
+    {
+      "path": "/product/c-p-flange-elbow/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 964"
+    },
+    {
+      "path": "/product/c-p-hospital-clamp/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 965"
+    },
+    {
+      "path": "/product/c-p-reducing-elbow/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 974"
+    },
+    {
+      "path": "/product/c-p-reducing-tee/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 973"
+    },
+    {
+      "path": "/product/c-p-socket/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 977"
+    },
+    {
+      "path": "/product/c1-c/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 824"
+    },
+    {
+      "path": "/product/c1-m/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 826"
+    },
+    {
+      "path": "/product/c1/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 822"
+    },
+    {
+      "path": "/product/c2-a/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 828"
+    },
+    {
+      "path": "/product/c2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 827"
+    },
+    {
+      "path": "/product/c3/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 830"
+    },
+    {
+      "path": "/product/c4-a/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 834"
+    },
+    {
+      "path": "/product/c4/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 832"
+    },
+    {
+      "path": "/product/c5-b/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 837"
+    },
+    {
+      "path": "/product/c5-d/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 838"
+    },
+    {
+      "path": "/product/c6-1/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 840"
+    },
+    {
+      "path": "/product/c6-2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 841"
+    },
+    {
+      "path": "/product/c6-3/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 843"
+    },
+    {
+      "path": "/product/c6/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 839"
+    },
+    {
+      "path": "/product/c7-1/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 850"
+    },
+    {
+      "path": "/product/c7/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 845"
+    },
+    {
+      "path": "/product/cap/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 955"
+    },
+    {
+      "path": "/product/caps/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 305"
+    },
+    {
+      "path": "/product/carriage-bolts/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 597"
+    },
+    {
+      "path": "/product/chain-shackles/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 236"
+    },
+    {
+      "path": "/product/check-valves-2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 353"
+    },
+    {
+      "path": "/product/check-valves/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 212"
+    },
+    {
+      "path": "/product/circuit-breakers-fuses/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 502"
+    },
+    {
+      "path": "/product/clamps-u-bolt-t-bolt-etc/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 362"
+    },
+    {
+      "path": "/product/compressing-mini-ball-valve/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 981"
+    },
+    {
+      "path": "/product/concrete-anchors/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 652"
+    },
+    {
+      "path": "/product/coupling-nuts/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 613"
+    },
+    {
+      "path": "/product/couplings-threaded-socket-weld/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 297"
+    },
+    {
+      "path": "/product/cp-pipe/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 943"
+    },
+    {
+      "path": "/product/crimped-steel-brushes/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 702"
+    },
+    {
+      "path": "/product/crosses/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 299"
+    },
+    {
+      "path": "/product/cs7320-marine-mirror-cabinet/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 1438"
+    },
+    {
+      "path": "/product/cup-brushes/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 700"
+    },
+    {
+      "path": "/product/cutting-discs-metal-concrete/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 676"
+    },
+    {
+      "path": "/product/dc-102/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 108"
+    },
+    {
+      "path": "/product/dc-701/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 131"
+    },
+    {
+      "path": "/product/deck-mount-clamps/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 251"
+    },
+    {
+      "path": "/product/diamond-cutting-blades/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 682"
+    },
+    {
+      "path": "/product/dl-403ss/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 132"
+    },
+    {
+      "path": "/product/dl-521/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 134"
+    },
+    {
+      "path": "/product/double-door-mirror-cabinets/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 935"
+    },
+    {
+      "path": "/product/drain-plugs/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 485"
+    },
+    {
+      "path": "/product/drywall-screws/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 629"
+    },
+    {
+      "path": "/product/elbows-90-and-45/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 288"
+    },
+    {
+      "path": "/product/electrical-junction-boxes/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 507"
+    },
+    {
+      "path": "/product/electrical-outlets-switches/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 495"
+    },
+    {
+      "path": "/product/electrical-tape-conduits/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 500"
+    },
+    {
+      "path": "/product/expansion-anchors/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 654"
+    },
+    {
+      "path": "/product/extension-cords/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 496"
+    },
+    {
+      "path": "/product/extension-ladders/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 468"
+    },
+    {
+      "path": "/product/extension-nipple-socket/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 951"
+    },
+    {
+      "path": "/product/eye-bolts-rings/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 271"
+    },
+    {
+      "path": "/product/eye-bolts/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 602"
+    },
+    {
+      "path": "/product/fa-6010ss/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 135"
+    },
+    {
+      "path": "/product/faucet-parts-cartridges-spouts/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 479"
+    },
+    {
+      "path": "/product/fb-2060nc/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 136"
+    },
+    {
+      "path": "/product/fb-2060tkr/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 137"
+    },
+    {
+      "path": "/product/fb-3060anc/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 160"
+    },
+    {
+      "path": "/product/fc-104d/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 161"
+    },
+    {
+      "path": "/product/fc-106cs/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 162"
+    },
+    {
+      "path": "/product/fc-110cs/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 163"
+    },
+    {
+      "path": "/product/female-socket/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 961"
+    },
+    {
+      "path": "/product/fender-washers/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 619"
+    },
+    {
+      "path": "/product/fl-0312c/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 168"
+    },
+    {
+      "path": "/product/fl-122/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 164"
+    },
+    {
+      "path": "/product/fl-218n/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 165"
+    },
+    {
+      "path": "/product/fl-222n/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 166"
+    },
+    {
+      "path": "/product/fl-247/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 167"
+    },
+    {
+      "path": "/product/fl-3200c/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 170"
+    },
+    {
+      "path": "/product/fl-930c/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 169"
+    },
+    {
+      "path": "/product/flap-wheels/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 664"
+    },
+    {
+      "path": "/product/flat-washers/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 615"
+    },
+    {
+      "path": "/product/flexible-rubber-connector-for-w-c/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 1434"
+    },
+    {
+      "path": "/product/folding-step-stools/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 466"
+    },
+    {
+      "path": "/product/freezer-hinges/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 1236"
+    },
+    {
+      "path": "/product/frezeer-lock-1178/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 1237"
+    },
+    {
+      "path": "/product/galvanized-pipes/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 323"
+    },
+    {
+      "path": "/product/galvanized-steel-anchors/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 239"
+    },
+    {
+      "path": "/product/gaskets-metallic-non-metallic/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 369"
+    },
+    {
+      "path": "/product/gate-valves-2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 349"
+    },
+    {
+      "path": "/product/gate-valves/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 213"
+    },
+    {
+      "path": "/product/globe-valves-2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 357"
+    },
+    {
+      "path": "/product/globe-valves/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 214"
+    },
+    {
+      "path": "/product/grinding-wheels/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 681"
+    },
+    {
+      "path": "/product/hammer-in-anchors/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 656"
+    },
+    {
+      "path": "/product/hammers-claw-sledge-ball-peen/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 451"
+    },
+    {
+      "path": "/product/hex-bolt/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 509"
+    },
+    {
+      "path": "/product/hose-fittings-adapters/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 371"
+    },
+    {
+      "path": "/product/jaquar-flush-valve/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 939"
+    },
+    {
+      "path": "/product/kl-200/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 138"
+    },
+    {
+      "path": "/product/kr-60-ss/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 148"
+    },
+    {
+      "path": "/product/l-1000-sc/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 149"
+    },
+    {
+      "path": "/product/lag-bolts/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 606"
+    },
+    {
+      "path": "/product/lap-joint-flanges-2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 342"
+    },
+    {
+      "path": "/product/lap-joint-flanges/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 224"
+    },
+    {
+      "path": "/product/light-fixtures-bulbs/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 498"
+    },
+    {
+      "path": "/product/lock-nuts-nylon-insert/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 608"
+    },
+    {
+      "path": "/product/lock-washers/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 617"
+    },
+    {
+      "path": "/product/machine-screws/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 627"
+    },
+    {
+      "path": "/product/male-elbow/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 984"
+    },
+    {
+      "path": "/product/male-socket/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 963"
+    },
+    {
+      "path": "/product/marine-brackets/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 258"
+    },
+    {
+      "path": "/product/marine-chain-g30-g40/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 242"
+    },
+    {
+      "path": "/product/marine-fire-lock-c1-ohs-2320-rho/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 569"
+    },
+    {
+      "path": "/product/marine-fire-lock-c4-ohs-2770-rho/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 570"
+    },
+    {
+      "path": "/product/marine-fire-lock-ohs-2110-ss/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 571"
+    },
+    {
+      "path": "/product/marine-fire-lock-ohs-3550-rho-304/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 572"
+    },
+    {
+      "path": "/product/marine-nails-staples/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 272"
+    },
+    {
+      "path": "/product/masonry-bolts/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 657"
+    },
+    {
+      "path": "/product/mini-ball-valve/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 978"
+    },
+    {
+      "path": "/product/nipple-socket/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 957"
+    },
+    {
+      "path": "/product/nuts-washers-marine-grade/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 273"
+    },
+    {
+      "path": "/product/orifice-flanges/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 345"
+    },
+    {
+      "path": "/product/pf-008nf/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 172"
+    },
+    {
+      "path": "/product/pf-038/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 173"
+    },
+    {
+      "path": "/product/pf-075c/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 174"
+    },
+    {
+      "path": "/product/pipe-clamps/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 259"
+    },
+    {
+      "path": "/product/pipe-cutters/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 477"
+    },
+    {
+      "path": "/product/pipe-fittings-accessories/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 739"
+    },
+    {
+      "path": "/product/pipe-insulation-2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 737"
+    },
+    {
+      "path": "/product/pipe-insulation/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 487"
+    },
+    {
+      "path": "/product/pipe-joint-adhesive/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 738"
+    },
+    {
+      "path": "/product/pipe-support-brackets/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 260"
+    },
+    {
+      "path": "/product/pipe-wrenches/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 474"
+    },
+    {
+      "path": "/product/plastic-expansion-dowels/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 655"
+    },
+    {
+      "path": "/product/platform-ladders/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 472"
+    },
+    {
+      "path": "/product/pliers-needle-nose-lineman-slip-joint/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 456"
+    },
+    {
+      "path": "/product/plug-valves/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 359"
+    },
+    {
+      "path": "/product/polishing-cloths/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 675"
+    },
+    {
+      "path": "/product/polishing-pads/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 666"
+    },
+    {
+      "path": "/product/ppr-ball-valve-2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 729"
+    },
+    {
+      "path": "/product/ppr-ball-valve/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 715"
+    },
+    {
+      "path": "/product/ppr-check-valve/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 731"
+    },
+    {
+      "path": "/product/ppr-coupling/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 713"
+    },
+    {
+      "path": "/product/ppr-elbow/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 711"
+    },
+    {
+      "path": "/product/ppr-end-caps/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 714"
+    },
+    {
+      "path": "/product/ppr-gate-valve/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 730"
+    },
+    {
+      "path": "/product/ppr-pipe-3-4-to-4/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 703"
+    },
+    {
+      "path": "/product/ppr-stop-valve/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 732"
+    },
+    {
+      "path": "/product/ppr-tee/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 712"
+    },
+    {
+      "path": "/product/pressure-relief-valves-2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 355"
+    },
+    {
+      "path": "/product/pressure-relief-valves/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 215"
+    },
+    {
+      "path": "/product/raised-face-flanges/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 225"
+    },
+    {
+      "path": "/product/rcf100/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 186"
+    },
+    {
+      "path": "/product/rcp200a/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 194"
+    },
+    {
+      "path": "/product/reducer-bush/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 953"
+    },
+    {
+      "path": "/product/reducers-concentric-eccentric/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 302"
+    },
+    {
+      "path": "/product/reducing-hex-nipple/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 945"
+    },
+    {
+      "path": "/product/rfv110ab2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 195"
+    },
+    {
+      "path": "/product/rivet-nuts/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 644"
+    },
+    {
+      "path": "/product/rlp250a/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 196"
+    },
+    {
+      "path": "/product/rlp300/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 197"
+    },
+    {
+      "path": "/product/rs-100-toilet-seat-open-front/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 1432"
+    },
+    {
+      "path": "/product/rwc1610b/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 198"
+    },
+    {
+      "path": "/product/rwl220/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 199"
+    },
+    {
+      "path": "/product/s-1100pc/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 150"
+    },
+    {
+      "path": "/product/s-5100/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 852"
+    },
+    {
+      "path": "/product/s-5100pc/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 152"
+    },
+    {
+      "path": "/product/s-5103pc/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 153"
+    },
+    {
+      "path": "/product/s-5106pc/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 154"
+    },
+    {
+      "path": "/product/s-605/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 851"
+    },
+    {
+      "path": "/product/sanding-belts-1-2-4-wide/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 663"
+    },
+    {
+      "path": "/product/sanding-discs-5-6-7/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 658"
+    },
+    {
+      "path": "/product/sanding-sheets-wet-dry/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 665"
+    },
+    {
+      "path": "/product/sandpaper-sheets-p60-p120-p220/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 684"
+    },
+    {
+      "path": "/product/screwdrivers-flat-phillips-torx/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 453"
+    },
+    {
+      "path": "/product/seamless-pipes-astm-a106-a333/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 314"
+    },
+    {
+      "path": "/product/self-tapping-screws/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 622"
+    },
+    {
+      "path": "/product/sheet-metal-screws/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 633"
+    },
+    {
+      "path": "/product/single-door-mirror-cabinet/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 933"
+    },
+    {
+      "path": "/product/sinks-faucets/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 481"
+    },
+    {
+      "path": "/product/sl-200/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 155"
+    },
+    {
+      "path": "/product/slip-on-flanges-2/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 326"
+    },
+    {
+      "path": "/product/slip-on-flanges/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 226"
+    },
+    {
+      "path": "/product/socket-head-cap-screws/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 634"
+    },
+    {
+      "path": "/product/socket-weld-fittings/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 307"
+    },
+    {
+      "path": "/product/socket-weld-flanges/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 340"
+    },
+    {
+      "path": "/product/solid-rivets/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 641"
+    },
+    {
+      "path": "/product/specialty-rivets-flush-tubular/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 643"
+    },
+    {
+      "path": "/product/split-rings-lock-washers/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 275"
+    },
+    {
+      "path": "/product/sponge-sanding-pads/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 691"
+    },
+    {
+      "path": "/product/ss-butt-weld-elbow/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 925"
+    },
+    {
+      "path": "/product/ss-butt-weld-stub-end/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 923"
+    },
+    {
+      "path": "/product/ss-butt-weld-tee/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 920"
+    },
+    {
+      "path": "/product/stainless-steel-anchors/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 243"
+    },
+    {
+      "path": "/product/stainless-steel-bolts/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 277"
+    },
+    {
+      "path": "/product/stainless-steel-hose-clamps/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 263"
+    },
+    {
+      "path": "/product/stainless-steel-tubing-304-316/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 319"
+    },
+    {
+      "path": "/product/stainless-steel-u-clamps/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 264"
+    },
+    {
+      "path": "/product/strainers/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 363"
+    },
+    {
+      "path": "/product/sw-200/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 157"
+    },
+    {
+      "path": "/product/tape-measures/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 460"
+    },
+    {
+      "path": "/product/tees-equal-reducing/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 295"
+    },
+    {
+      "path": "/product/telescoping-ladders/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 470"
+    },
+    {
+      "path": "/product/thermostatic-shower-mixer-bar/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 1430"
+    },
+    {
+      "path": "/product/threaded-elbow/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 949"
+    },
+    {
+      "path": "/product/threaded-fittings/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 309"
+    },
+    {
+      "path": "/product/threaded-socket/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 959"
+    },
+    {
+      "path": "/product/threaded-tee/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 947"
+    },
+    {
+      "path": "/product/tube-brushes/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 701"
+    },
+    {
+      "path": "/product/u-bolts/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 604"
+    },
+    {
+      "path": "/product/upvc-ball-valve/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 726"
+    },
+    {
+      "path": "/product/upvc-elbow/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 723"
+    },
+    {
+      "path": "/product/upvc-flanges/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 743"
+    },
+    {
+      "path": "/product/upvc-pipes-20mm-to-200mm/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 716"
+    },
+    {
+      "path": "/product/upvc-pressure-valves/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 745"
+    },
+    {
+      "path": "/product/upvc-reducer/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 727"
+    },
+    {
+      "path": "/product/upvc-socket/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 725"
+    },
+    {
+      "path": "/product/upvc-tee/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 724"
+    },
+    {
+      "path": "/product/upvc-threaded-couplings/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 744"
+    },
+    {
+      "path": "/product/upvc-union-fittings/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 746"
+    },
+    {
+      "path": "/product/utility-knives/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 462"
+    },
+    {
+      "path": "/product/vacuum-breaker/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 941"
+    },
+    {
+      "path": "/product/valve-seats/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 365"
+    },
+    {
+      "path": "/product/w-c-flexible-connector-4%e2%80%b3-rubber-below/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 1436"
+    },
+    {
+      "path": "/product/wall-anchors/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 645"
+    },
+    {
+      "path": "/product/weld-neck-flanges/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 333"
+    },
+    {
+      "path": "/product/welded-pipes-astm-a312/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 317"
+    },
+    {
+      "path": "/product/wet-dry-sandpaper/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 689"
+    },
+    {
+      "path": "/product/wing-nuts/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 610"
+    },
+    {
+      "path": "/product/wire-brushes/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 692"
+    },
+    {
+      "path": "/product/wood-screws/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 624"
+    },
+    {
+      "path": "/product/wrenches-adjustable-torque-pipe/",
+      "kind": "product",
+      "indexable": true,
+      "source": "supplied SQL product 458"
+    },
+    {
+      "path": "/role-of-hardware-pipes-fittings-marine-industry/",
+      "kind": "article",
+      "indexable": true,
+      "source": "supplied SQL article 1151"
+    },
+    {
+      "path": "/shop/",
+      "kind": "page",
+      "indexable": true,
+      "source": "supplied SQL page 8"
+    },
+    {
+      "path": "/shop/page/10/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/11/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/12/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/13/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/14/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/15/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/16/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/17/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/18/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/19/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/2/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/20/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/21/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/22/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/23/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/24/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/25/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/3/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/4/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/5/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/6/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/7/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/8/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/shop/page/9/",
+      "kind": "pagination",
+      "indexable": true,
+      "source": "/shop/"
+    },
+    {
+      "path": "/top-challenges-uae-marine-suppliers-solve-ship-owners/",
+      "kind": "article",
+      "indexable": true,
+      "source": "supplied SQL article 1141"
+    },
+    {
+      "path": "/types-of-toilet-flush-valve-and-how-to-choose-the-right-one/",
+      "kind": "article",
+      "indexable": true,
+      "source": "supplied SQL article 1342"
+    },
+    {
+      "path": "/ultimate-guide-to-stainless-steel-marine-parts/",
+      "kind": "article",
+      "indexable": true,
+      "source": "supplied SQL article 1420"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/product-category/marine-locks/",
+      "destination": "/brand/marine-locks/",
+      "type": 301
+    },
+    {
+      "source": "/home/",
+      "destination": "/",
+      "type": 301
+    },
+    {
+      "source": "/company/",
+      "destination": "/about-us/",
+      "type": 301
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact-us/",
+      "type": 301
+    },
+    {
+      "source": "/articles/",
+      "destination": "/blog/",
+      "type": 301
+    }
+  ]
+}

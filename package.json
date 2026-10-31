@@ -1,0 +1,39 @@
+{
+  "name": "yaybmt-static",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "typecheck": "next typegen && tsc --noEmit",
+    "preview": "python3 scripts/serve-export.py",
+    "test:browser": "node --import tsx scripts/check-browser.ts",
+    "check:content": "node --import tsx scripts/check-content.ts",
+    "check:export": "node --import tsx scripts/check-export.ts",
+    "manifest": "node --import tsx scripts/generate-manifest.ts",
+    "test:catalogue": "node --import tsx --test scripts/catalogue.test.ts",
+    "test:import": "python3 scripts/test-importer.py",
+    "check": "npm run typecheck && npm run check:content && npm run test:catalogue && npm run test:import",
+    "prebuild": "npm run check:content",
+    "format": "prettier --write app components data lib scripts/*.ts next.config.ts tsconfig.json firebase.json",
+    "assets:optimise": "node scripts/optimise-assets.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "playwright": "1.64.1",
+    "prettier": "3.9.10",
+    "sharp": "0.35.5",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}
