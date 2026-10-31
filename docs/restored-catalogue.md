@@ -46,3 +46,11 @@ Passed: real homepage range links, 9 brands and 41 category links, DAELIM count 
 The complete site URL manifest, detailed content/metadata/schema audit, correct business address and WhatsApp number, sitemap/robots launch configuration, image optimisation, Search Console and Analytics, Core Web Vitals, email delivery, hosting security headers, staging-to-production migration and launch are still pending. No ranking or production-readiness claim is made.
 
 The installable theme ZIP uses the root folder `yaybmt-modern` to avoid overwriting the original theme. It includes theme code and public design assets only; it does not include customer data, SQL, uploaded plugins or local credentials. Database repairs are separate from installing the theme.
+
+## Fresh isolated restoration and design review — 31 October 2026
+
+Restored the newly supplied `softsql.zip` and four plugin packages into separate project `yaybmt-restore` and new volumes `yaybmt-restore_restore_db` / `yaybmt-restore_restore_wp`. The SQL backup is preserved privately and ordinary startup does not import it. Verified 292 published products, 9 brands, 41 categories, 10 articles, 8 pages and 523 attachment records. WooCommerce, ACF and Yoast are active; the extra schema plugin is retained inactive. The repository's local repair helper corrected five article links and refreshed counts without changing the supplied backup.
+
+The running baseline uses a private theme copy from main, with floating-only WhatsApp. The new catalogue/detail design is opt-in, using real restored data, and is documented in [samples/restored/README.md](../samples/restored/README.md). It has not been applied throughout the theme. The working tree's earlier design draft is preserved separately. No live website was contacted or changed.
+
+Passed the restored catalogue suite (all 50 archive URLs, real pagination, product enquiry, Marine Locks redirect, no synthetic rating/price schema and noindex), contact/navigation checks, homepage checks and the new sample suite at four widths. Email and WordPress HTTP blocking were verified; local responses carry noindex and a same-origin browser CSP. Product photography remains absent.

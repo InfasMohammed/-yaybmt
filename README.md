@@ -36,10 +36,18 @@ If that isolated database is fresh, run `node scripts/install-dev.cjs` once. It 
 
 The prepared cloud environment also contains a separate, private restoration of the supplied catalogue. See [restored catalogue instructions](docs/restored-catalogue.md). Its database is deliberately outside Git and is not recreated by cloning this repository.
 
+The modern samples are `preview/catalogue.html` and `preview/product-detail.html`. They preserve existing product links and use explicitly labelled photography placeholders. The catalogue search filters only the 16 displayed sample products. Open the detail sample from the catalogue’s sample link; real product links still point to their original WordPress URLs.
+
 For the static design preview:
 
 ```sh
 python3 -m http.server 8080 --bind 127.0.0.1 --directory preview
+```
+
+Run the sample regression checks against the Firebase Hosting emulator (port 5000), or set `YAYBMT_SAMPLE_URL` to the Python preview server:
+
+```sh
+node scripts/check-samples.cjs
 ```
 
 ## Validation and launch

@@ -22,3 +22,18 @@ document.addEventListener('keydown',event=>{
   toggle.setAttribute('aria-expanded','false');nav.classList.remove('is-open');toggle.focus();
  }
 });
+
+// Sample-only search never intercepts native WordPress taxonomy or product URLs.
+const sampleCatalogue=document.querySelector('[data-catalogue-sample]');
+if(sampleCatalogue){
+ const search=sampleCatalogue.querySelector('#catalogue-search');
+ const cards=[...sampleCatalogue.querySelectorAll('li.product')];
+ const status=sampleCatalogue.querySelector('.sample-search-status');
+ const updateSample=()=>{
+  const query=search.value.trim().toLocaleLowerCase();
+  let visible=0;
+  cards.forEach(card=>{const matches=card.querySelector('h2').textContent.toLocaleLowerCase().includes(query);card.hidden=!matches;if(matches)visible++;});
+  status.textContent=query ? `${visible} matching ${visible===1?'product':'products'} on this sample page.` : 'Search the 16 products shown on this sample page.';
+ };
+ search.addEventListener('input',updateSample);updateSample();
+}

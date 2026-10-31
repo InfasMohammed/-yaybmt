@@ -9,8 +9,8 @@ add_action('after_setup_theme', function () {
     register_nav_menus(['primary' => 'Primary navigation']);
 });
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('yaybmt', get_theme_file_uri('/assets/site.css'), [], '0.9.2');
-    wp_enqueue_script('yaybmt', get_theme_file_uri('/assets/site.js'), [], '0.9.2', true);
+    wp_enqueue_style('yaybmt', get_theme_file_uri('/assets/site.css'), [], '0.10.0');
+    wp_enqueue_script('yaybmt', get_theme_file_uri('/assets/site.js'), [], '0.10.0', true);
 }, 20);
 // Keep canonical URLs and metadata owned by WordPress / the existing SEO plugin.
 // Never generate prices, ratings, or reviews from unverified catalogue data.
@@ -69,7 +69,7 @@ add_action('woocommerce_single_product_summary', function () {
     if (!$product) { return; }
     $subject = 'Product enquiry: '.$product->get_name();
     $body = 'Please confirm specifications and availability for '.$product->get_name().".\n".get_permalink($product->get_id());
-    echo '<div class="product-enquiry"><a class="button" href="'.esc_url('mailto:sales@yaybmt.com?subject='.rawurlencode($subject).'&body='.rawurlencode($body)).'">Enquire about this product <span aria-hidden="true">→</span></a><a class="button whatsapp-product" href="'.esc_url(yaybmt_whatsapp_url($body)).'" target="_blank" rel="noopener noreferrer">'.yaybmt_whatsapp_icon().' WhatsApp our team</a><p>Send our team your quantity and required specifications.</p></div>';
+    echo '<div class="product-enquiry"><a class="button" href="'.esc_url('mailto:sales@yaybmt.com?subject='.rawurlencode($subject).'&body='.rawurlencode($body)).'">Enquire about this product <span aria-hidden="true">→</span></a><p>Send our team your quantity and required specifications.</p></div>';
 }, 35);
 
 // Preserve the established Marine Locks archive when old articles use the wrong route.
