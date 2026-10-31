@@ -9,9 +9,11 @@ class Handler(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=str(EXPORT), **kwargs)
 
     def do_GET(self):
-        pathname=self.path.split('?')[0].rstrip('/')+'/'
+        pathname=self.path.split('?')[0].rstrip('/')
         redirects=json.loads((EXPORT.parent/'data/redirects.json').read_text())
-        match=next((r for r in redirects if r['source']==pathname),None)
+        image_rules=EXPORT.parent/'data/image-redirects.json'
+        if image_rules.exists():redirects+=json.loads(image_rules.read_text())
+        match=next((r for r in redirects if r['source'].rstrip('/')==pathname),None)
         if match:
             self.send_response(301)
             self.send_header('Location', match['destination'])

@@ -11,12 +11,13 @@
     "check:content": "node --import tsx scripts/check-content.ts",
     "check:export": "node --import tsx scripts/check-export.ts",
     "manifest": "node --import tsx scripts/generate-manifest.ts",
-    "test:catalogue": "node --import tsx --test scripts/catalogue.test.ts",
+    "test:catalogue": "node --import tsx --test scripts/catalogue.test.ts scripts/image-import.test.ts",
     "test:import": "python3 scripts/test-importer.py",
-    "check": "npm run typecheck && npm run check:content && npm run test:catalogue && npm run test:import",
+    "check": "npm run typecheck && npm run check:content && npm run test:media && npm run test:catalogue && npm run test:import",
     "prebuild": "npm run check:content",
     "format": "prettier --write app components data lib scripts/*.ts next.config.ts tsconfig.json firebase.json",
-    "assets:optimise": "node scripts/optimise-assets.mjs"
+    "assets:optimise": "node scripts/optimise-assets.mjs",
+    "test:media": "node --import tsx scripts/check-media.ts"
   },
   "dependencies": {
     "next": "16.4.3",

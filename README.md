@@ -2,7 +2,7 @@
 
 Next.js + TypeScript, exported to `out/` for Firebase Hosting. The client-supplied SQL has been migrated into typed local files: **292 products, 9 brands, 41 product categories, 10 articles and all 8 source page routes**. SQL is migration input only. There is no WordPress runtime, admin dashboard, database, Authentication, Firestore or Firebase Storage.
 
-Work stays on `rebuild/nextjs-static-samples`. Nothing has been deployed and `main` is unchanged. Earlier implementation and deliverables are preserved in Git history and `legacy/`; they are excluded from the export.
+The core rebuild was merged into `main` through PR #1. The current image update is isolated on `feat/static-product-images`; it does not change production hosting or deploy Firebase. Earlier implementation and deliverables are preserved in Git history and `legacy/`; they are excluded from the export.
 
 ## Setup and commands
 
@@ -27,7 +27,7 @@ Browser checks use the pinned Playwright package. They use `/usr/bin/chromium` w
 
 - `/shop/`, `/shop/page/2/` — catalogue with search, brand/category filters, removable chips, sorting and static pagination.
 - `/brands/`, `/categories/` — directories linking to original `/brand/.../` and nested `/product-category/.../` routes.
-- `/product/dc-102/` — real product with imported specifications, gallery placeholder and direct enquiries.
+- `/product/dc-102/` — real product with imported specifications, a genuine product image, original-size view and direct enquiries.
 - `/blog/` and original root article slugs — all ten imported articles.
 - `/about-us/`, `/contact-us/` — original company/contact routes using confirmed business details.
 
@@ -39,11 +39,11 @@ Native page links work without JavaScript; search/filter enhancements keep selec
 
 See [content editing](docs/content-editing.md) and [migration report](docs/nextjs-migration.md). Future changes are manual repository edits, followed by checks, rebuild and approved redeployment. Keep original slugs and consult [the URL manifest](docs/url-manifest.json) before changing a route.
 
-Product photos have not been supplied. All 292 products retain their database attachment references and show labelled placeholders. No product photo, model, brand relationship or specification was guessed. Logos are the unchanged original assets. The existing illustrative hero is pre-encoded as a static WebP and preloaded; no image optimisation server is required.
+All 292 primary product images have been retrieved read-only from the connected WordPress uploads using exact SQL attachment paths. Originals and smaller static web copies are in `public/images/products/`. No product photo, model, brand relationship or specification was guessed. See [image validation](docs/image-validation.md) and the [checksum manifest](docs/product-image-manifest.json). Logos are the unchanged original assets. The existing illustrative hero is pre-encoded as a static WebP and preloaded; no image optimisation server is required.
 
 ## Firebase Hosting — only after approval
 
-`firebase.json` serves **only `out/`**, with no SPA catch-all. Unknown paths return `404.html` with HTTP 404. Exact 301s include `/product-category/marine-locks/` → `/brand/marine-locks/` and the interim review utility aliases → original page routes.
+`firebase.json` serves **only `out/`**, with no SPA catch-all. Unknown paths return `404.html` with HTTP 404. Exact 301s include `/product-category/marine-locks/` → `/brand/marine-locks/` and the interim review utility aliases → original page routes. There are also 292 exact redirects from the old WordPress upload URLs to the copied original static image files; unknown image paths still return 404.
 
 Install Firebase CLI separately and use the explicitly approved project:
 

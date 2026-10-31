@@ -1,3 +1,4 @@
+import imageRedirects from "../data/image-redirects.json";
 import { chromium } from "playwright";
 import assert from "node:assert/strict";
 import { existsSync, mkdirSync } from "node:fs";
@@ -44,6 +45,19 @@ async function main() {
         const response = await page.goto(base + path);
         assert.equal(response?.status(), 200);
         await page.waitForLoadState("networkidle");
+        // Load below-the-fold photos before full-page review screenshots.
+        await page
+          .locator('img[loading="lazy"]')
+          .evaluateAll((images) =>
+            images.forEach(
+              (image) => ((image as HTMLImageElement).loading = "eager"),
+            ),
+          );
+        await page.evaluate(async () => {
+          await Promise.all(
+            [...document.images].map((image) => image.decode()),
+          );
+        });
         assert.equal(await page.locator("h1").count(), 1);
         assert.ok(
           await page.evaluate(
@@ -115,6 +129,20 @@ async function main() {
       new RegExp(fasteners.length + " imported products"),
     );
     await page.getByRole("button", { name: /Remove category filter/ }).click();
+    assert.equal(
+      await page
+        .locator(".image-frame img")
+        .first()
+        .evaluate((image) => (image as HTMLImageElement).naturalWidth > 0),
+      true,
+    );
+    assert.equal(
+      await page
+        .locator(".image-frame img")
+        .first()
+        .evaluate((image) => getComputedStyle(image).objectFit),
+      "contain",
+    );
     const geometry = await page.locator(".card").evaluateAll((cards) =>
       cards.slice(0, 3).map((c) => ({
         bottom: c.getBoundingClientRect().bottom,
@@ -175,6 +203,16 @@ async function main() {
     );
     assert.equal(wa.pathname, "/971567369803");
     assert.match(wa.searchParams.get("text") || "", /DC 102/);
+    const originalLink = page.getByRole("link", {
+      name: "View original image",
+      exact: true,
+    });
+    const originalPath = await originalLink.getAttribute("href");
+    assert.ok(originalPath?.startsWith("/images/products/"));
+    const originalResponse = await context.request.get(base + originalPath);
+    assert.equal(originalResponse.status(), 200);
+    assert.match(originalResponse.headers()["content-type"], /^image\//);
+    await originalResponse.dispose();
     const unbranded = products.find(
       (p) => p.brand === null && p.model === null,
     )!;
@@ -193,6 +231,18 @@ async function main() {
         }),
       );
     }
+    for (let i = 0; i < imageRedirects.length; i += 15) {
+      await Promise.all(
+        imageRedirects.slice(i, i + 15).map(async (rule) => {
+          const response = await context.request.get(base + rule.source, {
+            maxRedirects: 0,
+          });
+          assert.equal(response.status(), 301);
+          assert.equal(response.headers().location, rule.destination);
+          await response.dispose();
+        }),
+      );
+    }
     for (const redirect of redirects) {
       const response = await context.request.get(base + redirect.source, {
         maxRedirects: 0,
@@ -203,6 +253,7 @@ async function main() {
     }
     for (const path of [
       "/genuine-missing-page/",
+      "/wp-content/uploads/2025/04/not-a-real-image.jpg",
       "/product/missing/",
       "/brand/missing/",
       "/shop/page/999/",
@@ -223,6 +274,14 @@ async function main() {
     await plain.locator(".card a").first().click();
     assert.ok(
       await plain.getByRole("link", { name: /Enquire by email/ }).isVisible(),
+    );
+    const plainImage = plain.locator(".gallery-photo img").first();
+    assert.ok(await plainImage.isVisible());
+    assert.equal(
+      await plainImage.evaluate(
+        (image) => (image as HTMLImageElement).naturalWidth > 0,
+      ),
+      true,
     );
     await nojs.close();
     await page.emulateMedia({ reducedMotion: "reduce" });

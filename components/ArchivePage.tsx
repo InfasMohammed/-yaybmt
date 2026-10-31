@@ -52,8 +52,8 @@ export default function ArchivePage({
       {items.length ? (
         <>
           <p className="notice">
-            Review catalogue · Imported product records are shown below. Images
-            are pending; confirm current specifications with our team.
+            Review catalogue · Imported product records are shown below. Confirm
+            current specifications with our team.
           </p>
           <Catalogue
             items={items.map(catalogueItem)}

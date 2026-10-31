@@ -1009,3 +1009,20 @@ summary {
 .content-body p:empty {
   display: none;
 }
+
+/* Keep source-image dimensions from changing the catalogue frame geometry. */
+.image-frame {
+  position: relative;
+  overflow: hidden;
+}
+.image-frame > img {
+  position: absolute;
+  inset: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.gallery-photo figcaption a {
+  color: var(--copper);
+  text-decoration: underline;
+}

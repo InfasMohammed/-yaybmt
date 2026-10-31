@@ -13,10 +13,60 @@
   "productsWithModel": 58,
   "productsWithoutBrand": 224,
   "productsWithoutDescriptionOrDetails": 201,
-  "productsWithoutLocalImages": 292,
+  "productsWithoutLocalImages": 0,
   "attachmentRecords": 523,
   "productMediaReferences": 292,
-  "articleImageReferences": [
+  "marineLinkRepairs": [
+    {
+      "from": "/product-category/marine-locks/",
+      "to": "/brand/marine-locks/",
+      "page": "/10-must-have-marine-safety-items-required-on-every-vessel/"
+    },
+    {
+      "from": "/product-category/marine-locks/",
+      "to": "/brand/marine-locks/",
+      "page": "/marine-supply-in-uae-encompass-offshore-and-onshore/"
+    },
+    {
+      "from": "/product-category/marine-locks/",
+      "to": "/brand/marine-locks/",
+      "page": "/top-challenges-uae-marine-suppliers-solve-ship-owners/"
+    },
+    {
+      "from": "/product-category/marine-locks/",
+      "to": "/brand/marine-locks/",
+      "page": "/role-of-hardware-pipes-fittings-marine-industry/"
+    },
+    {
+      "from": "/product-category/marine-locks/",
+      "to": "/brand/marine-locks/",
+      "page": "/best-marine-locks-for-boats-yachts-features-benefits/"
+    }
+  ],
+  "issues": [
+    {
+      "type": "external-link-needs-review",
+      "page": "/ultimate-guide-to-stainless-steel-marine-parts/",
+      "url": "https://luluatalnoor.com/product/stainless-steel-wire-rope/"
+    },
+    {
+      "type": "external-link-needs-review",
+      "page": "/ultimate-guide-to-stainless-steel-marine-parts/",
+      "url": "https://luluatalnoor.com/product-category/marine-equipment/"
+    }
+  ],
+  "excluded": [
+    "users",
+    "customers",
+    "orders",
+    "credentials",
+    "plugin configuration",
+    "prices",
+    "availability",
+    "reviews"
+  ],
+  "productionReady": false,
+  "inlineImageReferences": [
     {
       "page": "/product/s-1100pc/",
       "reference": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-02-030506-Photoroom-1-300x247.png"
@@ -146,54 +196,6 @@
       "reference": "https://yaybmt.com/wp-content/uploads/2025/10/5603-diagram.jpg"
     }
   ],
-  "marineLinkRepairs": [
-    {
-      "from": "/product-category/marine-locks/",
-      "to": "/brand/marine-locks/",
-      "page": "/10-must-have-marine-safety-items-required-on-every-vessel/"
-    },
-    {
-      "from": "/product-category/marine-locks/",
-      "to": "/brand/marine-locks/",
-      "page": "/marine-supply-in-uae-encompass-offshore-and-onshore/"
-    },
-    {
-      "from": "/product-category/marine-locks/",
-      "to": "/brand/marine-locks/",
-      "page": "/top-challenges-uae-marine-suppliers-solve-ship-owners/"
-    },
-    {
-      "from": "/product-category/marine-locks/",
-      "to": "/brand/marine-locks/",
-      "page": "/role-of-hardware-pipes-fittings-marine-industry/"
-    },
-    {
-      "from": "/product-category/marine-locks/",
-      "to": "/brand/marine-locks/",
-      "page": "/best-marine-locks-for-boats-yachts-features-benefits/"
-    }
-  ],
-  "issues": [
-    {
-      "type": "external-link-needs-review",
-      "page": "/ultimate-guide-to-stainless-steel-marine-parts/",
-      "url": "https://luluatalnoor.com/product/stainless-steel-wire-rope/"
-    },
-    {
-      "type": "external-link-needs-review",
-      "page": "/ultimate-guide-to-stainless-steel-marine-parts/",
-      "url": "https://luluatalnoor.com/product-category/marine-equipment/"
-    }
-  ],
-  "excluded": [
-    "users",
-    "customers",
-    "orders",
-    "credentials",
-    "plugin configuration",
-    "prices",
-    "availability",
-    "reviews"
-  ],
-  "productionReady": false
+  "sourceInlineReferenceScope": "32 embedded references in product descriptions, not article illustrations",
+  "productImageManifest": "product-image-manifest.json"
 }

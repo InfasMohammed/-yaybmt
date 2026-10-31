@@ -63,7 +63,7 @@ export default async function Product({
             ? { description: p.description.join("\n") }
             : {}),
           ...(p.images.length
-            ? { image: p.images.map((i) => origin + i.src) }
+            ? { image: p.images.map((i) => new URL(i.src, origin).href) }
             : {}),
         }
       : null;

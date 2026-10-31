@@ -20,8 +20,9 @@ export default function Card({ product: p }: { product: CatalogueItem }) {
               src={image.src}
               alt={image.alt}
               loading="lazy"
-              width="600"
-              height="600"
+              decoding="async"
+              width={image.width || 600}
+              height={image.height || 600}
             />
           ) : (
             <Placeholder />
