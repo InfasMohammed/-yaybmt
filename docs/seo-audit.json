@@ -1,0 +1,102 @@
+{
+  "scope": "Local static export; not a production crawl",
+  "pagesChecked": 406,
+  "indexableAfterLaunch": 403,
+  "reviewNoindex": true,
+  "uniqueTitles": 406,
+  "uniqueDescriptions": 406,
+  "descriptionWarnings": [],
+  "checks": [
+    "One H1 per page",
+    "Page-specific canonical",
+    "Robots mode",
+    "Internal links and local images",
+    "JSON-LD parses",
+    "No Product offers, ratings or reviews",
+    "Sitemap coverage",
+    "No WordPress runtime in export"
+  ],
+  "productSourceSEOTitles": 120,
+  "productTitleAdjustments": [
+    {
+      "path": "/product/check-valves/",
+      "original": "Check Valves",
+      "rendered": "Check Valves – Marine Valves"
+    },
+    {
+      "path": "/product/gate-valves/",
+      "original": "Gate Valves",
+      "rendered": "Gate Valves – Marine Valves"
+    },
+    {
+      "path": "/product/globe-valves/",
+      "original": "Globe Valves",
+      "rendered": "Globe Valves – Marine Valves"
+    },
+    {
+      "path": "/product/pressure-relief-valves/",
+      "original": "Pressure Relief Valves",
+      "rendered": "Pressure Relief Valves – Marine Valves"
+    },
+    {
+      "path": "/product/lap-joint-flanges/",
+      "original": "Lap Joint Flanges",
+      "rendered": "Lap Joint Flanges – Marine Flanges"
+    },
+    {
+      "path": "/product/slip-on-flanges/",
+      "original": "Slip-On Flanges",
+      "rendered": "Slip-On Flanges – Marine Flanges"
+    },
+    {
+      "path": "/product/slip-on-flanges-2/",
+      "original": "Slip-On Flanges",
+      "rendered": "Slip-On Flanges – Pipes & Tubes"
+    },
+    {
+      "path": "/product/lap-joint-flanges-2/",
+      "original": "Lap Joint Flanges",
+      "rendered": "Lap Joint Flanges – Flanges"
+    },
+    {
+      "path": "/product/gate-valves-2/",
+      "original": "Gate Valves",
+      "rendered": "Gate Valves – Valves"
+    },
+    {
+      "path": "/product/check-valves-2/",
+      "original": "Check Valves",
+      "rendered": "Check Valves – Valves"
+    },
+    {
+      "path": "/product/pressure-relief-valves-2/",
+      "original": "Pressure Relief Valves",
+      "rendered": "Pressure Relief Valves – Valves"
+    },
+    {
+      "path": "/product/globe-valves-2/",
+      "original": "Globe Valves",
+      "rendered": "Globe Valves – Valves"
+    },
+    {
+      "path": "/product/pipe-insulation/",
+      "original": "Pipe Insulation",
+      "rendered": "Pipe Insulation – Plumbing Hardware"
+    },
+    {
+      "path": "/product/ppr-ball-valve/",
+      "original": "PPR Ball Valve",
+      "rendered": "PPR Ball Valve – PPR Pipes & Fittings"
+    },
+    {
+      "path": "/product/ppr-ball-valve-2/",
+      "original": "PPR Ball Valve",
+      "rendered": "PPR Ball Valve – PPR Valves"
+    },
+    {
+      "path": "/product/pipe-insulation-2/",
+      "original": "Pipe Insulation",
+      "rendered": "Pipe Insulation – PPR Accessories"
+    }
+  ]
+}

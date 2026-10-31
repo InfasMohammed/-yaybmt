@@ -1,9 +1,15 @@
+import { productSEO } from "../../../lib/product-seo";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 import { notFound } from "next/navigation";
 import { products } from "../../../data/products";
-import Card, { Placeholder } from "../../../components/Card";
-import { metadata as meta, email, whatsapp } from "../../../lib/site";
+import ContentBody from "../../../components/ContentBody";
+import { brands } from "../../../data/brands";
+import { categories } from "../../../data/categories";
+import Card from "../../../components/Card";
+import Gallery from "../../../components/Gallery";
+import { metadata as meta, email, whatsapp, origin } from "../../../lib/site";
 export function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }));
+  return products.map((p) => ({ slug: decodeURIComponent(p.slug) }));
 }
 export const dynamicParams = false;
 export async function generateMetadata({
@@ -12,12 +18,15 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const p = products.find((p) => p.slug === slug);
+  const p = products.find(
+    (p) => decodeURIComponent(p.slug) === decodeURIComponent(slug),
+  );
   return p
     ? meta(
-        p.name,
-        "Enquire about " + p.name + " at YAYBMT, Deira, Dubai.",
+        productSEO(p).title,
+        productSEO(p).description,
         "/product/" + p.slug + "/",
+        p.status !== "sample",
       )
     : {};
 }
@@ -27,43 +36,89 @@ export default async function Product({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const p = products.find((p) => p.slug === slug);
+  const p = products.find(
+    (p) => decodeURIComponent(p.slug) === decodeURIComponent(slug),
+  );
   if (!p) notFound();
+  const brand = brands.find((b) => b.slug === p.brand);
+  const related = products
+    .filter(
+      (x) =>
+        x.slug !== p.slug &&
+        (p.brand
+          ? x.brand === p.brand
+          : x.categorySlugs.some((c) => p.categorySlugs.includes(c))),
+    )
+    .slice(0, 3);
+  const structured =
+    p.status !== "sample"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: p.name,
+          ...(p.model ? { model: p.model } : {}),
+          ...(brand ? { brand: { "@type": "Brand", name: brand.name } } : {}),
+          url: origin + "/product/" + p.slug + "/",
+          ...(p.description.length
+            ? { description: p.description.join("\n") }
+            : {}),
+          ...(p.images.length
+            ? { image: p.images.map((i) => origin + i.src) }
+            : {}),
+        }
+      : null;
   return (
     <main id="main" className="page">
-      <div className="breadcrumb">
-        <a href="/">Home</a> / <a href="/shop/">Catalogue</a> / {p.model}
-      </div>
+      {structured && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structured).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
+      <Breadcrumbs
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Catalogue", path: "/shop/" },
+          ...(brand
+            ? [{ name: brand.name, path: "/brand/" + brand.slug + "/" }]
+            : []),
+          { name: p.name, path: "/product/" + p.slug + "/" },
+        ]}
+      />
       <div className="product-layout">
-        <section aria-label="Product gallery">
-          <div className="gallery">
-            <Placeholder />
-          </div>
-          <p className="caption">
-            Original product photography has not been supplied.
-          </p>
-          <details>
-            <summary>About this gallery</summary>
-            <p>
-              No substitute or generated product photos are used. Original
-              images will be matched using database attachment references.
-            </p>
-          </details>
-        </section>
+        <Gallery product={p} />
         <section>
-          <p className="eyebrow">DAELIM / PRODUCT SAMPLE</p>
-          <h1>{p.name}</h1>
-          <p className="model">MODEL {p.model}</p>
-          <p className="product-copy">
-            For product details and suitability for your project, speak directly
-            with our team in Deira, Dubai.
+          <p className="eyebrow">
+            {brand?.name || "YAYBMT CATALOGUE"} /{" "}
+            {p.status === "sample" ? "PRODUCT SAMPLE" : "PRODUCT INFORMATION"}
           </p>
-          <a className="button" href={email(p.name + " (" + p.model + ")")}>
+          <h1>{p.name}</h1>
+          <p className="model">
+            {p.model ? "MODEL " + p.model : "Model reference not recorded"}
+          </p>
+          {p.description.length ? (
+            p.description.map((text, i) => (
+              <p className="product-copy" key={i}>
+                {text}
+              </p>
+            ))
+          ) : (
+            <p className="product-copy">
+              For product details and suitability for your project, speak
+              directly with our team in Deira, Dubai.
+            </p>
+          )}
+          <a
+            className="button"
+            href={email(p.model ? p.name + " (" + p.model + ")" : p.name)}
+          >
             Enquire by email +
           </a>
           <a
             className="button outline"
-            href={whatsapp(p.name + " (" + p.model + ")")}
+            href={whatsapp(p.model ? p.name + " (" + p.model + ")" : p.name)}
           >
             Enquire on WhatsApp +
           </a>
@@ -74,39 +129,78 @@ export default async function Product({
             <summary>Product information</summary>
             <dl>
               <dt>Brand</dt>
-              <dd>DAELIM</dd>
+              <dd>
+                {brand ? (
+                  <a className="text-link" href={"/brand/" + brand.slug + "/"}>
+                    {brand.name}
+                  </a>
+                ) : (
+                  "Not recorded in the source catalogue"
+                )}
+              </dd>
               <dt>Model reference</dt>
-              <dd>{p.model}</dd>
+              <dd>{p.model || "Not recorded in the source catalogue"}</dd>
             </dl>
+            {p.categorySlugs.length > 0 && (
+              <p>
+                Categories:{" "}
+                {p.categorySlugs.map((slug) => (
+                  <a
+                    className="category-link"
+                    href={"/product-category/" + slug + "/"}
+                    key={slug}
+                  >
+                    {categories.find((c) => c.slug === slug)?.name}
+                  </a>
+                ))}
+              </p>
+            )}
           </details>
           <details open>
             <summary>Specifications</summary>
-            <p>
-              Technical specifications are not available in the repository.
-              Verified dimensions, material, finish and installation information
-              are pending the original product data.
-            </p>
+            {p.specifications.length ? (
+              <dl>
+                {p.specifications.map((spec, i) => (
+                  <div className="spec-row" key={spec.label + String(i)}>
+                    <dt>{spec.label}</dt>
+                    <dd>{spec.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            ) : (
+              <p>
+                Technical specifications are not recorded for this product in
+                the supplied catalogue. Contact our team for details.
+              </p>
+            )}
           </details>
-          <p className="notice">
-            Sample record from the previous public project preview. No
-            specifications, prices or availability have been inferred from its
-            title.
-          </p>
+          {p.bodyHtml && (
+            <details>
+              <summary>Original product details</summary>
+              <ContentBody html={p.bodyHtml} />
+            </details>
+          )}
+          {p.status === "sample" && (
+            <p className="notice">
+              Sample record from the previous public project preview. No
+              specifications, prices or availability have been inferred from its
+              title.
+            </p>
+          )}
         </section>
       </div>
-      <section className="related">
-        <p className="eyebrow">CONTINUE EXPLORING</p>
-        <h2>More from DAELIM</h2>
-        <p>Related by brand only.</p>
-        <div className="grid">
-          {products
-            .filter((x) => x.slug !== p.slug)
-            .slice(0, 3)
-            .map((x) => (
+      {related.length > 0 && (
+        <section className="related">
+          <p className="eyebrow">CONTINUE EXPLORING</p>
+          <h2>{brand ? "More from " + brand.name : "Related products"}</h2>
+          <p>Related by {brand ? "brand" : "category"} only.</p>
+          <div className="grid">
+            {related.map((x) => (
               <Card key={x.slug} product={x} />
             ))}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
     </main>
   );
 }

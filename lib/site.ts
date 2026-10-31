@@ -1,23 +1,37 @@
 import type { Metadata } from "next";
+import { contacts } from "../data/contacts";
 export const production = process.env.YAYBMT_PRODUCTION === "true";
 export const origin = "https://yaybmt.com";
 export function metadata(
   title: string,
   description: string,
   path: string,
+  indexable = true,
 ): Metadata {
+  const fullTitle = /yaybmt/i.test(title) ? title : `${title} | YAYBMT`;
   return {
-    title: `${title} | YAYBMT`,
+    title: fullTitle,
     description,
     alternates: { canonical: origin + path },
-    robots: { index: production, follow: production },
+    robots: { index: production && indexable, follow: production },
+    openGraph: {
+      title: fullTitle,
+      description,
+      url: origin + path,
+      type: "website",
+      siteName: "YAYBMT",
+    },
   };
 }
 export const whatsapp = (name = "the catalogue") =>
-  "https://wa.me/971567369803?text=" +
+  "https://wa.me/" +
+  contacts.whatsappNumber +
+  "?text=" +
   encodeURIComponent(
     "Hello YAYBMT, I would like to enquire about " + name + ".",
   );
 export const email = (name: string) =>
-  "mailto:sales@yaybmt.com?subject=" +
+  "mailto:" +
+  contacts.sales +
+  "?subject=" +
   encodeURIComponent("Product enquiry: " + name);

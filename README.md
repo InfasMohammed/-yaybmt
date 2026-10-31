@@ -1,48 +1,66 @@
-# YAYBMT — Next.js static catalogue
+# YAYBMT — static catalogue
 
-Review branch: Next.js + TypeScript, exported to `out/` for Firebase Hosting. No WordPress runtime, admin, database, Firestore, Authentication or Storage. Nothing has been deployed. Earlier WordPress work is preserved in Git history and `legacy/`; it is never copied into the export.
+Next.js + TypeScript, exported to `out/` for Firebase Hosting. The client-supplied SQL has been migrated into typed local files: **292 products, 9 brands, 41 product categories, 10 articles and all 8 source page routes**. SQL is migration input only. There is no WordPress runtime, admin dashboard, database, Authentication, Firestore or Firebase Storage.
 
-## Setup and review
+Work stays on `rebuild/nextjs-static-samples`. Nothing has been deployed and `main` is unchanged. Earlier implementation and deliverables are preserved in Git history and `legacy/`; they are excluded from the export.
 
-Node.js 22+ and npm:
+## Setup and commands
+
+Node.js 22.18+ (24 recommended), npm and Python 3 for the local preview/parser tests:
 
 ```sh
 npm ci
 npm run dev
-npm run typecheck
+npm run check
 npm run build
+npm run check:export
 npm run preview
+# In another terminal:
 npm run test:browser
 ```
 
-`npm run preview` serves the actual export at http://127.0.0.1:8080 with real 404 responses and the specific Marine Locks redirect. The browser script requires runtime-provided Playwright and Chromium. It does not contact external enquiry services or send messages.
+Browser checks use the pinned Playwright package. They use `/usr/bin/chromium` when available; otherwise install its matching browser with `npx playwright install chromium`. `YAYBMT_BROWSER_EXECUTABLE` can select an installed browser. Tests stay on localhost and do not send enquiries. The preview is http://127.0.0.1:8080 and serves the actual exported files with real 404s and the configured specific redirects.
 
-Review `/shop/` (catalogue), `/product/fc-110cs/` (detail), and `/` (homepage brand treatment). Product links resolve to generated static detail pages. The same catalogue sample is available at the established `/brand/daelim/` URL. Email actions use the visitor's email application; WhatsApp opens a product-specific draft. No delivery backend is claimed.
+`npm run check` validates TypeScript, content relationships, sourced specifications, HTML, filter behavior, pagination and the SQL reader. `npm run check:export` audits every exported route for metadata, canonical, H1, internal links, local assets, JSON-LD and sitemap rules. The GitHub workflow runs checks/build/browser validation; it has no deployment job or Firebase credentials.
 
-## Content editing
+## Browse the rebuild
 
-Edit `data/products.ts`, `data/brands.ts`, `data/categories.ts`, and `data/articles.ts` manually. Preserve slugs. Product records include their source and explicit empty specifications/images when evidence is absent. Put approved images in `public/images/`. Image frames use `object-fit: contain`; `images.unoptimized` is enabled, so no image server is required. Current placeholders are intentional, and are not product photographs.
+- `/shop/`, `/shop/page/2/` — catalogue with search, brand/category filters, removable chips, sorting and static pagination.
+- `/brands/`, `/categories/` — directories linking to original `/brand/.../` and nested `/product-category/.../` routes.
+- `/product/dc-102/` — real product with imported specifications, gallery placeholder and direct enquiries.
+- `/blog/` and original root article slugs — all ten imported articles.
+- `/about-us/`, `/contact-us/` — original company/contact routes using confirmed business details.
 
-The current data is a labelled subset extracted from `legacy/preview/catalogue.html`, not a restoration of the database. Category and brand lists preserve public reference labels and paths; category assignments are unverified and unused by the sample filter. No article text has been invented. See `docs/nextjs-migration.md` for missing inputs and URL work.
+Native page links work without JavaScript; search/filter enhancements keep selections in the URL. Filter and sort variants retain the canonical of their static archive document. Each static pagination page has its own canonical. Email links open an email application; WhatsApp opens an unsent product-specific draft.
+
+`/cart/`, `/checkout/` and `/my-account/` retain their URLs as **noindexed retirement information**, with enquiry links. They provide no commerce or account functionality and are excluded from the production sitemap.
+
+## Editing content and images
+
+See [content editing](docs/content-editing.md) and [migration report](docs/nextjs-migration.md). Future changes are manual repository edits, followed by checks, rebuild and approved redeployment. Keep original slugs and consult [the URL manifest](docs/url-manifest.json) before changing a route.
+
+Product photos have not been supplied. All 292 products retain their database attachment references and show labelled placeholders. No product photo, model, brand relationship or specification was guessed. Logos are the unchanged original assets. The existing illustrative hero is pre-encoded as a static WebP and preloaded; no image optimisation server is required.
 
 ## Firebase Hosting — only after approval
 
-Install Firebase CLI separately and use an approved project ID. Do not select a project implicitly.
+`firebase.json` serves **only `out/`**, with no SPA catch-all. Unknown paths return `404.html` with HTTP 404. Exact 301s include `/product-category/marine-locks/` → `/brand/marine-locks/` and the interim review utility aliases → original page routes.
+
+Install Firebase CLI separately and use the explicitly approved project:
 
 ```sh
-npm ci
-npm run build
+# Optional local Hosting emulator; no deployment:
 firebase emulators:start --only hosting --project YOUR_REVIEW_PROJECT_ID
-# Only after explicit deployment approval:
+# Only after deployment approval and all launch gates:
 firebase deploy --only hosting --project YOUR_APPROVED_PROJECT_ID
 ```
 
-`firebase.json` serves only `out/`, with no SPA catch-all. Unknown URLs return the exported `404.html` and HTTP 404. `/product-category/marine-locks/` redirects specifically to `/brand/marine-locks/`.
+Review builds have `noindex,nofollow` metadata and Firebase `X-Robots-Tag`, blocked robots rules and an empty sitemap. Production export is intentionally gated by `data/migration.ts` while media/content/SEO launch review remains open.
 
-Review is noindexed in page metadata, robots.txt, and Firebase's X-Robots-Tag. Review sitemap contains no URLs. Before an approved production release, complete the URL/content migration and remove the `X-Robots-Tag: noindex, nofollow` header from `firebase.json`, then build with:
+The approved production switch requires completing [SEO release gates](docs/seo-release.md), setting `migration.complete=true`, removing the review `X-Robots-Tag` header in `firebase.json`, then:
 
 ```sh
 YAYBMT_PRODUCTION=true npm run build
+YAYBMT_PRODUCTION=true npm run check:export
 ```
 
-This switches metadata and robots to indexable and generates the sitemap from actual exported routes, with `https://yaybmt.com` canonicals. Review both switches together; verify final headers, robots, sitemap and canonical tags before cutover. Do not publish this incomplete sample as the production catalogue.
+That generates production robots and a sitemap from real indexable routes, using `https://yaybmt.com` canonicals. Retired utility pages remain noindexed. Verify actual hosting responses before cutover; do not deploy the review export to production.

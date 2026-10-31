@@ -1,8 +1,10 @@
+import { sourcePages } from "../../data/source-pages";
 import CataloguePage from "../../components/CataloguePage";
 import { metadata as meta } from "../../lib/site";
+const source = sourcePages.find((p) => p.path === "/shop/")!;
 export const metadata = meta(
-  "DAELIM catalogue sample",
-  "Browse existing DAELIM product records and enquire by model.",
+  source.seo.title || "Product catalogue",
+  source.seo.description || "Browse the YAYBMT catalogue.",
   "/shop/",
 );
 export default CataloguePage;

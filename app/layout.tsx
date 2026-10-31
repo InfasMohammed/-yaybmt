@@ -1,9 +1,28 @@
 import "./globals.css";
+import { origin } from "../lib/site";
 import { whatsapp } from "../lib/site";
+import { contacts } from "../data/contacts";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "@id": origin + "/#organization",
+              name: contacts.company,
+              url: origin,
+              logo: origin + "/images/logo-header-original.jpg",
+              telephone: contacts.telephone,
+              email: contacts.sales,
+              sameAs: [contacts.instagram, contacts.facebook],
+              location: contacts.location,
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
         <a className="skip" href="#main">
           Skip to content
         </a>
@@ -17,9 +36,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </a>
           <nav aria-label="Main navigation">
             <a href="/shop/">Products</a>
-            <a href="/brand/daelim/">DAELIM</a>
-            <a href="/brand/marine-locks/">Marine locks</a>
-            <a href="/#contact">Contact</a>
+            <a href="/brands/">Brands</a>
+            <a href="/categories/">Ranges</a>
+            <a href="/about-us/">Company</a>
+            <a href="/contact-us/">Contact</a>
           </nav>
         </header>
         {children}
@@ -38,26 +58,30 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <div>
             <h2>Let’s talk about your project.</h2>
-            <a href="mailto:sales@yaybmt.com">sales@yaybmt.com</a>
-            <a href="mailto:info@yaybmt.com">info@yaybmt.com</a>
-            <a href="tel:+97142278616">+971 4 227 8616</a>
-            <a href="https://www.google.com/maps?cid=10643360148458649588">
-              Deira, Dubai +
-            </a>
+            <a href={"mailto:" + contacts.sales}>{contacts.sales}</a>
+            <a href={"mailto:" + contacts.info}>{contacts.info}</a>
+            <a href={contacts.telephoneHref}>{contacts.telephone}</a>
+            <a href={contacts.maps}>Deira, Dubai +</a>
           </div>
           <div className="social">
-            <a aria-label="Instagram" href="https://www.instagram.com/yaybmt/">
+            <a aria-label="Instagram" href={contacts.instagram}>
               <img src="/images/icons/instagram.svg" alt="" />
             </a>
-            <a
-              aria-label="Facebook"
-              href="https://www.facebook.com/people/Yusuf-Al-Yousfi-Building-Materials-Trading-LLC/61573646427608/"
-            >
+            <a aria-label="Facebook" href={contacts.facebook}>
               <img src="/images/icons/facebook.svg" alt="" />
             </a>
           </div>
+          <nav className="footer-navigation" aria-label="Footer navigation">
+            <a href="/shop/">Catalogue</a>
+            <a href="/brands/">Brands</a>
+            <a href="/categories/">Categories</a>
+            <a href="/brand/marine-locks/">Marine locks</a>
+            <a href="/about-us/">Company</a>
+            <a href="/blog/">Articles</a>
+            <a href="/contact-us/">Contact</a>
+          </nav>
           <p className="footer-note">
-            YAYBMT · Sample review edition · Not the complete catalogue
+            YAYBMT · Review edition · Original product images pending
           </p>
         </footer>
         <a

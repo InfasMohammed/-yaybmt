@@ -10,8 +10,48 @@
         "type": 301
       },
       {
+        "source": "/home",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/company",
+        "destination": "/about-us/",
+        "type": 301
+      },
+      {
+        "source": "/contact",
+        "destination": "/contact-us/",
+        "type": 301
+      },
+      {
+        "source": "/articles",
+        "destination": "/blog/",
+        "type": 301
+      },
+      {
         "source": "/product-category/marine-locks/",
         "destination": "/brand/marine-locks/",
+        "type": 301
+      },
+      {
+        "source": "/home/",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/company/",
+        "destination": "/about-us/",
+        "type": 301
+      },
+      {
+        "source": "/contact/",
+        "destination": "/contact-us/",
+        "type": 301
+      },
+      {
+        "source": "/articles/",
+        "destination": "/blog/",
         "type": 301
       }
     ],

@@ -1,0 +1,40 @@
+name: Static catalogue checks
+on:
+  pull_request:
+  push:
+    branches: ["rebuild/**"]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+      - run: npm run check:export
+      - run: npx playwright install --with-deps chromium
+      - name: Check static browser flows
+        run: |
+          npm run preview > /tmp/yaybmt-preview.log 2>&1 &
+          PREVIEW_PID=$!
+          trap 'kill "$PREVIEW_PID"' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8080/ > /dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: catalogue-screenshots
+          path: artifacts/nextjs/
+# This workflow has no deployment job and no Firebase credentials.

@@ -23,3 +23,8 @@ node_modules/
 out/
 work/
 *.tsbuildinfo
+
+# Private migration inputs never belong in Git.
+*.sql
+*.sql.gz
+private/

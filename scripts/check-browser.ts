@@ -1,0 +1,250 @@
+import { chromium } from "playwright";
+import assert from "node:assert/strict";
+import { existsSync, mkdirSync } from "node:fs";
+import { join } from "node:path";
+import { routes } from "../lib/routes";
+import { products } from "../data/products";
+import { articles } from "../data/articles";
+import { filterProducts, emptyFilters } from "../lib/catalogue";
+import redirects from "../data/redirects.json";
+const base = process.env.YAYBMT_TEST_URL || "http://127.0.0.1:8080";
+const output = process.env.YAYBMT_SCREENSHOTS || "artifacts/nextjs";
+mkdirSync(output, { recursive: true });
+const executable =
+  process.env.YAYBMT_BROWSER_EXECUTABLE ||
+  (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : undefined);
+async function main() {
+  const browser = await chromium.launch({
+    headless: true,
+    executablePath: executable,
+    args: ["--no-sandbox"],
+  });
+  try {
+    const context = await browser.newContext();
+    await context.route("**/*", (route) =>
+      new URL(route.request().url()).origin === base
+        ? route.continue()
+        : route.abort(),
+    );
+    const page = await context.newPage();
+    const errors: string[] = [];
+    page.on("pageerror", (e) => errors.push(e.message));
+    const representative = [
+      ["/", "home"],
+      ["/shop/", "catalogue"],
+      ["/product/fc-110cs/", "product"],
+      [articles[0].path, "article"],
+    ];
+    for (const width of [1440, 390, 320]) {
+      await page.setViewportSize({
+        width,
+        height: width === 1440 ? 1000 : 844,
+      });
+      for (const [path, name] of representative) {
+        const response = await page.goto(base + path);
+        assert.equal(response?.status(), 200);
+        await page.waitForLoadState("networkidle");
+        assert.equal(await page.locator("h1").count(), 1);
+        assert.ok(
+          await page.evaluate(
+            () => document.documentElement.scrollWidth <= innerWidth,
+          ),
+          "Overflow " + path + " at " + width,
+        );
+        assert.match(
+          (await page.locator("meta[name=robots]").getAttribute("content")) ||
+            "",
+          /noindex/,
+        );
+        assert.equal(
+          await page.locator("link[rel=canonical]").getAttribute("href"),
+          "https://yaybmt.com" + path,
+        );
+        assert.equal(await page.locator('header a[href*="wa.me"]').count(), 0);
+        if (width !== 320)
+          await page.screenshot({
+            path: join(
+              output,
+              name + "-" + (width === 1440 ? "desktop" : "mobile") + ".png",
+            ),
+            fullPage: true,
+          });
+      }
+    }
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    await page.goto(base + "/shop/");
+    await page.waitForLoadState("networkidle");
+    assert.equal(await page.locator(".card").count(), 12);
+    await page.getByRole("searchbox").fill("FC110");
+    assert.equal(await page.locator(".card").count(), 1);
+    assert.ok(page.url().includes("q=FC110"));
+    await page
+      .locator(".chips")
+      .getByRole("button", { name: /Clear search/ })
+      .click();
+    assert.equal(await page.locator(".card").count(), 12);
+    await page
+      .locator("aside")
+      .getByRole("checkbox", { name: /^DAELIM\b/ })
+      .check();
+    assert.match(
+      await page.locator(".result-bar").innerText(),
+      /21 imported products/,
+    );
+    await page.reload();
+    await page.waitForLoadState("networkidle");
+    assert.match(
+      await page.locator(".result-bar").innerText(),
+      /21 imported products/,
+    );
+    await page.getByRole("button", { name: /Remove brand filter/ }).click();
+    await page
+      .locator("aside summary")
+      .filter({ hasText: /^Categories$/ })
+      .click();
+    await page
+      .locator("aside")
+      .getByRole("checkbox", { name: /^Fasteners\b/ })
+      .check();
+    const fasteners = filterProducts(products, {
+      ...emptyFilters,
+      categories: ["fasteners"],
+    });
+    assert.match(
+      await page.locator(".result-bar").innerText(),
+      new RegExp(fasteners.length + " imported products"),
+    );
+    await page.getByRole("button", { name: /Remove category filter/ }).click();
+    const geometry = await page.locator(".card").evaluateAll((cards) =>
+      cards.slice(0, 3).map((c) => ({
+        bottom: c.getBoundingClientRect().bottom,
+        top: c.querySelector(".card-name")!.getBoundingClientRect().top,
+        frame: c.querySelector(".image-frame")!.getBoundingClientRect().height,
+      })),
+    );
+    assert.ok(
+      geometry.every(
+        (g) =>
+          Math.abs(g.bottom - geometry[0].bottom) < 2 &&
+          Math.abs(g.top - geometry[0].top) < 2 &&
+          Math.abs(g.frame - geometry[0].frame) < 2,
+      ),
+    );
+    await page
+      .getByRole("navigation", { name: "Catalogue pages" })
+      .getByRole("link", { name: "Next", exact: true })
+      .click();
+    assert.ok(page.url().endsWith("/shop/page/2/"));
+    assert.equal(
+      await page.locator("link[rel=canonical]").getAttribute("href"),
+      "https://yaybmt.com/shop/page/2/",
+    );
+    await page.getByRole("searchbox").fill("nonexistentcatalogueitem");
+    assert.equal(await page.locator(".card").count(), 0);
+    assert.ok(page.url().includes("/shop/page/2/?q="));
+    assert.equal(
+      await page.locator("link[rel=canonical]").getAttribute("href"),
+      "https://yaybmt.com/shop/page/2/",
+    );
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page
+      .locator(".chips")
+      .getByRole("button", { name: /Clear search/ })
+      .click();
+    await page.waitForURL(base + "/shop/");
+    await page.getByRole("button", { name: "Filters +" }).click();
+    assert.ok(await page.locator("dialog").isVisible());
+    await page
+      .locator("dialog")
+      .getByRole("checkbox", { name: /^DAELIM\b/ })
+      .check();
+    await page.keyboard.press("Escape");
+    assert.ok(!(await page.locator("dialog").isVisible()));
+    await page.goto(base + "/product/dc-102/");
+    assert.match(await page.locator("main").innerText(), /6 Litres/);
+    const email = await page
+      .locator("main")
+      .getByRole("link", { name: /Enquire by email/ })
+      .getAttribute("href");
+    assert.match(email || "", /^mailto:sales@yaybmt.com\?subject=/);
+    const wa = new URL(
+      (await page
+        .locator("main")
+        .getByRole("link", { name: /Enquire on WhatsApp/ })
+        .getAttribute("href"))!,
+    );
+    assert.equal(wa.pathname, "/971567369803");
+    assert.match(wa.searchParams.get("text") || "", /DC 102/);
+    const unbranded = products.find(
+      (p) => p.brand === null && p.model === null,
+    )!;
+    await page.goto(base + "/product/" + unbranded.slug + "/");
+    assert.ok(
+      (await page.locator("main").innerText()).includes(
+        "Not recorded in the source catalogue",
+      ),
+    );
+    for (let i = 0; i < routes.length; i += 10) {
+      await Promise.all(
+        routes.slice(i, i + 10).map(async (route) => {
+          const response = await context.request.get(base + route.path);
+          assert.equal(response.status(), 200, "HTTP route " + route.path);
+          await response.dispose();
+        }),
+      );
+    }
+    for (const redirect of redirects) {
+      const response = await context.request.get(base + redirect.source, {
+        maxRedirects: 0,
+      });
+      assert.equal(response.status(), 301);
+      assert.equal(response.headers().location, redirect.destination);
+      await response.dispose();
+    }
+    for (const path of [
+      "/genuine-missing-page/",
+      "/product/missing/",
+      "/brand/missing/",
+      "/shop/page/999/",
+    ]) {
+      const response = await context.request.get(base + path);
+      assert.equal(response.status(), 404, "Missing route must return 404");
+      await response.dispose();
+    }
+    const nojs = await browser.newContext({ javaScriptEnabled: false });
+    const plain = await nojs.newPage();
+    await plain.goto(base + "/brand/daelim/");
+    assert.equal(await plain.locator(".card").count(), 12);
+    await plain
+      .getByRole("navigation", { name: "Catalogue pages" })
+      .getByRole("link", { name: "Next", exact: true })
+      .click();
+    assert.equal(await plain.locator(".card").count(), 9);
+    await plain.locator(".card a").first().click();
+    assert.ok(
+      await plain.getByRole("link", { name: /Enquire by email/ }).isVisible(),
+    );
+    await nojs.close();
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.goto(base + "/shop/");
+    assert.equal(
+      await page
+        .locator(".card")
+        .first()
+        .evaluate((e) => getComputedStyle(e).animationName),
+      "none",
+    );
+    assert.deepEqual(errors, []);
+    console.log(
+      "PASS browser: " +
+        routes.length +
+        " HTTP routes; desktop/mobile layout; search; filters; bookmark restore; native pagination; sourced specifications; enquiries; 301/404; no-JS catalogue navigation; reduced motion.",
+    );
+  } finally {
+    await browser.close();
+  }
+}
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

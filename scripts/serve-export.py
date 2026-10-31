@@ -1,5 +1,6 @@
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+import json
 
 EXPORT = Path(__file__).resolve().parents[1] / 'out'
 
@@ -8,9 +9,12 @@ class Handler(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=str(EXPORT), **kwargs)
 
     def do_GET(self):
-        if self.path.split('?')[0].rstrip('/') == '/product-category/marine-locks':
+        pathname=self.path.split('?')[0].rstrip('/')+'/'
+        redirects=json.loads((EXPORT.parent/'data/redirects.json').read_text())
+        match=next((r for r in redirects if r['source']==pathname),None)
+        if match:
             self.send_response(301)
-            self.send_header('Location', '/brand/marine-locks/')
+            self.send_header('Location', match['destination'])
             self.end_headers()
             return
         super().do_GET()

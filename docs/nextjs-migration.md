@@ -1,23 +1,40 @@
-# Static rebuild migration status
+# Source migration status — 31 October 2026
 
-The previous documentation in this folder records historical WordPress work, not the current runtime. Root README is the current setup guide. Legacy source, preview and delivery archives are retained under `legacy/` solely for provenance. The Next build includes only app code and `public/` assets.
+The client supplied `softsql.zip` in this conversation. Its 22,214,970-byte SQL export was read locally without executing SQL or starting WordPress. The archive/raw SQL remain outside Git and the public export. Public output provenance and a SHA-256 checksum are recorded in `migration-report.json`.
 
-## Evidence and missing input
+## Reconciliation
 
-The private `/workspace/private/yaybmt-restore` directory is absent in this environment. No supplied SQL export or uploads library is available here. Git explicitly excludes those private inputs. Therefore the 292 products, 9 brands, 41 categories, 10 articles, 8 pages and 523 attachment records reported in the earlier restoration have NOT been fully migrated.
+| Source | Imported |
+| --- | ---: |
+| Published products | 292 |
+| Brands | 9 |
+| Product categories | 41 |
+| Articles | 10 |
+| Original page routes | 8 |
+| Attachment records identified | 523 |
+| Product image references retained | 292 |
 
-The catalogue sample uses the names, model references and product paths in the existing preview. It contains no inferred material, measurements, technical specifications, prices, stock, ratings or reviews. DAELIM association follows the source preview's archive. Some public preview records may themselves need verification against the export. All technical specifications remain explicitly unavailable. The product gallery intentionally contains a missing-photo placeholder because there are no genuine product photos in Git. Related items share a brand only.
+All original product slugs, brand/category paths, article permalinks and public source page routes are represented. The database's `/%postname%/` article permalink and `/product/` base were checked. Nested product category paths come from the original parent relationships. The encoded quote in one product slug is preserved and separately checked against the actual export.
 
-Required next inputs: original database export, wp-content/uploads, verified priority product specifications, and a complete historical URL manifest/crawl plus Search Console data. Import public fields only; never commit SQL, users, customers, credentials or plugins. Database is migration input only. Sanitise legacy HTML, strip shortcodes, validate links and copy approved media by attachment references. Preserve original slugs and Yoast metadata where supported. Reconcile counts and all URLs against the export before launch.
+The eight source pages comprise homepage, shop, blog, about, contact, cart, checkout and account. About/contact/blog use their original routes. The three commerce/account URLs serve noindexed information and enquiry links; there is no cart, checkout or authentication runtime. Empty source About/Contact page bodies were replaced with confirmed business/contact copy, not invented company history. Source SEO fields were retained.
 
-## URL handling
+The route manifest contains source-derived routes plus browse directories and real static archive pagination. It is a database-derived inventory, not a completed production/Search Console crawl; historical media, author, query and other plugin URLs still need the launch URL review.
 
-Existing known sample product routes `/product/<original-slug>/` and `/brand/daelim/` are generated. `/brand/marine-locks/` stays at its established address, with a clearly labelled migration holding page and functional enquiry. Its erroneous category route has the specific Firebase 301. No other missing URL is redirected to a homepage. The category reference file preserves nested paths but does not claim those archives are already implemented. Article bodies, page routes and remaining products await migration. Do not invent a redirect map without the missing manifest.
+## Content fidelity and gaps
 
-## Contacts
+- 91 products contain original specifications; 58 have an explicit stored model. These values are reproduced from the supplied source, not independently certified manufacturer data.
+- 224 products have no brand taxonomy assignment. No brand was inferred from their names or manufacturer text.
+- 201 products have no stored description/details. The current text extraction finds 203 products with fewer than 50 words across excerpt and body. These are content enrichment priorities, not grounds to delete established URLs or add filler.
+- All 292 product image files are missing. Their exact attachment references remain in local data. Product cards and galleries show labelled placeholders; no fabricated or substitute product photos are used.
+- Article headings, paragraphs, lists, tables and internal links are retained in safe HTML. Block comments, styles and runtime markup are removed. There are 32 source article illustration references awaiting actual files.
+- Five invalid Marine Locks links in article content were corrected. The exact old category route has a one-hop 301 to the original brand archive.
+- Two competitor destinations in the stainless-steel article have no verified equivalent in the supplied catalogue. Their anchor text is retained as plain text; those destinations are not promoted as links. The original destinations are recorded for editorial review, rather than guessed replacements.
+- Product prices, stock status, customer/order data, user accounts, reviews and plugin settings were excluded. No synthetic Offer, price-currency or AggregateRating markup is emitted.
 
-Confirmed Deira, Dubai; telephone +971 4 227 8616; WhatsApp +971 56 736 9803; sales@yaybmt.com; info@yaybmt.com. Instagram, Facebook and Google Maps links use the client-confirmed URLs. No enquiry messages are sent by tests.
+## Provenance and architecture
 
-## Review limitations
+The site now depends on `data/`, `app/`, `components/` and approved `public/images/` assets only. Original logos match the source files unchanged. The homepage hero is the pre-existing illustrative marine scene; its static WebP is 190,332 bytes versus the original 2,331,615-byte PNG. This is an asset-byte reduction, not a Core Web Vitals claim.
 
-This branch is a sample implementation only. Missing real technical specifications cannot be resolved by design or code. The original white logo is reused unchanged on the homepage and footer; the existing marine hero is documented as illustrative. Neither it nor placeholders represent product photography. No Firebase project has been linked, no deployment made, and main is untouched.
+The SQL reader/importer and optional image matcher are repository maintenance tools only. No PHP/MySQL/WordPress service is started or required. Earlier WordPress code, scripts, delivery ZIP and historical documentation are preserved under `legacy/` and in Git history; none enter `out/`.
+
+No production deployment, DNS change, Firebase link, Search Console submission or main-branch replacement has been made. Production release remains gated by `docs/seo-release.md`.

@@ -1,12 +1,22 @@
+import { sourcePages } from "../data/source-pages";
+import { brands } from "../data/brands";
+import { categories } from "../data/categories";
 import { metadata as meta } from "../lib/site";
+const source = sourcePages.find((p) => p.path === "/")!;
 export const metadata = meta(
-  "Building materials, connected",
-  "Building materials and marine fittings enquiries in Deira, Dubai.",
+  source.seo.title || "Building materials, connected",
+  source.seo.description || "Building materials enquiries in Deira, Dubai.",
   "/",
 );
 export default function Home() {
   return (
     <main id="main">
+      <link
+        rel="preload"
+        as="image"
+        href="/images/hero-marine.webp"
+        fetchPriority="high"
+      />
       <section className="hero">
         <div>
           <p className="eyebrow">DEIRA, DUBAI · YUSUF AL YOUSFI</p>
@@ -29,11 +39,46 @@ export default function Home() {
         <p className="eyebrow">A NEW WAY TO EXPLORE</p>
         <h2>Built around your next project.</h2>
         <p>
-          Review our new catalogue and product detail experience. This sample
-          uses existing public project records; the complete catalogue and
-          original photography are pending migration.
+          Browse the imported catalogue by brand, category or model. Contact our
+          team to confirm specifications and discuss your requirements. Original
+          product photography is pending.
         </p>
-        <a href="/brand/daelim/">Discover the DAELIM sample +</a>
+        <a href="/brand/daelim/">Discover the DAELIM range +</a>
+      </section>
+      <section className="home-section">
+        <p className="eyebrow">PRODUCT RANGES</p>
+        <h2>Explore by category.</h2>
+        <div className="directory">
+          {categories
+            .filter((c) => !c.slug.includes("/") && c.slug !== "uncategorized")
+            .map((c) => (
+              <a href={"/product-category/" + c.slug + "/"} key={c.slug}>
+                {c.name}
+                <span aria-hidden="true">+</span>
+              </a>
+            ))}
+        </div>
+      </section>
+      <section className="home-section">
+        <p className="eyebrow">BRANDS</p>
+        <h2>Find your brand.</h2>
+        <div className="directory">
+          {brands.map((b) => (
+            <a href={"/brand/" + b.slug + "/"} key={b.slug}>
+              {b.name}
+              <span aria-hidden="true">+</span>
+            </a>
+          ))}
+        </div>
+      </section>
+      <section className="intro" id="company">
+        <p className="eyebrow">YUSUF AL YOUSFI</p>
+        <h2>Building materials in Deira, Dubai.</h2>
+        <p>
+          Share your product list, model numbers and project requirements with
+          our team.
+        </p>
+        <a href="/about-us/">Our company +</a>
       </section>
     </main>
   );
