@@ -4,19 +4,21 @@ Story verified: visitor opens an exported catalogue page, searches/filters publi
 
 ## Results
 
-| Check | Result |
-| --- | --- |
-| Source reconciliation | 292 products, 9 brands, 41 categories, 10 articles, 8 source page routes |
-| TypeScript and content integrity | Passed |
-| Catalogue and sitemap regression tests | 5 passed |
-| Offline SQL parser/privacy tests | 3 passed |
-| Next.js static build | Passed |
-| Export SEO/internal-link audit | 406 pages passed |
-| Unique titles/descriptions | 406 / 406 |
-| Eligible production sitemap routes | 403; excludes three retired utility pages |
-| Actual local HTTP responses | All 406 public exported routes returned 200 |
-| Specific redirects / unknown URLs | 301 destinations and genuine 404s passed |
-| Production dependency audit | Zero known vulnerabilities at verification time |
+| Check                                                        | Result                                                                   |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| Source reconciliation                                        | 292 products, 9 brands, 41 categories, 10 articles, 8 source page routes |
+| TypeScript and content integrity                             | Passed                                                                   |
+| Catalogue, sitemap and partial-image-import regression tests | 8 passed                                                                 |
+| Primary product media                                        | 292 decoded; dimensions, SQL associations and original SHA-256 verified  |
+| Legacy image redirects                                       | 292 specific 301 rules passed                                            |
+| Offline SQL parser/privacy tests                             | 3 passed                                                                 |
+| Next.js static build                                         | Passed                                                                   |
+| Export SEO/internal-link audit                               | 406 pages passed                                                         |
+| Unique titles/descriptions                                   | 406 / 406                                                                |
+| Eligible production sitemap routes                           | 403; excludes three retired utility pages                                |
+| Actual local HTTP responses                                  | All 406 public exported routes returned 200                              |
+| Specific redirects / unknown URLs                            | 301 destinations and genuine 404s passed                                 |
+| Production dependency audit                                  | Zero known vulnerabilities at verification time                          |
 
 The staging export remains noindexed, with blocked robots rules and an empty sitemap. The production sitemap generator is tested independently. An attempted indexable build was correctly blocked by the incomplete launch-review flag; no production release was made.
 
@@ -28,7 +30,7 @@ Product-specific email/WhatsApp destinations and exact confirmed numbers were ch
 
 A separate JavaScript-disabled context followed DAELIM's native page links and opened a real product enquiry. Reduced motion disabled card animations. No uncaught browser errors remained. Fresh full-page desktop/mobile homepage, catalogue, product and article screenshots are in `artifacts/nextjs/`.
 
-Visual inspection confirmed the original white logo, charcoal/off-white/copper treatment and labelled missing-image frames. The hero is the existing illustrative scene, pre-encoded to 190,332-byte WebP from a 2,331,615-byte PNG. Both original logo hashes match the retained source assets.
+Visual inspection confirmed the original white logo, charcoal/off-white/copper treatment and genuine product images contained within equal frames. The hero is the existing illustrative scene, pre-encoded to 190,332-byte WebP from a 2,331,615-byte PNG. Both original logo hashes match the retained source assets.
 
 ## Issues caught and corrected
 
@@ -42,4 +44,4 @@ Visual inspection confirmed the original white logo, charcoal/off-white/copper t
 
 The HTTP redirect/404 checks used the local static preview; Firebase configuration was inspected, but no Hosting emulator, deployed headers, domain redirects, TLS, production crawl, Search Console, Google rich-results tool, field Core Web Vitals or full WCAG audit is claimed. GitHub CI was added; the local results above do not claim a completed remote workflow run.
 
-All 292 product photos and 32 article illustrations remain unavailable. 201 product bodies are empty in the source and need approved enrichment; imported specifications are reproduced source values, not independent manufacturer certification. The two removed competitor links remain editorial review items. Raw SQL and the uploaded archive are not committed or served. Nothing was deployed and main is unchanged.
+All 292 primary product images are restored locally. Their original SHA-256 hashes match read-only checks on the connected source. Rendering variants reduce selected-image bytes from 21,529,572 to 7,481,334. Of 32 older inline product-body references, 31 files remain unavailable and one synthetic placeholder was excluded; these were previously incorrectly labelled article illustrations. 201 product bodies are empty in the source and need approved enrichment; imported specifications are reproduced source values, not independent manufacturer certification. The two removed competitor links remain editorial review items. Raw SQL and the uploaded archive are not committed or served. This image update has not been merged into main. No Firebase deployment or production promotion was performed. A branch push may trigger existing Vercel preview automation.

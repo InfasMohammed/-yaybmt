@@ -76,7 +76,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 108",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/DC-102.jpg.webp",
+        originalSrc: "/images/products/2025/04/DC-102.jpg",
+        alt: "DC 102",
+        source: "supplied SQL attachment 109",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 109,
@@ -155,7 +164,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 131",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/DC-701.png.webp",
+        originalSrc: "/images/products/2025/04/DC-701.png",
+        alt: "DC701 Manual Wall‑Hung Toilet System",
+        source: "supplied SQL attachment 110",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 110,
@@ -245,7 +263,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 132",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/DL-403SS.png.webp",
+        originalSrc: "/images/products/2025/04/DL-403SS.png",
+        alt: "DL403SS Wall-Hung Wash Basin with Semi-Pedestal",
+        source: "supplied SQL attachment 111",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 111,
@@ -330,7 +357,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 134",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/DL-521.png.webp",
+        originalSrc: "/images/products/2025/04/DL-521.png",
+        alt: "DL521 Wall‑Hung Wash Basin",
+        source: "supplied SQL attachment 112",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 112,
@@ -416,7 +452,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 135",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FA-6010SS.jpg.webp",
+        originalSrc: "/images/products/2025/04/FA-6010SS.jpg",
+        alt: "FA 6010SS Stainless Steel Toilet Holder",
+        source: "supplied SQL attachment 113",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 113,
@@ -506,7 +551,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 136",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FB-2060NC.jpg.webp",
+        originalSrc: "/images/products/2025/04/FB-2060NC.jpg",
+        alt: "FB2060NC Thermostatic Shower Mixer",
+        source: "supplied SQL attachment 114",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 114,
@@ -601,7 +655,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 137",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FB-2060TKR.jpg.webp",
+        originalSrc: "/images/products/2025/04/FB-2060TKR.jpg",
+        alt: "FB2060TKR Thermostatic Mixer",
+        source: "supplied SQL attachment 115",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 115,
@@ -693,7 +756,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 138",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/KL-200.jpg.webp",
+        originalSrc: "/images/products/2025/04/KL-200.jpg",
+        alt: "KL-200 Commercial Mortise Hook Lock",
+        source: "supplied SQL attachment 139",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 139,
@@ -778,7 +850,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 148",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/KR-60-SS.jpg.webp",
+        originalSrc: "/images/products/2025/04/KR-60-SS.jpg",
+        alt: "KR-60SS Cylindrical Lock",
+        source: "supplied SQL attachment 140",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 140,
@@ -843,7 +924,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 149",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/L-1000-SC.jpg.webp",
+        originalSrc: "/images/products/2025/04/L-1000-SC.jpg",
+        alt: "KOPAT L-1000SC/L-1100GRSC Lever Handles",
+        source: "supplied SQL attachment 141",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 141,
@@ -867,7 +957,7 @@ export const products: Product[] = [
       "The KOPAT S-1100PC(LH) Mortise Lever Lock is designed for reliability and frequent use in hospital and marine environments. Its left-hand configuration and durable construction make it ideal for interior doors requiring secure, smooth operation.",
     ],
     bodyHtml:
-      "<strong>Specifications:</strong>\n<p><strong>Manufacturer:</strong> KOPAT</p>\n<p><strong>Model Number:</strong> S-1100PC(LH)</p>\n<p><strong>Product Type:</strong> Mortise Lever Lock</p>\n<p><strong>Transaction Number / SKU:</strong> 02222</p>\n<p><strong>Orientation:</strong> Left-Hand (LH)</p>\n<p><strong>Function:</strong> Lever-operated mortise lock for controlled access</p>\n<p><strong>Application: </strong>Hospital doors, Marine and vessel doors, Commercial or institutional interior spaces</p>\n<p><p>Original illustration awaiting image files.</p></p>",
+      "<strong>Specifications:</strong>\n<p><strong>Manufacturer:</strong> KOPAT</p>\n<p><strong>Model Number:</strong> S-1100PC(LH)</p>\n<p><strong>Product Type:</strong> Mortise Lever Lock</p>\n<p><strong>Transaction Number / SKU:</strong> 02222</p>\n<p><strong>Orientation:</strong> Left-Hand (LH)</p>\n<p><strong>Function:</strong> Lever-operated mortise lock for controlled access</p>\n<p><strong>Application: </strong>Hospital doors, Marine and vessel doors, Commercial or institutional interior spaces</p>\n<p><p>Additional source illustration is not available in this review.</p></p>",
     specifications: [
       {
         label: "Manufacturer",
@@ -908,7 +998,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 150",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/S-1100PC.jpg.webp",
+        originalSrc: "/images/products/2025/04/S-1100PC.jpg",
+        alt: "S-1100PC(LH) Mortise Lever Lock",
+        source: "supplied SQL attachment 142",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 142,
@@ -983,7 +1082,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 152",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/S-5100PC.jpg.webp",
+        originalSrc: "/images/products/2025/04/S-5100PC.jpg",
+        alt: "S-5100PC(LH) Mortise Lever Door Lock",
+        source: "supplied SQL attachment 143",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 143,
@@ -1007,7 +1115,7 @@ export const products: Product[] = [
       "The KOPAT S-5103PC Mortise Passage Lock is designed for high-traffic areas on hospital ships and similar environments where keyless, free-access operation is required. Made domestically, it ensures reliable, maintenance-free performance for internal passage doors.",
     ],
     bodyHtml:
-      "<p><strong>Specifications:</strong></p>\n<p><strong>Manufacturer:</strong> KOPAT</p>\n<p><strong>Model:</strong> S-5103PC</p>\n<p><strong>Origin:</strong> Domestic</p>\n<p><strong>Type:</strong> Mortise Passage Lock (non-locking)</p>\n<p><strong>Function:</strong> Passage function – no keys; allows free movement through doors</p>\n<strong>Operation:</strong> Non-locking lever handle on both sides\n<p><strong>Cycle Test:</strong> Suitable for high-frequency use in healthcare and marine settings</p>\n<p><strong>Application: </strong>Hospital ship passage doors, General hospital corridors, Marine vessel interiors where no key access is required</p>\n<p><p>Original illustration awaiting image files.</p></p>\n<p></p>",
+      "<p><strong>Specifications:</strong></p>\n<p><strong>Manufacturer:</strong> KOPAT</p>\n<p><strong>Model:</strong> S-5103PC</p>\n<p><strong>Origin:</strong> Domestic</p>\n<p><strong>Type:</strong> Mortise Passage Lock (non-locking)</p>\n<p><strong>Function:</strong> Passage function – no keys; allows free movement through doors</p>\n<strong>Operation:</strong> Non-locking lever handle on both sides\n<p><strong>Cycle Test:</strong> Suitable for high-frequency use in healthcare and marine settings</p>\n<p><strong>Application: </strong>Hospital ship passage doors, General hospital corridors, Marine vessel interiors where no key access is required</p>\n<p><p>Additional source illustration is not available in this review.</p></p>\n<p></p>",
     specifications: [
       {
         label: "Manufacturer",
@@ -1054,7 +1162,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 153",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/S-5103PC.jpg.webp",
+        originalSrc: "/images/products/2025/04/S-5103PC.jpg",
+        alt: "S-5103PC Mortise Passage Lock",
+        source: "supplied SQL attachment 144",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 144,
@@ -1120,7 +1237,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 154",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/S-5106PC.jpg.webp",
+        originalSrc: "/images/products/2025/04/S-5106PC.jpg",
+        alt: "KOPAT S-5106PC Mortise Lever Lock",
+        source: "supplied SQL attachment 145",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 145,
@@ -1145,7 +1271,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 155",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/SL-200.jpg.webp",
+        originalSrc: "/images/products/2025/04/SL-200.jpg",
+        alt: "SL 200",
+        source: "supplied SQL attachment 146",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 146,
@@ -1165,7 +1300,7 @@ export const products: Product[] = [
       "The KOPAT SW 200 Dead Lock is a high-security locking solution designed for marine and industrial environments. Part of the SW 200 series, it features a master key and one-key-multiple-lock system, ensuring both convenience and control in secure access management.",
     ],
     bodyHtml:
-      "<p><strong>Specifications:</strong></p>\n<p><strong>Brand:</strong> KOPAT</p>\n<p><strong>Model:</strong> SW 200</p>\n<p><strong>Series:</strong> Dead Lock</p>\n<p><strong>Type:</strong> Cylinder Dead Lock</p>\n<p><strong>Cylinder Type:</strong> Compatible with master key systems</p>\n<p><strong>Keying System:</strong></p>\n\n<ul>\n \t<li>One key multiple lock system</li>\n \t<li>Master key system</li>\n</ul>\n<p><strong>SKU:</strong> 86965</p>\n<p><strong>Application:</strong></p>\n\n<ul>\n \t<li>Marine doors</li>\n \t<li>Industrial enclosures</li>\n \t<li>Areas requiring access control and key management</li>\n</ul>\n<p>Original illustration awaiting image files.</p>\n<ul>\n \t<li>\n</ul>",
+      "<p><strong>Specifications:</strong></p>\n<p><strong>Brand:</strong> KOPAT</p>\n<p><strong>Model:</strong> SW 200</p>\n<p><strong>Series:</strong> Dead Lock</p>\n<p><strong>Type:</strong> Cylinder Dead Lock</p>\n<p><strong>Cylinder Type:</strong> Compatible with master key systems</p>\n<p><strong>Keying System:</strong></p>\n\n<ul>\n \t<li>One key multiple lock system</li>\n \t<li>Master key system</li>\n</ul>\n<p><strong>SKU:</strong> 86965</p>\n<p><strong>Application:</strong></p>\n\n<ul>\n \t<li>Marine doors</li>\n \t<li>Industrial enclosures</li>\n \t<li>Areas requiring access control and key management</li>\n</ul>\n<p>Additional source illustration is not available in this review.</p>\n<ul>\n \t<li>\n</ul>",
     specifications: [
       {
         label: "Brand",
@@ -1200,7 +1335,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 157",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/SW-200.jpg.webp",
+        originalSrc: "/images/products/2025/04/SW-200.jpg",
+        alt: "KOPAT SW 200 Dead Lock",
+        source: "supplied SQL attachment 147",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 147,
@@ -1280,7 +1424,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 160",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FB-3060ANC.jpg.webp",
+        originalSrc: "/images/products/2025/04/FB-3060ANC.jpg",
+        alt: "FB3060ANC Thermostatic Shower Faucet",
+        source: "supplied SQL attachment 116",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 116,
@@ -1359,7 +1512,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 161",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FC-104D.jpg.webp",
+        originalSrc: "/images/products/2025/04/FC-104D.jpg",
+        alt: "FC104D Manual Toilet Flush Valve",
+        source: "supplied SQL attachment 117",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 117,
@@ -1438,7 +1600,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 162",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FC-106CS.jpg.webp",
+        originalSrc: "/images/products/2025/04/FC-106CS.jpg",
+        alt: "FC106CS Dual-Flush Toilet Valve",
+        source: "supplied SQL attachment 118",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 118,
@@ -1493,7 +1664,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 163",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FC-110CS.jpg.webp",
+        originalSrc: "/images/products/2025/04/FC-110CS.jpg",
+        alt: "FC110CS Brass Urinal Flush Valve",
+        source: "supplied SQL attachment 119",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 119,
@@ -1587,7 +1767,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 164",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FL-122.jpg.webp",
+        originalSrc: "/images/products/2025/04/FL-122.jpg",
+        alt: "FL122 Elite Collection Bathroom Faucet",
+        source: "supplied SQL attachment 120",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 120,
@@ -1641,7 +1830,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 165",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FL-218N.png.webp",
+        originalSrc: "/images/products/2025/04/FL-218N.png",
+        alt: "FL 218N Heavy-Duty Brass P-Trap Nuts",
+        source: "supplied SQL attachment 121",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 121,
@@ -1700,7 +1898,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 166",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FL-222N.png.webp",
+        originalSrc: "/images/products/2025/04/FL-222N.png",
+        alt: "FL 222N Stainless Steel Bathroom Accessory",
+        source: "supplied SQL attachment 122",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 122,
@@ -1769,7 +1976,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 167",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FL-247.png.webp",
+        originalSrc: "/images/products/2025/04/FL-247.png",
+        alt: "FL 247 Waste Vent",
+        source: "supplied SQL attachment 123",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 123,
@@ -1848,7 +2064,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 168",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FL-0312C.jpg.webp",
+        originalSrc: "/images/products/2025/04/FL-0312C.jpg",
+        alt: "FL 0312C Well Bloom Basin Faucet",
+        source: "supplied SQL attachment 124",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 124,
@@ -1872,7 +2097,7 @@ export const products: Product[] = [
       "FL 930C Chrome Faucet – Premium washbasin tap designed for smooth water flow and modern aesthetics, perfect for bathroom and sink installations.",
     ],
     bodyHtml:
-      "<strong>Specifications:</strong>\n<p><strong>Model:</strong> FL 930C</p>\n<p><strong>Type:</strong> Washbasin Faucet</p>\n<p><strong>Color:</strong> Chrome</p>\n<p><strong>Material:</strong> Durable brass body with high-quality chrome plating</p>\n<p><strong>Application:</strong> Ideal for washbasins and bathroom sinks</p>\n<p><strong>Finish:</strong> Polished chrome for a sleek, rust-resistant surface</p>\n<p><strong>Mounting Type:</strong> Deck-mounted</p>\n<p><strong>Operation:</strong> Single-handle design for precise water flow and temperature control</p>\n<p><strong>Features:</strong> Water-saving aerator, smooth cartridge mechanism</p>\n<p><strong>Usage:</strong> Suitable for residential bathrooms, hotels, and commercial restrooms</p>\n<p><p>Original illustration awaiting image files.</p> <p>Original illustration awaiting image files.</p></p>",
+      "<strong>Specifications:</strong>\n<p><strong>Model:</strong> FL 930C</p>\n<p><strong>Type:</strong> Washbasin Faucet</p>\n<p><strong>Color:</strong> Chrome</p>\n<p><strong>Material:</strong> Durable brass body with high-quality chrome plating</p>\n<p><strong>Application:</strong> Ideal for washbasins and bathroom sinks</p>\n<p><strong>Finish:</strong> Polished chrome for a sleek, rust-resistant surface</p>\n<p><strong>Mounting Type:</strong> Deck-mounted</p>\n<p><strong>Operation:</strong> Single-handle design for precise water flow and temperature control</p>\n<p><strong>Features:</strong> Water-saving aerator, smooth cartridge mechanism</p>\n<p><strong>Usage:</strong> Suitable for residential bathrooms, hotels, and commercial restrooms</p>\n<p><p>Additional source illustration is not available in this review.</p> <p>Additional source illustration is not available in this review.</p></p>",
     specifications: [
       {
         label: "Model",
@@ -1929,7 +2154,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 169",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FL-930C.jpg.webp",
+        originalSrc: "/images/products/2025/04/FL-930C.jpg",
+        alt: "FL 930C Chrome Faucet",
+        source: "supplied SQL attachment 125",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 125,
@@ -2003,7 +2237,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 170",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/FL-3200C.png.webp",
+        originalSrc: "/images/products/2025/04/FL-3200C.png",
+        alt: "FL 3200C Chrome Wash Tap",
+        source: "supplied SQL attachment 126",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 126,
@@ -2082,7 +2325,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 172",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/PF-008NF.jpg.webp",
+        originalSrc: "/images/products/2025/04/PF-008NF.jpg",
+        alt: "PF 008NF Chrome Massage Shower Head",
+        source: "supplied SQL attachment 127",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 127,
@@ -2167,7 +2419,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 173",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/PF-038.jpg.webp",
+        originalSrc: "/images/products/2025/04/PF-038.jpg",
+        alt: "PF 038 Daelim Dobidos Shower Head",
+        source: "supplied SQL attachment 128",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 128,
@@ -2246,7 +2507,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 174",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/PF-075C.jpg.webp",
+        originalSrc: "/images/products/2025/04/PF-075C.jpg",
+        alt: "PF 075C Contour Maxi Shower Head",
+        source: "supplied SQL attachment 129",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 129,
@@ -2270,7 +2540,7 @@ export const products: Product[] = [
       "The COSMO CD-5600 Cylinder Mortice Lock is a durable marine-grade lock designed for interior and cabin doors. Featuring a 6-pin tumbler and a 54.5 mm backset, it ensures secure and smooth locking for doors with 35–45 mm thickness.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n<strong>Brand:</strong> COSMO\n\n<strong>Model:</strong> CD-5600\n\n<strong>Type:</strong> Marine Lock\n\n<strong>Function:</strong> Cylinder Mortice Lock and Cabin Lock\n\n<strong>Cylinder:</strong> 6-pin tumbler\n\n<strong>Backset:</strong> 54.5 mm\n\n<strong>Suitable Door Thickness:</strong> 35–45 mm\n\n<strong>Application:</strong> Marine interior doors and cabin doors\n\n\n<p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n<strong>Brand:</strong> COSMO\n\n<strong>Model:</strong> CD-5600\n\n<strong>Type:</strong> Marine Lock\n\n<strong>Function:</strong> Cylinder Mortice Lock and Cabin Lock\n\n<strong>Cylinder:</strong> 6-pin tumbler\n\n<strong>Backset:</strong> 54.5 mm\n\n<strong>Suitable Door Thickness:</strong> 35–45 mm\n\n<strong>Application:</strong> Marine interior doors and cabin doors\n\n\n<p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "display",
@@ -2400,7 +2670,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 182",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/5600.jpg.webp",
+        originalSrc: "/images/products/2025/04/5600.jpg",
+        alt: "CD-5600 Cylinder Mortice Lock",
+        source: "supplied SQL attachment 183",
+        width: 164,
+        height: 233,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 183,
@@ -2479,7 +2758,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 186",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/RCF100.png.webp",
+        originalSrc: "/images/products/2025/04/RCF100.png",
+        alt: "RCF100 Flush Valve",
+        source: "supplied SQL attachment 187",
+        width: 290,
+        height: 290,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 187,
@@ -2503,7 +2791,7 @@ export const products: Product[] = [
       "The RCP200 Toilet Seat by Royal Toto offers a sleek, comfortable, and durable design, ideal for modern bathrooms. Made domestically with quality materials, it ensures long-lasting performance and an enhanced hygiene experience.",
     ],
     bodyHtml:
-      "<strong>Specifications:</strong>\n<p><strong>Product Name:</strong> RCP200 (Toilet Seat)</p>\n<p><strong>Brand:</strong> Royal Toto / Royal &amp; Company</p>\n<p><strong>Model:</strong> RCP200A</p>\n<p><strong>Manufacturer:</strong> Self-made</p>\n<p><strong>Origin:</strong> Domestic</p>\n<strong>Type:</strong> Standard toilet seat\n<p><strong>Mounting:</strong> Top-fix installation</p>\n<p><strong>Features:</strong> Smooth finish, ergonomic shape, easy to clean</p>\n<p><strong>Application:</strong> Residential and commercial toilets</p>\n<p><p>Original illustration awaiting image files.</p> <p>Original illustration awaiting image files.</p></p>",
+      "<strong>Specifications:</strong>\n<p><strong>Product Name:</strong> RCP200 (Toilet Seat)</p>\n<p><strong>Brand:</strong> Royal Toto / Royal &amp; Company</p>\n<p><strong>Model:</strong> RCP200A</p>\n<p><strong>Manufacturer:</strong> Self-made</p>\n<p><strong>Origin:</strong> Domestic</p>\n<strong>Type:</strong> Standard toilet seat\n<p><strong>Mounting:</strong> Top-fix installation</p>\n<p><strong>Features:</strong> Smooth finish, ergonomic shape, easy to clean</p>\n<p><strong>Application:</strong> Residential and commercial toilets</p>\n<p><p>Additional source illustration is not available in this review.</p> <p>Additional source illustration is not available in this review.</p></p>",
     specifications: [
       {
         label: "Product Name",
@@ -2553,7 +2841,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 194",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/RCP200A.png.webp",
+        originalSrc: "/images/products/2025/04/RCP200A.png",
+        alt: "RCP200A Toilet Seat",
+        source: "supplied SQL attachment 188",
+        width: 290,
+        height: 290,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 188,
@@ -2648,7 +2945,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 195",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/RFV110AB2.png.webp",
+        originalSrc: "/images/products/2025/04/RFV110AB2.png",
+        alt: "RFV110AB2 Long Body Tap / Angle Valve",
+        source: "supplied SQL attachment 189",
+        width: 600,
+        height: 600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 189,
@@ -2718,7 +3024,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 196",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/RLP250A.png.webp",
+        originalSrc: "/images/products/2025/04/RLP250A.png",
+        alt: "RLP250A Royal Washbasin Attached Pop-Up",
+        source: "supplied SQL attachment 190",
+        width: 600,
+        height: 600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 190,
@@ -2742,7 +3057,7 @@ export const products: Product[] = [
       "The Royal RLP300-A is a wall-mounted basin drain pipe (P-Trap) designed for efficient wastewater drainage in residential and commercial washbasins. Manufactured domestically by Royal & Company, it is compatible with Royal Toto fixtures and ensures long-lasting, leak-resistant performance.",
     ],
     bodyHtml:
-      "<strong>Specifications:</strong>\n<p><strong>Product Name:</strong> Royal Basin Attached Wall Drain Pipe RLP300-A (Washbasin P-Trap)</p>\n<p><strong>Model:</strong> RLP300-A</p>\n<p><strong>Manufacturer:</strong> Royal &amp; Company</p>\n<p><strong>Origin:</strong> Domestic</p>\n<p><strong>Type:</strong> Washbasin P-Trap / Wall-mounted drain pipe</p>\n<p><strong>Compatibility:</strong> Suitable for Royal Toto and Royal &amp; Company washbasins</p>\n<p><strong>Application:</strong> Residential and commercial bathrooms</p>\n<p><p>Original illustration awaiting image files.</p></p>",
+      "<strong>Specifications:</strong>\n<p><strong>Product Name:</strong> Royal Basin Attached Wall Drain Pipe RLP300-A (Washbasin P-Trap)</p>\n<p><strong>Model:</strong> RLP300-A</p>\n<p><strong>Manufacturer:</strong> Royal &amp; Company</p>\n<p><strong>Origin:</strong> Domestic</p>\n<p><strong>Type:</strong> Washbasin P-Trap / Wall-mounted drain pipe</p>\n<p><strong>Compatibility:</strong> Suitable for Royal Toto and Royal &amp; Company washbasins</p>\n<p><strong>Application:</strong> Residential and commercial bathrooms</p>\n<p><p>Additional source illustration is not available in this review.</p></p>",
     specifications: [
       {
         label: "Product Name",
@@ -2783,7 +3098,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 197",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/RLP300.png.webp",
+        originalSrc: "/images/products/2025/04/RLP300.png",
+        alt: "RLP300-A Washbasin P-Trap",
+        source: "supplied SQL attachment 191",
+        width: 290,
+        height: 290,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 191,
@@ -2872,7 +3196,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 198",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/RWC1610B.png.webp",
+        originalSrc: "/images/products/2025/04/RWC1610B.png",
+        alt: "RWC1610B Western-Style Marine Toilet",
+        source: "supplied SQL attachment 192",
+        width: 600,
+        height: 600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 192,
@@ -2962,7 +3295,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 199",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/RWL220.png.webp",
+        originalSrc: "/images/products/2025/04/RWL220.png",
+        alt: "RWL220 Wall-Hung Washbasin",
+        source: "supplied SQL attachment 193",
+        width: 600,
+        height: 600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 193,
@@ -2990,7 +3332,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 210",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Ball-Valves.webp",
+        originalSrc: "/images/products/2025/04/Ball-Valves.webp",
+        alt: "Ball Valves",
+        source: "supplied SQL attachment 203",
+        width: 400,
+        height: 377,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 203,
@@ -3018,7 +3369,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 211",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Butterfly-Valves.webp",
+        originalSrc: "/images/products/2025/04/Butterfly-Valves.webp",
+        alt: "Butterfly Valves",
+        source: "supplied SQL attachment 204",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 204,
@@ -3043,7 +3403,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 212",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Check-Valves.webp",
+        originalSrc: "/images/products/2025/04/Check-Valves.webp",
+        alt: "Check Valves",
+        source: "supplied SQL attachment 205",
+        width: 936,
+        height: 1000,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 205,
@@ -3067,7 +3436,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 213",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Gate-Valves.webp",
+        originalSrc: "/images/products/2025/04/Gate-Valves.webp",
+        alt: "Gate Valves",
+        source: "supplied SQL attachment 206",
+        width: 574,
+        height: 1000,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 206,
@@ -3091,7 +3469,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 214",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Globe-Valves.webp",
+        originalSrc: "/images/products/2025/04/Globe-Valves.webp",
+        alt: "Globe Valves",
+        source: "supplied SQL attachment 207",
+        width: 400,
+        height: 650,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 207,
@@ -3115,7 +3502,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 215",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Pressure-Relief-Valves.webp",
+        originalSrc: "/images/products/2025/04/Pressure-Relief-Valves.webp",
+        alt: "Pressure Relief Valves",
+        source: "supplied SQL attachment 208",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 208,
@@ -3136,7 +3532,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 218",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Blind-Flanges.webp",
+        originalSrc: "/images/products/2025/04/Blind-Flanges.webp",
+        alt: "Blind Flanges",
+        source: "supplied SQL attachment 223",
+        width: 900,
+        height: 900,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 223,
@@ -3161,7 +3566,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 224",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Lap-Joint-Flanges.webp",
+        originalSrc: "/images/products/2025/04/Lap-Joint-Flanges.webp",
+        alt: "Lap Joint Flanges",
+        source: "supplied SQL attachment 219",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 219,
@@ -3182,7 +3596,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 225",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Raised-Face-Flanges.webp",
+        originalSrc: "/images/products/2025/04/Raised-Face-Flanges.webp",
+        alt: "Raised Face Flanges",
+        source: "supplied SQL attachment 220",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 220,
@@ -3203,7 +3626,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 226",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/ss-flanges-500x500-2.webp",
+        originalSrc: "/images/products/2025/04/ss-flanges-500x500-2.webp",
+        alt: "Slip-On Flanges",
+        source: "supplied SQL attachment 221",
+        width: 750,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 221,
@@ -3224,7 +3656,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 230",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Anchor-Chain-Assemblies.webp",
+        originalSrc: "/images/products/2025/04/Anchor-Chain-Assemblies.webp",
+        alt: "Anchor Chain Assemblies",
+        source: "supplied SQL attachment 228",
+        width: 339,
+        height: 480,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 228,
@@ -3249,7 +3690,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 236",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Chain-Shackles.webp",
+        originalSrc: "/images/products/2025/04/Chain-Shackles.webp",
+        alt: "Chain Shackles",
+        source: "supplied SQL attachment 231",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 231,
@@ -3270,7 +3720,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 239",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Galvanized-Steel-Anchors.jpg.webp",
+        originalSrc: "/images/products/2025/04/Galvanized-Steel-Anchors.jpg",
+        alt: "Galvanized Steel Anchors",
+        source: "supplied SQL attachment 232",
+        width: 1600,
+        height: 1600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 232,
@@ -3291,7 +3750,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 242",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Marine-Chain-G30-G40.png.webp",
+        originalSrc: "/images/products/2025/04/Marine-Chain-G30-G40.png",
+        alt: "Marine Chain (G30, G40)",
+        source: "supplied SQL attachment 234",
+        width: 1000,
+        height: 250,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 234,
@@ -3312,7 +3780,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 243",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Stainless-Steel-Anchors.jpg.webp",
+        originalSrc: "/images/products/2025/04/Stainless-Steel-Anchors.jpg",
+        alt: "Stainless Steel Anchors",
+        source: "supplied SQL attachment 235",
+        width: 953,
+        height: 953,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 235,
@@ -3333,7 +3810,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 244",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Anchor-Buoys.jpg.webp",
+        originalSrc: "/images/products/2025/04/Anchor-Buoys.jpg",
+        alt: "Anchor Buoys",
+        source: "supplied SQL attachment 237",
+        width: 1600,
+        height: 1364,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 237,
@@ -3358,7 +3844,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 251",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Deck-Mount-Clamps.jpg",
+        originalSrc: "/images/products/2025/04/Deck-Mount-Clamps.jpg",
+        alt: "Deck Mount Clamps",
+        source: "supplied SQL attachment 252",
+        width: 350,
+        height: 264,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 252,
@@ -3379,7 +3874,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 258",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Marine-Brackets.jpg.webp",
+        originalSrc: "/images/products/2025/04/Marine-Brackets.jpg",
+        alt: "Marine Brackets",
+        source: "supplied SQL attachment 253",
+        width: 1200,
+        height: 977,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 253,
@@ -3400,7 +3904,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 259",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Pipe-Clamps.webp",
+        originalSrc: "/images/products/2025/04/Pipe-Clamps.webp",
+        alt: "Pipe Clamps",
+        source: "supplied SQL attachment 254",
+        width: 700,
+        height: 650,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 254,
@@ -3421,7 +3934,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 260",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Pipe-Support-Brackets-1.webp",
+        originalSrc: "/images/products/2025/04/Pipe-Support-Brackets-1.webp",
+        alt: "Pipe Support Brackets",
+        source: "supplied SQL attachment 262",
+        width: 650,
+        height: 650,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 262,
@@ -3442,7 +3964,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 263",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Stainless-Steel-Hose-Clamps.webp",
+        originalSrc:
+          "/images/products/2025/04/Stainless-Steel-Hose-Clamps.webp",
+        alt: "Stainless Steel Hose Clamps",
+        source: "supplied SQL attachment 255",
+        width: 700,
+        height: 506,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 255,
@@ -3463,7 +3995,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 264",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Stainless-Steel-U-Clamps.jpg.webp",
+        originalSrc: "/images/products/2025/04/Stainless-Steel-U-Clamps.jpg",
+        alt: "Stainless Steel U-Clamps",
+        source: "supplied SQL attachment 256",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 256,
@@ -3484,7 +4025,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 271",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Eye-Bolts-Rings.jpg",
+        originalSrc: "/images/products/2025/04/Eye-Bolts-Rings.jpg",
+        alt: "Eye Bolts & Rings",
+        source: "supplied SQL attachment 265",
+        width: 894,
+        height: 717,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 265,
@@ -3505,7 +4055,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 272",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Marine-Nails-Staples.webp",
+        originalSrc: "/images/products/2025/04/Marine-Nails-Staples.webp",
+        alt: "Marine Nails & Staples",
+        source: "supplied SQL attachment 267",
+        width: 800,
+        height: 800,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 267,
@@ -3526,7 +4085,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 273",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Nuts-Washers-Marine-Grade.jpg",
+        originalSrc: "/images/products/2025/04/Nuts-Washers-Marine-Grade.jpg",
+        alt: "Nuts & Washers (Marine Grade)",
+        source: "supplied SQL attachment 268",
+        width: 1000,
+        height: 471,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 268,
@@ -3547,7 +4115,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 275",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Split-Rings-Lock-Washers.jpg",
+        originalSrc: "/images/products/2025/04/Split-Rings-Lock-Washers.jpg",
+        alt: "Split Rings & Lock Washers",
+        source: "supplied SQL attachment 269",
+        width: 894,
+        height: 787,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 269,
@@ -3568,7 +4145,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 277",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Stainless-Steel-Bolts.jpg",
+        originalSrc: "/images/products/2025/04/Stainless-Steel-Bolts.jpg",
+        alt: "Stainless Steel Bolts",
+        source: "supplied SQL attachment 270",
+        width: 530,
+        height: 322,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 270,
@@ -3589,7 +4175,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 288",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Elbows-90°-and-45°.jpg.webp",
+        originalSrc: "/images/products/2025/04/Elbows-90°-and-45°.jpg",
+        alt: "Elbows (90° and 45°)",
+        source: "supplied SQL attachment 292",
+        width: 450,
+        height: 450,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 292,
@@ -3610,7 +4205,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 295",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Tees-Equal-Reducing.jpg.webp",
+        originalSrc: "/images/products/2025/04/Tees-Equal-Reducing.jpg",
+        alt: "Tees (Equal & Reducing)",
+        source: "supplied SQL attachment 296",
+        width: 560,
+        height: 751,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 296,
@@ -3631,7 +4235,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 297",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Couplings-Threaded-Socket-Weld-1.webp",
+        originalSrc:
+          "/images/products/2025/04/Couplings-Threaded-Socket-Weld-1.webp",
+        alt: "Couplings (Threaded & Socket Weld)",
+        source: "supplied SQL attachment 298",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 298,
@@ -3652,7 +4266,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 299",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Crosses-1.webp",
+        originalSrc: "/images/products/2025/04/Crosses-1.webp",
+        alt: "Crosses",
+        source: "supplied SQL attachment 300",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 300,
@@ -3673,7 +4296,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 302",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1729063864carbon-steel-eccentric-reducers-removebg-preview.webp",
+        originalSrc:
+          "/images/products/2025/04/1729063864carbon-steel-eccentric-reducers-removebg-preview.webp",
+        alt: "Reducers (Concentric & Eccentric)",
+        source: "supplied SQL attachment 303",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 303,
@@ -3694,7 +4327,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 305",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Caps.jpeg",
+        originalSrc: "/images/products/2025/04/Caps.jpeg",
+        alt: "Caps",
+        source: "supplied SQL attachment 289",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 289,
@@ -3717,7 +4359,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 307",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Socket-Weld-Fittings.jpg",
+        originalSrc: "/images/products/2025/04/Socket-Weld-Fittings.jpg",
+        alt: "Socket Weld Fittings",
+        source: "supplied SQL attachment 308",
+        width: 660,
+        height: 660,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 308,
@@ -3740,7 +4391,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 309",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Threaded-Fittings.jpg.webp",
+        originalSrc: "/images/products/2025/04/Threaded-Fittings.jpg",
+        alt: "Threaded Fittings",
+        source: "supplied SQL attachment 310",
+        width: 400,
+        height: 309,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 310,
@@ -3763,7 +4423,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 311",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Butt-Weld-Fittings.jpeg",
+        originalSrc: "/images/products/2025/04/Butt-Weld-Fittings.jpeg",
+        alt: "Butt Weld Fittings",
+        source: "supplied SQL attachment 312",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 312,
@@ -3788,7 +4457,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 314",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/seamless-pipe-1.jpg.webp",
+        originalSrc: "/images/products/2025/04/seamless-pipe-1.jpg",
+        alt: "Seamless Pipes (ASTM A106, A333)",
+        source: "supplied SQL attachment 315",
+        width: 600,
+        height: 600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 315,
@@ -3809,7 +4487,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 317",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Welded-Pipes-ASTM-A312.jpg.webp",
+        originalSrc: "/images/products/2025/04/Welded-Pipes-ASTM-A312.jpg",
+        alt: "Welded Pipes (ASTM A312)",
+        source: "supplied SQL attachment 318",
+        width: 1200,
+        height: 675,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 318,
@@ -3830,7 +4517,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 319",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Stainless-Steel-Tubing-304.jpg",
+        originalSrc: "/images/products/2025/04/Stainless-Steel-Tubing-304.jpg",
+        alt: "Stainless Steel Tubing (304/316)",
+        source: "supplied SQL attachment 320",
+        width: 986,
+        height: 1000,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 320,
@@ -3851,7 +4547,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 321",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Alloy-Steel-Pipes.jpg.webp",
+        originalSrc: "/images/products/2025/04/Alloy-Steel-Pipes.jpg",
+        alt: "Alloy Steel Pipes",
+        source: "supplied SQL attachment 322",
+        width: 580,
+        height: 420,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 322,
@@ -3876,7 +4581,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 323",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Galvanized-Pipes.jpg.webp",
+        originalSrc: "/images/products/2025/04/Galvanized-Pipes.jpg",
+        alt: "Galvanized Pipes",
+        source: "supplied SQL attachment 324",
+        width: 1280,
+        height: 1280,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 324,
@@ -3897,7 +4611,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 326",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Slip-On-Flanges.jpg",
+        originalSrc: "/images/products/2025/04/Slip-On-Flanges.jpg",
+        alt: "Slip-On Flanges",
+        source: "supplied SQL attachment 330",
+        width: 750,
+        height: 750,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 330,
@@ -3918,7 +4641,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 331",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Blind-Flanges.jpeg",
+        originalSrc: "/images/products/2025/04/Blind-Flanges.jpeg",
+        alt: "Blind Flanges",
+        source: "supplied SQL attachment 332",
+        width: 900,
+        height: 900,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 332,
@@ -3939,7 +4671,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 333",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Weld-Neck-Flanges.jpg.webp",
+        originalSrc: "/images/products/2025/04/Weld-Neck-Flanges.jpg",
+        alt: "Weld Neck Flanges",
+        source: "supplied SQL attachment 335",
+        width: 800,
+        height: 600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 335,
@@ -3960,7 +4701,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 340",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Socket-Weld-Flanges.webp",
+        originalSrc: "/images/products/2025/04/Socket-Weld-Flanges.webp",
+        alt: "Socket Weld Flanges",
+        source: "supplied SQL attachment 341",
+        width: 420,
+        height: 420,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 341,
@@ -3981,7 +4731,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 342",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Lap-Joint-Flanges.jpg.webp",
+        originalSrc: "/images/products/2025/04/Lap-Joint-Flanges.jpg",
+        alt: "Lap Joint Flanges",
+        source: "supplied SQL attachment 344",
+        width: 476,
+        height: 414,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 344,
@@ -4002,7 +4761,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 345",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/orifice_flg.jpg",
+        originalSrc: "/images/products/2025/04/orifice_flg.jpg",
+        alt: "Orifice Flanges",
+        source: "supplied SQL attachment 347",
+        width: 554,
+        height: 599,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 347,
@@ -4023,7 +4791,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 349",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Gate-Valves-1.webp",
+        originalSrc: "/images/products/2025/04/Gate-Valves-1.webp",
+        alt: "Gate Valves",
+        source: "supplied SQL attachment 350",
+        width: 800,
+        height: 800,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 350,
@@ -4044,7 +4821,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 351",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Ball-Valves.jpg.webp",
+        originalSrc: "/images/products/2025/04/Ball-Valves.jpg",
+        alt: "Ball Valves",
+        source: "supplied SQL attachment 352",
+        width: 1600,
+        height: 1600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 352,
@@ -4065,7 +4851,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 353",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Check-Valves.jpg.webp",
+        originalSrc: "/images/products/2025/04/Check-Valves.jpg",
+        alt: "Check Valves",
+        source: "supplied SQL attachment 354",
+        width: 1280,
+        height: 1280,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 354,
@@ -4086,7 +4881,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 355",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Pressure-Relief-Valves.jpg.webp",
+        originalSrc: "/images/products/2025/04/Pressure-Relief-Valves.jpg",
+        alt: "Pressure Relief Valves",
+        source: "supplied SQL attachment 356",
+        width: 504,
+        height: 481,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 356,
@@ -4107,7 +4911,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 357",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Globe-Valves-img.jpg.webp",
+        originalSrc: "/images/products/2025/04/Globe-Valves-img.jpg",
+        alt: "Globe Valves",
+        source: "supplied SQL attachment 358",
+        width: 1000,
+        height: 900,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 358,
@@ -4128,7 +4941,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 359",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Plug-Valves.jpeg",
+        originalSrc: "/images/products/2025/04/Plug-Valves.jpeg",
+        alt: "Plug Valves",
+        source: "supplied SQL attachment 360",
+        width: 247,
+        height: 204,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 360,
@@ -4152,7 +4974,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 362",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Clamps-U-Bolt-T-Bolt-etc.webp",
+        originalSrc: "/images/products/2025/04/Clamps-U-Bolt-T-Bolt-etc.webp",
+        alt: "Clamps (U-Bolt, T-Bolt, etc.)",
+        source: "supplied SQL attachment 366",
+        width: 638,
+        height: 448,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 366,
@@ -4173,7 +5004,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 363",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Strainers-img.jpg.webp",
+        originalSrc: "/images/products/2025/04/Strainers-img.jpg",
+        alt: "Strainers",
+        source: "supplied SQL attachment 364",
+        width: 1001,
+        height: 1001,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 364,
@@ -4194,7 +5034,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 365",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Valve-Seats.jpeg",
+        originalSrc: "/images/products/2025/04/Valve-Seats.jpeg",
+        alt: "Valve Seats",
+        source: "supplied SQL attachment 368",
+        width: 224,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 368,
@@ -4215,7 +5064,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 369",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Gaskets-Metallic-Non-Metallic.jpg",
+        originalSrc:
+          "/images/products/2025/04/Gaskets-Metallic-Non-Metallic.jpg",
+        alt: "Gaskets (Metallic, Non-Metallic)",
+        source: "supplied SQL attachment 370",
+        width: 300,
+        height: 300,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 370,
@@ -4236,7 +5095,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 371",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Hose-Fittings-Adapters.jpg",
+        originalSrc: "/images/products/2025/04/Hose-Fittings-Adapters.jpg",
+        alt: "Hose Fittings & Adapters",
+        source: "supplied SQL attachment 372",
+        width: 1000,
+        height: 724,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 372,
@@ -4257,7 +5125,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 451",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Hammers.jpg.webp",
+        originalSrc: "/images/products/2025/04/Hammers.jpg",
+        alt: "Hammers (Claw, Sledge, Ball Peen)",
+        source: "supplied SQL attachment 452",
+        width: 1215,
+        height: 1343,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 452,
@@ -4278,7 +5155,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 453",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-22-023158.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-22-023158.png",
+        alt: "Screwdrivers (Flat, Phillips, Torx)",
+        source: "supplied SQL attachment 455",
+        width: 995,
+        height: 658,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 455,
@@ -4299,7 +5186,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 456",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Pliers-Needle-Nose-Lineman-Slip-Joint.jpg.webp",
+        originalSrc:
+          "/images/products/2025/04/Pliers-Needle-Nose-Lineman-Slip-Joint.jpg",
+        alt: "Pliers (Needle Nose, Lineman, Slip-Joint)",
+        source: "supplied SQL attachment 457",
+        width: 850,
+        height: 995,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 457,
@@ -4320,7 +5217,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 458",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Wrenches-Adjustable-Torque-Pipe.jpg",
+        originalSrc:
+          "/images/products/2025/04/Wrenches-Adjustable-Torque-Pipe.jpg",
+        alt: "Wrenches (Adjustable, Torque, Pipe)",
+        source: "supplied SQL attachment 459",
+        width: 1455,
+        height: 953,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 459,
@@ -4341,7 +5248,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 460",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Tape-Measures.jpg.webp",
+        originalSrc: "/images/products/2025/04/Tape-Measures.jpg",
+        alt: "Tape Measures",
+        source: "supplied SQL attachment 461",
+        width: 1200,
+        height: 880,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 461,
@@ -4362,7 +5278,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 462",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Utility-Knives.jpg.webp",
+        originalSrc: "/images/products/2025/04/Utility-Knives.jpg",
+        alt: "Utility Knives",
+        source: "supplied SQL attachment 463",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 463,
@@ -4383,7 +5308,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 464",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-22-023920.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-22-023920.png",
+        alt: "Aluminum Ladders",
+        source: "supplied SQL attachment 465",
+        width: 793,
+        height: 789,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 465,
@@ -4408,7 +5343,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 466",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Folding-Step-Stools.jpg",
+        originalSrc: "/images/products/2025/04/Folding-Step-Stools.jpg",
+        alt: "Folding Step Stools",
+        source: "supplied SQL attachment 467",
+        width: 1056,
+        height: 1500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 467,
@@ -4429,7 +5373,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 468",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Extension-ladder.jpg.webp",
+        originalSrc: "/images/products/2025/04/Extension-ladder.jpg",
+        alt: "Extension Ladders",
+        source: "supplied SQL attachment 469",
+        width: 1200,
+        height: 1200,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 469,
@@ -4450,7 +5403,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 470",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Telescoping-Ladders.jpg.webp",
+        originalSrc: "/images/products/2025/04/Telescoping-Ladders.jpg",
+        alt: "Telescoping Ladders",
+        source: "supplied SQL attachment 471",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 471,
@@ -4471,7 +5433,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 472",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Platform-Ladders.jpg",
+        originalSrc: "/images/products/2025/04/Platform-Ladders.jpg",
+        alt: "Platform Ladders",
+        source: "supplied SQL attachment 473",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 473,
@@ -4492,7 +5463,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 474",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/8526f8100b48cc6e2b65d2eff12e078a-1.jpg.webp",
+        originalSrc:
+          "/images/products/2025/04/8526f8100b48cc6e2b65d2eff12e078a-1.jpg",
+        alt: "Pipe Wrenches",
+        source: "supplied SQL attachment 475",
+        width: 1600,
+        height: 1600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 475,
@@ -4513,7 +5494,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 477",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-23-011514.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-23-011514.png",
+        alt: "Pipe Cutters",
+        source: "supplied SQL attachment 478",
+        width: 610,
+        height: 791,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 478,
@@ -4534,7 +5525,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 479",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-23-011633.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-23-011633.png",
+        alt: "Faucet Parts (Cartridges, Spouts)",
+        source: "supplied SQL attachment 480",
+        width: 891,
+        height: 681,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 480,
@@ -4555,7 +5556,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 481",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Sink-faucet.jpg",
+        originalSrc: "/images/products/2025/04/Sink-faucet.jpg",
+        alt: "Sinks & Faucets",
+        source: "supplied SQL attachment 482",
+        width: 679,
+        height: 679,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 482,
@@ -4576,7 +5586,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 485",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Yacht-Accessories-Marine-Hardware-Pipe-Drain-Plug-Thru-Hull-Fitting-Outlets-for-Boat-Stainless-Steel-316-Thru-Hull-Outlets-Hose.avif",
+        originalSrc:
+          "/images/products/2025/04/Yacht-Accessories-Marine-Hardware-Pipe-Drain-Plug-Thru-Hull-Fitting-Outlets-for-Boat-Stainless-Steel-316-Thru-Hull-Outlets-Hose.avif",
+        alt: "Drain Plugs",
+        source: "supplied SQL attachment 441",
+        width: 1000,
+        height: 1000,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 441,
@@ -4597,7 +5617,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 487",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/65056021-1.jpg.webp",
+        originalSrc: "/images/products/2025/04/65056021-1.jpg",
+        alt: "Pipe Insulation",
+        source: "supplied SQL attachment 443",
+        width: 1600,
+        height: 1203,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 443,
@@ -4618,7 +5647,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 495",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Electric-1.jpg.webp",
+        originalSrc: "/images/products/2025/04/Electric-1.jpg",
+        alt: "Electrical Outlets & Switches",
+        source: "supplied SQL attachment 493",
+        width: 399,
+        height: 420,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 493,
@@ -4639,7 +5677,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 496",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Extension-Cords.jpg.webp",
+        originalSrc: "/images/products/2025/04/Extension-Cords.jpg",
+        alt: "Extension Cords",
+        source: "supplied SQL attachment 497",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 497,
@@ -4660,7 +5707,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 498",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Light-Fixtures-Bulbs.jpg",
+        originalSrc: "/images/products/2025/04/Light-Fixtures-Bulbs.jpg",
+        alt: "Light Fixtures & Bulbs",
+        source: "supplied SQL attachment 499",
+        width: 200,
+        height: 200,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 499,
@@ -4681,7 +5737,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 500",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Electrical-Tape-Conduits.jpg.webp",
+        originalSrc: "/images/products/2025/04/Electrical-Tape-Conduits.jpg",
+        alt: "Electrical Tape & Conduits",
+        source: "supplied SQL attachment 501",
+        width: 300,
+        height: 209,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 501,
@@ -4702,7 +5767,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 502",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/633f1e347dceb890350168-Photoroom.png.webp",
+        originalSrc:
+          "/images/products/2025/04/633f1e347dceb890350168-Photoroom.png",
+        alt: "Circuit Breakers & Fuses",
+        source: "supplied SQL attachment 503",
+        width: 719,
+        height: 1280,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 503,
@@ -4723,7 +5798,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 507",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Electrical-Junction-Boxes.jpg.webp",
+        originalSrc: "/images/products/2025/04/Electrical-Junction-Boxes.jpg",
+        alt: "Electrical Junction Boxes",
+        source: "supplied SQL attachment 505",
+        width: 1600,
+        height: 1600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 505,
@@ -4744,7 +5828,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 509",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/hex-bolt.jpg",
+        originalSrc: "/images/products/2025/04/hex-bolt.jpg",
+        alt: "Hex Bolt",
+        source: "supplied SQL attachment 596",
+        width: 600,
+        height: 800,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 596,
@@ -4844,7 +5937,17 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 569",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/MARINE-FIRE-LOCK-C1-OHS-2320-RHO-1-1.png.webp",
+        originalSrc:
+          "/images/products/2025/04/MARINE-FIRE-LOCK-C1-OHS-2320-RHO-1-1.png",
+        alt: "MARINE FIRE LOCK C1 OHS-2320 RHO",
+        source: "supplied SQL attachment 755",
+        width: 400,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 755,
@@ -4923,7 +6026,17 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 570",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/MARINE-FIRE-LOCK-C4-OHS-2770-RHO.png.webp",
+        originalSrc:
+          "/images/products/2025/04/MARINE-FIRE-LOCK-C4-OHS-2770-RHO.png",
+        alt: "MARINE FIRE LOCK C4 OHS-2770 RHO",
+        source: "supplied SQL attachment 579",
+        width: 300,
+        height: 300,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 579,
@@ -4987,7 +6100,17 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 571",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/MARINE-FIRE-LOCK-OHS-2110-SS.png.webp",
+        originalSrc:
+          "/images/products/2025/04/MARINE-FIRE-LOCK-OHS-2110-SS.png",
+        alt: "MARINE FIRE LOCK OHS-2110 SS",
+        source: "supplied SQL attachment 580",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 580,
@@ -5061,7 +6184,17 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 572",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/MARINE-FIRE-LOCK-OHS-3550-RHO-304.png.webp",
+        originalSrc:
+          "/images/products/2025/04/MARINE-FIRE-LOCK-OHS-3550-RHO-304.png",
+        alt: "MARINE FIRE LOCK OHS-3550 RHO 304",
+        source: "supplied SQL attachment 581",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 581,
@@ -5131,7 +6264,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 583",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/7000.jpg.webp",
+        originalSrc: "/images/products/2025/04/7000.jpg",
+        alt: "Staco 7000 Marine Mortice Lockcase",
+        source: "supplied SQL attachment 584",
+        width: 490,
+        height: 490,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 584,
@@ -5155,7 +6297,7 @@ export const products: Product[] = [
       "The Sung Mi SM-1105 Cylinder Mortise Lock combines marine-grade durability with domestic versatility. Made from stainless steel and equipped with a 6-pin cylinder, thumbturn, and Grand Master Key system, it suits door thicknesses of 35–60 mm and is ideal for both marine and residential use.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n<strong>Brand:</strong> Sung Mi\n\n<strong>Model:</strong> SM-1105\n\n<strong>Type:</strong> Cylinder Mortise Lock\n\n<strong>Material:</strong> Stainless Steel\n\n<strong>Function:</strong> Locking with Thumbturn and Grand Master Key compatibility\n\n<strong>Cylinder:</strong> Standard 6-pin\n\n<strong>Backset:</strong> 55 mm\n\n<strong>Suitable Door Thickness:</strong> 35–60 mm\n\n<strong>Edge Type:</strong> Round Edge\n<h4>Features:</h4>\n<ul>\n \t<li>Thumbturn operation</li>\n \t<li>Grand Master Key system</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Marine doors</li>\n \t<li>Residential interior and exterior doors</li>\n</ul>\n\n<p>Original illustration awaiting image files.</p>\n<p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n<strong>Brand:</strong> Sung Mi\n\n<strong>Model:</strong> SM-1105\n\n<strong>Type:</strong> Cylinder Mortise Lock\n\n<strong>Material:</strong> Stainless Steel\n\n<strong>Function:</strong> Locking with Thumbturn and Grand Master Key compatibility\n\n<strong>Cylinder:</strong> Standard 6-pin\n\n<strong>Backset:</strong> 55 mm\n\n<strong>Suitable Door Thickness:</strong> 35–60 mm\n\n<strong>Edge Type:</strong> Round Edge\n<h4>Features:</h4>\n<ul>\n \t<li>Thumbturn operation</li>\n \t<li>Grand Master Key system</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Marine doors</li>\n \t<li>Residential interior and exterior doors</li>\n</ul>\n\n<p>Additional source illustration is not available in this review.</p>\n<p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Brand",
@@ -5205,7 +6347,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 586",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1105-1.jpg",
+        originalSrc: "/images/products/2025/04/1105-1.jpg",
+        alt: "Sung Mi SM-1105 Cylinder Mortise Lock",
+        source: "supplied SQL attachment 587",
+        width: 1000,
+        height: 1000,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 587,
@@ -5230,7 +6381,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 588",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1103.jpg.webp",
+        originalSrc: "/images/products/2025/04/1103.jpg",
+        alt: "1103",
+        source: "supplied SQL attachment 525",
+        width: 279,
+        height: 181,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 525,
@@ -5255,7 +6415,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 589",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1131.png.webp",
+        originalSrc: "/images/products/2025/04/1131.png",
+        alt: "1131",
+        source: "supplied SQL attachment 526",
+        width: 650,
+        height: 343,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 526,
@@ -5280,7 +6449,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 590",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1151.png.webp",
+        originalSrc: "/images/products/2025/04/1151.png",
+        alt: "1151",
+        source: "supplied SQL attachment 528",
+        width: 650,
+        height: 343,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 528,
@@ -5305,7 +6483,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 591",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1156.jpg",
+        originalSrc: "/images/products/2025/04/1156.jpg",
+        alt: "1156",
+        source: "supplied SQL attachment 529",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 529,
@@ -5330,7 +6517,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 593",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1161.jpg",
+        originalSrc: "/images/products/2025/04/1161.jpg",
+        alt: "1161",
+        source: "supplied SQL attachment 530",
+        width: 1024,
+        height: 1024,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 530,
@@ -5355,7 +6551,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 594",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1165.jpg.webp",
+        originalSrc: "/images/products/2025/04/1165.jpg",
+        alt: "1165",
+        source: "supplied SQL attachment 531",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 531,
@@ -5380,7 +6585,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 597",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Carriage-Bolts-02.jpg.webp",
+        originalSrc: "/images/products/2025/04/Carriage-Bolts-02.jpg",
+        alt: "Carriage Bolts",
+        source: "supplied SQL attachment 598",
+        width: 1500,
+        height: 1500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 598,
@@ -5401,7 +6615,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 599",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/AnchorBolts_1.jpg.webp",
+        originalSrc: "/images/products/2025/04/AnchorBolts_1.jpg",
+        alt: "Anchor Bolts",
+        source: "supplied SQL attachment 600",
+        width: 1000,
+        height: 1000,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 600,
@@ -5426,7 +6649,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 602",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-24-000814.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-24-000814.png",
+        alt: "Eye Bolts",
+        source: "supplied SQL attachment 603",
+        width: 346,
+        height: 344,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 603,
@@ -5447,7 +6680,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 604",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/U-Bolts.jpg",
+        originalSrc: "/images/products/2025/04/U-Bolts.jpg",
+        alt: "U-Bolts",
+        source: "supplied SQL attachment 605",
+        width: 200,
+        height: 252,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 605,
@@ -5468,7 +6710,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 606",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Lag-Bolts.jpg",
+        originalSrc: "/images/products/2025/04/Lag-Bolts.jpg",
+        alt: "Lag Bolts",
+        source: "supplied SQL attachment 607",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 607,
@@ -5489,7 +6740,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 608",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Lock-Nuts-Nylon-Insert.jpg",
+        originalSrc: "/images/products/2025/04/Lock-Nuts-Nylon-Insert.jpg",
+        alt: "Lock Nuts (Nylon Insert)",
+        source: "supplied SQL attachment 609",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 609,
@@ -5510,7 +6770,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 610",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/wing-nut-500x500-1.jpg",
+        originalSrc: "/images/products/2025/04/wing-nut-500x500-1.jpg",
+        alt: "Wing Nuts",
+        source: "supplied SQL attachment 611",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 611,
@@ -5531,7 +6800,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 613",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Coupling-Nuts.jpg",
+        originalSrc: "/images/products/2025/04/Coupling-Nuts.jpg",
+        alt: "Coupling Nuts",
+        source: "supplied SQL attachment 614",
+        width: 1500,
+        height: 1500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 614,
@@ -5552,7 +6830,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 615",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Flat-Washers.jpg.webp",
+        originalSrc: "/images/products/2025/04/Flat-Washers.jpg",
+        alt: "Flat Washers",
+        source: "supplied SQL attachment 616",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 616,
@@ -5573,7 +6860,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 617",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-24-001422.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-24-001422.png",
+        alt: "Lock Washers",
+        source: "supplied SQL attachment 618",
+        width: 296,
+        height: 238,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 618,
@@ -5594,7 +6891,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 619",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/fender.jpg",
+        originalSrc: "/images/products/2025/04/fender.jpg",
+        alt: "Fender Washers",
+        source: "supplied SQL attachment 620",
+        width: 299,
+        height: 168,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 620,
@@ -5615,7 +6921,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 622",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/self-tappong-screws.jpg",
+        originalSrc: "/images/products/2025/04/self-tappong-screws.jpg",
+        alt: "Self-Tapping Screws",
+        source: "supplied SQL attachment 623",
+        width: 278,
+        height: 182,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 623,
@@ -5636,7 +6951,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 624",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/wood-screws.jpg",
+        originalSrc: "/images/products/2025/04/wood-screws.jpg",
+        alt: "Wood Screws",
+        source: "supplied SQL attachment 625",
+        width: 949,
+        height: 618,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 625,
@@ -5657,7 +6981,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 627",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/33dad6391693a0eb6ff38e5971915922.jpg_720x720q80.jpg",
+        originalSrc:
+          "/images/products/2025/04/33dad6391693a0eb6ff38e5971915922.jpg_720x720q80.jpg",
+        alt: "Machine Screws",
+        source: "supplied SQL attachment 628",
+        width: 720,
+        height: 720,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 628,
@@ -5678,7 +7012,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 629",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/dry-wall.jpg.webp",
+        originalSrc: "/images/products/2025/04/dry-wall.jpg",
+        alt: "Drywall Screws",
+        source: "supplied SQL attachment 631",
+        width: 1200,
+        height: 1200,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 631,
@@ -5699,7 +7042,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 633",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/sheet-metal.jpg.webp",
+        originalSrc: "/images/products/2025/04/sheet-metal.jpg",
+        alt: "Sheet Metal Screws",
+        source: "supplied SQL attachment 630",
+        width: 1087,
+        height: 1149,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 630,
@@ -5720,7 +7072,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 634",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-24-001857.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-24-001857.png",
+        alt: "Socket Head Cap Screws",
+        source: "supplied SQL attachment 635",
+        width: 191,
+        height: 193,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 635,
@@ -5741,7 +7103,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 636",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Blind-Rivets.jpg",
+        originalSrc: "/images/products/2025/04/Blind-Rivets.jpg",
+        alt: "Blind Rivets",
+        source: "supplied SQL attachment 640",
+        width: 333,
+        height: 151,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 640,
@@ -5766,7 +7137,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 641",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/solid-rivets.jpg",
+        originalSrc: "/images/products/2025/04/solid-rivets.jpg",
+        alt: "Solid Rivets",
+        source: "supplied SQL attachment 639",
+        width: 235,
+        height: 215,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 639,
@@ -5787,7 +7167,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 643",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/images-2.jpg.webp",
+        originalSrc: "/images/products/2025/04/images-2.jpg",
+        alt: "Specialty Rivets (Flush, Tubular)",
+        source: "supplied SQL attachment 638",
+        width: 300,
+        height: 154,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 638,
@@ -5808,7 +7197,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 644",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/rivets-nut-Photoroom.png.webp",
+        originalSrc: "/images/products/2025/04/rivets-nut-Photoroom.png",
+        alt: "Rivet Nuts",
+        source: "supplied SQL attachment 637",
+        width: 1280,
+        height: 1280,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 637,
@@ -5829,7 +7227,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 645",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/wall.jpg",
+        originalSrc: "/images/products/2025/04/wall.jpg",
+        alt: "Wall Anchors",
+        source: "supplied SQL attachment 651",
+        width: 248,
+        height: 203,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 651,
@@ -5850,7 +7257,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 652",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/concrete-1.jpg",
+        originalSrc: "/images/products/2025/04/concrete-1.jpg",
+        alt: "Concrete Anchors",
+        source: "supplied SQL attachment 653",
+        width: 224,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 653,
@@ -5871,7 +7287,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 654",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/expansion.jpg",
+        originalSrc: "/images/products/2025/04/expansion.jpg",
+        alt: "Expansion Anchors",
+        source: "supplied SQL attachment 649",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 649,
@@ -5892,7 +7317,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 655",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/plastic.jpg.webp",
+        originalSrc: "/images/products/2025/04/plastic.jpg",
+        alt: "Plastic Expansion Dowels",
+        source: "supplied SQL attachment 648",
+        width: 1600,
+        height: 1290,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 648,
@@ -5913,7 +7347,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 656",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/hammer.jpg",
+        originalSrc: "/images/products/2025/04/hammer.jpg",
+        alt: "Hammer-In Anchors",
+        source: "supplied SQL attachment 647",
+        width: 259,
+        height: 194,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 647,
@@ -5934,7 +7377,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 657",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/masonry.jpg",
+        originalSrc: "/images/products/2025/04/masonry.jpg",
+        alt: "Masonry Bolts",
+        source: "supplied SQL attachment 646",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 646,
@@ -5955,7 +7407,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 658",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/sanding-disc.jpg.webp",
+        originalSrc: "/images/products/2025/04/sanding-disc.jpg",
+        alt: 'Sanding Discs (5", 6", 7")',
+        source: "supplied SQL attachment 662",
+        width: 1280,
+        height: 1280,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 662,
@@ -5976,7 +7437,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 663",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-24-003142.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-24-003142.png",
+        alt: 'Sanding Belts (1", 2", 4" wide)',
+        source: "supplied SQL attachment 659",
+        width: 1015,
+        height: 498,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 659,
@@ -5997,7 +7468,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 664",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/flap-wheels.jpg.webp",
+        originalSrc: "/images/products/2025/04/flap-wheels.jpg",
+        alt: "Flap Wheels",
+        source: "supplied SQL attachment 661",
+        width: 1500,
+        height: 1000,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 661,
@@ -6018,7 +7498,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 665",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/sanding-sheet.jpg",
+        originalSrc: "/images/products/2025/04/sanding-sheet.jpg",
+        alt: "Sanding Sheets (Wet & Dry)",
+        source: "supplied SQL attachment 660",
+        width: 1155,
+        height: 906,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 660,
@@ -6039,7 +7528,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 666",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/polishing.jpg",
+        originalSrc: "/images/products/2025/04/polishing.jpg",
+        alt: "Polishing Pads",
+        source: "supplied SQL attachment 668",
+        width: 1483,
+        height: 1440,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 668,
@@ -6060,7 +7558,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 671",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-24-003927.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-24-003927.png",
+        alt: "Buffing Compounds (Car, Metal)",
+        source: "supplied SQL attachment 672",
+        width: 490,
+        height: 483,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 672,
@@ -6085,7 +7593,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 673",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/buffing-wheels.jpg",
+        originalSrc: "/images/products/2025/04/buffing-wheels.jpg",
+        alt: "Buffing Wheels",
+        source: "supplied SQL attachment 667",
+        width: 1500,
+        height: 1429,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 667,
@@ -6110,7 +7627,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 675",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-24-003555.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-24-003555.png",
+        alt: "Polishing Cloths",
+        source: "supplied SQL attachment 670",
+        width: 677,
+        height: 677,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 670,
@@ -6131,7 +7658,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 676",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-24-004250.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-24-004250.png",
+        alt: "Cutting Discs (Metal, Concrete)",
+        source: "supplied SQL attachment 678",
+        width: 850,
+        height: 779,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 678,
@@ -6156,7 +7693,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 681",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/grinding.jpg",
+        originalSrc: "/images/products/2025/04/grinding.jpg",
+        alt: "Grinding Wheels",
+        source: "supplied SQL attachment 680",
+        width: 635,
+        height: 424,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 680,
@@ -6177,7 +7723,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 682",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/diamond.jpg.webp",
+        originalSrc: "/images/products/2025/04/diamond.jpg",
+        alt: "Diamond Cutting Blades",
+        source: "supplied SQL attachment 679",
+        width: 1080,
+        height: 1080,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 679,
@@ -6198,7 +7753,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 683",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-24-004348.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-24-004348.png",
+        alt: "Angle Grinder Discs",
+        source: "supplied SQL attachment 677",
+        width: 402,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 677,
@@ -6223,7 +7788,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 684",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-24-004829.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-24-004829.png",
+        alt: "Sandpaper Sheets (P60, P120, P220)",
+        source: "supplied SQL attachment 686",
+        width: 541,
+        height: 537,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 686,
@@ -6244,7 +7819,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 689",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/wetDry-sand-paper.jpg.webp",
+        originalSrc: "/images/products/2025/04/wetDry-sand-paper.jpg",
+        alt: "Wet/Dry Sandpaper",
+        source: "supplied SQL attachment 687",
+        width: 800,
+        height: 400,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 687,
@@ -6265,7 +7849,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 691",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-24-004909.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-24-004909.png",
+        alt: "Sponge Sanding Pads",
+        source: "supplied SQL attachment 685",
+        width: 546,
+        height: 542,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 685,
@@ -6286,7 +7880,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 692",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/wire.png.webp",
+        originalSrc: "/images/products/2025/04/wire.png",
+        alt: "Wire Brushes",
+        source: "supplied SQL attachment 696",
+        width: 720,
+        height: 720,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 696,
@@ -6307,7 +7910,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 700",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/cup.jpg",
+        originalSrc: "/images/products/2025/04/cup.jpg",
+        alt: "Cup Brushes",
+        source: "supplied SQL attachment 695",
+        width: 882,
+        height: 1000,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 695,
@@ -6328,7 +7940,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 701",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/tube.jpg",
+        originalSrc: "/images/products/2025/04/tube.jpg",
+        alt: "Tube Brushes",
+        source: "supplied SQL attachment 694",
+        width: 226,
+        height: 223,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 694,
@@ -6349,7 +7970,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 702",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/crimped-steel-brush.jpg",
+        originalSrc: "/images/products/2025/04/crimped-steel-brush.jpg",
+        alt: "Crimped Steel Brushes",
+        source: "supplied SQL attachment 693",
+        width: 259,
+        height: 194,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 693,
@@ -6373,7 +8003,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 703",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/pipe.jpg.webp",
+        originalSrc: "/images/products/2025/04/pipe.jpg",
+        alt: 'PPR Pipe (3/4" to 4")',
+        source: "supplied SQL attachment 709",
+        width: 1500,
+        height: 1500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 709,
@@ -6397,7 +8036,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 711",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/elbow.jpg.webp",
+        originalSrc: "/images/products/2025/04/elbow.jpg",
+        alt: "PPR Elbow",
+        source: "supplied SQL attachment 708",
+        width: 251,
+        height: 201,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 708,
@@ -6421,7 +8069,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 712",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/tee.jpg.webp",
+        originalSrc: "/images/products/2025/04/tee.jpg",
+        alt: "PPR Tee",
+        source: "supplied SQL attachment 707",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 707,
@@ -6445,7 +8102,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 713",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/coupling.jpg.webp",
+        originalSrc: "/images/products/2025/04/coupling.jpg",
+        alt: "PPR Coupling",
+        source: "supplied SQL attachment 706",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 706,
@@ -6469,7 +8135,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 714",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/Screenshot-2025-04-24-010112.png.webp",
+        originalSrc:
+          "/images/products/2025/04/Screenshot-2025-04-24-010112.png",
+        alt: "PPR End Caps",
+        source: "supplied SQL attachment 704",
+        width: 539,
+        height: 530,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 704,
@@ -6493,7 +8169,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 715",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/ball-valve.jpg.webp",
+        originalSrc: "/images/products/2025/04/ball-valve.jpg",
+        alt: "PPR Ball Valve",
+        source: "supplied SQL attachment 705",
+        width: 600,
+        height: 600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 705,
@@ -6517,7 +8202,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 716",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/pipe.png.webp",
+        originalSrc: "/images/products/2025/04/pipe.png",
+        alt: "UPVC Pipes (20mm to 200mm)",
+        source: "supplied SQL attachment 722",
+        width: 336,
+        height: 334,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 722,
@@ -6541,7 +8235,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 723",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/elbow-1.jpg.webp",
+        originalSrc: "/images/products/2025/04/elbow-1.jpg",
+        alt: "UPVC Elbow",
+        source: "supplied SQL attachment 721",
+        width: 900,
+        height: 600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 721,
@@ -6565,7 +8268,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 724",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/tee-upvc.jpg.webp",
+        originalSrc: "/images/products/2025/04/tee-upvc.jpg",
+        alt: "UPVC Tee",
+        source: "supplied SQL attachment 720",
+        width: 900,
+        height: 600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 720,
@@ -6589,7 +8301,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 725",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/socket.png.webp",
+        originalSrc: "/images/products/2025/04/socket.png",
+        alt: "UPVC Socket",
+        source: "supplied SQL attachment 719",
+        width: 489,
+        height: 488,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 719,
@@ -6613,7 +8334,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 726",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/upvc-ball-valve.jpeg.webp",
+        originalSrc: "/images/products/2025/04/upvc-ball-valve.jpeg",
+        alt: "UPVC Ball Valve",
+        source: "supplied SQL attachment 717",
+        width: 1600,
+        height: 1600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 717,
@@ -6637,7 +8367,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 727",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/reducer.jpg.webp",
+        originalSrc: "/images/products/2025/04/reducer.jpg",
+        alt: "UPVC Reducer",
+        source: "supplied SQL attachment 718",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 718,
@@ -6661,7 +8400,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 729",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/ball.jpg.webp",
+        originalSrc: "/images/products/2025/04/ball.jpg",
+        alt: "PPR Ball Valve",
+        source: "supplied SQL attachment 736",
+        width: 600,
+        height: 575,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 736,
@@ -6685,7 +8433,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 730",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/gate.jpg",
+        originalSrc: "/images/products/2025/04/gate.jpg",
+        alt: "PPR Gate Valve",
+        source: "supplied SQL attachment 735",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 735,
@@ -6709,7 +8466,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 731",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/check.jpg",
+        originalSrc: "/images/products/2025/04/check.jpg",
+        alt: "PPR Check Valve",
+        source: "supplied SQL attachment 734",
+        width: 251,
+        height: 201,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 734,
@@ -6733,7 +8499,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 732",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/stop.png.webp",
+        originalSrc: "/images/products/2025/04/stop.png",
+        alt: "PPR Stop Valve",
+        source: "supplied SQL attachment 733",
+        width: 685,
+        height: 778,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 733,
@@ -6757,7 +8532,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 737",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/insulation.jpg",
+        originalSrc: "/images/products/2025/04/insulation.jpg",
+        alt: "Pipe Insulation",
+        source: "supplied SQL attachment 742",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 742,
@@ -6781,7 +8565,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 738",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/joint.jpg",
+        originalSrc: "/images/products/2025/04/joint.jpg",
+        alt: "Pipe Joint Adhesive",
+        source: "supplied SQL attachment 741",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 741,
@@ -6805,7 +8598,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 739",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/fitting-accessories.jpg",
+        originalSrc: "/images/products/2025/04/fitting-accessories.jpg",
+        alt: "Pipe Fittings Accessories",
+        source: "supplied SQL attachment 740",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 740,
@@ -6829,7 +8631,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 743",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/flange.jpg.webp",
+        originalSrc: "/images/products/2025/04/flange.jpg",
+        alt: "UPVC Flanges",
+        source: "supplied SQL attachment 750",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 750,
@@ -6853,7 +8664,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 744",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/thread.png.webp",
+        originalSrc: "/images/products/2025/04/thread.png",
+        alt: "UPVC Threaded Couplings",
+        source: "supplied SQL attachment 749",
+        width: 706,
+        height: 706,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 749,
@@ -6877,7 +8697,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 745",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/pressure.png.webp",
+        originalSrc: "/images/products/2025/04/pressure.png",
+        alt: "UPVC Pressure Valves",
+        source: "supplied SQL attachment 748",
+        width: 600,
+        height: 600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 748,
@@ -6901,7 +8730,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 746",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/union.jpg.webp",
+        originalSrc: "/images/products/2025/04/union.jpg",
+        alt: "UPVC Union Fittings",
+        source: "supplied SQL attachment 747",
+        width: 1024,
+        height: 1024,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 747,
@@ -6922,7 +8760,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 769",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1144.jpg",
+        originalSrc: "/images/products/2025/04/1144.jpg",
+        alt: "1144",
+        source: "supplied SQL attachment 527",
+        width: 462,
+        height: 693,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 527,
@@ -6947,7 +8794,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 770",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1176.jpg",
+        originalSrc: "/images/products/2025/04/1176.jpg",
+        alt: "1176",
+        source: "supplied SQL attachment 532",
+        width: 806,
+        height: 1000,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 532,
@@ -6972,7 +8828,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 771",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1181.jpg.webp",
+        originalSrc: "/images/products/2025/04/1181.jpg",
+        alt: "1181",
+        source: "supplied SQL attachment 533",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 533,
@@ -6997,7 +8862,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 772",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1232.jpg",
+        originalSrc: "/images/products/2025/04/1232.jpg",
+        alt: "1232",
+        source: "supplied SQL attachment 534",
+        width: 314,
+        height: 350,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 534,
@@ -7022,7 +8896,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 773",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1241.png.webp",
+        originalSrc: "/images/products/2025/04/1241.png",
+        alt: "1241",
+        source: "supplied SQL attachment 535",
+        width: 499,
+        height: 439,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 535,
@@ -7047,7 +8930,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 775",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1246.jpg.webp",
+        originalSrc: "/images/products/2025/04/1246.jpg",
+        alt: "1246",
+        source: "supplied SQL attachment 536",
+        width: 800,
+        height: 800,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 536,
@@ -7072,7 +8964,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 777",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1247.png.webp",
+        originalSrc: "/images/products/2025/04/1247.png",
+        alt: "1247",
+        source: "supplied SQL attachment 537",
+        width: 489,
+        height: 472,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 537,
@@ -7097,7 +8998,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 778",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1251.jpg.webp",
+        originalSrc: "/images/products/2025/04/1251.jpg",
+        alt: "1251",
+        source: "supplied SQL attachment 538",
+        width: 1600,
+        height: 975,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 538,
@@ -7122,7 +9032,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 779",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1263.jpg.webp",
+        originalSrc: "/images/products/2025/04/1263.jpg",
+        alt: "1263",
+        source: "supplied SQL attachment 539",
+        width: 640,
+        height: 427,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 539,
@@ -7147,7 +9066,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 780",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1361.png.webp",
+        originalSrc: "/images/products/2025/04/1361.png",
+        alt: "1361",
+        source: "supplied SQL attachment 540",
+        width: 476,
+        height: 406,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 540,
@@ -7172,7 +9100,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 781",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/1403.jpg",
+        originalSrc: "/images/products/2025/04/1403.jpg",
+        alt: "1403",
+        source: "supplied SQL attachment 541",
+        width: 350,
+        height: 174,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 541,
@@ -7236,7 +9173,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 782",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/3231.jpg",
+        originalSrc: "/images/products/2025/04/3231.jpg",
+        alt: "3231",
+        source: "supplied SQL attachment 542",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 542,
@@ -7310,7 +9256,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 783",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/4224.png.webp",
+        originalSrc: "/images/products/2025/04/4224.png",
+        alt: "4224",
+        source: "supplied SQL attachment 544",
+        width: 495,
+        height: 495,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 544,
@@ -7400,7 +9355,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 784",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/4225.png.webp",
+        originalSrc: "/images/products/2025/04/4225.png",
+        alt: "4225-cam-drawer-lock",
+        source: "supplied SQL attachment 545",
+        width: 295,
+        height: 292,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 545,
@@ -7464,7 +9428,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 785",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/4226.jpg.webp",
+        originalSrc: "/images/products/2025/04/4226.jpg",
+        alt: "4226",
+        source: "supplied SQL attachment 546",
+        width: 300,
+        height: 300,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 546,
@@ -7524,7 +9497,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 786",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/4251.jpg.webp",
+        originalSrc: "/images/products/2025/04/4251.jpg",
+        alt: "4251",
+        source: "supplied SQL attachment 547",
+        width: 801,
+        height: 800,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 547,
@@ -7579,7 +9561,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 787",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/5481.jpg",
+        originalSrc: "/images/products/2025/04/5481.jpg",
+        alt: "5481",
+        source: "supplied SQL attachment 548",
+        width: 208,
+        height: 156,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 548,
@@ -7660,7 +9651,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 788",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/5491.jpg",
+        originalSrc: "/images/products/2025/04/5491.jpg",
+        alt: "5491",
+        source: "supplied SQL attachment 549",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 549,
@@ -7739,7 +9739,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 789",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/5522.jpg.webp",
+        originalSrc: "/images/products/2025/04/5522.jpg",
+        alt: "5522",
+        source: "supplied SQL attachment 550",
+        width: 640,
+        height: 640,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 550,
@@ -7823,7 +9832,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 791",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/5531.jpg",
+        originalSrc: "/images/products/2025/04/5531.jpg",
+        alt: "5531",
+        source: "supplied SQL attachment 551",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 551,
@@ -7903,7 +9921,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 792",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/5751.png.webp",
+        originalSrc: "/images/products/2025/04/5751.png",
+        alt: "5751",
+        source: "supplied SQL attachment 552",
+        width: 651,
+        height: 574,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 552,
@@ -7973,7 +10000,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 793",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/6201.jpg",
+        originalSrc: "/images/products/2025/04/6201.jpg",
+        alt: "6201",
+        source: "supplied SQL attachment 553",
+        width: 785,
+        height: 1000,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 553,
@@ -8038,7 +10074,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 794",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/6202.jpg.webp",
+        originalSrc: "/images/products/2025/04/6202.jpg",
+        alt: "6202",
+        source: "supplied SQL attachment 554",
+        width: 1024,
+        height: 1024,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 554,
@@ -8127,7 +10172,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 795",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/6203.jpg.webp",
+        originalSrc: "/images/products/2025/04/6203.jpg",
+        alt: "6203",
+        source: "supplied SQL attachment 555",
+        width: 1024,
+        height: 1024,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 555,
@@ -8211,7 +10265,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 796",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/6204.jpg",
+        originalSrc: "/images/products/2025/04/6204.jpg",
+        alt: "6204",
+        source: "supplied SQL attachment 556",
+        width: 1024,
+        height: 1024,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 556,
@@ -8320,7 +10383,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 797",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/6211.png.webp",
+        originalSrc: "/images/products/2025/04/6211.png",
+        alt: "6211",
+        source: "supplied SQL attachment 557",
+        width: 223,
+        height: 217,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 557,
@@ -8405,7 +10477,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 799",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/6232.jpg.webp",
+        originalSrc: "/images/products/2025/04/6232.jpg",
+        alt: "6232",
+        source: "supplied SQL attachment 558",
+        width: 1024,
+        height: 1024,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 558,
@@ -8489,7 +10570,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 800",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/6321.jpg.webp",
+        originalSrc: "/images/products/2025/04/6321.jpg",
+        alt: "6321",
+        source: "supplied SQL attachment 559",
+        width: 1600,
+        height: 1600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 559,
@@ -8564,7 +10654,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 801",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/6323.png",
+        originalSrc: "/images/products/2025/04/6323.png",
+        alt: "6323",
+        source: "supplied SQL attachment 560",
+        width: 360,
+        height: 360,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 560,
@@ -8634,7 +10733,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 802",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/6331.png.webp",
+        originalSrc: "/images/products/2025/04/6331.png",
+        alt: "6331",
+        source: "supplied SQL attachment 561",
+        width: 667,
+        height: 468,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 561,
@@ -8699,7 +10807,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 804",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/6401.png.webp",
+        originalSrc: "/images/products/2025/04/6401.png",
+        alt: "6401",
+        source: "supplied SQL attachment 562",
+        width: 244,
+        height: 237,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 562,
@@ -8773,7 +10890,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 805",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/7141-2.png.webp",
+        originalSrc: "/images/products/2025/04/7141-2.png",
+        alt: "7141",
+        source: "supplied SQL attachment 563",
+        width: 206,
+        height: 204,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 563,
@@ -8828,7 +10954,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 806",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/82007.png.webp",
+        originalSrc: "/images/products/2025/04/82007.png",
+        alt: "82007",
+        source: "supplied SQL attachment 564",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 564,
@@ -8852,7 +10987,7 @@ export const products: Product[] = [
       "Premium fireproof door lock designed for cabin doors and all-grade A class fireproof doors on ships and vessels. Features double bolts, single cylinder, and master key mechanism for enhanced maritime security. The windproof latch bolt operates via lever handle, while the deadbolt can be locked/unlocked with a knob from inside or key from outside. Compatible with marine doors of 38-42mm thickness. IMO/SOLAS compliant.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n<strong>Model:</strong> C1\n<strong>Type:</strong> Cabin Door Lock with Master Key System\n<strong>Material:</strong> Marine-Grade Stainless Steel\n<strong>Function:</strong> Double bolt system with single cylinder and master key compatibility\n<strong>Bolt Mechanism:</strong> Windproof latch bolt (lever operated) + Deadbolt (key/knob operated)\n<strong>Cylinder:</strong> Single cylinder (external key operation)\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Certification:</strong> IMO/SOLAS compliant\n<h4>Features:</h4>\n<ul>\n \t<li>Double bolt security system</li>\n \t<li>Windproof latch bolt operates via lever handle</li>\n \t<li>Deadbolt locks/unlocks with interior knob or exterior key</li>\n \t<li>Master key system compatible</li>\n \t<li>Premium fireproof construction</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Ship cabin doors</li>\n \t<li>Grade A class fireproof doors</li>\n \t<li>Naval and commercial vessels</li>\n \t<li>Crew quarters and officer cabins</li>\n \t<li>Restricted access areas on ships</li>\n</ul>\n\n<p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n<strong>Model:</strong> C1\n<strong>Type:</strong> Cabin Door Lock with Master Key System\n<strong>Material:</strong> Marine-Grade Stainless Steel\n<strong>Function:</strong> Double bolt system with single cylinder and master key compatibility\n<strong>Bolt Mechanism:</strong> Windproof latch bolt (lever operated) + Deadbolt (key/knob operated)\n<strong>Cylinder:</strong> Single cylinder (external key operation)\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Certification:</strong> IMO/SOLAS compliant\n<h4>Features:</h4>\n<ul>\n \t<li>Double bolt security system</li>\n \t<li>Windproof latch bolt operates via lever handle</li>\n \t<li>Deadbolt locks/unlocks with interior knob or exterior key</li>\n \t<li>Master key system compatible</li>\n \t<li>Premium fireproof construction</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Ship cabin doors</li>\n \t<li>Grade A class fireproof doors</li>\n \t<li>Naval and commercial vessels</li>\n \t<li>Crew quarters and officer cabins</li>\n \t<li>Restricted access areas on ships</li>\n</ul>\n\n<p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -8899,7 +11034,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 822",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/c1-2.png.webp",
+        originalSrc: "/images/products/2025/04/c1-2.png",
+        alt: "C1 Marine Fireproof Door Lock for Ship | Cabin Door Lock with Master Key",
+        source: "supplied SQL attachment 914",
+        width: 250,
+        height: 250,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 914,
@@ -8923,7 +11067,7 @@ export const products: Product[] = [
       "Advanced marine fireproof door lock with double bolts, double cylinders, and master key system. Offers the convenience of key operation from both sides of the door for maximum security and flexibility on ships and vessels. Designed for marine doors of 38-42mm thickness with the same dimensions as C1 lock. Suitable for naval and commercial vessels.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n<strong>Model:</strong> C1-C\n<strong>Type:</strong> Double Cylinder Ship Lock\n<strong>Material:</strong> Marine-Grade Stainless Steel\n<strong>Function:</strong> Double bolt system with double cylinders and master key compatibility\n<strong>Bolt Mechanism:</strong> Windproof latch bolt + Deadbolt with dual-sided key operation\n<strong>Cylinder:</strong> Double cylinder (key operation from both sides)\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Dimensions:</strong> Same as C1 model\n<strong>Certification:</strong> Maritime safety standards compliant\n<h4>Features:</h4>\n<ul>\n \t<li>Advanced double cylinder security</li>\n \t<li>Key operation from both interior and exterior</li>\n \t<li>Double bolt mechanism for maximum security</li>\n \t<li>Master key system compatible</li>\n \t<li>Enhanced flexibility for high-security zones</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>High-security ship doors</li>\n \t<li>Naval vessel restricted areas</li>\n \t<li>Commercial ship secure compartments</li>\n \t<li>Critical access control points</li>\n \t<li>Marine doors requiring dual-sided key access</li>\n</ul>\n\n<p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n<strong>Model:</strong> C1-C\n<strong>Type:</strong> Double Cylinder Ship Lock\n<strong>Material:</strong> Marine-Grade Stainless Steel\n<strong>Function:</strong> Double bolt system with double cylinders and master key compatibility\n<strong>Bolt Mechanism:</strong> Windproof latch bolt + Deadbolt with dual-sided key operation\n<strong>Cylinder:</strong> Double cylinder (key operation from both sides)\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Dimensions:</strong> Same as C1 model\n<strong>Certification:</strong> Maritime safety standards compliant\n<h4>Features:</h4>\n<ul>\n \t<li>Advanced double cylinder security</li>\n \t<li>Key operation from both interior and exterior</li>\n \t<li>Double bolt mechanism for maximum security</li>\n \t<li>Master key system compatible</li>\n \t<li>Enhanced flexibility for high-security zones</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>High-security ship doors</li>\n \t<li>Naval vessel restricted areas</li>\n \t<li>Commercial ship secure compartments</li>\n \t<li>Critical access control points</li>\n \t<li>Marine doors requiring dual-sided key access</li>\n</ul>\n\n",
     specifications: [
       {
         label: "Model",
@@ -8974,7 +11118,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 824",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C1-C.jpg.webp",
+        originalSrc: "/images/products/2025/04/C1-C.jpg",
+        alt: "C1-C Marine Fireproof Door Lock for Ship | Double Cylinder Ship Lock",
+        source: "supplied SQL attachment 808",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 808,
@@ -8998,7 +11151,7 @@ export const products: Product[] = [
       "High-security marine fireproof door lock featuring double bolts, double knobs, single cylinder, mechanical password button, and master key mechanism. Opens and locks with knob from inside, while users can access via password entry from outside. Suitable for ship cabin doors of 38-42mm thickness. Ideal for crew quarters and restricted areas on vessels.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n<strong>Model:</strong> C1-M\n<strong>Type:</strong> Password Button Lock with Master Key System\n<strong>Material:</strong> Marine-Grade Stainless Steel\n<strong>Function:</strong> Double bolt system with mechanical password entry and master key override\n<strong>Bolt Mechanism:</strong> Double knob operation (interior) with mechanical password button (exterior)\n<strong>Cylinder:</strong> Single cylinder with master key compatibility\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Access Control:</strong> Mechanical password button + Master key\n<strong>Certification:</strong> Maritime safety standards compliant\n<h4>Features:</h4>\n<ul>\n \t<li>High-security mechanical password button entry</li>\n \t<li>Double knob operation from interior</li>\n \t<li>Master key override capability</li>\n \t<li>Keyless entry convenience from exterior</li>\n \t<li>Double bolt security system</li>\n \t<li>Fireproof marine construction</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Ship cabin doors with keyless entry</li>\n \t<li>Crew quarters and officer cabins</li>\n \t<li>Restricted access areas requiring password control</li>\n \t<li>Naval and commercial vessels</li>\n \t<li>High-security zones on ships</li>\n</ul>\n\n<p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n<strong>Model:</strong> C1-M\n<strong>Type:</strong> Password Button Lock with Master Key System\n<strong>Material:</strong> Marine-Grade Stainless Steel\n<strong>Function:</strong> Double bolt system with mechanical password entry and master key override\n<strong>Bolt Mechanism:</strong> Double knob operation (interior) with mechanical password button (exterior)\n<strong>Cylinder:</strong> Single cylinder with master key compatibility\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Access Control:</strong> Mechanical password button + Master key\n<strong>Certification:</strong> Maritime safety standards compliant\n<h4>Features:</h4>\n<ul>\n \t<li>High-security mechanical password button entry</li>\n \t<li>Double knob operation from interior</li>\n \t<li>Master key override capability</li>\n \t<li>Keyless entry convenience from exterior</li>\n \t<li>Double bolt security system</li>\n \t<li>Fireproof marine construction</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Ship cabin doors with keyless entry</li>\n \t<li>Crew quarters and officer cabins</li>\n \t<li>Restricted access areas requiring password control</li>\n \t<li>Naval and commercial vessels</li>\n \t<li>High-security zones on ships</li>\n</ul>\n\n<p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9050,7 +11203,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 826",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C1-M.jpg.webp",
+        originalSrc: "/images/products/2025/04/C1-M.jpg",
+        alt: "C1-M Marine Fireproof Door Lock | Ship Lock with Password Button & Master Key",
+        source: "supplied SQL attachment 811",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 811,
@@ -9074,7 +11236,7 @@ export const products: Product[] = [
       "Versatile marine fireproof door lock with double bolt, single cylinder, and master key mechanism. Opens freely via lever handle during normal operation. When deadbolt is engaged by key (outside) or knob (inside), the handle becomes immovable for enhanced security. Ideal for steel doors, watertight doors, and weathertight doors on ships of 38-42mm thickness. Marine-grade construction.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n<strong>Model:</strong> C2\n<strong>Type:</strong> Watertight Door Lock for Ships\n<strong>Material:</strong> Marine-Grade Steel\n<strong>Function:</strong> Double bolt system with single cylinder and master key compatibility\n<strong>Bolt Mechanism:</strong> Lever handle for free operation; deadbolt engaged by key/knob immobilizes handle\n<strong>Cylinder:</strong> Single cylinder (external key operation)\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Certification:</strong> Marine-grade construction\n<h4>Features:</h4>\n<ul>\n \t<li>Versatile operation modes</li>\n \t<li>Lever handle for normal passage</li>\n \t<li>Deadbolt engagement for enhanced security</li>\n \t<li>Handle immobilization when locked</li>\n \t<li>Master key system compatible</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Steel doors on ships</li>\n \t<li>Watertight doors</li>\n \t<li>Weathertight doors</li>\n \t<li>Marine vessel doors</li>\n \t<li>High-security marine compartments</li>\n</ul>\n\n<p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n<strong>Model:</strong> C2\n<strong>Type:</strong> Watertight Door Lock for Ships\n<strong>Material:</strong> Marine-Grade Steel\n<strong>Function:</strong> Double bolt system with single cylinder and master key compatibility\n<strong>Bolt Mechanism:</strong> Lever handle for free operation; deadbolt engaged by key/knob immobilizes handle\n<strong>Cylinder:</strong> Single cylinder (external key operation)\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Certification:</strong> Marine-grade construction\n<h4>Features:</h4>\n<ul>\n \t<li>Versatile operation modes</li>\n \t<li>Lever handle for normal passage</li>\n \t<li>Deadbolt engagement for enhanced security</li>\n \t<li>Handle immobilization when locked</li>\n \t<li>Master key system compatible</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Steel doors on ships</li>\n \t<li>Watertight doors</li>\n \t<li>Weathertight doors</li>\n \t<li>Marine vessel doors</li>\n \t<li>High-security marine compartments</li>\n</ul>\n\n<p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9121,7 +11283,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 827",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C2.jpg.webp",
+        originalSrc: "/images/products/2025/04/C2.jpg",
+        alt: "C2 Marine Fireproof Door Lock | Watertight Door Lock for Ships",
+        source: "supplied SQL attachment 812",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 812,
@@ -9145,7 +11316,7 @@ export const products: Product[] = [
       "Secure marine fireproof door lock incorporating single deadbolt, single cylinder, and master key mechanism. Operates via knob from inside and key from outside for controlled access. Designed specifically for steel doors, watertight doors, and marine bulkhead doors of 38-42mm thickness. Corrosion-resistant for saltwater environments",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C2-A<br>\n<strong>Type:</strong> Ship Watertight Door Deadbolt Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Single deadbolt with single cylinder and master key mechanism<br>\n    <strong>Bolt Mechanism:</strong> Deadbolt operated by knob (inside) or key (outside)<br>\n    <strong>Cylinder:</strong> Single cylinder (external key operation)<br>\n    <strong>Suitable Door Thickness:</strong> 38–42 mm<br>\n    <strong>Certification:</strong> Corrosion-resistant for saltwater environments\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Controlled access operation</li>\n      <li>Single deadbolt security</li>\n      <li>Knob operation from interior</li>\n      <li>Key operation from exterior</li>\n      <li>Master key system compatible</li>\n      <li>Designed for marine bulkhead doors</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Steel doors on vessels</li>\n      <li>Watertight doors</li>\n      <li>Marine bulkhead doors</li>\n      <li>Commercial and naval ships</li>\n      <li>Saltwater environment applications</li>\n    </ul>\n  \n\n  \n    <p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C2-A<br>\n<strong>Type:</strong> Ship Watertight Door Deadbolt Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Single deadbolt with single cylinder and master key mechanism<br>\n    <strong>Bolt Mechanism:</strong> Deadbolt operated by knob (inside) or key (outside)<br>\n    <strong>Cylinder:</strong> Single cylinder (external key operation)<br>\n    <strong>Suitable Door Thickness:</strong> 38–42 mm<br>\n    <strong>Certification:</strong> Corrosion-resistant for saltwater environments\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Controlled access operation</li>\n      <li>Single deadbolt security</li>\n      <li>Knob operation from interior</li>\n      <li>Key operation from exterior</li>\n      <li>Master key system compatible</li>\n      <li>Designed for marine bulkhead doors</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Steel doors on vessels</li>\n      <li>Watertight doors</li>\n      <li>Marine bulkhead doors</li>\n      <li>Commercial and naval ships</li>\n      <li>Saltwater environment applications</li>\n    </ul>\n  \n\n  \n    <p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9190,7 +11361,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 828",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C2-A.jpg.webp",
+        originalSrc: "/images/products/2025/04/C2-A.jpg",
+        alt: "C2-A Marine Fireproof Door Lock | Ship Watertight Door Deadbolt Lock",
+        source: "supplied SQL attachment 813",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 813,
@@ -9214,7 +11394,7 @@ export const products: Product[] = [
       "Specialized marine fireproof door lock featuring hook latch bolt, single cylinder, and master key mechanism. Hook latch bolt operates freely via handle during normal use. When locked by key (outside) or knob (inside), the handle becomes immovable. Perfect for sliding doors of bridge house, wheelhouse, and navigation areas on vessels. Compatible with 38-42mm thickness marine sliding doors.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n<strong>Model:</strong> C3\n<strong>Type:</strong> Sliding Door Lock for Ships\n<strong>Material:</strong> Marine-Grade Steel\n<strong>Function:</strong> Hook latch bolt with single cylinder and master key mechanism\n\n<strong>Function:</strong> Hook latch bolt with single cylinder and master key mechanism\n<strong>Bolt Mechanism:</strong> Hook latch bolt operates freely via handle; immobilizes when locked\n<strong>Cylinder:</strong> Single cylinder (external key operation)\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Certification:</strong> Maritime safety standards compliant\n<h4>Features:</h4>\n<ul>\n \t<li>Specialized hook latch design for sliding doors</li>\n \t<li>Free operation via handle during normal use</li>\n \t<li>Handle immobilization when locked</li>\n \t<li>Key (outside) or knob (inside) locking</li>\n \t<li>Master key system compatible</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Sliding doors of bridge house</li>\n \t<li>Wheelhouse sliding doors</li>\n \t<li>Navigation area doors</li>\n \t<li>Marine sliding door applications</li>\n \t<li>Commercial and naval vessels</li>\n</ul>\n\n<p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n<strong>Model:</strong> C3\n<strong>Type:</strong> Sliding Door Lock for Ships\n<strong>Material:</strong> Marine-Grade Steel\n<strong>Function:</strong> Hook latch bolt with single cylinder and master key mechanism\n\n<strong>Function:</strong> Hook latch bolt with single cylinder and master key mechanism\n<strong>Bolt Mechanism:</strong> Hook latch bolt operates freely via handle; immobilizes when locked\n<strong>Cylinder:</strong> Single cylinder (external key operation)\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Certification:</strong> Maritime safety standards compliant\n<h4>Features:</h4>\n<ul>\n \t<li>Specialized hook latch design for sliding doors</li>\n \t<li>Free operation via handle during normal use</li>\n \t<li>Handle immobilization when locked</li>\n \t<li>Key (outside) or knob (inside) locking</li>\n \t<li>Master key system compatible</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Sliding doors of bridge house</li>\n \t<li>Wheelhouse sliding doors</li>\n \t<li>Navigation area doors</li>\n \t<li>Marine sliding door applications</li>\n \t<li>Commercial and naval vessels</li>\n</ul>\n\n<p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9265,7 +11445,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 830",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C3.jpg.webp",
+        originalSrc: "/images/products/2025/04/C3.jpg",
+        alt: "C3 Marine Fireproof Hook Latch Lock | Sliding Door Lock for Ships",
+        source: "supplied SQL attachment 814",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 814,
@@ -9289,7 +11478,7 @@ export const products: Product[] = [
       "Privacy-focused marine fireproof door lock with double bolts and indicator mechanism. Operates freely via lever handle during normal use. Turn the knob 90° upward from inside to display red indicator outside, preventing handle operation except with special key. Ideal for ship toilet doors, bathrooms, and WC compartments of 35-45mm thickness. Marine-certified privacy lock.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C4<br>\n    <strong>Type:</strong> Ship Toilet Door Lock with Indicator<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Privacy lock with double bolts and indicator mechanism<br>\n    <strong>Bolt Mechanism:</strong> Lever handle for free operation; knob engagement displays red indicator<br>\n    <strong>Indicator System:</strong> Red indicator visible outside when locked<br>\n    <strong>Suitable Door Thickness:</strong> 35–45 mm<br>\n    <strong>Suitable Door Thickness:</strong> 35–45 mm<br>\n    <strong>Certification:</strong> Marine-certified privacy lock\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Privacy-focused indicator system</li>\n      <li>Lever handle for normal operation</li>\n      <li>Turn knob 90° upward to lock and activate indicator</li>\n      <li>Red indicator prevents outside entry</li>\n      <li>Special key override available</li>\n      <li>Double bolt mechanism</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship toilet doors</li>\n      <li>Marine bathrooms</li>\n      <li>WC compartments on vessels</li>\n      <li>Crew facilities</li>\n      <li>Privacy areas on ships</li>\n    </ul>\n  \n\n  \n    <p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C4<br>\n    <strong>Type:</strong> Ship Toilet Door Lock with Indicator<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Privacy lock with double bolts and indicator mechanism<br>\n    <strong>Bolt Mechanism:</strong> Lever handle for free operation; knob engagement displays red indicator<br>\n    <strong>Indicator System:</strong> Red indicator visible outside when locked<br>\n    <strong>Suitable Door Thickness:</strong> 35–45 mm<br>\n    <strong>Suitable Door Thickness:</strong> 35–45 mm<br>\n    <strong>Certification:</strong> Marine-certified privacy lock\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Privacy-focused indicator system</li>\n      <li>Lever handle for normal operation</li>\n      <li>Turn knob 90° upward to lock and activate indicator</li>\n      <li>Red indicator prevents outside entry</li>\n      <li>Special key override available</li>\n      <li>Double bolt mechanism</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship toilet doors</li>\n      <li>Marine bathrooms</li>\n      <li>WC compartments on vessels</li>\n      <li>Crew facilities</li>\n      <li>Privacy areas on ships</li>\n    </ul>\n  \n\n  \n    <p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9340,7 +11529,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 832",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C4.jpg.webp",
+        originalSrc: "/images/products/2025/04/C4.jpg",
+        alt: "C4 Marine Privacy Lock | Ship Toilet Door Lock with Indicator",
+        source: "supplied SQL attachment 815",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 815,
@@ -9364,7 +11562,7 @@ export const products: Product[] = [
       "Enhanced marine fireproof door lock featuring single slanting bolt, double deadbolt, and double indicator mechanism. Designed for maximum privacy and security in public toilet and restroom applications on ships and vessels. Suitable for marine bathroom doors of 38-42mm thickness.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n<strong>Model:</strong> C4-A\n<strong>Type:</strong> Ship WC Door Lock with Double Indicator\n<strong>Material:</strong> Marine-Grade Steel\n<strong>Function:</strong> Enhanced privacy lock with double indicator system\n<strong>Bolt Mechanism:</strong> Single slanting bolt + Double deadbolt\n<strong>Indicator System:</strong> Double indicator mechanism\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Certification:</strong> Maritime safety standards compliant\n<h4>Features:</h4>\n<ul>\n \t<li>Enhanced double indicator system</li>\n \t<li>Single slanting bolt mechanism</li>\n \t<li>Double deadbolt for maximum security</li>\n \t<li>Designed for public toilet applications</li>\n \t<li>Maximum privacy and security features</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Public toilets on ships</li>\n \t<li>Public restrooms on vessels</li>\n \t<li>Marine bathroom facilities</li>\n \t<li>High-traffic WC areas</li>\n \t<li>Commercial vessel facilities</li>\n</ul>\n\n<p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n<strong>Model:</strong> C4-A\n<strong>Type:</strong> Ship WC Door Lock with Double Indicator\n<strong>Material:</strong> Marine-Grade Steel\n<strong>Function:</strong> Enhanced privacy lock with double indicator system\n<strong>Bolt Mechanism:</strong> Single slanting bolt + Double deadbolt\n<strong>Indicator System:</strong> Double indicator mechanism\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Certification:</strong> Maritime safety standards compliant\n<h4>Features:</h4>\n<ul>\n \t<li>Enhanced double indicator system</li>\n \t<li>Single slanting bolt mechanism</li>\n \t<li>Double deadbolt for maximum security</li>\n \t<li>Designed for public toilet applications</li>\n \t<li>Maximum privacy and security features</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Public toilets on ships</li>\n \t<li>Public restrooms on vessels</li>\n \t<li>Marine bathroom facilities</li>\n \t<li>High-traffic WC areas</li>\n \t<li>Commercial vessel facilities</li>\n</ul>\n\n<p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9409,7 +11607,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 834",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C4-A.jpg.webp",
+        originalSrc: "/images/products/2025/04/C4-A.jpg",
+        alt: "C4-A Marine Public Toilet Lock | Ship WC Door Lock with Double Indicator",
+        source: "supplied SQL attachment 816",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 816,
@@ -9433,7 +11640,7 @@ export const products: Product[] = [
       "This marine-grade fireproof door lock features a single bolt mechanism for quick and easy operation. The door opens directly using the lever handle, making it ideal for high-traffic passage doors on ships and vessels. Suitable for marine doors with 38-42mm thickness. Certified for maritime safety standards.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n<strong>Model:</strong> C-5\n<strong>Type:</strong> Single Bolt Passage Door Lock\n<strong>Material:</strong> Marine-Grade Steel\n<strong>Function:</strong> Direct passage operation via lever handle (no key required)\n<strong>Bolt Mechanism:</strong> Single windproof latch bolt\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Certification:</strong> Maritime safety standards compliant\n<h4>Features:</h4>\n<ul>\n \t<li>Quick and easy lever handle operation</li>\n \t<li>Single bolt mechanism for high-traffic areas</li>\n \t<li>Fireproof construction for marine safety</li>\n \t<li>Windproof latch bolt design</li>\n \t<li>No cylinder or key operation required</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Ship passage doors</li>\n \t<li>High-traffic marine corridors</li>\n \t<li>Vessel interior passage doors</li>\n \t<li>Commercial and naval ships</li>\n \t<li>Grade A fireproof door applications</li>\n</ul>\n\n<p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n<strong>Model:</strong> C-5\n<strong>Type:</strong> Single Bolt Passage Door Lock\n<strong>Material:</strong> Marine-Grade Steel\n<strong>Function:</strong> Direct passage operation via lever handle (no key required)\n<strong>Bolt Mechanism:</strong> Single windproof latch bolt\n<strong>Suitable Door Thickness:</strong> 38–42 mm\n<strong>Certification:</strong> Maritime safety standards compliant\n<h4>Features:</h4>\n<ul>\n \t<li>Quick and easy lever handle operation</li>\n \t<li>Single bolt mechanism for high-traffic areas</li>\n \t<li>Fireproof construction for marine safety</li>\n \t<li>Windproof latch bolt design</li>\n \t<li>No cylinder or key operation required</li>\n</ul>\n<h4>Application:</h4>\n<ul>\n \t<li>Ship passage doors</li>\n \t<li>High-traffic marine corridors</li>\n \t<li>Vessel interior passage doors</li>\n \t<li>Commercial and naval ships</li>\n \t<li>Grade A fireproof door applications</li>\n</ul>\n\n<p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9473,7 +11680,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 835",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C-5.jpg.webp",
+        originalSrc: "/images/products/2025/04/C-5.jpg",
+        alt: "C-5 Marine Fireproof Door Lock for Ship | Single Bolt Passage Door Lock",
+        source: "supplied SQL attachment 817",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 817,
@@ -9497,7 +11713,7 @@ export const products: Product[] = [
       "Simplified marine fireproof door lock with single latch bolt mechanism. Features the same case design as C1 lock but without deadbolt. Operates using the same method as C5 lock for straightforward access. Ideal for ship passage doors, corridors, and hallways of 38-42mm thickness. Lightweight marine lock solution.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C5-B<br>\n    <strong>Type:</strong> Ship Fireproof Latch Bolt Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Simplified passage lock with single latch bolt<br>\n    <strong>Bolt Mechanism:</strong> Single latch bolt<br>\n    <strong>Case Design:</strong> Same as C1 lock (without deadbolt)<br>\n    <strong>Operation:</strong> Same method as C5 lock<br>\n    <strong>Suitable Door Thickness:</strong> 38–42 mm<br>\n    <strong>Certification:</strong> Lightweight marine lock solution\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Simplified design without deadbolt</li>\n      <li>Same case as C1 model</li>\n      <li>Single latch bolt mechanism</li>\n      <li>Straightforward access operation</li>\n      <li>Lightweight construction</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship passage doors</li>\n      <li>Marine corridors</li>\n      <li>Vessel hallways</li>\n      <li>High-traffic interior areas</li>\n      <li>Commercial and naval ships</li>\n    </ul>\n  \n\n  \n    <p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C5-B<br>\n    <strong>Type:</strong> Ship Fireproof Latch Bolt Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Simplified passage lock with single latch bolt<br>\n    <strong>Bolt Mechanism:</strong> Single latch bolt<br>\n    <strong>Case Design:</strong> Same as C1 lock (without deadbolt)<br>\n    <strong>Operation:</strong> Same method as C5 lock<br>\n    <strong>Suitable Door Thickness:</strong> 38–42 mm<br>\n    <strong>Certification:</strong> Lightweight marine lock solution\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Simplified design without deadbolt</li>\n      <li>Same case as C1 model</li>\n      <li>Single latch bolt mechanism</li>\n      <li>Straightforward access operation</li>\n      <li>Lightweight construction</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship passage doors</li>\n      <li>Marine corridors</li>\n      <li>Vessel hallways</li>\n      <li>High-traffic interior areas</li>\n      <li>Commercial and naval ships</li>\n    </ul>\n  \n\n  \n    <p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9547,7 +11763,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 837",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C5-B.jpg.webp",
+        originalSrc: "/images/products/2025/04/C5-B.jpg",
+        alt: "C5-B Marine Passage Door Lock | Ship Fireproof Latch Bolt Lock",
+        source: "supplied SQL attachment 818",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 818,
@@ -9571,7 +11796,7 @@ export const products: Product[] = [
       "Secure access marine fireproof door lock with single bolt and no-handle mechanism. Operates exclusively via special key for restricted access control on ships and vessels. Designed for service access doors, utility rooms, and machinery spaces of 38-42mm thickness. High-security marine lock.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C5-D<br>\n    <strong>Type:</strong> Ship Restricted Entry Lock (Key Only)<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Restricted access with key-only operation<br>\n    <strong>Bolt Mechanism:</strong> Single bolt with no-handle mechanism<br>\n    <strong>Operation:</strong> Exclusive special key operation<br>\n    <strong>Suitable Door Thickness:</strong> 38–42 mm<br>\n    <strong>Certification:</strong> High-security marine lock\n\n    <h4>Features:</h4>\n    <ul>\n      <li>No-handle design for restricted access</li>\n      <li>Key-only operation</li>\n      <li>Single bolt mechanism</li>\n      <li>Enhanced security control</li>\n      <li>Prevents unauthorized entry</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Service access doors</li>\n      <li>Utility rooms on ships</li>\n      <li>Machinery spaces</li>\n      <li>Restricted access areas</li>\n      <li>High-security compartments</li>\n    </ul>\n  \n\n  \n    <p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C5-D<br>\n    <strong>Type:</strong> Ship Restricted Entry Lock (Key Only)<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Restricted access with key-only operation<br>\n    <strong>Bolt Mechanism:</strong> Single bolt with no-handle mechanism<br>\n    <strong>Operation:</strong> Exclusive special key operation<br>\n    <strong>Suitable Door Thickness:</strong> 38–42 mm<br>\n    <strong>Certification:</strong> High-security marine lock\n\n    <h4>Features:</h4>\n    <ul>\n      <li>No-handle design for restricted access</li>\n      <li>Key-only operation</li>\n      <li>Single bolt mechanism</li>\n      <li>Enhanced security control</li>\n      <li>Prevents unauthorized entry</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Service access doors</li>\n      <li>Utility rooms on ships</li>\n      <li>Machinery spaces</li>\n      <li>Restricted access areas</li>\n      <li>High-security compartments</li>\n    </ul>\n  \n\n  \n    <p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9616,7 +11841,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 838",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C5-D.jpg.webp",
+        originalSrc: "/images/products/2025/04/C5-D.jpg",
+        alt: "C5-D Marine Access Door Lock | Ship Restricted Entry Lock (Key Only)",
+        source: "supplied SQL attachment 819",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 819,
@@ -9640,7 +11874,7 @@ export const products: Product[] = [
       "Marine-grade drawer lock incorporating button and single slanting bolt mechanism. Provides reliable security for ship drawers, cabinets, and storage compartments. Durable construction designed specifically for maritime environments. Corrosion-resistant ship furniture lock.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C6<br>\n    <strong>Type:</strong> Ship Furniture Lock with Button Mechanism<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Drawer security with button operation<br>\n    <strong>Bolt Mechanism:</strong> Button and single slanting bolt<br>\n    <strong>Certification:</strong> Corrosion-resistant ship furniture lock\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Button mechanism operation</li>\n      <li>Single slanting bolt design</li>\n      <li>Reliable drawer security</li>\n      <li>Durable marine construction</li>\n      <li>Designed for maritime environments</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship drawers</li>\n      <li>Marine cabinets</li>\n      <li>Storage compartments on vessels</li>\n      <li>Ship furniture</li>\n      <li>Naval and commercial vessels</li>\n    </ul>\n  \n\n  \n    <p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C6<br>\n    <strong>Type:</strong> Ship Furniture Lock with Button Mechanism<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Drawer security with button operation<br>\n    <strong>Bolt Mechanism:</strong> Button and single slanting bolt<br>\n    <strong>Certification:</strong> Corrosion-resistant ship furniture lock\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Button mechanism operation</li>\n      <li>Single slanting bolt design</li>\n      <li>Reliable drawer security</li>\n      <li>Durable marine construction</li>\n      <li>Designed for maritime environments</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship drawers</li>\n      <li>Marine cabinets</li>\n      <li>Storage compartments on vessels</li>\n      <li>Ship furniture</li>\n      <li>Naval and commercial vessels</li>\n    </ul>\n  \n\n  \n    <p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9675,7 +11909,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 839",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C6.jpg.webp",
+        originalSrc: "/images/products/2025/04/C6.jpg",
+        alt: "C6 Marine Drawer Lock | Ship Furniture Lock with Button Mechanism",
+        source: "supplied SQL attachment 820",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 820,
@@ -9699,7 +11942,7 @@ export const products: Product[] = [
       "Compact marine drawer lock featuring button and single slanting bolt mechanism. Designed for reliable security in ship drawer, cabinet, and furniture applications. Ideal for various marine storage solutions on vessels and boats.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C6-1<br>\n    <strong>Type:</strong> Compact Ship Cabinet Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Compact drawer security<br>\n    <strong>Bolt Mechanism:</strong> Button and single slanting bolt<br>\n    <strong>Certification:</strong> Marine-grade construction\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Compact design</li>\n      <li>Button mechanism operation</li>\n      <li>Single slanting bolt</li>\n      <li>Reliable security</li>\n      <li>Space-saving installation</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship drawers</li>\n      <li>Marine cabinets</li>\n      <li>Compact furniture on vessels</li>\n      <li>Storage solutions</li>\n      <li>Boats and ships</li>\n    </ul>\n  \n\n  \n    <p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C6-1<br>\n    <strong>Type:</strong> Compact Ship Cabinet Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Compact drawer security<br>\n    <strong>Bolt Mechanism:</strong> Button and single slanting bolt<br>\n    <strong>Certification:</strong> Marine-grade construction\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Compact design</li>\n      <li>Button mechanism operation</li>\n      <li>Single slanting bolt</li>\n      <li>Reliable security</li>\n      <li>Space-saving installation</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship drawers</li>\n      <li>Marine cabinets</li>\n      <li>Compact furniture on vessels</li>\n      <li>Storage solutions</li>\n      <li>Boats and ships</li>\n    </ul>\n  \n\n  \n    <p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9734,7 +11977,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 840",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C6-1.jpg.webp",
+        originalSrc: "/images/products/2025/04/C6-1.jpg",
+        alt: "C6-1 Marine Drawer Lock | Compact Ship Cabinet Lock",
+        source: "supplied SQL attachment 821",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 821,
@@ -9758,7 +12010,7 @@ export const products: Product[] = [
       "Heavy-duty marine drawer lock with button and single slanting bolt mechanism. Provides secure locking for ship drawers, cabinets, and compartments. Built to withstand harsh marine conditions and saltwater exposure.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C6-2<br>\n    <strong>Type:</strong> Heavy-Duty Ship Storage Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Heavy-duty drawer security<br>\n    <strong>Bolt Mechanism:</strong> Button and single slanting bolt<br>\n    <strong>Certification:</strong> Built to withstand harsh marine conditions\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Heavy-duty construction</li>\n      <li>Button mechanism operation</li>\n      <li>Single slanting bolt design</li>\n      <li>Saltwater exposure resistant</li>\n      <li>Enhanced durability</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Heavy-duty ship drawers</li>\n      <li>Marine cabinets</li>\n      <li>Storage compartments</li>\n      <li>Industrial marine applications</li>\n      <li>Commercial vessels</li>\n    </ul>\n  \n\n  \n    <p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C6-2<br>\n    <strong>Type:</strong> Heavy-Duty Ship Storage Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Heavy-duty drawer security<br>\n    <strong>Bolt Mechanism:</strong> Button and single slanting bolt<br>\n    <strong>Certification:</strong> Built to withstand harsh marine conditions\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Heavy-duty construction</li>\n      <li>Button mechanism operation</li>\n      <li>Single slanting bolt design</li>\n      <li>Saltwater exposure resistant</li>\n      <li>Enhanced durability</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Heavy-duty ship drawers</li>\n      <li>Marine cabinets</li>\n      <li>Storage compartments</li>\n      <li>Industrial marine applications</li>\n      <li>Commercial vessels</li>\n    </ul>\n  \n\n  \n    <p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9793,7 +12045,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 841",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C6-2.jpg.webp",
+        originalSrc: "/images/products/2025/04/C6-2.jpg",
+        alt: "C6-2 Marine Drawer Lock | Heavy-Duty Ship Storage Lock",
+        source: "supplied SQL attachment 823",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 823,
@@ -9817,7 +12078,7 @@ export const products: Product[] = [
       "Professional marine drawer lock incorporating button and single slanting bolt mechanism. Ensures secure storage in ship drawer and cabinet applications. Corrosion-resistant design for long-lasting maritime use on vessels.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C6-3<br>\n    <strong>Type:</strong> Professional Ship Furniture Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Professional-grade drawer security<br>\n    <strong>Bolt Mechanism:</strong> Button and single slanting bolt<br>\n    <strong>Certification:</strong> Corrosion-resistant for long-lasting maritime use\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Professional-grade design</li>\n      <li>Button mechanism operation</li>\n      <li>Single slanting bolt</li>\n      <li>Secure storage solution</li>\n      <li>Long-lasting marine durability</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship drawers</li>\n      <li>Marine cabinets</li>\n      <li>Professional vessel furniture</li>\n      <li>Commercial ship applications</li>\n      <li>Naval vessel storage</li>\n    </ul>\n  \n\n  \n    <p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C6-3<br>\n    <strong>Type:</strong> Professional Ship Furniture Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Professional-grade drawer security<br>\n    <strong>Bolt Mechanism:</strong> Button and single slanting bolt<br>\n    <strong>Certification:</strong> Corrosion-resistant for long-lasting maritime use\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Professional-grade design</li>\n      <li>Button mechanism operation</li>\n      <li>Single slanting bolt</li>\n      <li>Secure storage solution</li>\n      <li>Long-lasting marine durability</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship drawers</li>\n      <li>Marine cabinets</li>\n      <li>Professional vessel furniture</li>\n      <li>Commercial ship applications</li>\n      <li>Naval vessel storage</li>\n    </ul>\n  \n\n  \n    <p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9852,7 +12113,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 843",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C6-3.jpg.webp",
+        originalSrc: "/images/products/2025/04/C6-3.jpg",
+        alt: "C6-3 Marine Drawer Lock | Professional Ship Furniture Lock",
+        source: "supplied SQL attachment 844",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 844,
@@ -9876,7 +12146,7 @@ export const products: Product[] = [
       "Versatile marine pull lock with single bolt, single cylinder, and pull mechanism. Locks and unlocks via key, with free pull operation when unlocked. Perfect for access doors, drawers, cupboards, and furniture on ships and vessels. Available for 15mm, 20mm, and 25mm thickness. Marine-grade furniture lock.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C7<br>\n    <strong>Type:</strong> Ship Furniture &amp; Cupboard Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Pull lock with key operation<br>\n    <strong>Bolt Mechanism:</strong> Single bolt with pull mechanism<br>\n    <strong>Cylinder:</strong> Single cylinder<br>\n    <strong>Operation:</strong> Key lock/unlock with free pull when unlocked<br>\n    <strong>Available Thickness:</strong> 15mm, 20mm, and 25mm<br>\n    <strong>Certification:</strong> Marine-grade furniture lock\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Versatile pull mechanism</li>\n      <li>Key-operated locking</li>\n      <li>Free pull operation when unlocked</li>\n      <li>Multiple thickness options (15mm, 20mm, 25mm)</li>\n      <li>Single bolt security</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Access doors on ships</li>\n      <li>Marine drawers</li>\n      <li>Ship cupboards</li>\n      <li>Vessel furniture</li>\n      <li>Commercial and naval applications</li>\n    </ul>\n  \n\n  \n    <p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C7<br>\n    <strong>Type:</strong> Ship Furniture &amp; Cupboard Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Pull lock with key operation<br>\n    <strong>Bolt Mechanism:</strong> Single bolt with pull mechanism<br>\n    <strong>Cylinder:</strong> Single cylinder<br>\n    <strong>Operation:</strong> Key lock/unlock with free pull when unlocked<br>\n    <strong>Available Thickness:</strong> 15mm, 20mm, and 25mm<br>\n    <strong>Certification:</strong> Marine-grade furniture lock\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Versatile pull mechanism</li>\n      <li>Key-operated locking</li>\n      <li>Free pull operation when unlocked</li>\n      <li>Multiple thickness options (15mm, 20mm, 25mm)</li>\n      <li>Single bolt security</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Access doors on ships</li>\n      <li>Marine drawers</li>\n      <li>Ship cupboards</li>\n      <li>Vessel furniture</li>\n      <li>Commercial and naval applications</li>\n    </ul>\n  \n\n  \n    <p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9926,7 +12196,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 845",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C7.jpg.webp",
+        originalSrc: "/images/products/2025/04/C7.jpg",
+        alt: "C7 Marine Pull Lock | Ship Furniture & Cupboard Lock (15-25mm)",
+        source: "supplied SQL attachment 846",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 846,
@@ -9950,7 +12229,7 @@ export const products: Product[] = [
       "Simple marine pull lock featuring single bolt and pull mechanism. Offers easy pull-to-open operation for convenient access to ship furniture, cabinets, and drawers. Ideal for furniture access doors and storage on ships and vessels. Compatible with 15mm, 20mm, and 25mm thickness.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C7-1<br>\n    <strong>Type:</strong> Ship Cabinet &amp; Drawer Pull Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Simple pull-to-open operation<br>\n    <strong>Bolt Mechanism:</strong> Single bolt with pull mechanism<br>\n    <strong>Operation:</strong> Easy pull-to-open for convenient access<br>\n    <strong>Available Thickness:</strong> 15mm, 20mm, and 25mm<br>\n    <strong>Certification:</strong> Marine-grade construction\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Simple pull mechanism</li>\n      <li>Single bolt design</li>\n      <li>Easy pull-to-open operation</li>\n      <li>Convenient access</li>\n      <li>Multiple thickness options (15mm, 20mm, 25mm)</li>\n      <li>No key required for operation</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship furniture access doors</li>\n      <li>Marine cabinets</li>\n      <li>Ship drawers</li>\n      <li>Vessel storage compartments</li>\n      <li>Commercial and naval vessels</li>\n    </ul>\n  \n\n  \n    <p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> C7-1<br>\n    <strong>Type:</strong> Ship Cabinet &amp; Drawer Pull Lock<br>\n    <strong>Material:</strong> Marine-Grade Steel<br>\n    <strong>Function:</strong> Simple pull-to-open operation<br>\n    <strong>Bolt Mechanism:</strong> Single bolt with pull mechanism<br>\n    <strong>Operation:</strong> Easy pull-to-open for convenient access<br>\n    <strong>Available Thickness:</strong> 15mm, 20mm, and 25mm<br>\n    <strong>Certification:</strong> Marine-grade construction\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Simple pull mechanism</li>\n      <li>Single bolt design</li>\n      <li>Easy pull-to-open operation</li>\n      <li>Convenient access</li>\n      <li>Multiple thickness options (15mm, 20mm, 25mm)</li>\n      <li>No key required for operation</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship furniture access doors</li>\n      <li>Marine cabinets</li>\n      <li>Ship drawers</li>\n      <li>Vessel storage compartments</li>\n      <li>Commercial and naval vessels</li>\n    </ul>\n  \n\n  \n    <p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -9995,7 +12274,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 850",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/C7-1.jpg.webp",
+        originalSrc: "/images/products/2025/04/C7-1.jpg",
+        alt: "C7-1 Marine Pull Lock | Ship Cabinet & Drawer Pull Lock (15-25mm)",
+        source: "supplied SQL attachment 847",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 847,
@@ -10019,7 +12307,7 @@ export const products: Product[] = [
       "High-security marine fireproof door lock designed for cabin doors and all-grade fireproof doors on vessels. Features double bolts and blade locking mechanism for enhanced maritime security. Key-operated for controlled access on ships. Suitable for marine doors of 38-42mm thickness. Commercial vessel approved.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> S-605<br>\n    <strong>Type:</strong> Ship Blade Lock with Key Operation<br>\n    <strong>Material:</strong> Marine-Grade Stainless Steel<br>\n    <strong>Function:</strong> High-security blade locking mechanism<br>\n    <strong>Bolt Mechanism:</strong> Double bolts with blade locking system<br>\n    <strong>Operation:</strong> Key-operated for controlled access<br>\n    <strong>Suitable Door Thickness:</strong> 38–42 mm<br>\n    <strong>Certification:</strong> Commercial vessel approved\n\n    <h4>Features:</h4>\n    <ul>\n      <li>High-security blade locking mechanism</li>\n      <li>Double bolt system</li>\n      <li>Key-operated controlled access</li>\n      <li>Enhanced maritime security</li>\n      <li>Fireproof construction</li>\n      <li>All-grade fireproof door compatible</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship cabin doors</li>\n      <li>All-grade fireproof doors on vessels</li>\n      <li>High-security marine areas</li>\n      <li>Controlled access zones</li>\n      <li>Commercial and naval vessels</li>\n    </ul>\n  \n\n  \n    <p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> S-605<br>\n    <strong>Type:</strong> Ship Blade Lock with Key Operation<br>\n    <strong>Material:</strong> Marine-Grade Stainless Steel<br>\n    <strong>Function:</strong> High-security blade locking mechanism<br>\n    <strong>Bolt Mechanism:</strong> Double bolts with blade locking system<br>\n    <strong>Operation:</strong> Key-operated for controlled access<br>\n    <strong>Suitable Door Thickness:</strong> 38–42 mm<br>\n    <strong>Certification:</strong> Commercial vessel approved\n\n    <h4>Features:</h4>\n    <ul>\n      <li>High-security blade locking mechanism</li>\n      <li>Double bolt system</li>\n      <li>Key-operated controlled access</li>\n      <li>Enhanced maritime security</li>\n      <li>Fireproof construction</li>\n      <li>All-grade fireproof door compatible</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship cabin doors</li>\n      <li>All-grade fireproof doors on vessels</li>\n      <li>High-security marine areas</li>\n      <li>Controlled access zones</li>\n      <li>Commercial and naval vessels</li>\n    </ul>\n  \n\n  \n    <p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -10064,7 +12352,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 851",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/S-605.jpg.webp",
+        originalSrc: "/images/products/2025/04/S-605.jpg",
+        alt: "S-605 Marine Fireproof Door Lock | Ship Blade Lock with Key Operation",
+        source: "supplied SQL attachment 848",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 848,
@@ -10088,7 +12385,7 @@ export const products: Product[] = [
       "Professional marine fireproof door lock suitable for cabin doors and all grade A-class fireproof doors on ships and commercial vessels. Incorporates double bolts, single cylinder, and master key mechanism. Operates using the same reliable method as C1 lock. Designed for marine doors of 38-42mm thickness. IMO/SOLAS approved ship lock.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> S-5100<br>\n    <strong>Type:</strong> Ship Cabin Door Lock (C1 Type)<br>\n    <strong>Material:</strong> Marine-Grade Stainless Steel<br>\n    <strong>Function:</strong> Double bolt system with single cylinder and master key compatibility<br>\n    <strong>Bolt Mechanism:</strong> Double bolts (operates same as C1 lock)<br>\n    <strong>Cylinder:</strong> Single cylinder<br>\n    <strong>Suitable Door Thickness:</strong> 38–42 mm<br>\n    <strong>Certification:</strong> IMO/SOLAS approved\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Professional marine fireproof construction</li>\n      <li>Double bolt security system</li>\n      <li>Single cylinder operation</li>\n      <li>Master key system compatible</li>\n      <li>Same reliable operation method as C1 lock</li>\n      <li>Grade A-class fireproof door approved</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship cabin doors</li>\n      <li>Grade A-class fireproof doors</li>\n      <li>Commercial vessels</li>\n      <li>Naval ships</li>\n      <li>Maritime safety compliant installations</li>\n    </ul>\n  \n\n  \n    <p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n\n    <strong>Model:</strong> S-5100<br>\n    <strong>Type:</strong> Ship Cabin Door Lock (C1 Type)<br>\n    <strong>Material:</strong> Marine-Grade Stainless Steel<br>\n    <strong>Function:</strong> Double bolt system with single cylinder and master key compatibility<br>\n    <strong>Bolt Mechanism:</strong> Double bolts (operates same as C1 lock)<br>\n    <strong>Cylinder:</strong> Single cylinder<br>\n    <strong>Suitable Door Thickness:</strong> 38–42 mm<br>\n    <strong>Certification:</strong> IMO/SOLAS approved\n\n    <h4>Features:</h4>\n    <ul>\n      <li>Professional marine fireproof construction</li>\n      <li>Double bolt security system</li>\n      <li>Single cylinder operation</li>\n      <li>Master key system compatible</li>\n      <li>Same reliable operation method as C1 lock</li>\n      <li>Grade A-class fireproof door approved</li>\n    </ul>\n\n    <h4>Application:</h4>\n    <ul>\n      <li>Ship cabin doors</li>\n      <li>Grade A-class fireproof doors</li>\n      <li>Commercial vessels</li>\n      <li>Naval ships</li>\n      <li>Maritime safety compliant installations</li>\n    </ul>\n  \n\n  \n    <p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "Model",
@@ -10134,7 +12431,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 852",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/04/S-5100.jpg.webp",
+        originalSrc: "/images/products/2025/04/S-5100.jpg",
+        alt: "S-5100 Marine Fireproof Door Lock | Ship Cabin Door Lock (C1 Type)",
+        source: "supplied SQL attachment 849",
+        width: 600,
+        height: 432,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 849,
@@ -10159,7 +12465,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 920",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/05/stainless-steel-butt-weld-tees.jpg.webp",
+        originalSrc:
+          "/images/products/2025/05/stainless-steel-butt-weld-tees.jpg",
+        alt: "SS Butt Weld Tee",
+        source: "supplied SQL attachment 921",
+        width: 1525,
+        height: 1500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 921,
@@ -10180,7 +12496,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 923",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/05/SS-Butt-Weld-Stub-End.jpg",
+        originalSrc: "/images/products/2025/05/SS-Butt-Weld-Stub-End.jpg",
+        alt: "SS Butt Weld Stub End",
+        source: "supplied SQL attachment 924",
+        width: 1000,
+        height: 905,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 924,
@@ -10201,7 +12526,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 925",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/05/stainless-steel-butt-weld-pipe-fittings-45-degree-elbows-schedule-10-40-80-400-detail__67428.jpg.webp",
+        originalSrc:
+          "/images/products/2025/05/stainless-steel-butt-weld-pipe-fittings-45-degree-elbows-schedule-10-40-80-400-detail__67428.jpg",
+        alt: "SS Butt Weld Elbow",
+        source: "supplied SQL attachment 926",
+        width: 600,
+        height: 600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 926,
@@ -10222,7 +12557,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 933",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/img-20220106033340-Photoroom-1.png.webp",
+        originalSrc:
+          "/images/products/2025/06/img-20220106033340-Photoroom-1.png",
+        alt: "Single Door Mirror Cabinet",
+        source: "supplied SQL attachment 934",
+        width: 450,
+        height: 450,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 934,
@@ -10243,7 +12588,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 935",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/img-20220106033405-Photoroom.png.webp",
+        originalSrc:
+          "/images/products/2025/06/img-20220106033405-Photoroom.png",
+        alt: "Double Door Mirror Cabinets",
+        source: "supplied SQL attachment 936",
+        width: 450,
+        height: 450,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 936,
@@ -10264,7 +12619,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 937",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/img-20220105121033-Photoroom.png.webp",
+        originalSrc:
+          "/images/products/2025/06/img-20220105121033-Photoroom.png",
+        alt: "Bend Pipe CP",
+        source: "supplied SQL attachment 938",
+        width: 850,
+        height: 565,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 938,
@@ -10289,7 +12654,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 939",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/jaquar-flush-vlave.png.webp",
+        originalSrc: "/images/products/2025/06/jaquar-flush-vlave.png",
+        alt: "Jaquar Flush Valve",
+        source: "supplied SQL attachment 940",
+        width: 496,
+        height: 490,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 940,
@@ -10310,7 +12684,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 941",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/vaccum.jpg.webp",
+        originalSrc: "/images/products/2025/06/vaccum.jpg",
+        alt: "Vacuum Breaker",
+        source: "supplied SQL attachment 942",
+        width: 787,
+        height: 787,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 942,
@@ -10331,7 +12714,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 943",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/cp-connection-pipe.jpg.webp",
+        originalSrc: "/images/products/2025/06/cp-connection-pipe.jpg",
+        alt: "CP Pipe",
+        source: "supplied SQL attachment 944",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 944,
@@ -10352,7 +12744,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 945",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/img-20220107053804.jpg",
+        originalSrc: "/images/products/2025/06/img-20220107053804.jpg",
+        alt: "Reducing Hex Nipple",
+        source: "supplied SQL attachment 946",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 946,
@@ -10373,7 +12774,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 947",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/img-20220107053854.jpg.webp",
+        originalSrc: "/images/products/2025/06/img-20220107053854.jpg",
+        alt: "Threaded Tee",
+        source: "supplied SQL attachment 948",
+        width: 450,
+        height: 450,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 948,
@@ -10394,7 +12804,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 949",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/Screenshot-2025-06-04-040410.png.webp",
+        originalSrc:
+          "/images/products/2025/06/Screenshot-2025-06-04-040410.png",
+        alt: "Threaded Elbow",
+        source: "supplied SQL attachment 950",
+        width: 523,
+        height: 498,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 950,
@@ -10415,7 +12835,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 951",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/img-20220107053948.jpg.webp",
+        originalSrc: "/images/products/2025/06/img-20220107053948.jpg",
+        alt: "Extension Nipple Socket",
+        source: "supplied SQL attachment 952",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 952,
@@ -10436,7 +12865,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 953",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/img-20220107054053.jpg.webp",
+        originalSrc: "/images/products/2025/06/img-20220107054053.jpg",
+        alt: "Reducer Bush",
+        source: "supplied SQL attachment 954",
+        width: 300,
+        height: 287,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 954,
@@ -10457,7 +12895,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 955",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/img-20220107055003.jpg.webp",
+        originalSrc: "/images/products/2025/06/img-20220107055003.jpg",
+        alt: "CAP",
+        source: "supplied SQL attachment 956",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 956,
@@ -10478,7 +12925,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 957",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/img-20220107055137.jpg.webp",
+        originalSrc: "/images/products/2025/06/img-20220107055137.jpg",
+        alt: "Nipple Socket",
+        source: "supplied SQL attachment 958",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 958,
@@ -10499,7 +12955,17 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 959",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/Screenshot-2025-06-04-040038.png.webp",
+        originalSrc:
+          "/images/products/2025/06/Screenshot-2025-06-04-040038.png",
+        alt: "Threaded Socket",
+        source: "supplied SQL attachment 960",
+        width: 553,
+        height: 423,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 960,
@@ -10520,7 +12986,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 961",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/img-20220107060318.jpg",
+        originalSrc: "/images/products/2025/06/img-20220107060318.jpg",
+        alt: "Female Socket",
+        source: "supplied SQL attachment 962",
+        width: 330,
+        height: 330,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 962,
@@ -10541,7 +13016,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 963",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/Male-Socket.jpg.webp",
+        originalSrc: "/images/products/2025/06/Male-Socket.jpg",
+        alt: "Male Socket",
+        source: "supplied SQL attachment 966",
+        width: 330,
+        height: 330,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 966,
@@ -10562,7 +13046,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 964",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/C.P-Flange-Elbow.jpg.webp",
+        originalSrc: "/images/products/2025/06/C.P-Flange-Elbow.jpg",
+        alt: "C.P Flange Elbow",
+        source: "supplied SQL attachment 967",
+        width: 450,
+        height: 450,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 967,
@@ -10583,7 +13076,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 965",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/C.P-Hospital-Clamp.png.webp",
+        originalSrc: "/images/products/2025/06/C.P-Hospital-Clamp.png",
+        alt: "C.P Hospital Clamp",
+        source: "supplied SQL attachment 968",
+        width: 687,
+        height: 512,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 968,
@@ -10608,7 +13110,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 969",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/Boliver-Clamp.png.webp",
+        originalSrc: "/images/products/2025/06/Boliver-Clamp.png",
+        alt: "Boliver Clamp",
+        source: "supplied SQL attachment 971",
+        width: 440,
+        height: 443,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 971,
@@ -10633,7 +13144,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 970",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/C.P-Elbow.jpg.webp",
+        originalSrc: "/images/products/2025/06/C.P-Elbow.jpg",
+        alt: "C.P Elbow",
+        source: "supplied SQL attachment 972",
+        width: 330,
+        height: 330,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 972,
@@ -10658,7 +13178,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 973",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/img-C.P-Reducing-Tee.jpg.webp",
+        originalSrc: "/images/products/2025/06/img-C.P-Reducing-Tee.jpg",
+        alt: "C.P Reducing Tee",
+        source: "supplied SQL attachment 975",
+        width: 500,
+        height: 500,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 975,
@@ -10679,7 +13208,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 974",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/C.P-Reducing-Elbow.png.webp",
+        originalSrc: "/images/products/2025/06/C.P-Reducing-Elbow.png",
+        alt: "C.P Reducing Elbow",
+        source: "supplied SQL attachment 976",
+        width: 520,
+        height: 510,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 976,
@@ -10700,7 +13238,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 977",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/C.P-socket.jpg.webp",
+        originalSrc: "/images/products/2025/06/C.P-socket.jpg",
+        alt: "C.P Socket",
+        source: "supplied SQL attachment 979",
+        width: 800,
+        height: 800,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 979,
@@ -10721,7 +13268,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 978",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/Mini-Ball-Valve.png.webp",
+        originalSrc: "/images/products/2025/06/Mini-Ball-Valve.png",
+        alt: "Mini Ball Valve",
+        source: "supplied SQL attachment 980",
+        width: 454,
+        height: 447,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 980,
@@ -10742,7 +13298,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 981",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/Compressing-Mini-Ball-Valve.png.webp",
+        originalSrc: "/images/products/2025/06/Compressing-Mini-Ball-Valve.png",
+        alt: "Compressing Mini Ball Valve",
+        source: "supplied SQL attachment 982",
+        width: 467,
+        height: 460,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 982,
@@ -10763,7 +13328,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 983",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/Ball-Valve.png.webp",
+        originalSrc: "/images/products/2025/06/Ball-Valve.png",
+        alt: "Ball Valve",
+        source: "supplied SQL attachment 985",
+        width: 441,
+        height: 370,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 985,
@@ -10788,7 +13362,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 984",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/06/Male-Elbow.jpg.webp",
+        originalSrc: "/images/products/2025/06/Male-Elbow.jpg",
+        alt: "Male Elbow",
+        source: "supplied SQL attachment 986",
+        width: 1200,
+        height: 1200,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 986,
@@ -10808,7 +13391,7 @@ export const products: Product[] = [
       "The COSMO CD-5601 Cylinder Mortice Lock is a durable marine-grade lock designed for interior and cabin doors. Featuring a 6-pin tumbler and a 54.5 mm backset, it ensures secure and smooth locking for doors with 35–45 mm thickness.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n<strong>Backset:</strong> 54.4 mm\n\n<strong>Suitable Door Thickness:</strong> 35–45 mm\n\n\n<p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n<strong>Backset:</strong> 54.4 mm\n\n<strong>Suitable Door Thickness:</strong> 35–45 mm\n\n\n<p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "display",
@@ -10908,7 +13491,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 1158",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/10/5601.jpg.webp",
+        originalSrc: "/images/products/2025/10/5601.jpg",
+        alt: "CD-5601 Cylinder Mortice Lock",
+        source: "supplied SQL attachment 1159",
+        width: 184,
+        height: 242,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 1159,
@@ -10932,7 +13524,7 @@ export const products: Product[] = [
       "The COSMO CD-5603 Cylinder Mortice Lock is a durable marine-grade lock designed for interior and cabin doors. Featuring a 6-pin tumbler and a 54.5 mm backset, it ensures secure and smooth locking for doors with 35–45 mm thickness.",
     ],
     bodyHtml:
-      "<h3>Specifications:</h3>\n<strong>Backset:</strong> 54.4 mm\n\n<strong>Suitable Door Thickness:</strong> 35–45 mm\n\n\n<p>Original illustration awaiting image files.</p>",
+      "<h3>Specifications:</h3>\n<strong>Backset:</strong> 54.4 mm\n\n<strong>Suitable Door Thickness:</strong> 35–45 mm\n\n\n<p>Additional source illustration is not available in this review.</p>",
     specifications: [
       {
         label: "display",
@@ -11032,7 +13624,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 1161",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/10/5603.jpg.webp",
+        originalSrc: "/images/products/2025/10/5603.jpg",
+        alt: "CD-5603 Cylinder Mortice Lock",
+        source: "supplied SQL attachment 1162",
+        width: 162,
+        height: 209,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 1162,
@@ -11057,7 +13658,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 1236",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/12/freezer-hinges.jpg",
+        originalSrc: "/images/products/2025/12/freezer-hinges.jpg",
+        alt: "FREEZER HINGES",
+        source: "supplied SQL attachment 1238",
+        width: 225,
+        height: 225,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 1238,
@@ -11078,7 +13688,16 @@ export const products: Product[] = [
     specifications: [],
     source: "supplied SQL product 1237",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2025/12/FREZEER-LOCK-1178.jpg",
+        originalSrc: "/images/products/2025/12/FREZEER-LOCK-1178.jpg",
+        alt: "FREZEER LOCK 1178",
+        source: "supplied SQL attachment 1239",
+        width: 204,
+        height: 192,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 1239,
@@ -11175,7 +13794,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 1430",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2026/02/61RyOHyDVuL._AC_SX522_.jpg",
+        originalSrc: "/images/products/2026/02/61RyOHyDVuL._AC_SX522_.jpg",
+        alt: "Thermostatic Shower Mixer Bar",
+        source: "supplied SQL attachment 1431",
+        width: 522,
+        height: 299,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 1431,
@@ -11265,7 +13893,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 1432",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2026/02/3110shJa1L._AC_SX522_.jpg.webp",
+        originalSrc: "/images/products/2026/02/3110shJa1L._AC_SX522_.jpg",
+        alt: "RS 100 Toilet Seat Open Front",
+        source: "supplied SQL attachment 1433",
+        width: 522,
+        height: 653,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 1433,
@@ -11350,7 +13987,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 1434",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2026/02/rubber-elbow.png.webp",
+        originalSrc: "/images/products/2026/02/rubber-elbow.png",
+        alt: "Flexible Rubber Connector for W.C.",
+        source: "supplied SQL attachment 1435",
+        width: 550,
+        height: 471,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 1435,
@@ -11431,7 +14077,16 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 1436",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2026/02/Rubber-bellow-mp4.webp",
+        originalSrc: "/images/products/2026/02/Rubber-bellow-mp4.webp",
+        alt: "W.C. Flexible Connector 4″ (Rubber Below)",
+        source: "supplied SQL attachment 1437",
+        width: 550,
+        height: 550,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 1437,
@@ -11497,7 +14152,17 @@ export const products: Product[] = [
     ],
     source: "supplied SQL product 1438",
     status: "imported",
-    images: [],
+    images: [
+      {
+        src: "/images/products/2026/02/MIRROR-CABINET-CS-7320-1-scaled-1.jpg.webp",
+        originalSrc:
+          "/images/products/2026/02/MIRROR-CABINET-CS-7320-1-scaled-1.jpg",
+        alt: "CS7320 Marine Mirror Cabinet",
+        source: "supplied SQL attachment 1439",
+        width: 1067,
+        height: 1600,
+      },
+    ],
     mediaReferences: [
       {
         attachmentId: 1439,

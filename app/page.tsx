@@ -40,8 +40,7 @@ export default function Home() {
         <h2>Built around your next project.</h2>
         <p>
           Browse the imported catalogue by brand, category or model. Contact our
-          team to confirm specifications and discuss your requirements. Original
-          product photography is pending.
+          team to confirm specifications and discuss your requirements.
         </p>
         <a href="/brand/daelim/">Discover the DAELIM range +</a>
       </section>

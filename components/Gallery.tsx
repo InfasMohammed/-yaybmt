@@ -17,7 +17,7 @@ export default function Gallery({ product }: { product: Product }) {
       <div
         className="gallery-track"
         tabIndex={0}
-        aria-label="Product photographs; scroll to see more"
+        aria-label="Product images; scroll to see more"
       >
         {product.images.map((image, i) => (
           <figure
@@ -28,26 +28,26 @@ export default function Gallery({ product }: { product: Product }) {
             <img
               src={image.src}
               alt={image.alt}
-              width="900"
-              height="900"
+              width={image.width || 900}
+              height={image.height || 900}
               loading={i === 0 ? "eager" : "lazy"}
+              decoding="async"
+              fetchPriority={i === 0 ? "high" : "auto"}
             />
             <figcaption>
-              {i + 1} / {product.images.length}
+              {i + 1} / {product.images.length} ·{" "}
+              <a href={image.originalSrc || image.src}>View original image</a>
             </figcaption>
           </figure>
         ))}
       </div>
       {product.images.length > 1 && (
-        <nav
-          className="gallery-thumbnails"
-          aria-label="Choose a product photograph"
-        >
+        <nav className="gallery-thumbnails" aria-label="Choose a product image">
           {product.images.map((image, i) => (
             <a
               href={"#photo-" + (i + 1)}
               key={image.src}
-              aria-label={"View photograph " + (i + 1)}
+              aria-label={"View image " + (i + 1)}
             >
               <img
                 src={image.src}

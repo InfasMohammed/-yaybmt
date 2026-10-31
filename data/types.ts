@@ -1,6 +1,13 @@
 export type SEO = { title?: string; description?: string };
 export type ContentStatus = "sample" | "imported" | "verified";
-export type ProductImage = { src: string; alt: string; source: string };
+export type ProductImage = {
+  src: string;
+  alt: string;
+  source: string;
+  originalSrc?: string;
+  width?: number;
+  height?: number;
+};
 export type Product = {
   slug: string;
   name: string;

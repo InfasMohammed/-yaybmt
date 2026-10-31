@@ -11,5 +11,6 @@ export const migration = {
     pages: 8,
   },
   databaseAvailable: true,
-  uploadsAvailable: false,
+  // Required primary product files are available; older inline drawings still have missing references.
+  uploadsAvailable: true,
 };

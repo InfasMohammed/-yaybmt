@@ -80,9 +80,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <a href="/blog/">Articles</a>
             <a href="/contact-us/">Contact</a>
           </nav>
-          <p className="footer-note">
-            YAYBMT · Review edition · Original product images pending
-          </p>
+          <p className="footer-note">YAYBMT · Review edition</p>
         </footer>
         <a
           className="floating"

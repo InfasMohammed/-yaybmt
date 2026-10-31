@@ -22,20 +22,20 @@ Metadata uses source SEO fields, then factual name/category fallbacks. Duplicate
 
 ## Adding genuine media later
 
-Keep files under `public/images/`. Every product image needs `src`, accurate `alt`, and provenance `source`. Rendered frames use `object-fit: contain`; explicit dimensions reserve space. The gallery uses native scroll/anchor links and works without JavaScript. Missing images remain placeholders and are never emitted in Product schema.
+Keep files under `public/images/`. Every product image needs `src`, accurate `alt`, provenance `source`, and measured `width`/`height`. SQL imports also retain `originalSrc` for unchanged original-size viewing. Rendered frames use `object-fit: contain`; explicit dimensions reserve space. The gallery uses native scroll/anchor links and works without JavaScript. Missing images remain placeholders and are never emitted in Product schema.
 
-The SQL has 523 attachment records and 292 product image references. Once the original uploads directory is supplied, match files by those references rather than filenames guessed from product names:
+The SQL has 523 attachment records and 292 primary product image references. All 292 primary files are now matched and present locally. Future batches must still match exact recorded paths, not guessed product names:
 
 ```sh
 node --import tsx scripts/match-images.ts --uploads /private/path/wp-content/uploads
 # Review the dry-run results, then copy the matched originals:
-node --import tsx scripts/match-images.ts --uploads /private/path/wp-content/uploads --write
+node --import tsx scripts/match-images.ts --uploads /private/path/wp-content/uploads --write --optimise
 npm run check
 npm run build
 npm run check:export
 ```
 
-The matcher validates raster image signatures, rejects paths/symlinks outside the input directory, copies referenced originals to `public/images/products/`, and updates product image data. It does not download substitutes. Article illustrations have separate source references in `docs/migration-report.json`; matching them is still pending. Preserve original logos unchanged.
+The matcher validates raster image signatures, rejects paths/symlinks outside the input directory, copies referenced originals to `public/images/products/`, and updates product image data. Optional `--optimise` creates a smaller WebP only when it reduces bytes, preserving source aspect ratio, transparency and an unchanged original-size link. Partial-month imports preserve images from earlier batches and manual images. The script also writes exact legacy upload redirects and a SHA-256 manifest. It does not download substitutes. Older embedded product-body references are tracked in `docs/inline-media-review.json`; 31 files are unavailable and one synthetic placeholder is excluded. There are no article illustrations among those 32 references. Preserve original logos unchanged.
 
 `npm run assets:optimise` re-encodes only the retained illustrative homepage hero as WebP; it leaves the original PNG and logo files unchanged. Commit the generated WebP when changing that hero.
 

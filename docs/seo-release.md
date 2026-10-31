@@ -18,7 +18,7 @@ See `seo-audit.json`, `url-manifest.json`, `migration-report.json` and `static-v
 
 ## Content and media review before release
 
-1. Obtain original uploads and match images using database attachment references. Confirm image rights, alt text, dimensions and byte size. Restore the article illustrations as well as product photos. Never replace missing photos with generated product imagery.
+1. All 292 primary product photos are restored using exact SQL references. Review their quality, alt text, measured dimensions and byte size. Resolve the 31 unavailable older inline image/drawing references if the original files can be supplied; one legacy generated placeholder is deliberately excluded. Never invent replacement photos.
 2. Confirm priority products and enrich the 201 empty product bodies using approved manufacturer/client information. Review the 203 short records, 224 missing brand relationships and 234 absent explicit models. Keep unknown fields empty until verified.
 3. Review imported marketing claims and technical values. Confirm the metadata and visible copy reflect current business/service facts. Resolve the two removed competitor links with verified relevant destinations or retain plain text.
 4. Obtain a live crawl, current sitemap and Search Console page/query exports. Reconcile high-value URLs, old pagination, attachment/author/tag/query/plugin routes and inbound links against the database-derived manifest. Add only relevant, specific redirects. Do not consolidate duplicate-looking products without reviewing their real distinctions.
