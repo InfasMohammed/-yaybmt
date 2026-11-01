@@ -40,7 +40,6 @@ export default function HeaderMenu() {
       <nav aria-label="Main navigation">
         <a href="/shop/">Products</a>
         <a href="/brands/">Brands</a>
-        <a href="/categories/">Ranges</a>
         <a href="/about-us/">Company</a>
         <a href="/contact-us/">Contact</a>
       </nav>
