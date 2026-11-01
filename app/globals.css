@@ -1372,3 +1372,30 @@ summary {
     height: auto;
   }
 }
+
+/* Let the two taller lower photos fill only the height of the right column. */
+@media (min-width: 901px) {
+  .showroom-grid {
+    align-items: stretch;
+  }
+  .showroom-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .showroom-grid a {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .showroom-column:not(:last-child) > a:last-child {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+  }
+  .showroom-column:not(:last-child) > a:last-child img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+}
