@@ -1,8 +1,28 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
 export default function HeaderMenu() {
+  const menu = useRef<HTMLDetailsElement>(null);
+
+  useEffect(() => {
+    const closeOutside = (event: PointerEvent) => {
+      const element = menu.current;
+      if (
+        element?.open &&
+        event.target instanceof Node &&
+        !element.contains(event.target)
+      ) {
+        element.open = false;
+      }
+    };
+    document.addEventListener("pointerdown", closeOutside);
+    return () => document.removeEventListener("pointerdown", closeOutside);
+  }, []);
+
   return (
     <details
+      ref={menu}
       className="header-menu"
       onKeyDown={(event) => {
         if (event.key !== "Escape") return;
