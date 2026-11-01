@@ -1064,20 +1064,3 @@ summary {
     align-self: start;
   }
 }
-
-@media (max-width: 650px) {
-  .product-gallery {
-    position: sticky;
-    top: 0;
-    align-self: start;
-    z-index: 2;
-    background: var(--paper, #f8f7f3);
-  }
-  .product-gallery .gallery-image {
-    --detail-frame-height: clamp(120px, 32svh, 240px);
-    padding: 12px;
-  }
-  .product-gallery .gallery-image img {
-    max-height: calc(var(--detail-frame-height) - 24px);
-  }
-}
