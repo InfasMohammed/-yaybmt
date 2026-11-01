@@ -1222,3 +1222,129 @@ summary {
     padding: 18px;
   }
 }
+
+.about-page > p {
+  max-width: 900px;
+}
+.about-banner {
+  margin: 36px 0 60px;
+}
+.about-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+  object-fit: cover;
+}
+.about-section {
+  margin: 60px 0;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.team-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 24px;
+  text-align: center;
+}
+.team-photo {
+  height: 240px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+}
+.team-photo img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.team-card h3 {
+  margin: 22px 0 8px;
+  font-size: 21px;
+}
+.team-card p {
+  margin: 0;
+  color: #656860;
+}
+.company-figures {
+  padding: 36px;
+  background: var(--ink);
+  color: var(--paper);
+}
+.company-figures dl {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+.company-figures dl > div {
+  display: flex;
+  flex-direction: column-reverse;
+  border-top: 1px solid #ffffff44;
+  padding-top: 18px;
+}
+.company-figures dt {
+  font-size: 14px;
+  font-weight: 400;
+}
+.company-figures dd {
+  font-size: 38px;
+  color: #e7b08b;
+}
+.showroom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.showroom-grid a {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.showroom-grid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media (max-width: 900px) {
+  .team-card {
+    padding: 16px;
+  }
+  .team-photo {
+    height: 200px;
+  }
+  .company-figures dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .showroom-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 650px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-photo {
+    height: 240px;
+  }
+  .company-figures {
+    padding: 24px;
+  }
+  .company-figures dd {
+    font-size: 32px;
+  }
+  .about-section {
+    margin: 40px 0;
+  }
+  .showroom-grid {
+    gap: 12px;
+  }
+}
