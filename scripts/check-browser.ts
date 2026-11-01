@@ -211,6 +211,34 @@ async function main() {
     assert.equal(originalResponse.status(), 200);
     assert.match(originalResponse.headers()["content-type"], /^image\//);
     await originalResponse.dispose();
+    const zoomFrame = page.locator(".gallery-image").first();
+    const frameBounds = await zoomFrame.boundingBox();
+    assert.ok(frameBounds);
+    const zoomImage = zoomFrame.locator("img");
+    await zoomFrame.hover({
+      position: { x: frameBounds.width * 0.3, y: frameBounds.height * 0.3 },
+    });
+    const firstOrigin = await zoomImage.evaluate(
+      (img) => img.style.transformOrigin,
+    );
+    await zoomFrame.hover({
+      position: { x: frameBounds.width * 0.7, y: frameBounds.height * 0.7 },
+    });
+    const secondOrigin = await zoomImage.evaluate(
+      (img) => img.style.transformOrigin,
+    );
+    assert.notEqual(
+      firstOrigin,
+      secondOrigin,
+      "Zoom follows the pointer across image areas",
+    );
+    assert.equal((await zoomFrame.boundingBox())?.height, frameBounds.height);
+    await page.mouse.move(0, 0);
+    assert.equal(
+      await zoomImage.evaluate((img) => img.style.transformOrigin),
+      "50% 50%",
+    );
+
     const unbranded = products.find(
       (p) => p.brand === null && p.model === null,
     )!;

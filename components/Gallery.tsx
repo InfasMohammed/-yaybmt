@@ -1,3 +1,4 @@
+import ZoomImage from "./ZoomImage";
 import type { Product } from "../data/types";
 import { Placeholder } from "./Card";
 export default function Gallery({ product }: { product: Product }) {
@@ -25,21 +26,7 @@ export default function Gallery({ product }: { product: Product }) {
             className="gallery-photo"
             key={image.src}
           >
-            <a
-              className="gallery-image"
-              href={image.originalSrc || image.src}
-              aria-label={"View original image: " + image.alt}
-            >
-              <img
-                src={image.originalSrc || image.src}
-                alt={image.alt}
-                width={image.width || 900}
-                height={image.height || 900}
-                loading={i === 0 ? "eager" : "lazy"}
-                decoding="async"
-                fetchPriority={i === 0 ? "high" : "auto"}
-              />
-            </a>
+            <ZoomImage image={image} priority={i === 0} />
           </figure>
         ))}
       </div>
