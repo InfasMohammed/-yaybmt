@@ -1055,3 +1055,12 @@ summary {
     transition: transform 0.25s ease;
   }
 }
+
+/* Keep the photo alongside the details until their shared section ends. */
+@media (min-width: 651px) and (min-height: 600px) {
+  .product-gallery {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+  }
+}

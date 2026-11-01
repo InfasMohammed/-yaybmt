@@ -4,7 +4,7 @@ import { Placeholder } from "./Card";
 export default function Gallery({ product }: { product: Product }) {
   if (!product.images.length)
     return (
-      <section aria-label="Product gallery">
+      <section className="product-gallery" aria-label="Product gallery">
         <div className="gallery">
           <Placeholder />
         </div>
@@ -14,7 +14,7 @@ export default function Gallery({ product }: { product: Product }) {
       </section>
     );
   return (
-    <section aria-label="Product gallery">
+    <section className="product-gallery" aria-label="Product gallery">
       <div
         className="gallery-track"
         tabIndex={0}
