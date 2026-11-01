@@ -1,3 +1,4 @@
+import WelcomeSection from "../components/WelcomeSection";
 import HomeMotion from "../components/HomeMotion";
 import { industries } from "../data/industries";
 import BrandLogo from "../components/BrandLogo";
@@ -38,15 +39,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section className="intro">
-        <p className="eyebrow">A NEW WAY TO EXPLORE</p>
-        <h2>Built around your next project.</h2>
-        <p>
-          Browse the imported catalogue by brand, category or model. Contact our
-          team to confirm specifications and discuss your requirements.
-        </p>
-        <a href="/brand/daelim/">Discover the DAELIM range +</a>
-      </section>
+      <WelcomeSection />
       <section
         className="home-section industries-section"
         aria-labelledby="industries-heading"
