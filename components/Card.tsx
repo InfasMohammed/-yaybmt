@@ -1,3 +1,4 @@
+import BrandBadge from "./BrandBadge";
 import type { CatalogueItem } from "../data/types";
 import { brands } from "../data/brands";
 export function Placeholder() {
@@ -27,6 +28,7 @@ export default function Card({ product: p }: { product: CatalogueItem }) {
           ) : (
             <Placeholder />
           )}
+          <BrandBadge brand={p.brand} />
         </div>
         <div className="card-name">
           <small>

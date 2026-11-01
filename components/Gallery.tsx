@@ -1,3 +1,4 @@
+import BrandBadge from "./BrandBadge";
 import ZoomImage from "./ZoomImage";
 import type { Product } from "../data/types";
 import { Placeholder } from "./Card";
@@ -27,6 +28,7 @@ export default function Gallery({ product }: { product: Product }) {
             key={image.src}
           >
             <ZoomImage image={image} priority={i === 0} />
+            <BrandBadge brand={product.brand} />
           </figure>
         ))}
       </div>

@@ -1,5 +1,3 @@
-import BrandLogo from "../../../components/BrandLogo";
-import { brandLogos } from "../../../data/brand-logos";
 import { productSEO } from "../../../lib/product-seo";
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import { notFound } from "next/navigation";
@@ -92,21 +90,10 @@ export default async function Product({
       <div className="product-layout">
         <Gallery product={p} />
         <section>
-          <div className="product-brand-heading">
-            {brand && brandLogos[brand.slug] && (
-              <a
-                className="product-brand-logo"
-                href={"/brand/" + brand.slug + "/"}
-                aria-label={"Browse " + brand.name + " products"}
-              >
-                <BrandLogo slug={brand.slug} />
-              </a>
-            )}
-            <p className="eyebrow">
-              {brand?.name || "YAYBMT CATALOGUE"} /{" "}
-              {p.status === "sample" ? "PRODUCT SAMPLE" : "PRODUCT INFORMATION"}
-            </p>
-          </div>
+          <p className="eyebrow">
+            {brand?.name || "YAYBMT CATALOGUE"} /{" "}
+            {p.status === "sample" ? "PRODUCT SAMPLE" : "PRODUCT INFORMATION"}
+          </p>
           <h1>{p.name}</h1>
           <p className="model">
             {p.model ? "MODEL " + p.model : "Model reference not recorded"}
