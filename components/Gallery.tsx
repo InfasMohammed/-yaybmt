@@ -25,15 +25,21 @@ export default function Gallery({ product }: { product: Product }) {
             className="gallery-photo"
             key={image.src}
           >
-            <img
-              src={image.src}
-              alt={image.alt}
-              width={image.width || 900}
-              height={image.height || 900}
-              loading={i === 0 ? "eager" : "lazy"}
-              decoding="async"
-              fetchPriority={i === 0 ? "high" : "auto"}
-            />
+            <a
+              className="gallery-image"
+              href={image.originalSrc || image.src}
+              aria-label={"View original image: " + image.alt}
+            >
+              <img
+                src={image.originalSrc || image.src}
+                alt={image.alt}
+                width={image.width || 900}
+                height={image.height || 900}
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding="async"
+                fetchPriority={i === 0 ? "high" : "auto"}
+              />
+            </a>
             <figcaption>
               {i + 1} / {product.images.length} ·{" "}
               <a href={image.originalSrc || image.src}>View original image</a>

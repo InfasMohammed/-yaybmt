@@ -318,7 +318,7 @@ input[type="checkbox"] {
 }
 .image-frame {
   aspect-ratio: 1.15;
-  background: #f0f0eb;
+  background: #fff;
   display: grid;
   place-items: center;
   margin: 12px;
@@ -1017,12 +1017,47 @@ summary {
 }
 .image-frame > img {
   position: absolute;
-  inset: 0;
-  max-width: 100%;
-  max-height: 100%;
+  inset: 14%;
+  width: 72%;
+  height: 72%;
+  max-width: 72%;
+  max-height: 72%;
   object-fit: contain;
 }
 .gallery-photo figcaption a {
   color: var(--copper);
   text-decoration: underline;
+}
+
+/* The original image stays contained; zoom is confined to its own frame. */
+.gallery-image {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #fff;
+  cursor: zoom-in;
+}
+.gallery-image img {
+  width: 82%;
+  height: 82%;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.gallery-image:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: -3px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .gallery-image:hover img {
+    transform: scale(1.45);
+  }
+}
+.gallery-image:focus-visible img {
+  transform: scale(1.45);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .gallery-image img {
+    transition: transform 0.25s ease;
+  }
 }
