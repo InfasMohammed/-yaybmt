@@ -30,10 +30,9 @@ export default function Home() {
             Find your product. Speak to our team.
           </p>
           <a className="button" href="/shop/">
-            Explore the catalogue +
+            Explore the catalogue
           </a>
         </div>
-        <small>Illustrative marine image from the previous design</small>
       </section>
       <section className="intro">
         <p className="eyebrow">A NEW WAY TO EXPLORE</p>
