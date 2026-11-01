@@ -34,13 +34,6 @@ export const brandLogos: Record<string, BrandLogoData> = {
     height: 141,
     source: "2025/04/kopat.jpg",
   },
-  "marine-locks": {
-    src: "/images/brands/marine-locks.webp",
-    originalSrc: "/images/brands/marine-locks.png",
-    width: 480,
-    height: 240,
-    source: "2025/05/MARINE-LOCKS-1.png",
-  },
   "royal-co": {
     src: "/images/brands/royal-co.webp",
     originalSrc: "/images/brands/royal-co.png",
