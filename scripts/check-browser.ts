@@ -288,6 +288,82 @@ async function main() {
       assert.equal(response.status(), 404, "Missing route must return 404");
       await response.dispose();
     }
+    // A brand archive must not offer unrelated brand/category choices.
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    await page.goto(base + "/brand/daelim/?brand=kopat&category=fasteners");
+    await page.waitForLoadState("networkidle");
+    assert.equal(
+      await page.locator("aside .active-brand strong").innerText(),
+      "DAELIM",
+    );
+    assert.equal(
+      await page.locator("aside .active-brand a").getAttribute("href"),
+      "/brands/",
+    );
+    assert.equal(
+      await page
+        .locator("aside")
+        .getByRole("checkbox", { name: /^KOPAT/ })
+        .count(),
+      0,
+    );
+    assert.match(
+      await page.locator(".result-bar").innerText(),
+      /21 imported products/,
+    );
+    await page
+      .locator("aside summary")
+      .filter({ hasText: /^Categories$/ })
+      .click();
+    assert.equal(
+      await page
+        .locator("aside")
+        .getByRole("checkbox", { name: /^Fasteners/ })
+        .count(),
+      0,
+    );
+    await page.locator("aside").getByRole("checkbox").first().check();
+    assert.ok((await page.locator(".card").count()) > 0);
+    await page.getByRole("button", { name: /Remove category filter/ }).click();
+    await page.goto(base + "/shop/");
+    await page
+      .locator("aside")
+      .getByRole("checkbox", { name: /^DAELIM/ })
+      .check();
+    await page
+      .locator("aside summary")
+      .filter({ hasText: /^Categories$/ })
+      .click();
+    assert.equal(
+      await page
+        .locator("aside")
+        .getByRole("checkbox", { name: /^Fasteners/ })
+        .isDisabled(),
+      true,
+    );
+    await page.getByRole("button", { name: /Remove brand filter/ }).click();
+    assert.equal(
+      await page
+        .locator("aside")
+        .getByRole("checkbox", { name: /^Fasteners/ })
+        .isEnabled(),
+      true,
+    );
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(base + "/brand/daelim/");
+    await page.getByRole("button", { name: "Filters +", exact: true }).click();
+    assert.equal(
+      await page.locator("dialog .active-brand strong").innerText(),
+      "DAELIM",
+    );
+    assert.equal(
+      await page
+        .locator("dialog")
+        .getByRole("checkbox", { name: /^KOPAT/ })
+        .count(),
+      0,
+    );
+    await page.keyboard.press("Escape");
     const nojs = await browser.newContext({ javaScriptEnabled: false });
     const plain = await nojs.newPage();
     await plain.goto(base + "/brand/daelim/");

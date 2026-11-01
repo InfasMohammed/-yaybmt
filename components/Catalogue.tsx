@@ -22,10 +22,12 @@ export default function Catalogue({
   items,
   initialPage = 1,
   basePath = "/shop/",
+  scopeBrand,
 }: {
   items: CatalogueItem[];
   initialPage?: number;
   basePath?: string;
+  scopeBrand?: { slug: string; name: string };
 }) {
   const [filters, setFilters] = useState<Filters>({
     ...emptyFilters,
@@ -41,14 +43,27 @@ export default function Catalogue({
     (currentPage - 1) * PAGE_SIZE,
     currentPage * PAGE_SIZE,
   );
-  const hasCategories = items.some((p) => p.categorySlugs.length);
+  const availableBrands = brands.filter((brand) =>
+    items.some((p) => p.brand === brand.slug),
+  );
+  const availableCategories = categories.filter((category) =>
+    items.some((p) => inCategory(p, category.slug)),
+  );
+  const brandMatches = filterProducts(items, { ...filters, brands: [] });
+  const categoryMatches = filterProducts(items, { ...filters, categories: [] });
 
   useEffect(() => {
     const restore = () => {
       const restored = readFilters(
         window.location.search,
-        brands.map((b) => b.slug),
-        categories.map((c) => c.slug),
+        scopeBrand
+          ? []
+          : brands
+              .filter((brand) => items.some((p) => p.brand === brand.slug))
+              .map((b) => b.slug),
+        categories
+          .filter((category) => items.some((p) => inCategory(p, category.slug)))
+          .map((c) => c.slug),
       );
       if (!new URLSearchParams(window.location.search).has("page"))
         restored.page =
@@ -64,7 +79,7 @@ export default function Catalogue({
     restore();
     window.addEventListener("popstate", restore);
     return () => window.removeEventListener("popstate", restore);
-  }, [initialPage, basePath, items.length]);
+  }, [initialPage, basePath, items, scopeBrand?.slug]);
 
   function update(patch: Partial<Filters>, resetPage = true) {
     const next = { ...filters, ...(resetPage ? { page: 1 } : {}), ...patch };
@@ -107,47 +122,60 @@ export default function Catalogue({
   function renderFilters() {
     return (
       <>
-        <details open>
-          <summary>Brands</summary>
-          {brands.map((brand) => (
-            <label className="check" key={brand.slug}>
-              <input
-                type="checkbox"
-                checked={filters.brands.includes(brand.slug)}
-                onChange={() => toggle("brands", brand.slug)}
-              />
-              {brand.name}
-              <small aria-label="Imported records">
-                {items.filter((p) => p.brand === brand.slug).length}
-              </small>
-            </label>
-          ))}
-        </details>
-        <details>
-          <summary>Categories</summary>
-          {hasCategories ? (
-            categories.map((category) => (
-              <label className="check" key={category.slug}>
-                <input
-                  type="checkbox"
-                  checked={filters.categories.includes(category.slug)}
-                  onChange={() => toggle("categories", category.slug)}
-                />
-                {category.name}
-                <small>
-                  {items.filter((p) => inCategory(p, category.slug)).length}
-                </small>
-              </label>
-            ))
-          ) : (
-            <p>
-              Category assignments await the original source data.{" "}
-              <a className="text-link" href="/categories/">
-                Browse known category names
-              </a>
-            </p>
-          )}
-        </details>
+        {scopeBrand ? (
+          <div className="active-brand">
+            <span>Brand</span>
+            <strong>{scopeBrand.name}</strong>
+            <a className="text-link" href="/brands/">
+              Change brand
+            </a>
+          </div>
+        ) : (
+          <details open>
+            <summary>Brands</summary>
+            {availableBrands.map((brand) => {
+              const count = brandMatches.filter(
+                (p) => p.brand === brand.slug,
+              ).length;
+              const selected = filters.brands.includes(brand.slug);
+              return (
+                <label className="check" key={brand.slug}>
+                  <input
+                    type="checkbox"
+                    checked={selected}
+                    disabled={count === 0 && !selected}
+                    onChange={() => toggle("brands", brand.slug)}
+                  />
+                  {brand.name}
+                  <small aria-label="Matching products">{count}</small>
+                </label>
+              );
+            })}
+          </details>
+        )}
+        {availableCategories.length > 0 && (
+          <details>
+            <summary>Categories</summary>
+            {availableCategories.map((category) => {
+              const count = categoryMatches.filter((p) =>
+                inCategory(p, category.slug),
+              ).length;
+              const selected = filters.categories.includes(category.slug);
+              return (
+                <label className="check" key={category.slug}>
+                  <input
+                    type="checkbox"
+                    checked={selected}
+                    disabled={count === 0 && !selected}
+                    onChange={() => toggle("categories", category.slug)}
+                  />
+                  {category.name}
+                  <small aria-label="Matching products">{count}</small>
+                </label>
+              );
+            })}
+          </details>
+        )}
         {(filters.query ||
           filters.brands.length > 0 ||
           filters.categories.length > 0) && (

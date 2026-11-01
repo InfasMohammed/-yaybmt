@@ -51,13 +51,14 @@ export default function ArchivePage({
       <h1>{term.name}</h1>
       {items.length ? (
         <>
-          <p className="notice">
-            Review catalogue · Imported product records are shown below. Confirm
-            current specifications with our team.
-          </p>
           <Catalogue
             items={items.map(catalogueItem)}
             initialPage={page}
+            scopeBrand={
+              kind === "brand"
+                ? { slug: term.slug, name: term.name }
+                : undefined
+            }
             basePath={
               (kind === "brand" ? "/brand/" : "/product-category/") +
               term.slug +
