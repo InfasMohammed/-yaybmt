@@ -1,3 +1,4 @@
+import HomeMotion from "../components/HomeMotion";
 import { industries } from "../data/industries";
 import BrandLogo from "../components/BrandLogo";
 import { sourcePages } from "../data/source-pages";
@@ -12,7 +13,8 @@ export const metadata = meta(
 );
 export default function Home() {
   return (
-    <main id="main">
+    <main id="main" className="home-page">
+      <HomeMotion />
       <link
         rel="preload"
         as="image"
