@@ -1,3 +1,4 @@
+import { cataloguePDF } from "../lib/catalogue-file";
 import HeaderMenu from "../components/HeaderMenu";
 import "./globals.css";
 import { origin } from "../lib/site";
@@ -68,6 +69,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <nav className="footer-navigation" aria-label="Footer navigation">
             <a href="/shop/">Catalogue</a>
+            <a href={cataloguePDF.href} download={cataloguePDF.filename}>
+              Original catalogue (PDF)
+            </a>
             <a href="/brands/">Brands</a>
             <a href="/categories/">Categories</a>
             <a href="/brand/marine-locks/">Marine locks</a>

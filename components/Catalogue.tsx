@@ -1,5 +1,7 @@
 "use client";
 
+import { cataloguePDF } from "../lib/catalogue-file";
+
 import { useEffect, useRef, useState } from "react";
 import { brands } from "../data/brands";
 import { categories } from "../data/categories";
@@ -175,6 +177,13 @@ export default function Catalogue({
             placeholder="Search by name or model…"
           />
         </label>
+        <a
+          className="catalogue-download"
+          href={cataloguePDF.href}
+          download={cataloguePDF.filename}
+        >
+          {cataloguePDF.label}
+        </a>
         <button
           className="filter-toggle"
           onClick={() => dialog.current?.showModal()}

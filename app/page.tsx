@@ -1,3 +1,4 @@
+import { categoryImages } from "../data/category-images";
 import WelcomeSection from "../components/WelcomeSection";
 import HomeMotion from "../components/HomeMotion";
 import { industries } from "../data/industries";
@@ -70,16 +71,33 @@ export default function Home() {
       <section className="home-section">
         <p className="eyebrow">PRODUCT RANGES</p>
         <h2>Explore by category.</h2>
-        <div className="directory">
+        <div className="directory category-directory">
           {categories
-            .filter((c) => !c.slug.includes("/") && c.slug !== "uncategorized")
+            .filter((c) => Boolean(categoryImages[c.slug]))
             .map((c) => (
               <a href={"/product-category/" + c.slug + "/"} key={c.slug}>
-                {c.name}
-                <span aria-hidden="true">+</span>
+                {categoryImages[c.slug] && (
+                  <span className="category-card-image">
+                    <img
+                      src={categoryImages[c.slug].src}
+                      alt=""
+                      width={categoryImages[c.slug].width}
+                      height={categoryImages[c.slug].height}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </span>
+                )}
+                <span className="category-card-name">
+                  {c.name}
+                  <span aria-hidden="true">+</span>
+                </span>
               </a>
             ))}
         </div>
+        <a className="text-link" href="/categories/">
+          Browse all categories
+        </a>
       </section>
       <section className="home-section">
         <p className="eyebrow">BRANDS</p>
