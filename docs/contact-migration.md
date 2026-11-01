@@ -11,3 +11,5 @@ Validation: static build and 406-route SEO/internal-link audit passed. Browser c
 No WordPress page, database, theme, plugin or live hosting setting was modified. No Firebase deployment or production promotion was performed.
 
 The contact layout now places the map and enquiry form in the same row above 800 pixels, with tighter spacing and name/telephone fields paired where space permits. Smaller screens stack the map above the form. The message field starts at four rows and remains resizable. Browser checks at 1440, 900, 390 and 320 pixels verify side-by-side/stacked positioning, no overflow and working email-draft preparation. Updated contact screenshots are included.
+
+The form presentation now uses a distinct white panel with a copper accent, required-field markers, optional-phone placeholder, clear focus outlines and a full-width Prepare enquiry email action. The email-draft behavior is retained. Browser checks at 1440, 390 and 320 pixels cover required-field validation, accessible field names, special-character encoding and desktop map/form alignment. Fresh full-page and form-specific screenshots are included.

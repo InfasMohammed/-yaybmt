@@ -7,13 +7,12 @@ export default function ContactEnquiry() {
   const [draft, setDraft] = useState("");
   return (
     <section className="contact-enquiry" aria-labelledby="enquiry-heading">
-      <h2 id="enquiry-heading">Get In Touch</h2>
-      <p>
-        Tell us what you need. Prepare an email draft, then send it from your
-        email application.
-      </p>
+      <p className="eyebrow">CONTACT OUR TEAM</p>
+      <h2 id="enquiry-heading">Send an enquiry</h2>
+      <p>Share your product or project requirements with our team.</p>
       <form
         className="contact-enquiry-form"
+        aria-describedby="enquiry-help"
         onChange={() => setDraft("")}
         onSubmit={(event) => {
           event.preventDefault();
@@ -25,10 +24,16 @@ export default function ContactEnquiry() {
         }}
       >
         <label htmlFor="contact-name">
-          Full name
+          <span>
+            Full name{" "}
+            <span className="required-mark" aria-hidden="true">
+              *
+            </span>
+          </span>
           <input
             id="contact-name"
             name="name"
+            placeholder="Your full name"
             autoComplete="name"
             required
             maxLength={150}
@@ -39,16 +44,23 @@ export default function ContactEnquiry() {
           <input
             id="contact-phone"
             name="phone"
+            placeholder="Phone number (optional)"
             type="tel"
             autoComplete="tel"
             maxLength={50}
           />
         </label>
         <label htmlFor="contact-email">
-          Email address
+          <span>
+            Email address{" "}
+            <span className="required-mark" aria-hidden="true">
+              *
+            </span>
+          </span>
           <input
             id="contact-email"
             name="email"
+            placeholder="you@example.com"
             type="email"
             autoComplete="email"
             required
@@ -56,19 +68,29 @@ export default function ContactEnquiry() {
           />
         </label>
         <label htmlFor="contact-message">
-          Message
+          <span>
+            Message{" "}
+            <span className="required-mark" aria-hidden="true">
+              *
+            </span>
+          </span>
           <textarea
             id="contact-message"
             name="message"
+            placeholder="Tell us the products, quantities or specifications you need…"
             rows={4}
             required
             maxLength={3000}
           />
         </label>
         <button className="button" type="submit">
-          Prepare email
+          Prepare enquiry email
         </button>
       </form>
+      <p id="enquiry-help" className="enquiry-help">
+        * Required fields. This form prepares an email draft for you to send
+        from your email application.
+      </p>
       <noscript>
         <style>{`.contact-enquiry-form{display:none}`}</style>
         <p>
@@ -76,7 +98,7 @@ export default function ContactEnquiry() {
           with your name, contact details and message.
         </p>
       </noscript>
-      <div aria-live="polite">
+      <div className={draft ? "enquiry-draft" : undefined} aria-live="polite">
         {draft && (
           <p>
             <a className="button" href={draft}>
