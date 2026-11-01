@@ -9,3 +9,9 @@ The published company figures (500+ customers, 20+ years, 100+ projects and 7 em
 Validation: static build and 406-route metadata/internal-link audit passed. Browser checks at 1440, 390 and 320 pixels verified one H1, all three team profiles, all ten decoded images, six working original-gallery links, four source figures and no horizontal overflow. The 320-pixel check ran without JavaScript. All original hashes match the retrieved source bytes. Fresh screenshots: `artifacts/nextjs/about-desktop.png` and `about-mobile.png`.
 
 No WordPress content, database, plugin, theme or hosting settings were modified. No Firebase deployment or production promotion was performed.
+
+## Frame sizing follow-up
+
+The live WordPress markup and cached theme stylesheet were inspected. Leadership uses a 150 × 150-pixel `.team-img` frame, with the managing director first and the other two profiles beneath. The inline page style changes the original rounded frame to a 10-pixel corner radius. These dimensions and hierarchy are restored.
+
+The original gallery groups images as three columns of two. Its special image heights are 597 pixels for the left lower image, 290 pixels for the middle upper image, and 266 pixels for the right lower image. Other images use width 100% and natural height; corners have a 12-pixel radius. The new desktop gallery follows those rules. Mobile uses a single column with natural-height images to show the full photos. Browser checks at 1440, 390 and 320 pixels verify these sizes/proportions, all six images and no overflow; the narrowest check disables JavaScript.

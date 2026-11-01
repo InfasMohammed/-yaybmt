@@ -17,7 +17,12 @@ export default function AboutSections() {
         <h2 id="team-heading">Our leadership</h2>
         <div className="team-grid">
           {team.map((person) => (
-            <article className="team-card" key={person.name}>
+            <article
+              className={
+                person === team[0] ? "team-card team-leader" : "team-card"
+              }
+              key={person.name}
+            >
               <div className="team-photo">
                 <img
                   src={person.image.src}
@@ -55,21 +60,31 @@ export default function AboutSections() {
         <p className="eyebrow">SHOWROOM</p>
         <h2 id="showroom-heading">Our Gallery</h2>
         <div className="showroom-grid">
-          {aboutImages.gallery.map((image, i) => (
-            <a
-              href={image.originalSrc}
-              key={image.src}
-              aria-label={"Open showroom image " + (i + 1)}
-            >
-              <img
-                src={image.src}
-                alt={"YAYBMT showroom — view " + (i + 1)}
-                width={image.width}
-                height={image.height}
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
+          {[0, 1, 2].map((column) => (
+            <div className="showroom-column" key={column}>
+              {aboutImages.gallery
+                .slice(column * 2, column * 2 + 2)
+                .map((image, offset) => {
+                  const index = column * 2 + offset;
+                  return (
+                    <a
+                      className={"showroom-image showroom-image-" + index}
+                      href={image.originalSrc}
+                      key={image.src}
+                      aria-label={"Open showroom image " + (index + 1)}
+                    >
+                      <img
+                        src={image.src}
+                        alt={"YAYBMT showroom — view " + (index + 1)}
+                        width={image.width}
+                        height={image.height}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </a>
+                  );
+                })}
+            </div>
           ))}
         </div>
       </section>
