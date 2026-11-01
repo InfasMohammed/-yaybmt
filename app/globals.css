@@ -1029,18 +1029,19 @@ summary {
   text-decoration: underline;
 }
 
-/* The original image stays contained; zoom is confined to its own frame. */
+/* Show original pixels without enlarging; only shrink to fit the gallery. */
 .gallery-image {
   display: grid;
   place-items: center;
-  aspect-ratio: 1;
+  min-height: 240px;
   overflow: hidden;
   background: #fff;
   cursor: zoom-in;
 }
 .gallery-image img {
-  width: 82%;
-  height: 82%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
   aspect-ratio: auto;
   object-fit: contain;
 }
