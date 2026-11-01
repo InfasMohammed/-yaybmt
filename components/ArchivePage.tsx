@@ -1,4 +1,3 @@
-import BrandLogo from "./BrandLogo";
 import Breadcrumbs from "./Breadcrumbs";
 import { pagePath } from "../lib/pagination";
 import type { Taxonomy } from "../data/types";
@@ -48,11 +47,6 @@ export default function ArchivePage({
           },
         ]}
       />
-      {kind === "brand" && (
-        <div className="brand-archive-logo">
-          <BrandLogo slug={term.slug} />
-        </div>
-      )}
       <p className="eyebrow">{kind === "brand" ? "BRAND" : "PRODUCT RANGE"}</p>
       <h1>{term.name}</h1>
       {items.length ? (

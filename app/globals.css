@@ -1173,15 +1173,6 @@ summary {
 .brand-directory-card > span[aria-hidden] {
   margin-left: auto;
 }
-.brand-archive-logo {
-  width: min(320px, 100%);
-  margin: 24px 0;
-}
-.brand-archive-logo .brand-logo-frame {
-  height: 160px;
-  border: 1px solid var(--line);
-}
-
 .industries-subtitle {
   color: #656860;
   margin-bottom: 28px;
