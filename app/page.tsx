@@ -1,3 +1,4 @@
+import { industries } from "../data/industries";
 import BrandLogo from "../components/BrandLogo";
 import { sourcePages } from "../data/source-pages";
 import { brands } from "../data/brands";
@@ -43,6 +44,33 @@ export default function Home() {
           team to confirm specifications and discuss your requirements.
         </p>
         <a href="/brand/daelim/">Discover the DAELIM range +</a>
+      </section>
+      <section
+        className="home-section industries-section"
+        aria-labelledby="industries-heading"
+      >
+        <p className="eyebrow">OUR EXPERTISE</p>
+        <h2 id="industries-heading">Industries We Serve</h2>
+        <p className="industries-subtitle">
+          Comprehensive Solutions for a Wide Range of Industries
+        </p>
+        <div className="industry-grid">
+          {industries.map((industry) => (
+            <article className="industry-card" key={industry.slug}>
+              <div className="industry-image">
+                <img
+                  src={industry.src}
+                  alt=""
+                  width={industry.width}
+                  height={industry.height}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>{industry.name}</h3>
+            </article>
+          ))}
+        </div>
       </section>
       <section className="home-section">
         <p className="eyebrow">PRODUCT RANGES</p>

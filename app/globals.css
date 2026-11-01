@@ -1181,3 +1181,44 @@ summary {
   height: 160px;
   border: 1px solid var(--line);
 }
+
+.industries-subtitle {
+  color: #656860;
+  margin-bottom: 28px;
+}
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.industry-card {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.industry-image {
+  aspect-ratio: 1.6;
+  overflow: hidden;
+}
+.industry-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.industry-card h3 {
+  margin: 0;
+  padding: 22px;
+  font-size: 20px;
+  line-height: 1.4;
+  border-top: 2px solid var(--copper);
+}
+@media (max-width: 650px) {
+  .industry-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .industry-card h3 {
+    padding: 18px;
+  }
+}
