@@ -19,7 +19,7 @@ export default function Breadcrumbs({
       <nav className="breadcrumb" aria-label="Breadcrumb">
         {items.map((item, i) => (
           <span key={item.path}>
-            {i > 0 && " / "}
+            {i > 0 && <span aria-hidden="true">{" > "}</span>}
             {i === items.length - 1 ? (
               <span aria-current="page">{item.name}</span>
             ) : (
