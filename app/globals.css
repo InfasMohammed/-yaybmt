@@ -1766,3 +1766,24 @@ summary {
     text-align: right;
   }
 }
+
+/* Animate only the category artwork; keep its card and label steady. */
+.category-card-image {
+  overflow: hidden;
+}
+.home-page .category-directory > a:focus-visible {
+  border-color: var(--copper);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .category-card-image img {
+    transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .category-directory > a:focus-visible .category-card-image img {
+    transform: scale(1.06);
+  }
+}
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .category-directory > a:hover .category-card-image img {
+    transform: scale(1.06);
+  }
+}
