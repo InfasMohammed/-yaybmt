@@ -60,7 +60,7 @@ export default function ContactEnquiry() {
           <textarea
             id="contact-message"
             name="message"
-            rows={6}
+            rows={4}
             required
             maxLength={3000}
           />

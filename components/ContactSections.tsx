@@ -31,21 +31,26 @@ export default function ContactSections() {
           <a href={whatsapp()}>WhatsApp {contacts.whatsapp}</a>
         </section>
       </div>
-      <section className="contact-map" aria-label="Our location on Google Maps">
-        <iframe
-          src={contactPage.mapEmbed}
-          title="Yusuf Al Yousfi Building Materials Trading LLC location in Deira, Dubai"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          allowFullScreen
-        />
-        <p>
-          <a className="text-link" href={contacts.maps}>
-            Open directions in Google Maps
-          </a>
-        </p>
-      </section>
-      <ContactEnquiry />
+      <div className="contact-enquiry-row">
+        <section
+          className="contact-map"
+          aria-label="Our location on Google Maps"
+        >
+          <iframe
+            src={contactPage.mapEmbed}
+            title="Yusuf Al Yousfi Building Materials Trading LLC location in Deira, Dubai"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+          <p>
+            <a className="text-link" href={contacts.maps}>
+              Open directions in Google Maps
+            </a>
+          </p>
+        </section>
+        <ContactEnquiry />
+      </div>
     </>
   );
 }
