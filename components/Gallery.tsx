@@ -40,10 +40,6 @@ export default function Gallery({ product }: { product: Product }) {
                 fetchPriority={i === 0 ? "high" : "auto"}
               />
             </a>
-            <figcaption>
-              {i + 1} / {product.images.length} ·{" "}
-              <a href={image.originalSrc || image.src}>View original image</a>
-            </figcaption>
           </figure>
         ))}
       </div>

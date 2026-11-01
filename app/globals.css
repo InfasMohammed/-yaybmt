@@ -832,11 +832,6 @@ footer p {
   aspect-ratio: 1;
   object-fit: contain;
 }
-.gallery-photo figcaption {
-  text-align: center;
-  font-size: 12px;
-  padding: 8px;
-}
 .gallery-thumbnails {
   display: flex;
   gap: 12px;
@@ -1024,16 +1019,13 @@ summary {
   max-height: 72%;
   object-fit: contain;
 }
-.gallery-photo figcaption a {
-  color: var(--copper);
-  text-decoration: underline;
-}
-
-/* Show original pixels without enlarging; only shrink to fit the gallery. */
+/* Consistent detail frames, with original images contained at natural scale. */
 .gallery-image {
   display: grid;
   place-items: center;
-  min-height: 240px;
+  --detail-frame-height: clamp(320px, 40vw, 520px);
+  height: var(--detail-frame-height);
+  padding: 24px;
   overflow: hidden;
   background: #fff;
   cursor: zoom-in;
@@ -1042,6 +1034,7 @@ summary {
   width: auto;
   height: auto;
   max-width: 100%;
+  max-height: calc(var(--detail-frame-height) - 48px);
   aspect-ratio: auto;
   object-fit: contain;
 }

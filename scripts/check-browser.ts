@@ -203,10 +203,8 @@ async function main() {
     );
     assert.equal(wa.pathname, "/971567369803");
     assert.match(wa.searchParams.get("text") || "", /DC 102/);
-    const originalLink = page.getByRole("link", {
-      name: "View original image",
-      exact: true,
-    });
+    assert.equal(await page.locator(".gallery-photo figcaption").count(), 0);
+    const originalLink = page.locator(".gallery-image").first();
     const originalPath = await originalLink.getAttribute("href");
     assert.ok(originalPath?.startsWith("/images/products/"));
     const originalResponse = await context.request.get(base + originalPath);
