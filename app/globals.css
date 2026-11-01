@@ -456,7 +456,7 @@ dd {
   margin-top: 100px;
 }
 .related .grid {
-  max-width: 1000px;
+  width: calc(100% - 265px);
 }
 footer {
   background: var(--ink);
@@ -684,7 +684,8 @@ footer p {
 }
 
 @media (min-width: 1200px) {
-  .catalogue .grid {
+  .catalogue .grid,
+  .related .grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 16px;
   }
@@ -1125,4 +1126,21 @@ summary {
 .header-menu nav a:focus-visible {
   background: #ffffff12;
   color: #edc6aa;
+}
+
+/* Match the catalogue's available card width, including its filter column. */
+@media (max-width: 1000px) {
+  .related .grid {
+    width: calc(100% - 195px);
+  }
+}
+@media (max-width: 900px) {
+  .related .grid {
+    width: calc(100% - 205px);
+  }
+}
+@media (max-width: 650px) {
+  .related .grid {
+    width: 100%;
+  }
 }

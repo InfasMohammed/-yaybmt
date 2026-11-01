@@ -146,9 +146,6 @@ export default function Catalogue({
             </p>
           )}
         </details>
-        <p className="muted">
-          Counts refer to imported records, not stock or the complete catalogue.
-        </p>
         {(filters.query ||
           filters.brands.length > 0 ||
           filters.categories.length > 0) && (
