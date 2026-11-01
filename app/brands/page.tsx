@@ -18,10 +18,6 @@ export default function Page() {
       />
       <p className="eyebrow">EXPLORE THE CATALOGUE</p>
       <h1>Browse by brand.</h1>
-      <p className="notice">
-        Browse the brands recorded in the supplied catalogue. Some products have
-        no recorded brand; find those in the full catalogue or by category.
-      </p>
       <div className="directory">
         {brands.map((b) => (
           <a
