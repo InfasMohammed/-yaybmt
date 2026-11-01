@@ -298,17 +298,15 @@ input[type="checkbox"] {
   gap: 22px;
 }
 .card {
-  border: 1px solid var(--line);
+  border: 1px solid #e3d7cd;
   background: #fff;
   display: flex;
   min-width: 0;
-  transition:
-    border-color 0.2s,
-    transform 0.2s;
+  transition: border-color 0.2s;
 }
-.card:hover {
-  border-color: #b77b55;
-  transform: translateY(-3px);
+.card:hover,
+.card:focus-within {
+  border-color: var(--copper);
 }
 .card > a {
   width: 100%;
@@ -317,11 +315,11 @@ input[type="checkbox"] {
   text-decoration: none;
 }
 .image-frame {
-  aspect-ratio: 1.15;
+  aspect-ratio: 1.25;
   background: #fff;
   display: grid;
   place-items: center;
-  margin: 12px;
+  margin: 8px;
 }
 .image-frame img,
 .gallery img {
@@ -349,7 +347,7 @@ input[type="checkbox"] {
   margin: 4px 0;
 }
 .card-name {
-  padding: 20px 22px;
+  padding: 14px 16px;
   flex: 1;
 }
 .card-name > small {
@@ -365,8 +363,8 @@ input[type="checkbox"] {
 }
 .card-bottom {
   border-top: 1px solid #eeeee8;
-  margin: 0 22px;
-  padding: 15px 0;
+  margin: 0 16px;
+  padding: 12px 0;
   font-size: 12px;
   display: flex;
   justify-content: space-between;
@@ -630,7 +628,7 @@ footer p {
   }
   .image-frame {
     margin: 7px;
-    aspect-ratio: 1;
+    aspect-ratio: 1.1;
   }
   .placeholder {
     padding: 8px;
@@ -643,7 +641,7 @@ footer p {
     font-size: 9px;
   }
   .card-name {
-    padding: 14px 12px;
+    padding: 12px;
   }
   .card-name h3 {
     font-size: 15px;
@@ -685,9 +683,28 @@ footer p {
   }
 }
 
+@media (min-width: 1200px) {
+  .catalogue .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+.card-name h3 {
+  font-size: 16px;
+  line-height: 1.45;
+  margin: 10px 0;
+}
 @media (prefers-reduced-motion: no-preference) {
-  .card {
-    animation: appear 0.25s ease-out;
+  .image-frame > img {
+    transition: transform 0.3s ease;
+  }
+  .card:focus-within .image-frame > img {
+    transform: scale(1.07);
+  }
+}
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .card:hover .image-frame > img {
+    transform: scale(1.07);
   }
 }
 
