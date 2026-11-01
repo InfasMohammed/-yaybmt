@@ -1,3 +1,4 @@
+import ScrollVideo from "./ScrollVideo";
 import { welcome } from "../data/welcome";
 import { whatsapp } from "../lib/site";
 
@@ -9,20 +10,7 @@ export default function WelcomeSection() {
     >
       <div className="welcome-media">
         <div className="welcome-video-frame">
-          <video
-            controls
-            muted
-            loop
-            playsInline
-            preload="none"
-            poster={welcome.poster}
-            width={1920}
-            height={1080}
-            aria-label="YAYBMT company video"
-          >
-            <source src={welcome.video} type="video/mp4" />
-            <a href={welcome.video}>Watch the YAYBMT company video</a>
-          </video>
+          <ScrollVideo src={welcome.video} poster={welcome.poster} />
         </div>
       </div>
       <div className="welcome-copy">
