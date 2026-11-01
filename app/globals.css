@@ -1787,3 +1787,42 @@ summary {
     transform: scale(1.06);
   }
 }
+
+.product-brand-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.product-brand-heading > .eyebrow {
+  margin: 0;
+  min-width: 0;
+  line-height: 1.8;
+}
+.product-brand-logo {
+  display: block;
+  flex: 0 0 144px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+.product-brand-logo .brand-logo-frame {
+  height: 76px;
+  padding: 10px;
+}
+.product-brand-logo:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 3px;
+}
+@media (max-width: 650px) {
+  .product-brand-heading {
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .product-brand-logo {
+    flex-basis: 116px;
+  }
+  .product-brand-logo .brand-logo-frame {
+    height: 64px;
+    padding: 8px;
+  }
+}
