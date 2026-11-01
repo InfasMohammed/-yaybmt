@@ -178,18 +178,6 @@ export default function Catalogue({
             placeholder="Search by name or model…"
           />
         </label>
-        <label className="sort">
-          Sort by
-          <select
-            value={filters.sort}
-            onChange={(e) =>
-              update({ sort: e.target.value as Filters["sort"] })
-            }
-          >
-            <option value="name">Name A–Z</option>
-            <option value="model">Model number</option>
-          </select>
-        </label>
         <button
           className="filter-toggle"
           onClick={() => dialog.current?.showModal()}

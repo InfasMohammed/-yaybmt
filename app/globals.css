@@ -784,22 +784,6 @@ footer p {
 .prose > p {
   max-width: 740px;
 }
-.sort {
-  font-size: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-width: 150px;
-}
-.sort select {
-  font: inherit;
-  min-height: 56px;
-  padding: 14px;
-  border: 1px solid var(--line);
-  background: transparent;
-  border-radius: 0;
-  color: var(--ink);
-}
 .pagination {
   display: flex;
   justify-content: center;
@@ -895,9 +879,6 @@ summary {
   .search {
     flex: 1;
   }
-  .sort {
-    min-width: 130px;
-  }
   .catalogue {
     grid-template-columns: 180px 1fr;
   }
@@ -914,13 +895,11 @@ summary {
     padding: 25px 6%;
   }
   .tools .search {
-    flex: 1 1 70%;
-  }
-  .tools .sort {
-    flex: 1 1 45%;
+    flex: 1 1 0;
+    min-width: 0;
   }
   .tools .filter-toggle {
-    flex: 1 1 35%;
+    flex: 0 0 auto;
   }
   .footer-navigation {
     justify-content: flex-start;
@@ -930,7 +909,6 @@ summary {
   .footer-navigation a {
     font-size: 13px;
   }
-  .sort select,
   .search input {
     font-size: 16px;
   }
