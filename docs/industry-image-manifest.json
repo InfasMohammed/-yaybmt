@@ -1,0 +1,29 @@
+{
+  "source": "Original images referenced by the live WordPress homepage Industries We Serve section; retrieved read-only",
+  "files": [
+    {
+      "slug": "marine",
+      "file": "marine-1.jpg",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/marine-1.jpg",
+      "width": 400,
+      "height": 247,
+      "sha256": "d3cf44e5466c54290a62efdfa85bada89314939ecff20cdf183f1a6065c710e2"
+    },
+    {
+      "slug": "engineering-fabrication",
+      "file": "fabrication-1.png",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/fabrication-1.png",
+      "width": 500,
+      "height": 274,
+      "sha256": "0fc523195ce0b53886e62dbaaab045d9627b84f1ef82cad40e5cddbaa89202b8"
+    },
+    {
+      "slug": "construction",
+      "file": "construction-1.jpg",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/construction-1.jpg",
+      "width": 400,
+      "height": 194,
+      "sha256": "eff35ee065abeee0b048a38e610dd0f413b4f6a75fe2ca89a8063e1bd737c522"
+    }
+  ]
+}

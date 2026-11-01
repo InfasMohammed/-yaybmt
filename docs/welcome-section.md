@@ -1,0 +1,11 @@
+# Homepage welcome section
+
+The short placeholder introduction is replaced with the public WordPress homepage's welcome heading, company introduction and Vision/Mission/History text. Content is typed in `data/welcome.ts`. Native expandable panels preserve keyboard and no-JavaScript access, with Vision initially open. A single Get in Touch link uses the confirmed WhatsApp contact.
+
+The original 30-second, 1920 × 1080 video is retained unchanged at `public/videos/company-welcome.mp4` (4,713,813 bytes). `welcome-media-manifest.json` records its source and SHA-256 hash. A lightweight poster is extracted from the same video at two seconds. Playback is muted, inline and loop-enabled, with no visible controls as requested. An IntersectionObserver starts playback when at least 35% of the video is visible and pauses it when it leaves view or the browser tab is hidden. `preload=none` defers loading until playback starts. Reduced-motion preference disables automatic playback; without JavaScript the poster remains visible. No WordPress connection is needed to build or view the site.
+
+Desktop uses two columns with the video alongside the content; mobile stacks them. No video crop or invented replacement imagery is used. The hero and the single existing brands section remain.
+
+Validation: static build and 406-route SEO/internal-link audit passed. Browser checks at 1440, 390 and 320 pixels verify original text, expandable content, confirmed WhatsApp destination, responsive layout and no overflow. The 320-pixel check disables JavaScript. Browser playback succeeds with a 30-second duration. Follow-up desktop/mobile checks verify automatic playback in view, pause/resume on scroll, no controls, muted inline looping and immediate pause when reduced motion is enabled. Source and local SHA-256 hashes match. Screenshots: `artifacts/nextjs/welcome-desktop.png`, `welcome-mobile.png` and updated homepage screenshots.
+
+The original company's marketing statements are reproduced from its source page and remain subject to the client's editorial review. No source WordPress content/settings or production hosting were modified.

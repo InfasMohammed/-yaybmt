@@ -1,0 +1,105 @@
+{
+  "source": "Read-only retrieval of images referenced by https://yaybmt.com/about-us/",
+  "files": [
+    {
+      "src": "https://yaybmt.com/wp-content/uploads/2025/05/Yusuf.png",
+      "alt": "Yusuf Ebrahim",
+      "section": "team-section",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/Yusuf.png",
+      "width": 180,
+      "height": 180,
+      "bytes": 57127,
+      "sha256": "bb73a9dac92ec9adeb62ae52f5d6cdc421b2e5e1a1fc9ff658fb3740bc892837"
+    },
+    {
+      "src": "https://yaybmt.com/wp-content/uploads/2025/05/NAZMI-1-1.jpg",
+      "alt": "Nazmi Yusuf",
+      "section": "team-section",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/NAZMI-1-1.jpg",
+      "width": 190,
+      "height": 190,
+      "bytes": 57728,
+      "sha256": "aa9f071df8794b99280a2e69423f9198fb237ab66ddc48a169850a6b089e95d1"
+    },
+    {
+      "src": "https://yaybmt.com/wp-content/uploads/2025/05/mohammed-1.jpg",
+      "alt": "Mohammed Yusuf",
+      "section": "team-section",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/mohammed-1.jpg",
+      "width": 180,
+      "height": 180,
+      "bytes": 47847,
+      "sha256": "82bd76ddb48b8390a7f6e11b9033754cdb45468d4f7ccb7e96ca447c433be626"
+    },
+    {
+      "src": "http://yaybmt.com/wp-content/uploads/2025/04/about.jpg",
+      "alt": "cta",
+      "section": "about_cta",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/04/about.jpg",
+      "width": 1920,
+      "height": 550,
+      "bytes": 188907,
+      "sha256": "cb2494c63fdeb869a76858e11c6e40a6f9fafd83819b393618323d0295f72044"
+    },
+    {
+      "src": "https://yaybmt.com/wp-content/uploads/2025/08/SUNG-MI-scaled.webp",
+      "alt": "",
+      "section": "gallery-section",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/08/SUNG-MI-scaled.webp",
+      "width": 2560,
+      "height": 1694,
+      "bytes": 378342,
+      "sha256": "5ef68a33d7af0ff49adc0d5b315fc62c51166f8736fc55ee6a772f415dde9ed4"
+    },
+    {
+      "src": "https://yaybmt.com/wp-content/uploads/2025/05/7f9ec7f2-3ea8-4852-b33c-a44775cbe804-1.jpg",
+      "alt": "",
+      "section": "gallery-section",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/7f9ec7f2-3ea8-4852-b33c-a44775cbe804-1.jpg",
+      "width": 1045,
+      "height": 1280,
+      "bytes": 211816,
+      "sha256": "a6a0a83fdf436cffb65b00cc5fb1e024c4e14d9ac7b63d90ce0d3996421d46e8"
+    },
+    {
+      "src": "https://yaybmt.com/wp-content/uploads/2025/05/64302e67-724a-492a-b8a5-38aff7a7677e-1-scaled.jpg",
+      "alt": "",
+      "section": "gallery-section",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/64302e67-724a-492a-b8a5-38aff7a7677e-1-scaled.jpg",
+      "width": 1920,
+      "height": 2560,
+      "bytes": 818548,
+      "sha256": "05de541c8afb48598f2029d360fb16e5a1153b61e98525b7a1a344c933df8740"
+    },
+    {
+      "src": "https://yaybmt.com/wp-content/uploads/2025/05/853468d1-2383-41ac-a7cc-3e5cfd7c4f6a-1-scaled.jpg",
+      "alt": "",
+      "section": "gallery-section",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/853468d1-2383-41ac-a7cc-3e5cfd7c4f6a-1-scaled.jpg",
+      "width": 1920,
+      "height": 2560,
+      "bytes": 897992,
+      "sha256": "b09639f063822db2dd217185516a6c6fc4247bd700575e1688b580192a45fdff"
+    },
+    {
+      "src": "https://yaybmt.com/wp-content/uploads/2025/05/showroom-1.jpg",
+      "alt": "",
+      "section": "gallery-section",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/showroom-1.jpg",
+      "width": 800,
+      "height": 1103,
+      "bytes": 263420,
+      "sha256": "45190cd0213a0fae15b2a7d59036bbd6e41c8270e0b1bb5bf119cd6d364dda03"
+    },
+    {
+      "src": "https://yaybmt.com/wp-content/uploads/2025/05/70a378be-84eb-4da3-bd37-ec3a425d5e8b-1-scaled.jpg",
+      "alt": "",
+      "section": "gallery-section",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/70a378be-84eb-4da3-bd37-ec3a425d5e8b-1-scaled.jpg",
+      "width": 1920,
+      "height": 2560,
+      "bytes": 837123,
+      "sha256": "411a94ff89ad53a136429398907b6cf6c81bf42336eddeac8080fb9ff501df6a"
+    }
+  ]
+}

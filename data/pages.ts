@@ -1,3 +1,4 @@
+import { contactPage } from "./contact-page";
 import type { ContentPage } from "./types";
 import { sourcePages } from "./source-pages";
 const source = (path: string) => sourcePages.find((p) => p.path === path)!;
@@ -9,10 +10,13 @@ export const pages: ContentPage[] = [
       source("/about-us/").seo.description ||
       "Yusuf Al Yousfi Building Materials Trading LLC in Deira, Dubai.",
     paragraphs: [
-      "Yusuf Al Yousfi Building Materials Trading LLC supplies building materials, sanitary fittings and marine hardware in Deira, Dubai.",
-      "Share your product names, model references and project requirements with our team. Contact us to confirm technical specifications, pricing and availability.",
+      "Most trusted marine equipment suppliers in UAE and building materials providers. We specialize in delivering a comprehensive range of high-quality products, including marine locks, sanitary ware, ship chandlery and deck hardware, oilfield equipment, building materials, general hardware, plumbing and sanitary accessories, tools, and fasteners to meet the diverse needs of our clients.",
+      "Renowned for our competitive pricing, premium quality, and reliable service, we are known for offering top-quality marine supply services that have earned the confidence of businesses across the marine, engineering, and oilfield sectors. Whether you need bulk orders or urgent single-item supplies, our experienced team ensures accurate, timely, and hassle-free delivery every time.",
+      "As one of the top-rated building materials trading companies in UAE, YAYBMT is committed to delivering excellence and building long-term partnerships through outstanding customer support and consistent product availability.",
+      "Looking for dependable marine & building materials suppliers in UAE? Contact YAYBMT today to request a quick quote and experience the difference of working with a trusted industry leader.",
     ],
-    source: "legacy/preview/index.html; client-confirmed contacts",
+    source:
+      "Original public WordPress About Us page: https://yaybmt.com/about-us/",
     kind: "company",
     seo: source("/about-us/").seo,
   },
@@ -22,10 +26,9 @@ export const pages: ContentPage[] = [
     description:
       source("/contact-us/").seo.description ||
       "Contact YAYBMT in Deira, Dubai.",
-    paragraphs: [
-      "Share the products, model numbers, quantities and specifications you need. Our team can discuss your enquiry directly.",
-    ],
-    source: "client-confirmed contacts",
+    paragraphs: [contactPage.introHeading, ...contactPage.paragraphs],
+    source:
+      "Original public WordPress Contact Us page; client-confirmed phone, WhatsApp and emails",
     kind: "contact",
     seo: source("/contact-us/").seo,
   },

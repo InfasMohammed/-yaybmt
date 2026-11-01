@@ -1,5 +1,7 @@
 "use client";
 
+import { cataloguePDF } from "../lib/catalogue-file";
+
 import { useEffect, useRef, useState } from "react";
 import { brands } from "../data/brands";
 import { categories } from "../data/categories";
@@ -146,9 +148,6 @@ export default function Catalogue({
             </p>
           )}
         </details>
-        <p className="muted">
-          Counts refer to imported records, not stock or the complete catalogue.
-        </p>
         {(filters.query ||
           filters.brands.length > 0 ||
           filters.categories.length > 0) && (
@@ -178,18 +177,13 @@ export default function Catalogue({
             placeholder="Search by name or model…"
           />
         </label>
-        <label className="sort">
-          Sort by
-          <select
-            value={filters.sort}
-            onChange={(e) =>
-              update({ sort: e.target.value as Filters["sort"] })
-            }
-          >
-            <option value="name">Name A–Z</option>
-            <option value="model">Model number</option>
-          </select>
-        </label>
+        <a
+          className="catalogue-download"
+          href={cataloguePDF.href}
+          download={cataloguePDF.filename}
+        >
+          {cataloguePDF.label}
+        </a>
         <button
           className="filter-toggle"
           onClick={() => dialog.current?.showModal()}

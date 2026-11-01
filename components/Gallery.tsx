@@ -1,9 +1,11 @@
+import BrandBadge from "./BrandBadge";
+import ZoomImage from "./ZoomImage";
 import type { Product } from "../data/types";
 import { Placeholder } from "./Card";
 export default function Gallery({ product }: { product: Product }) {
   if (!product.images.length)
     return (
-      <section aria-label="Product gallery">
+      <section className="product-gallery" aria-label="Product gallery">
         <div className="gallery">
           <Placeholder />
         </div>
@@ -13,7 +15,7 @@ export default function Gallery({ product }: { product: Product }) {
       </section>
     );
   return (
-    <section aria-label="Product gallery">
+    <section className="product-gallery" aria-label="Product gallery">
       <div
         className="gallery-track"
         tabIndex={0}
@@ -25,19 +27,8 @@ export default function Gallery({ product }: { product: Product }) {
             className="gallery-photo"
             key={image.src}
           >
-            <img
-              src={image.src}
-              alt={image.alt}
-              width={image.width || 900}
-              height={image.height || 900}
-              loading={i === 0 ? "eager" : "lazy"}
-              decoding="async"
-              fetchPriority={i === 0 ? "high" : "auto"}
-            />
-            <figcaption>
-              {i + 1} / {product.images.length} ·{" "}
-              <a href={image.originalSrc || image.src}>View original image</a>
-            </figcaption>
+            <ZoomImage image={image} priority={i === 0} />
+            <BrandBadge brand={product.brand} />
           </figure>
         ))}
       </div>

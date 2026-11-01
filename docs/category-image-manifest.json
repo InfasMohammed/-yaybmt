@@ -1,0 +1,95 @@
+{
+  "source": "Exact image/category mappings read from the live WordPress homepage",
+  "files": [
+    {
+      "path": "/product-category/cp-fittings/",
+      "name": "CP Fittings",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/06/CP-FITTINGS.png",
+      "status": 200,
+      "width": 2400,
+      "height": 1200,
+      "bytes": 1927645,
+      "sha256": "af66b414b03e3f5c972e889f202c393866a79d8fe47957ddbf23d1c282f35f27"
+    },
+    {
+      "path": "/product-category/flush-valve/",
+      "name": "Flush Valve",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/06/FLUSH-VALVE.png",
+      "status": 200,
+      "width": 2400,
+      "height": 1200,
+      "bytes": 1088700,
+      "sha256": "8e7c809eb0e96404d5316281db291a30572d70d4b74181248f5278b6f4eec489"
+    },
+    {
+      "path": "/product-category/mirror-cabinets/",
+      "name": "Mirror & Cabinets",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/06/MIRROR-CABINET.png",
+      "status": 200,
+      "width": 2400,
+      "height": 1200,
+      "bytes": 524718,
+      "sha256": "92fcc60fda7ebba7ff7ebfa3e97763a243841d321556472efd2c09cee528d79b"
+    },
+    {
+      "path": "/product-category/marine-furniture-fittings/",
+      "name": "Marine Furniture Fittings",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/MARINE-HARDWARE-1.png",
+      "status": 200,
+      "width": 2400,
+      "height": 1200,
+      "bytes": 995078,
+      "sha256": "027a54d476cd20adb6fc3bae91f350056943f161a2c6752d907fd6791b038def"
+    },
+    {
+      "path": "/product-category/abrasives/",
+      "name": "Abrasives",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/05/Coated-Abrasives_intro-1-scaled.jpg",
+      "status": 200,
+      "width": 2560,
+      "height": 1706,
+      "bytes": 579711,
+      "sha256": "717699b2ff36b59f4073c67051050f1d7384b4ce5b21d951fab1b8f6da139f2b"
+    },
+    {
+      "path": "/product-category/fasteners/",
+      "name": "Fasteners",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/04/fastner.webp",
+      "status": 200,
+      "width": 800,
+      "height": 400,
+      "bytes": 39218,
+      "sha256": "c01233c307b7d96d3d65759489e682a65d0365dd7f9b1febb1185b892b651281"
+    },
+    {
+      "path": "/product-category/general-hardware/",
+      "name": "General Hardware",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/04/general-20hardware.jpg",
+      "status": 200,
+      "width": 531,
+      "height": 267,
+      "bytes": 110101,
+      "sha256": "767539ef2ff2c80d873e041b2659c78888519f4267ae1365979792d3e560333e"
+    },
+    {
+      "path": "/product-category/oil-field-industrial-pipe-fittings/",
+      "name": "Oil Field & Industrial Pipe Fittings",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/04/pipe-fitting-page.png.jpg",
+      "status": 200,
+      "width": 960,
+      "height": 770,
+      "bytes": 18001,
+      "sha256": "9cf4c95a97093c9c4e5df49e9c531770edc15e85e66156cfbfe447d58fff6ef3"
+    },
+    {
+      "path": "/product-category/ppr-upvc-pipes-fittings/",
+      "name": "PPR/UPVC Pipes & Fittings",
+      "url": "https://yaybmt.com/wp-content/uploads/2025/04/PPRUPVC-Pipes-Fittings.jpeg",
+      "status": 200,
+      "width": 282,
+      "height": 179,
+      "bytes": 7292,
+      "sha256": "27e2977564a380dca643230d7a93676eae6c1f1de5fb55339bb145a4e8d966f4"
+    }
+  ]
+}

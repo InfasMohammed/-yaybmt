@@ -1,3 +1,5 @@
+import { cataloguePDF } from "../lib/catalogue-file";
+import HeaderMenu from "../components/HeaderMenu";
 import "./globals.css";
 import { origin } from "../lib/site";
 import { whatsapp } from "../lib/site";
@@ -34,13 +36,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               alt="Yusuf Al Yousfi Building Materials Trading LLC"
             />
           </a>
-          <nav aria-label="Main navigation">
-            <a href="/shop/">Products</a>
-            <a href="/brands/">Brands</a>
-            <a href="/categories/">Ranges</a>
-            <a href="/about-us/">Company</a>
-            <a href="/contact-us/">Contact</a>
-          </nav>
+          <HeaderMenu />
         </header>
         {children}
         <footer id="contact">
@@ -73,6 +69,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <nav className="footer-navigation" aria-label="Footer navigation">
             <a href="/shop/">Catalogue</a>
+            <a href={cataloguePDF.href} download={cataloguePDF.filename}>
+              Original catalogue (PDF)
+            </a>
             <a href="/brands/">Brands</a>
             <a href="/categories/">Categories</a>
             <a href="/brand/marine-locks/">Marine locks</a>
