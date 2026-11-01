@@ -54,6 +54,11 @@ export default function ArchivePage({
           <Catalogue
             items={items.map(catalogueItem)}
             initialPage={page}
+            scopeBrand={
+              kind === "brand"
+                ? { slug: term.slug, name: term.name }
+                : undefined
+            }
             basePath={
               (kind === "brand" ? "/brand/" : "/product-category/") +
               term.slug +

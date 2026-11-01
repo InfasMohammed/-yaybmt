@@ -57,7 +57,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <a href={"mailto:" + contacts.sales}>{contacts.sales}</a>
             <a href={"mailto:" + contacts.info}>{contacts.info}</a>
             <a href={contacts.telephoneHref}>{contacts.telephone}</a>
-            <a href={contacts.maps}>Deira, Dubai +</a>
+            <a href={contacts.maps}>{contacts.location}</a>
           </div>
           <div className="social">
             <a aria-label="Instagram" href={contacts.instagram}>
