@@ -1,3 +1,4 @@
+import { contactPage } from "./contact-page";
 import type { ContentPage } from "./types";
 import { sourcePages } from "./source-pages";
 const source = (path: string) => sourcePages.find((p) => p.path === path)!;
@@ -25,10 +26,9 @@ export const pages: ContentPage[] = [
     description:
       source("/contact-us/").seo.description ||
       "Contact YAYBMT in Deira, Dubai.",
-    paragraphs: [
-      "Share the products, model numbers, quantities and specifications you need. Our team can discuss your enquiry directly.",
-    ],
-    source: "client-confirmed contacts",
+    paragraphs: [contactPage.introHeading, ...contactPage.paragraphs],
+    source:
+      "Original public WordPress Contact Us page; client-confirmed phone, WhatsApp and emails",
     kind: "contact",
     seo: source("/contact-us/").seo,
   },

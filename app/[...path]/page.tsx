@@ -1,3 +1,4 @@
+import ContactSections from "../../components/ContactSections";
 import AboutSections from "../../components/AboutSections";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import { origin } from "../../lib/site";
@@ -54,7 +55,13 @@ export default async function Page({
   return (
     <main
       id="main"
-      className={pathname === "/about-us/" ? "page about-page" : "page prose"}
+      className={
+        pathname === "/about-us/"
+          ? "page about-page"
+          : pathname === "/contact-us/"
+            ? "page contact-page"
+            : "page prose"
+      }
     >
       {structured && (
         <script
@@ -85,7 +92,9 @@ export default async function Page({
       ))}
       {pathname === "/about-us/" && <AboutSections />}
       {item.bodyHtml && <ContentBody html={item.bodyHtml} />}{" "}
-      {"kind" in item ? (
+      {pathname === "/contact-us/" ? (
+        <ContactSections />
+      ) : "kind" in item ? (
         <>
           <h2>
             {item.kind === "contact"
