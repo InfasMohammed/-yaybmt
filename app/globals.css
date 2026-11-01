@@ -1081,3 +1081,70 @@ summary {
     align-self: start;
   }
 }
+
+.header-menu {
+  position: relative;
+  z-index: 20;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.header-menu > summary {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  color: #fff;
+  cursor: pointer;
+  list-style: none;
+  border: 1px solid #ffffff55;
+  border-radius: 3px;
+}
+.header-menu > summary::-webkit-details-marker {
+  display: none;
+}
+.header-menu > summary:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 4px;
+}
+.menu-bars {
+  display: grid;
+  gap: 5px;
+  width: 22px;
+}
+.menu-bars > span {
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+}
+.header-menu[open] > summary {
+  border-color: var(--copper);
+}
+.header-menu nav {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 12px);
+  width: min(270px, 86vw);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 10px;
+  background: var(--ink);
+  border: 1px solid var(--copper);
+  box-shadow: 0 12px 30px #0003;
+}
+.header-menu nav a {
+  display: block;
+  margin: 0;
+  padding: 14px 16px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
+.header-menu nav a:hover,
+.header-menu nav a:focus-visible {
+  background: #ffffff12;
+  color: #edc6aa;
+}
