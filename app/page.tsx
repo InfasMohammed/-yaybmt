@@ -1,3 +1,4 @@
+import BrandLogo from "../components/BrandLogo";
 import { sourcePages } from "../data/source-pages";
 import { brands } from "../data/brands";
 import { categories } from "../data/categories";
@@ -62,7 +63,12 @@ export default function Home() {
         <h2>Find your brand.</h2>
         <div className="directory">
           {brands.map((b) => (
-            <a href={"/brand/" + b.slug + "/"} key={b.slug}>
+            <a
+              className="brand-directory-card"
+              href={"/brand/" + b.slug + "/"}
+              key={b.slug}
+            >
+              <BrandLogo slug={b.slug} />
               {b.name}
               <span aria-hidden="true">+</span>
             </a>

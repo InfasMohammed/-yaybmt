@@ -1,0 +1,62 @@
+{
+  "source": "Read-only WordPress product_brand thumbnail_id mappings; original bytes retained",
+  "files": [
+    {
+      "slug": "bn-cosmo",
+      "file": "2025/04/images-2-1.png",
+      "width": 182,
+      "height": 80,
+      "sha256": "03a3dee191f6b24150865cb2b1aae1315422d33aba28c7de5ea4a6e433362361"
+    },
+    {
+      "slug": "daelim",
+      "file": "2025/04/daelim.png",
+      "width": 1179,
+      "height": 246,
+      "sha256": "cd9105f69e4e1f3d8d4ce9c0c8f6679f7331fe1171d68e5109984497066e399a"
+    },
+    {
+      "slug": "horse",
+      "file": "2025/05/horse.jpg",
+      "width": 1070,
+      "height": 732,
+      "sha256": "54a1199b27396b3d7e21e722a9060614b1c737b277fa5c0fd289a60466f28ee6"
+    },
+    {
+      "slug": "kopat",
+      "file": "2025/04/kopat.jpg",
+      "width": 188,
+      "height": 141,
+      "sha256": "fec40826d5967b50692f36701f02d7bb0dab5b93920e7c6c6b904d028f4bb87b"
+    },
+    {
+      "slug": "marine-locks",
+      "file": "2025/05/MARINE-LOCKS-1.png",
+      "width": 2400,
+      "height": 1200,
+      "sha256": "32f4f18dc6bcfaa14d82845f812a2a655135996beb8bc937f20891236aa3454e"
+    },
+    {
+      "slug": "royal-co",
+      "file": "2025/04/New-Project.png",
+      "width": 380,
+      "height": 380,
+      "sha256": "b62273b0210d5715ccb52b797636e1a0c5ed139d236ea1f721cddea180d90436"
+    },
+    {
+      "slug": "staco",
+      "file": "2025/04/logo.png",
+      "width": 300,
+      "height": 100,
+      "sha256": "253d8715438355e76ba6448ee4674d3e7de00509df30013aef04e55cf26cf652"
+    },
+    {
+      "slug": "sungmi-locks",
+      "file": "2025/04/sung-mi.png",
+      "width": 1185,
+      "height": 480,
+      "sha256": "bd11eabda70b42faa1deef3cf8ab6cde4d1f247ba3897fd8510072a96cece3be"
+    }
+  ],
+  "missing": ["marine-sanitary-fittings"]
+}

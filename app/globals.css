@@ -1144,3 +1144,40 @@ summary {
     width: 100%;
   }
 }
+
+.brand-logo-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  padding: 12px;
+}
+.brand-logo-frame img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.directory > .brand-directory-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.brand-directory-card > .brand-logo-frame {
+  flex: 0 0 100%;
+}
+.brand-directory-card > span[aria-hidden] {
+  margin-left: auto;
+}
+.brand-archive-logo {
+  width: min(320px, 100%);
+  margin: 24px 0;
+}
+.brand-archive-logo .brand-logo-frame {
+  height: 160px;
+  border: 1px solid var(--line);
+}
