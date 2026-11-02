@@ -1,8 +1,10 @@
+import CompanyValues from "./CompanyValues";
 import { aboutImages, team, companyFigures } from "../data/about";
 
 export default function AboutSections() {
   return (
     <>
+      <CompanyValues />
       <div className="about-banner">
         <img
           src={aboutImages.banner.src}

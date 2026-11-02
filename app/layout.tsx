@@ -1,3 +1,5 @@
+import { categories } from "../data/categories";
+import { brands } from "../data/brands";
 import { cataloguePDF } from "../lib/catalogue-file";
 import HeaderMenu from "../components/HeaderMenu";
 import "./globals.css";
@@ -36,7 +38,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               alt="Yusuf Al Yousfi Building Materials Trading LLC"
             />
           </a>
-          <HeaderMenu />
+          <HeaderMenu
+            categories={categories
+              .filter(
+                (c) => !c.slug.includes("/") && c.slug !== "uncategorized",
+              )
+              .map(({ slug, name }) => ({ slug, name }))}
+            brands={brands.map(({ slug, name }) => ({ slug, name }))}
+          />
         </header>
         {children}
         <footer id="contact">
