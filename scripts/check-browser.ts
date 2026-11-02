@@ -364,6 +364,43 @@ async function main() {
       0,
     );
     await page.keyboard.press("Escape");
+    await page.goto(base + "/");
+    assert.equal(await page.locator(".header-menu").count(), 0);
+    const primaryNavigation = page.getByRole("navigation", {
+      name: "Main navigation",
+    });
+    assert.ok(
+      await primaryNavigation
+        .getByRole("link", { name: "Company", exact: true })
+        .isVisible(),
+    );
+    const brandsDropdown = primaryNavigation
+      .locator("details")
+      .filter({ has: page.locator("summary", { hasText: /^Brands/ }) });
+    await brandsDropdown.locator("summary").click();
+    assert.ok(
+      await brandsDropdown
+        .getByRole("link", { name: "DAELIM", exact: true })
+        .isVisible(),
+    );
+    await page.keyboard.press("Escape");
+    assert.equal(await brandsDropdown.getAttribute("open"), null);
+    assert.equal(await page.locator(".welcome-section details").count(), 0);
+    await primaryNavigation
+      .getByRole("link", { name: "Company", exact: true })
+      .click();
+    assert.ok(page.url().endsWith("/about-us/"));
+    assert.equal(
+      await page.locator(".company-values-panels details").count(),
+      3,
+    );
+    await page
+      .locator(".company-values-panels summary")
+      .filter({ hasText: /^Mission$/ })
+      .click();
+    assert.ok(
+      await page.getByText(/Our mission is to provide innovative/).isVisible(),
+    );
     const nojs = await browser.newContext({ javaScriptEnabled: false });
     const plain = await nojs.newPage();
     await plain.goto(base + "/brand/daelim/");
