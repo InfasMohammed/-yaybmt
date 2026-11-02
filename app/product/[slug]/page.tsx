@@ -1,3 +1,5 @@
+import ProductDocuments from "../../../components/ProductDocuments";
+import { productDocuments } from "../../../data/product-documents";
 import { productSEO } from "../../../lib/product-seo";
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import { notFound } from "next/navigation";
@@ -174,10 +176,20 @@ export default async function Product({
               </p>
             )}
           </details>
+          <ProductDocuments product={p} />
           {p.bodyHtml && (
             <details>
               <summary>Original product details</summary>
-              <ContentBody html={p.bodyHtml} />
+              <ContentBody
+                html={
+                  productDocuments[p.slug]?.length
+                    ? p.bodyHtml.replace(
+                        /<p>Additional source illustration is not available in this review\.<\/p>/g,
+                        "",
+                      )
+                    : p.bodyHtml
+                }
+              />
             </details>
           )}
           {p.status === "sample" && (

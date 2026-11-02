@@ -1,7 +1,11 @@
 {
   "hosting": {
     "public": "out",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "trailingSlash": true,
     "redirects": [
       {
@@ -1512,6 +1516,201 @@
       {
         "source": "/wp-content/uploads/2026/02/rubber-elbow.png",
         "destination": "/images/products/2026/02/rubber-elbow.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-02-030506-Photoroom-1.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-02-030506-Photoroom-1.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-02-030506-Photoroom-1-300x247.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-02-030506-Photoroom-1.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-02-025355-Photoroom.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-02-025355-Photoroom.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-02-025355-Photoroom-220x300.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-02-025355-Photoroom.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-02-023311.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-02-023311.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-02-023311-250x300.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-02-023311.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-05-040413.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-05-040413.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-05-040413-300x207.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-05-040413.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-05-040403.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-05-040403.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-05-040403-300x191.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-05-040403.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/10/5600-yaybmt.png",
+        "destination": "/images/products/drawings/2025/10/5600-yaybmt.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-03-012650.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-03-012650.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-03-012650-300x252.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-03-012650.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-03-012644.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-03-012644.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-03-012644-300x205.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-03-012644.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-02-033628.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-02-033628.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/04/Screenshot-2025-05-02-033628-300x238.png",
+        "destination": "/images/products/drawings/2025/04/Screenshot-2025-05-02-033628.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/09/3.png",
+        "destination": "/images/products/drawings/2025/09/3.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/09/4.png",
+        "destination": "/images/products/drawings/2025/09/4.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2026/02/C1-MARINE-LOCK.png",
+        "destination": "/images/products/drawings/2026/02/C1-MARINE-LOCK.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2026/01/C1-M-e1767522179246.png",
+        "destination": "/images/products/drawings/2026/01/C1-M-e1767522179246.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C2-e1767483442713.png",
+        "destination": "/images/products/drawings/2025/12/C2-e1767483442713.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C2-A-e1767518872565.png",
+        "destination": "/images/products/drawings/2025/12/C2-A-e1767518872565.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C3-e1767519053691.png",
+        "destination": "/images/products/drawings/2025/12/C3-e1767519053691.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C4-e1767519216872.png",
+        "destination": "/images/products/drawings/2025/12/C4-e1767519216872.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C4-A-e1767519398199.png",
+        "destination": "/images/products/drawings/2025/12/C4-A-e1767519398199.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C5-e1767481936113.png",
+        "destination": "/images/products/drawings/2025/12/C5-e1767481936113.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C5-B-e1767519549294.png",
+        "destination": "/images/products/drawings/2025/12/C5-B-e1767519549294.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C5-D-e1767519762476.png",
+        "destination": "/images/products/drawings/2025/12/C5-D-e1767519762476.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C6-e1767520145142.png",
+        "destination": "/images/products/drawings/2025/12/C6-e1767520145142.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C6-1-e1767520274168.png",
+        "destination": "/images/products/drawings/2025/12/C6-1-e1767520274168.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C6-2-e1767520432685.png",
+        "destination": "/images/products/drawings/2025/12/C6-2-e1767520432685.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C6-3-e1767520705622.png",
+        "destination": "/images/products/drawings/2025/12/C6-3-e1767520705622.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C7-e1767520876181.png",
+        "destination": "/images/products/drawings/2025/12/C7-e1767520876181.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/C7-1-e1767520975581.png",
+        "destination": "/images/products/drawings/2025/12/C7-1-e1767520975581.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/S-5605-e1767521347465.png",
+        "destination": "/images/products/drawings/2025/12/S-5605-e1767521347465.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/12/S5100-e1767521166630.png",
+        "destination": "/images/products/drawings/2025/12/S5100-e1767521166630.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/10/5601-diag.png",
+        "destination": "/images/products/drawings/2025/10/5601-diag.png",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2025/10/5603-diagram.jpg",
+        "destination": "/images/products/drawings/2025/10/5603-diagram.jpg",
         "type": 301
       }
     ],

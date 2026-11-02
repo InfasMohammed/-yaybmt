@@ -197,5 +197,10 @@
     }
   ],
   "sourceInlineReferenceScope": "32 embedded references in product descriptions, not article illustrations",
-  "productImageManifest": "product-image-manifest.json"
+  "productImageManifest": "product-image-manifest.json",
+  "recoveredTechnicalDrawings": {
+    "files": 31,
+    "products": 28,
+    "manifest": "product-drawing-manifest.json"
+  }
 }

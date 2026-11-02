@@ -11,6 +11,6 @@ export const migration = {
     pages: 8,
   },
   databaseAvailable: true,
-  // Required primary product files are available; older inline drawings still have missing references.
+  // Required primary product files are available; all 31 genuine inline drawings are recovered locally.
   uploadsAvailable: true,
 };
