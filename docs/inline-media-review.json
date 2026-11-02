@@ -1,204 +1,422 @@
 {
-  "source": "SQL product-description image references checked read-only against the connected Novamira WordPress uploads",
+  "source": "SQL product-description image references checked read-only against the connected Novamira WordPress uploads; all 31 genuine references subsequently recovered from live yaybmt.com uploads",
   "primaryImages": {
     "matched": 292,
     "april": 253,
     "otherMonths": 39
   },
   "inlineReferences": 32,
-  "unavailableOriginalReferences": [
-    {
-      "page": "/product/s-1100pc/",
-      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-02-030506-Photoroom-1-300x247.png",
-      "attachmentId": 868,
-      "recordedOriginal": "2025/04/Screenshot-2025-05-02-030506-Photoroom-1.png"
-    },
-    {
-      "page": "/product/s-5103pc/",
-      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-02-025355-Photoroom-220x300.png",
-      "attachmentId": 864,
-      "recordedOriginal": "2025/04/Screenshot-2025-05-02-025355-Photoroom.png"
-    },
-    {
-      "page": "/product/sw-200/",
-      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-02-023311-250x300.png",
-      "attachmentId": 860,
-      "recordedOriginal": "2025/04/Screenshot-2025-05-02-023311.png"
-    },
-    {
-      "page": "/product/fl-930c/",
-      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-05-040413-300x207.png",
-      "attachmentId": 883,
-      "recordedOriginal": "2025/04/Screenshot-2025-05-05-040413.png"
-    },
-    {
-      "page": "/product/fl-930c/",
-      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-05-040403-300x191.png",
-      "attachmentId": 884,
-      "recordedOriginal": "2025/04/Screenshot-2025-05-05-040403.png"
-    },
-    {
-      "page": "/product/5600/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/10/5600-yaybmt.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/rcp200a/",
-      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-03-012650-300x252.png",
-      "attachmentId": 874,
-      "recordedOriginal": "2025/04/Screenshot-2025-05-03-012650.png"
-    },
-    {
-      "page": "/product/rcp200a/",
-      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-03-012644-300x205.png",
-      "attachmentId": 875,
-      "recordedOriginal": "2025/04/Screenshot-2025-05-03-012644.png"
-    },
-    {
-      "page": "/product/rlp300/",
-      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-02-033628-300x238.png",
-      "attachmentId": 871,
-      "recordedOriginal": "2025/04/Screenshot-2025-05-02-033628.png"
-    },
-    {
-      "page": "/product/1105/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/09/3.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/1105/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/09/4.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c1/",
-      "source": "https://yaybmt.com/wp-content/uploads/2026/02/C1-MARINE-LOCK.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c1-m/",
-      "source": "https://yaybmt.com/wp-content/uploads/2026/01/C1-M-e1767522179246.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c2/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C2-e1767483442713.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c2-a/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C2-A-e1767518872565.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c3/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C3-e1767519053691.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c4/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C4-e1767519216872.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c4-a/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C4-A-e1767519398199.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c-5/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C5-e1767481936113.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c5-b/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C5-B-e1767519549294.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c5-d/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C5-D-e1767519762476.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c6/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C6-e1767520145142.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c6-1/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C6-1-e1767520274168.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c6-2/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C6-2-e1767520432685.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c6-3/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C6-3-e1767520705622.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c7/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C7-e1767520876181.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/c7-1/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C7-1-e1767520975581.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/s-605/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/S-5605-e1767521347465.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/s-5100/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/12/S5100-e1767521166630.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/5601/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/10/5601-diag.png",
-      "attachmentId": null,
-      "recordedOriginal": null
-    },
-    {
-      "page": "/product/5603/",
-      "source": "https://yaybmt.com/wp-content/uploads/2025/10/5603-diagram.jpg",
-      "attachmentId": null,
-      "recordedOriginal": null
-    }
-  ],
+  "unavailableOriginalReferences": [],
   "excludedSyntheticReferences": [
     {
       "page": "/product/c1-c/",
       "source": "https://via.placeholder.com/450x450?text=C1-C+Product+Image",
       "reason": "Legacy generated placeholder URL; never treated as a genuine product photo"
+    }
+  ],
+  "recoveredReferences": [
+    {
+      "index": 0,
+      "page": "/product/s-1100pc/",
+      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-02-030506-Photoroom-1-300x247.png",
+      "attachmentId": 868,
+      "recordedOriginal": "2025/04/Screenshot-2025-05-02-030506-Photoroom-1.png",
+      "file": "2025/04/Screenshot-2025-05-02-030506-Photoroom-1.png",
+      "width": 415,
+      "height": 341,
+      "mime": "image/png",
+      "bytes": 54429,
+      "sha256": "b52597aa80e815e852e10d5fc8d1a46ea603d28bf8d3f39f34908ba8b8b6d7ba"
+    },
+    {
+      "index": 1,
+      "page": "/product/s-5103pc/",
+      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-02-025355-Photoroom-220x300.png",
+      "attachmentId": 864,
+      "recordedOriginal": "2025/04/Screenshot-2025-05-02-025355-Photoroom.png",
+      "file": "2025/04/Screenshot-2025-05-02-025355-Photoroom.png",
+      "width": 397,
+      "height": 541,
+      "mime": "image/png",
+      "bytes": 88436,
+      "sha256": "370cff50782619595ca7aa5e9f2d14d432659cdb0c81a50240a9b2ddbec484e2"
+    },
+    {
+      "index": 2,
+      "page": "/product/sw-200/",
+      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-02-023311-250x300.png",
+      "attachmentId": 860,
+      "recordedOriginal": "2025/04/Screenshot-2025-05-02-023311.png",
+      "file": "2025/04/Screenshot-2025-05-02-023311.png",
+      "width": 491,
+      "height": 590,
+      "mime": "image/png",
+      "bytes": 76913,
+      "sha256": "41247534771819e70e409e651bf67b04c3fe5a6386ff1cf16fe872ed034898c0"
+    },
+    {
+      "index": 3,
+      "page": "/product/fl-930c/",
+      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-05-040413-300x207.png",
+      "attachmentId": 883,
+      "recordedOriginal": "2025/04/Screenshot-2025-05-05-040413.png",
+      "file": "2025/04/Screenshot-2025-05-05-040413.png",
+      "width": 584,
+      "height": 403,
+      "mime": "image/png",
+      "bytes": 39498,
+      "sha256": "18c4259c07ec13b5fa8250b1435347937aae2d013eb9a1f0df91d18d0a85c493"
+    },
+    {
+      "index": 4,
+      "page": "/product/fl-930c/",
+      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-05-040403-300x191.png",
+      "attachmentId": 884,
+      "recordedOriginal": "2025/04/Screenshot-2025-05-05-040403.png",
+      "file": "2025/04/Screenshot-2025-05-05-040403.png",
+      "width": 613,
+      "height": 390,
+      "mime": "image/png",
+      "bytes": 38477,
+      "sha256": "97f1d66ff05fad18c2b28114bd36b80c9f563276974a7ad786198e1e445905c8"
+    },
+    {
+      "index": 5,
+      "page": "/product/5600/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/10/5600-yaybmt.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/10/5600-yaybmt.png",
+      "width": 429,
+      "height": 569,
+      "mime": "image/png",
+      "bytes": 151427,
+      "sha256": "b11d7f8672f335ed90c7ff3c651344c55b89e340543f413e67c6b2ef608d77e6"
+    },
+    {
+      "index": 6,
+      "page": "/product/rcp200a/",
+      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-03-012650-300x252.png",
+      "attachmentId": 874,
+      "recordedOriginal": "2025/04/Screenshot-2025-05-03-012650.png",
+      "file": "2025/04/Screenshot-2025-05-03-012650.png",
+      "width": 415,
+      "height": 348,
+      "mime": "image/png",
+      "bytes": 24446,
+      "sha256": "46c70e502789d38ddd717908135af26258b7ac2354fa53d3dc4dfe09cd4e8bf8"
+    },
+    {
+      "index": 7,
+      "page": "/product/rcp200a/",
+      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-03-012644-300x205.png",
+      "attachmentId": 875,
+      "recordedOriginal": "2025/04/Screenshot-2025-05-03-012644.png",
+      "file": "2025/04/Screenshot-2025-05-03-012644.png",
+      "width": 442,
+      "height": 302,
+      "mime": "image/png",
+      "bytes": 21628,
+      "sha256": "5560c34313dda5d24bbb4b2765c1e55103af25661e262ff6fa269369f245934c"
+    },
+    {
+      "index": 8,
+      "page": "/product/rlp300/",
+      "source": "https://rmsdemo.com/projects/yaybmt/web/wp-content/uploads/2025/04/Screenshot-2025-05-02-033628-300x238.png",
+      "attachmentId": 871,
+      "recordedOriginal": "2025/04/Screenshot-2025-05-02-033628.png",
+      "file": "2025/04/Screenshot-2025-05-02-033628.png",
+      "width": 907,
+      "height": 720,
+      "mime": "image/png",
+      "bytes": 120967,
+      "sha256": "de9219f8ea34a85668cfad5dc85af39464fda236a37987e3b9543dc81712903e"
+    },
+    {
+      "index": 9,
+      "page": "/product/1105/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/09/3.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/09/3.png",
+      "width": 916,
+      "height": 511,
+      "mime": "image/png",
+      "bytes": 235721,
+      "sha256": "de7f33bdcf39a7b870015dd917979516088effdbd5f651f4ea56b41a37a14f15"
+    },
+    {
+      "index": 10,
+      "page": "/product/1105/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/09/4.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/09/4.png",
+      "width": 364,
+      "height": 540,
+      "mime": "image/png",
+      "bytes": 91913,
+      "sha256": "3bb5bb6d53037ff144ea92db248949bd071fb813f70a8842c4c5ad4aee4b8eb0"
+    },
+    {
+      "index": 11,
+      "page": "/product/c1/",
+      "source": "https://yaybmt.com/wp-content/uploads/2026/02/C1-MARINE-LOCK.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2026/02/C1-MARINE-LOCK.png",
+      "width": 864,
+      "height": 869,
+      "mime": "image/png",
+      "bytes": 293632,
+      "sha256": "d9fb9d69f6c50561711039bce60d800e85e5e9bfb5169e01308d515efcf5a3e9"
+    },
+    {
+      "index": 12,
+      "page": "/product/c1-m/",
+      "source": "https://yaybmt.com/wp-content/uploads/2026/01/C1-M-e1767522179246.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2026/01/C1-M-e1767522179246.png",
+      "width": 864,
+      "height": 870,
+      "mime": "image/png",
+      "bytes": 350957,
+      "sha256": "c35eba8c31063dd09db09873d6c21946a77ff623dd3e5cb328638015711a35fe"
+    },
+    {
+      "index": 13,
+      "page": "/product/c2/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C2-e1767483442713.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C2-e1767483442713.png",
+      "width": 864,
+      "height": 922,
+      "mime": "image/png",
+      "bytes": 186430,
+      "sha256": "14b8ec468e8b9642ae667e9fa23b2f47473618c88c45fa7a87ac12c2da90b933"
+    },
+    {
+      "index": 14,
+      "page": "/product/c2-a/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C2-A-e1767518872565.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C2-A-e1767518872565.png",
+      "width": 864,
+      "height": 426,
+      "mime": "image/png",
+      "bytes": 125245,
+      "sha256": "59217c299dc1f369f745d0f2e4eeb7b2e03ca00ce118878735ec5f68d91e03f3"
+    },
+    {
+      "index": 15,
+      "page": "/product/c3/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C3-e1767519053691.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C3-e1767519053691.png",
+      "width": 864,
+      "height": 726,
+      "mime": "image/png",
+      "bytes": 238535,
+      "sha256": "17d8286d3860f5d0df0302a7efeb0a3ad0f11e942b764f802e7b92409277f401"
+    },
+    {
+      "index": 16,
+      "page": "/product/c4/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C4-e1767519216872.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C4-e1767519216872.png",
+      "width": 864,
+      "height": 680,
+      "mime": "image/png",
+      "bytes": 270125,
+      "sha256": "e40b575117939ed80d29f8c56e1a792acfe7db34db4aa2b3357538eface2cd86"
+    },
+    {
+      "index": 17,
+      "page": "/product/c4-a/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C4-A-e1767519398199.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C4-A-e1767519398199.png",
+      "width": 864,
+      "height": 1044,
+      "mime": "image/png",
+      "bytes": 248789,
+      "sha256": "d0540532148b89dc96add3f5195f7b83a2160d6c6d6fab3fb6a40bde83339640"
+    },
+    {
+      "index": 18,
+      "page": "/product/c-5/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C5-e1767481936113.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C5-e1767481936113.png",
+      "width": 864,
+      "height": 606,
+      "mime": "image/png",
+      "bytes": 187245,
+      "sha256": "eefcbaacf030070461139f19ec7c43fd4d903b1c7c9b587f543ce1eb2c37d274"
+    },
+    {
+      "index": 19,
+      "page": "/product/c5-b/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C5-B-e1767519549294.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C5-B-e1767519549294.png",
+      "width": 864,
+      "height": 704,
+      "mime": "image/png",
+      "bytes": 260137,
+      "sha256": "e3e0596773d1eb2a072ad628607188111e3b697178258349d3c51f9e63e63716"
+    },
+    {
+      "index": 20,
+      "page": "/product/c5-d/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C5-D-e1767519762476.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C5-D-e1767519762476.png",
+      "width": 864,
+      "height": 620,
+      "mime": "image/png",
+      "bytes": 170205,
+      "sha256": "a858bf9cea892345d48f02e93792e540c592a447c86652d5f87344d08320361b"
+    },
+    {
+      "index": 21,
+      "page": "/product/c6/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C6-e1767520145142.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C6-e1767520145142.png",
+      "width": 864,
+      "height": 493,
+      "mime": "image/png",
+      "bytes": 149514,
+      "sha256": "6ff09914de71c9952272ffc27f084fe0475a4c9a039350bd5bf16e6d79f0faf0"
+    },
+    {
+      "index": 22,
+      "page": "/product/c6-1/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C6-1-e1767520274168.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C6-1-e1767520274168.png",
+      "width": 580,
+      "height": 960,
+      "mime": "image/png",
+      "bytes": 139705,
+      "sha256": "526e0253213ff8f47f735767b3a36b42cd15732b99f159a0d3be6908c6f45843"
+    },
+    {
+      "index": 23,
+      "page": "/product/c6-2/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C6-2-e1767520432685.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C6-2-e1767520432685.png",
+      "width": 792,
+      "height": 690,
+      "mime": "image/png",
+      "bytes": 112743,
+      "sha256": "c2742a42b87b45a0a882e5e21456314dd7260e45a50a8e3144c37835badc9b27"
+    },
+    {
+      "index": 24,
+      "page": "/product/c6-3/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C6-3-e1767520705622.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C6-3-e1767520705622.png",
+      "width": 864,
+      "height": 1080,
+      "mime": "image/png",
+      "bytes": 257460,
+      "sha256": "6dfd1f6d0c892d8fde8ace50a8f44213bede1fc1a4bc3eafd1d288e5e9192250"
+    },
+    {
+      "index": 25,
+      "page": "/product/c7/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C7-e1767520876181.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C7-e1767520876181.png",
+      "width": 864,
+      "height": 800,
+      "mime": "image/png",
+      "bytes": 230263,
+      "sha256": "15d5e73a719f7584fe871eb3f502d26cb20a6a28303dee31421714b3b8094cf0"
+    },
+    {
+      "index": 26,
+      "page": "/product/c7-1/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/C7-1-e1767520975581.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/C7-1-e1767520975581.png",
+      "width": 864,
+      "height": 673,
+      "mime": "image/png",
+      "bytes": 148785,
+      "sha256": "a1413dc25be6b65d219e283e726d1c0b463043f722dcf85e3ddcd0fe20ba43be"
+    },
+    {
+      "index": 27,
+      "page": "/product/s-605/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/S-5605-e1767521347465.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/S-5605-e1767521347465.png",
+      "width": 955,
+      "height": 804,
+      "mime": "image/png",
+      "bytes": 251446,
+      "sha256": "e71471348c4377c00c1bd742983a3b1cb86f4297da746ac4e0ee5b8d88897ce0"
+    },
+    {
+      "index": 28,
+      "page": "/product/s-5100/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/12/S5100-e1767521166630.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/12/S5100-e1767521166630.png",
+      "width": 862,
+      "height": 606,
+      "mime": "image/png",
+      "bytes": 166040,
+      "sha256": "374dde4bbf15d465dd7b82838b3f1a7ee4da8dd78be43f431032521689c6b09f"
+    },
+    {
+      "index": 29,
+      "page": "/product/5601/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/10/5601-diag.png",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/10/5601-diag.png",
+      "width": 432,
+      "height": 571,
+      "mime": "image/png",
+      "bytes": 172454,
+      "sha256": "0946f154ad63d57541a1fef0e477dc8bed87911879a435be34b72dee3fb17478"
+    },
+    {
+      "index": 30,
+      "page": "/product/5603/",
+      "source": "https://yaybmt.com/wp-content/uploads/2025/10/5603-diagram.jpg",
+      "attachmentId": null,
+      "recordedOriginal": null,
+      "file": "2025/10/5603-diagram.jpg",
+      "width": 424,
+      "height": 563,
+      "mime": "image/jpeg",
+      "bytes": 51665,
+      "sha256": "f8e23d3d0a51704d845718d1c20bcf71fb29a93e5530b0fbfbfd3466f96d8a5f"
     }
   ]
 }

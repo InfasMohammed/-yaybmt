@@ -214,6 +214,7 @@ async function main() {
       ),
       ...pageRedirects,
       ...imageRedirects,
+      ...JSON.parse(readFileSync("data/drawing-image-redirects.json", "utf8")),
     ];
     writeFileSync("firebase.json", JSON.stringify(firebase, null, 2) + "\n");
     const migration = JSON.parse(
