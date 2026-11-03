@@ -459,15 +459,23 @@ dd {
   width: calc(100% - 265px);
 }
 footer {
-  background: var(--ink);
-  color: #eeeee8;
-  padding: 65px 6% 30px;
+  background: #f0f0e9;
+  color: var(--ink);
+  padding: 48px 6% 24px;
   display: grid;
   grid-template-columns: 1fr 1.5fr auto;
   gap: 40px;
 }
+footer > div:first-child > .logo {
+  display: block;
+  width: 184px;
+  height: 116px;
+  padding: 12px;
+  background: var(--ink);
+  border-radius: 12px;
+}
 footer h2 {
-  font-size: 27px;
+  font-size: 24px;
   margin-top: 0;
 }
 footer a {
@@ -477,7 +485,7 @@ footer a {
 }
 footer p {
   font-size: 13px;
-  color: #bdbfb6;
+  color: #626760;
 }
 .social {
   display: flex;
@@ -486,12 +494,12 @@ footer p {
 .social img {
   width: 22px;
   height: 22px;
-  filter: invert(1);
+  filter: none;
 }
 .footer-note {
   grid-column: 1/-1;
-  border-top: 1px solid #ffffff20;
-  padding-top: 25px;
+  border-top: 1px solid #d4d5ca;
+  padding-top: 20px;
   font-size: 11px;
 }
 .floating {

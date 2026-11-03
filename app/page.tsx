@@ -255,19 +255,22 @@ export default function Home() {
             </a>
           </div>
           <div
-            className="tw:grid tw:grid-cols-1 tw:gap-4 tw:sm:grid-cols-2 tw:xl:grid-cols-3"
+            className="tw:grid tw:grid-cols-1 tw:gap-4 tw:min-[360px]:grid-cols-2 tw:lg:grid-cols-3 tw:lg:gap-6"
             data-category-grid
           >
             {categories
               .filter((c) => Boolean(categoryImages[c.slug]))
-              .map((c, index) => (
+              .map((c) => (
                 <a
                   data-home-reveal
                   key={c.slug}
                   href={"/product-category/" + c.slug + "/"}
-                  className="tw:group tw:grid tw:min-h-[148px] tw:min-w-0 tw:grid-cols-[104px_1fr] tw:items-center tw:gap-5 tw:rounded-xl tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white tw:p-5 tw:no-underline tw:hover:border-copper tw:hover:no-underline tw:motion-safe:transition-[border-color,box-shadow] tw:motion-safe:hover:shadow-[0_8px_24px_-16px_rgba(37,40,39,0.3)] tw:sm:grid-cols-[88px_1fr] tw:sm:gap-4 tw:lg:grid-cols-[104px_1fr]"
+                  className="tw:group tw:flex tw:min-w-0 tw:flex-col tw:overflow-hidden tw:rounded-2xl tw:border tw:border-solid tw:border-[#ddded5] tw:bg-white tw:p-4 tw:no-underline tw:hover:border-copper tw:hover:no-underline tw:motion-safe:transition-[border-color,box-shadow] tw:motion-safe:duration-300 tw:motion-safe:hover:shadow-[0_18px_40px_-25px_rgba(100,66,45,0.3)] tw:sm:p-6"
                 >
-                  <span className="tw:flex tw:h-[100px] tw:w-full tw:items-center tw:justify-center tw:rounded-lg tw:bg-[#f7f7f3] tw:p-2">
+                  <span className="tw:min-h-[80px] tw:pt-1 tw:text-[14px] tw:leading-snug tw:font-semibold tw:text-ink tw:sm:min-h-[56px] tw:sm:text-[18px]">
+                    {c.name}
+                  </span>
+                  <span className="tw:flex tw:h-[130px] tw:items-center tw:justify-center tw:px-1 tw:py-3 tw:sm:h-[180px] tw:sm:px-4">
                     <img
                       src={categoryImages[c.slug].src}
                       alt=""
@@ -277,21 +280,13 @@ export default function Home() {
                       className="tw:block tw:h-full tw:w-full tw:object-contain tw:motion-safe:transition-transform tw:motion-safe:duration-500 tw:motion-safe:group-hover:scale-105"
                     />
                   </span>
-                  <span className="tw:flex tw:min-w-0 tw:flex-col tw:items-start tw:gap-2">
-                    <span
-                      aria-hidden="true"
-                      className="tw:text-[9px] tw:tracking-[0.12em] tw:text-muted"
-                    >
-                      CATEGORY {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <span className="tw:text-[15px] tw:leading-snug tw:font-semibold tw:text-ink">
-                      {c.name}
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      className="tw:mt-1 tw:inline-flex tw:items-center tw:gap-3 tw:text-[11px] tw:font-medium tw:text-copper-dark"
-                    >
-                      Explore <Arrow />
+                  <span
+                    aria-hidden="true"
+                    className="tw:mt-auto tw:flex tw:items-center tw:justify-between tw:gap-3 tw:pt-3 tw:text-[10px] tw:font-medium tw:tracking-wide tw:text-muted"
+                  >
+                    <span>Explore range</span>
+                    <span className="tw:flex tw:h-8 tw:w-8 tw:shrink-0 tw:items-center tw:justify-center tw:rounded-full tw:border tw:border-solid tw:border-[#e2d8cd] tw:bg-paper tw:text-copper-dark tw:group-hover:border-copper tw:group-hover:bg-copper tw:group-hover:text-white tw:motion-safe:transition-colors tw:sm:h-10 tw:sm:w-10">
+                      <Arrow diagonal />
                     </span>
                   </span>
                 </a>
@@ -387,12 +382,12 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="tw:relative tw:isolate tw:overflow-hidden tw:bg-ink tw:py-20 tw:text-white tw:md:py-24"
+        className="tw:relative tw:isolate tw:overflow-hidden tw:border-0 tw:border-y tw:border-solid tw:border-[#dedfd6] tw:bg-sand tw:py-14 tw:text-ink tw:md:py-16"
         aria-labelledby="home-enquiry-heading"
       >
         <div
           aria-hidden="true"
-          className="tw:pointer-events-none tw:absolute tw:-top-40 tw:-right-32 tw:-z-10 tw:h-[500px] tw:w-[500px] tw:rounded-full tw:border tw:border-solid tw:border-white/10"
+          className="tw:pointer-events-none tw:absolute tw:-top-40 tw:-right-32 tw:-z-10 tw:h-[500px] tw:w-[500px] tw:rounded-full tw:border tw:border-solid tw:border-copper/15"
         />
         <div
           data-home-reveal
@@ -402,22 +397,25 @@ export default function Home() {
           }
         >
           <div>
-            <p className="tw:mt-0 tw:mb-5 tw:text-[10px] tw:font-bold tw:tracking-[0.2em] tw:text-copper-light">
+            <p className="tw:mt-0 tw:mb-5 tw:text-[10px] tw:font-bold tw:tracking-[0.2em] tw:text-copper-dark">
               LET’S TALK ABOUT YOUR PROJECT
             </p>
             <h2
               id="home-enquiry-heading"
-              className={heading + " tw:md:text-[54px]"}
+              className={heading.replace(
+                "tw:md:text-[48px]",
+                "tw:md:text-[42px]",
+              )}
             >
               Your requirements.
               <br />
-              <span className="tw:font-normal tw:text-copper-light">
+              <span className="tw:font-normal tw:text-copper-dark">
                 Our next conversation.
               </span>
             </h2>
           </div>
           <div>
-            <p className="tw:mt-0 tw:mb-6 tw:text-[14px] tw:leading-[1.9] tw:text-white/75">
+            <p className="tw:mt-0 tw:mb-6 tw:text-[14px] tw:leading-[1.9] tw:text-muted">
               Share your product list, model numbers and project requirements
               with our team in Deira, Dubai.
             </p>
@@ -427,7 +425,7 @@ export default function Home() {
               </a>
               <a
                 href={whatsapp()}
-                className="tw:inline-flex tw:min-h-11 tw:items-center tw:gap-3 tw:text-[12px] tw:font-semibold tw:text-white"
+                className="tw:inline-flex tw:min-h-11 tw:items-center tw:gap-3 tw:text-[12px] tw:font-semibold tw:text-copper-dark"
               >
                 WhatsApp our team <Arrow />
               </a>

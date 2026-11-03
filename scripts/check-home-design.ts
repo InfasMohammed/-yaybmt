@@ -103,6 +103,23 @@ async function main() {
         ),
         "Industry photos must retain their aspect ratios without enlargement",
       );
+      assert.equal(
+        await page
+          .locator("footer")
+          .evaluate((e) => getComputedStyle(e).backgroundColor),
+        "rgb(240, 240, 233)",
+      );
+      assert.equal(
+        await page.locator("footer .logo").getAttribute("src"),
+        "/images/logo-footer-original.png",
+      );
+      assert.equal(
+        await page
+          .locator("footer .social img")
+          .first()
+          .evaluate((e) => getComputedStyle(e).filter),
+        "none",
+      );
       for (const b of brands)
         assert.equal(
           await page.locator('main a[href="/brand/' + b.slug + '/"]').count(),
@@ -137,6 +154,12 @@ async function main() {
       .getByRole("link", { name: "Explore the catalogue", exact: true })
       .click();
     assert.ok(page.url().endsWith("/shop/"));
+    assert.equal(
+      await page
+        .locator("footer")
+        .evaluate((e) => getComputedStyle(e).backgroundColor),
+      "rgb(240, 240, 233)",
+    );
     await page.goBack();
     await page.getByRole("link", { name: "Discover our company" }).click();
     assert.ok(page.url().endsWith("/about-us/"));
