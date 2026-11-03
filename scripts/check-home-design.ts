@@ -107,7 +107,7 @@ async function main() {
         await page
           .locator("footer")
           .evaluate((e) => getComputedStyle(e).backgroundColor),
-        "rgb(240, 240, 233)",
+        "rgb(37, 40, 39)",
       );
       assert.equal(
         await page.locator("footer .logo").getAttribute("src"),
@@ -118,7 +118,7 @@ async function main() {
           .locator("footer .social img")
           .first()
           .evaluate((e) => getComputedStyle(e).filter),
-        "none",
+        "invert(1)",
       );
       for (const b of brands)
         assert.equal(
@@ -158,7 +158,7 @@ async function main() {
       await page
         .locator("footer")
         .evaluate((e) => getComputedStyle(e).backgroundColor),
-      "rgb(240, 240, 233)",
+      "rgb(37, 40, 39)",
     );
     await page.goBack();
     await page.getByRole("link", { name: "Discover our company" }).click();

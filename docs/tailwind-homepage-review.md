@@ -26,7 +26,7 @@ These are local/automated checks, not field Core Web Vitals, a complete accessib
 
 Category cards now use an image-led layout with fully wrapping names, a clear circular arrow, larger contained artwork and subtle copper hover feedback. Industries We Serve uses three compact cards; original photos keep their aspect ratios and render at no more than 260px wide, reducing enlargement of the low-resolution source images. This does not invent or reconstruct image detail. The original company video sits inside a rounded white card with a padded frame, subtle border/shadow and an integrated established-year caption. Muted scroll-aware playback and reduced-motion behavior are unchanged.
 
-The enquiry section and shared footer now use light warm backgrounds, dark readable text and softer separators. The original white footer logo remains unchanged on a small charcoal panel; social icons use their original dark appearance. This footer refinement applies consistently to every page. All footer navigation and confirmed contact links remain intact.
+The enquiry section uses a light warm background. At the client’s request, the shared footer is restored to its original charcoal background, light text, original white logo and white social icons. All footer navigation and confirmed contact links remain intact.
 
 ## UI/UX references
 
