@@ -11,7 +11,7 @@ export default function HomeMotion() {
       return;
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     const elements = document.querySelectorAll<HTMLElement>(
-      ".home-page > section:not(.hero) > h2, .home-page > section:not(.hero) > p, .home-page .industry-card, .home-page .directory > a",
+      ".home-page [data-home-reveal], .home-page > section:not(.hero) > h2, .home-page > section:not(.hero) > p, .home-page .industry-card, .home-page .directory > a",
     );
     const animations = new Set<Animation>();
     const observer = new IntersectionObserver(

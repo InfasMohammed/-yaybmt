@@ -1,0 +1,48 @@
+/* Prefix and omit Preflight so existing catalogue/detail styles keep their behavior. */
+@layer theme, utilities;
+@import "tailwindcss/theme.css" layer(theme) prefix(tw);
+@import "tailwindcss/utilities.css" layer(utilities) prefix(tw) important;
+@source "./page.tsx";
+
+@theme {
+  --color-ink: #252827;
+  --color-paper: #f7f6f2;
+  --color-copper: #a96340;
+  --color-copper-dark: #8c4d2d;
+  --color-copper-light: #e6b996;
+  --color-muted: #626760;
+  --color-sand: #eae5db;
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+/* Shared header belongs to the layout; adjust it only for this design preview. */
+body:has(.tailwind-home) header {
+  padding-inline: max(24px, calc((100vw - 1280px) / 2));
+}
+.tailwind-home {
+  overflow: clip;
+}
+.tailwind-home a:focus-visible {
+  outline: 3px solid #a96340;
+  outline-offset: 5px;
+}
+@media (max-width: 650px) {
+  body:has(.tailwind-home) header {
+    padding: 18px 24px;
+    gap: 10px;
+  }
+  body:has(.tailwind-home) .logo {
+    width: 130px;
+    height: 74px;
+  }
+  body:has(.tailwind-home) .primary-navigation {
+    gap: 0;
+    justify-content: space-between;
+  }
+  body:has(.tailwind-home) .primary-navigation > a,
+  body:has(.tailwind-home) .nav-dropdown > summary {
+    font-size: 12px;
+    padding: 8px 2px;
+    gap: 3px;
+  }
+}

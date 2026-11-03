@@ -64,3 +64,9 @@ YAYBMT_PRODUCTION=true npm run check:export
 ```
 
 That generates production robots and a sitemap from real indexable routes, using `https://yaybmt.com` canonicals. Retired utility pages remain noindexed. Verify actual hosting responses before cutover; do not deploy the review export to production.
+
+## Tailwind homepage design preview
+
+`feat/tailwind-homepage` is an independent design proposal based on `main`, separate from PR #8. It uses Tailwind CSS 4 through `@tailwindcss/postcss`; versions are pinned in `package-lock.json`. Use `npm ci` followed by the existing check/build/preview commands. `npm run test:home` checks the compiled Tailwind styles and responsive homepage against a running static preview.
+
+Homepage utilities use the `tw:` prefix and omit Preflight so the existing catalogue and product CSS remains intact. Theme colours live in `app/tailwind-home.css`; the homepage layout uses utilities in `app/page.tsx`. Build-time CSS is bundled locally; no Tailwind CDN or browser runtime is required. See [the design review](docs/tailwind-homepage-review.md) for scope and validation.
