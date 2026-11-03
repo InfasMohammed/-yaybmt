@@ -4,7 +4,7 @@ An independent alternative on `feat/tailwind-homepage`, based on `main` after PR
 
 ## Design
 
-The homepage uses bold sans-serif typography, a marine photograph behind the original white logo/navigation, copper actions, an overlapping white brand panel, an editorial company video/established-year panel, clean category cards, an asymmetric industry image grid and a dark enquiry section. It reuses the original local images and confirmed company content. Seven genuine logos are used; Marine Locks and Marine Sanitary Fittings remain text-only. Existing footer/social icons and the floating icon-only WhatsApp link remain.
+The homepage uses bold sans-serif typography, a marine photograph behind the original white logo/navigation, copper actions, an overlapping white brand panel, an editorial company video card, clean category cards, a compact three-card industry grid and a dark enquiry section. It reuses the original local images and confirmed company content. Seven genuine logos are used; Marine Locks and Marine Sanitary Fittings remain text-only. Existing footer/social icons and the floating icon-only WhatsApp link remain.
 
 The homepage retains all three source welcome paragraphs, the original H1 wording, existing source metadata/canonical, original category/brand routes and the 2004 establishment year from the source company content. No product photos, specifications, statistics, testimonials, prices, stock or certification claims are invented. Vision/Mission/History stay on the Company page. No URLs, redirects, product data or indexability rules change.
 
@@ -21,3 +21,7 @@ Run `npm ci`, `npm run check`, `npm run build`, `npm run check:export`, then `np
 Repository checks, build and the exported SEO/internal-link audit cover all 406 public pages. Existing browser coverage checks catalogue search/filters/pagination, enquiries, technical drawings, 301/404 behavior, no-JavaScript browsing and reduced motion. The new homepage check verifies that Tailwind actually compiled, five viewport widths (1440/1024/768/390/320), hero/header separation, all nine brand and nine category links, source welcome copy, decoded local images, reduced-motion video, no-JavaScript navigation and enquiry destinations. Fresh full-page screenshots are in `artifacts/tailwind-homepage/`.
 
 These are local/automated checks, not field Core Web Vitals, a complete accessibility audit or a guarantee of rankings. Review remains noindexed. Firebase and the live WordPress website have not been changed; production release still requires the existing SEO migration gates and explicit approval.
+
+## Design refinement
+
+Category cards now use a horizontal thumbnail layout with fully wrapping names and restrained copper links. Industries We Serve uses three compact cards; original photos keep their aspect ratios and render at no more than 260px wide, reducing enlargement of the low-resolution source images. This does not invent or reconstruct image detail. The original company video sits inside a rounded white card with a padded frame, subtle border/shadow and an integrated established-year caption. Muted scroll-aware playback and reduced-motion behavior are unchanged.

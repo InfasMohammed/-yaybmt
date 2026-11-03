@@ -183,30 +183,34 @@ export default function Home() {
         }
         aria-labelledby="welcome-heading"
       >
-        <div data-home-reveal className="tw:relative tw:min-w-0">
-          <div className="tw:mb-4 tw:flex tw:items-center tw:gap-4">
-            <span
-              aria-hidden="true"
-              className="tw:h-px tw:flex-1 tw:bg-[#d1d1c6]"
-            />
-            <span className="tw:text-[9px] tw:tracking-[0.16em] tw:text-muted">
+        <figure
+          data-home-reveal
+          data-video-card
+          className="tw:m-0 tw:min-w-0 tw:overflow-hidden tw:rounded-2xl tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white tw:p-3 tw:shadow-[0_16px_40px_-28px_rgba(37,40,39,0.35)] tw:sm:p-4"
+        >
+          <div className="tw:flex tw:items-center tw:justify-between tw:gap-4 tw:px-2 tw:pt-1 tw:pb-4">
+            <span className="tw:text-[9px] tw:font-bold tw:tracking-[0.15em] tw:text-muted">
               YUSUF AL YOUSFI / DUBAI
             </span>
+            <span
+              aria-hidden="true"
+              className="tw:h-1.5 tw:w-1.5 tw:shrink-0 tw:rounded-full tw:bg-copper"
+            />
           </div>
-          <div className="tw:overflow-hidden tw:bg-ink tw:[&_video]:block tw:[&_video]:h-auto tw:[&_video]:w-full">
+          <div className="tw:aspect-video tw:overflow-hidden tw:rounded-xl tw:bg-ink tw:[&_video]:block tw:[&_video]:h-full tw:[&_video]:w-full tw:[&_video]:object-contain">
             <ScrollVideo src={welcome.video} poster={welcome.poster} />
           </div>
-          <div className="tw:relative tw:ml-6 tw:-mt-5 tw:flex tw:items-center tw:gap-5 tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-paper tw:px-6 tw:py-5 tw:sm:ml-12 tw:sm:gap-8">
-            <strong className="tw:text-[48px] tw:leading-none tw:font-normal tw:tracking-[-3px] tw:text-copper-dark">
+          <figcaption className="tw:flex tw:items-center tw:gap-5 tw:px-2 tw:pt-5 tw:pb-2 tw:sm:gap-7">
+            <strong className="tw:text-[42px] tw:leading-none tw:font-normal tw:tracking-[-2px] tw:text-copper-dark">
               2004
             </strong>
-            <span className="tw:border-0 tw:border-l tw:border-solid tw:border-[#cecec2] tw:pl-5 tw:text-[11px] tw:leading-[1.8] tw:text-muted">
+            <span className="tw:border-0 tw:border-l tw:border-solid tw:border-[#dedfd6] tw:pl-5 tw:text-[11px] tw:leading-[1.8] tw:text-muted">
               Established in Dubai.
               <br />
               Built on lasting connections.
             </span>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
         <div data-home-reveal className="tw:min-w-0">
           <p className={eyebrow}>{welcome.heading}</p>
           <h2
@@ -251,7 +255,7 @@ export default function Home() {
             </a>
           </div>
           <div
-            className="tw:grid tw:grid-cols-1 tw:gap-4 tw:min-[360px]:grid-cols-2 tw:lg:grid-cols-3 tw:lg:gap-6"
+            className="tw:grid tw:grid-cols-1 tw:gap-4 tw:sm:grid-cols-2 tw:xl:grid-cols-3"
             data-category-grid
           >
             {categories
@@ -261,15 +265,9 @@ export default function Home() {
                   data-home-reveal
                   key={c.slug}
                   href={"/product-category/" + c.slug + "/"}
-                  className="tw:group tw:flex tw:min-w-0 tw:flex-col tw:border tw:border-solid tw:border-transparent tw:bg-white tw:no-underline tw:hover:border-copper tw:hover:no-underline tw:motion-safe:transition-colors"
+                  className="tw:group tw:grid tw:min-h-[148px] tw:min-w-0 tw:grid-cols-[104px_1fr] tw:items-center tw:gap-5 tw:rounded-xl tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white tw:p-5 tw:no-underline tw:hover:border-copper tw:hover:no-underline tw:motion-safe:transition-[border-color,box-shadow] tw:motion-safe:hover:shadow-[0_8px_24px_-16px_rgba(37,40,39,0.3)] tw:sm:grid-cols-[88px_1fr] tw:sm:gap-4 tw:lg:grid-cols-[104px_1fr]"
                 >
-                  <div className="tw:relative tw:flex tw:h-[170px] tw:items-center tw:justify-center tw:p-7 tw:sm:h-[215px]">
-                    <span
-                      aria-hidden="true"
-                      className="tw:absolute tw:top-3 tw:left-4 tw:text-[9px] tw:text-muted"
-                    >
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
+                  <span className="tw:flex tw:h-[100px] tw:w-full tw:items-center tw:justify-center tw:rounded-lg tw:bg-[#f7f7f3] tw:p-2">
                     <img
                       src={categoryImages[c.slug].src}
                       alt=""
@@ -278,15 +276,24 @@ export default function Home() {
                       loading="lazy"
                       className="tw:block tw:h-full tw:w-full tw:object-contain tw:motion-safe:transition-transform tw:motion-safe:duration-500 tw:motion-safe:group-hover:scale-105"
                     />
-                  </div>
-                  <div className="tw:flex tw:min-h-[76px] tw:flex-1 tw:items-center tw:justify-between tw:gap-3 tw:border-0 tw:border-t tw:border-solid tw:border-[#eeeee8] tw:px-4 tw:py-5 tw:sm:px-6">
-                    <h3 className="tw:m-0 tw:text-[13px] tw:leading-normal tw:font-medium tw:sm:text-[15px]">
-                      {c.name}
-                    </h3>
-                    <span className="tw:text-copper-dark">
-                      <Arrow diagonal />
+                  </span>
+                  <span className="tw:flex tw:min-w-0 tw:flex-col tw:items-start tw:gap-2">
+                    <span
+                      aria-hidden="true"
+                      className="tw:text-[9px] tw:tracking-[0.12em] tw:text-muted"
+                    >
+                      CATEGORY {String(index + 1).padStart(2, "0")}
                     </span>
-                  </div>
+                    <span className="tw:text-[15px] tw:leading-snug tw:font-semibold tw:text-ink">
+                      {c.name}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="tw:mt-1 tw:inline-flex tw:items-center tw:gap-3 tw:text-[11px] tw:font-medium tw:text-copper-dark"
+                    >
+                      Explore <Arrow />
+                    </span>
+                  </span>
                 </a>
               ))}
           </div>
@@ -301,7 +308,7 @@ export default function Home() {
         </div>
       </section>
       <section
-        className={container + " tw:py-20 tw:md:py-24"}
+        className={container + " tw:py-14 tw:md:py-16"}
         aria-labelledby="industries-heading"
       >
         <div
@@ -310,7 +317,13 @@ export default function Home() {
         >
           <div>
             <p className={eyebrow + " tw:mb-4"}>02 / OUR EXPERTISE</p>
-            <h2 id="industries-heading" className={heading}>
+            <h2
+              id="industries-heading"
+              className={heading.replace(
+                "tw:md:text-[48px]",
+                "tw:md:text-[36px]",
+              )}
+            >
               Industries We Serve
             </h2>
           </div>
@@ -318,43 +331,38 @@ export default function Home() {
             Comprehensive Solutions for a Wide Range of Industries
           </p>
         </div>
-        <div className="tw:grid tw:gap-5 tw:lg:grid-cols-2 tw:lg:grid-rows-2">
+        <div className="tw:grid tw:gap-5 tw:md:grid-cols-3" data-industry-grid>
           {industries.map((i, index) => (
             <article
               data-home-reveal
               id={"industry-" + i.slug}
               key={i.slug}
-              className={
-                "tw:relative tw:isolate tw:flex tw:min-h-[300px] tw:scroll-mt-6 tw:flex-col tw:justify-end tw:overflow-hidden tw:bg-ink tw:p-7 tw:text-white " +
-                (index === 0
-                  ? "tw:lg:row-span-2 tw:lg:min-h-[570px]"
-                  : "tw:lg:min-h-[275px]")
-              }
+              className="tw:min-w-0 tw:scroll-mt-6 tw:overflow-hidden tw:rounded-xl tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white"
             >
-              <img
-                src={i.src}
-                alt=""
-                width={i.width}
-                height={i.height}
-                loading="lazy"
-                className="tw:absolute tw:inset-0 tw:-z-20 tw:h-full tw:w-full tw:object-cover"
-              />
-              <div
-                aria-hidden="true"
-                className="tw:absolute tw:inset-0 tw:-z-10 tw:bg-[linear-gradient(0deg,rgba(17,25,24,0.95),rgba(17,25,24,0.1))]"
-              />
-              <span
-                aria-hidden="true"
-                className="tw:absolute tw:top-6 tw:left-7 tw:text-[11px] tw:tracking-wide tw:text-white/80"
-              >
-                0{index + 1} / INDUSTRY
-              </span>
-              <h3 className="tw:mt-0 tw:mb-3 tw:text-[28px] tw:leading-tight tw:font-medium tw:tracking-[-0.7px]">
-                {i.name}
-              </h3>
-              <p className="tw:m-0 tw:max-w-[340px] tw:text-[13px] tw:leading-[1.8] tw:text-white/85">
-                {industryCopy[i.slug]}
-              </p>
+              <div className="tw:flex tw:h-[174px] tw:items-center tw:justify-center tw:bg-[#eeeee7] tw:p-4">
+                <img
+                  src={i.src}
+                  alt=""
+                  width={i.width}
+                  height={i.height}
+                  loading="lazy"
+                  className="tw:block tw:h-auto tw:max-h-full tw:w-auto tw:max-w-[min(100%,260px)] tw:object-contain"
+                />
+              </div>
+              <div className="tw:p-5">
+                <span
+                  aria-hidden="true"
+                  className="tw:text-[9px] tw:tracking-[0.12em] tw:text-copper-dark"
+                >
+                  0{index + 1} / INDUSTRY
+                </span>
+                <h3 className="tw:mt-2 tw:mb-3 tw:text-[20px] tw:leading-tight tw:font-semibold tw:tracking-[-0.4px]">
+                  {i.name}
+                </h3>
+                <p className="tw:m-0 tw:text-[12px] tw:leading-[1.8] tw:text-muted">
+                  {industryCopy[i.slug]}
+                </p>
+              </div>
             </article>
           ))}
         </div>

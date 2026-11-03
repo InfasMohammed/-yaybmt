@@ -81,6 +81,28 @@ async function main() {
         "Reduced-motion video should stay paused",
       );
       assert.equal(await page.locator("video[controls]").count(), 0);
+      assert.equal(await page.locator("[data-video-card] video").count(), 1);
+      assert.equal(
+        await page.locator("[data-industry-grid] article").count(),
+        3,
+      );
+      assert.ok(
+        await page.locator("[data-industry-grid] img").evaluateAll((images) =>
+          images.every((image) => {
+            const img = image as HTMLImageElement;
+            const rect = img.getBoundingClientRect();
+            return (
+              rect.width <= 261 &&
+              rect.width <= img.naturalWidth &&
+              rect.height <= img.naturalHeight &&
+              Math.abs(
+                rect.width / rect.height - img.naturalWidth / img.naturalHeight,
+              ) < 0.02
+            );
+          }),
+        ),
+        "Industry photos must retain their aspect ratios without enlargement",
+      );
       for (const b of brands)
         assert.equal(
           await page.locator('main a[href="/brand/' + b.slug + '/"]').count(),
