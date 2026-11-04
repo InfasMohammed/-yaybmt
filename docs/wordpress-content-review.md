@@ -29,3 +29,11 @@ Four held records:
 A public reader spot check of https://yaybmt.com/product/4225/ confirmed both its numeric heading and the descriptive Cam Drawer Lock wording in its body. Other attempted product reads failed, so all 41 were not independently revalidated against current live WordPress. The full comparison uses the supplied SQL-derived public content, not a fresh database export.
 
 No WordPress content, files, plugins, settings or DNS were modified. No testimonials or dealer claims were added to the new site by this review.
+
+## Approved refinements
+
+The client requested descriptive names without leading numbers and chose to preserve product URLs while renaming image files. The 19 display names now omit the numeric model prefix; the old identifier remains in the separate model field. Rendered images and original-image links use descriptive filenames, with copies of the exact existing bytes. The old numeric image paths remain available, and existing WordPress upload redirects point to the descriptive originals. SQL attachment references and checksum provenance are preserved. See product-image-name-recovery.json for all 38 old/new asset links.
+
+KOPAT's exact source wording is shown on its brand archive, the brand directory and the homepage brand entry. It is not applied to any other brand. No new top-of-page brand logo was added.
+
+Validation after refinements: clean Next.js static build, content integrity, 406-page export/SEO audit, 292-image checksum/redirect checks, drawing checks and catalogue/image-import tests passed. Clearing the generated .next cache resolved the earlier compiler failure; no build configuration changes were needed.

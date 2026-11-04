@@ -49,6 +49,9 @@ export default function ArchivePage({
       />
       <p className="eyebrow">{kind === "brand" ? "BRAND" : "PRODUCT RANGE"}</p>
       <h1>{term.name}</h1>
+      {kind === "brand" && term.distributorNote && (
+        <p>{term.distributorNote}</p>
+      )}
       {items.length ? (
         <>
           <Catalogue

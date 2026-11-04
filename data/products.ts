@@ -2,7 +2,7 @@ import type { Product } from "./types";
 export const products: Product[] = [
   {
     slug: "dc-102",
-    name: "DC 102 Flush Valve Toilet",
+    name: "Flush Valve Toilet",
     model: "DC 102",
     brand: "daelim",
     categorySlugs: ["uncategorized"],
@@ -78,9 +78,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/DC-102.jpg.webp",
-        originalSrc: "/images/products/2025/04/DC-102.jpg",
-        alt: "DC 102",
+        src: "/images/products/flush-valve-toilet.webp",
+        originalSrc: "/images/products/flush-valve-toilet-original.jpg",
+        alt: "Flush Valve Toilet",
         source: "supplied SQL attachment 109",
         width: 400,
         height: 400,
@@ -90,7 +90,7 @@ export const products: Product[] = [
       {
         attachmentId: 109,
         file: "2025/04/DC-102.jpg",
-        alt: "DC 102",
+        alt: "Flush Valve Toilet",
       },
     ],
     seo: {
@@ -9125,8 +9125,8 @@ export const products: Product[] = [
   },
   {
     slug: "3231",
-    name: "3231 Stainless Steel Tower Bolt Slide Lock",
-    model: null,
+    name: "Stainless Steel Tower Bolt Slide Lock",
+    model: "3231",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -9175,9 +9175,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/3231.jpg",
-        originalSrc: "/images/products/2025/04/3231.jpg",
-        alt: "3231",
+        src: "/images/products/stainless-steel-tower-bolt-slide-lock.jpg",
+        originalSrc: "/images/products/stainless-steel-tower-bolt-slide-lock-original.jpg",
+        alt: "Stainless Steel Tower Bolt Slide Lock",
         source: "supplied SQL attachment 542",
         width: 225,
         height: 225,
@@ -9187,7 +9187,7 @@ export const products: Product[] = [
       {
         attachmentId: 542,
         file: "2025/04/3231.jpg",
-        alt: "3231",
+        alt: "Stainless Steel Tower Bolt Slide Lock",
       },
     ],
     seo: {
@@ -9198,8 +9198,8 @@ export const products: Product[] = [
   },
   {
     slug: "4224",
-    name: "4224 Truck Rear Tool Box Slam Lock",
-    model: null,
+    name: "Truck Rear Tool Box Slam Lock",
+    model: "4224",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -9258,9 +9258,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/4224.png.webp",
-        originalSrc: "/images/products/2025/04/4224.png",
-        alt: "4224",
+        src: "/images/products/truck-rear-tool-box-slam-lock.webp",
+        originalSrc: "/images/products/truck-rear-tool-box-slam-lock-original.png",
+        alt: "Truck Rear Tool Box Slam Lock",
         source: "supplied SQL attachment 544",
         width: 495,
         height: 495,
@@ -9270,7 +9270,7 @@ export const products: Product[] = [
       {
         attachmentId: 544,
         file: "2025/04/4224.png",
-        alt: "4224",
+        alt: "Truck Rear Tool Box Slam Lock",
       },
     ],
     seo: {
@@ -9281,8 +9281,8 @@ export const products: Product[] = [
   },
   {
     slug: "4225",
-    name: "4225 Cam Drawer Lock",
-    model: null,
+    name: "Cam Drawer Lock",
+    model: "4225",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -9357,9 +9357,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/4225.png.webp",
-        originalSrc: "/images/products/2025/04/4225.png",
-        alt: "4225-cam-drawer-lock",
+        src: "/images/products/cam-drawer-lock.webp",
+        originalSrc: "/images/products/cam-drawer-lock-original.png",
+        alt: "Cam Drawer Lock",
         source: "supplied SQL attachment 545",
         width: 295,
         height: 292,
@@ -9369,7 +9369,7 @@ export const products: Product[] = [
       {
         attachmentId: 545,
         file: "2025/04/4225.png",
-        alt: "4225-cam-drawer-lock",
+        alt: "Cam Drawer Lock",
       },
     ],
     seo: {
@@ -9380,8 +9380,8 @@ export const products: Product[] = [
   },
   {
     slug: "4226",
-    name: "4226 Furniture Lock",
-    model: null,
+    name: "Furniture Lock",
+    model: "4226",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -9430,9 +9430,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/4226.jpg.webp",
-        originalSrc: "/images/products/2025/04/4226.jpg",
-        alt: "4226",
+        src: "/images/products/furniture-lock.webp",
+        originalSrc: "/images/products/furniture-lock-original.jpg",
+        alt: "Furniture Lock",
         source: "supplied SQL attachment 546",
         width: 300,
         height: 300,
@@ -9442,7 +9442,7 @@ export const products: Product[] = [
       {
         attachmentId: 546,
         file: "2025/04/4226.jpg",
-        alt: "4226",
+        alt: "Furniture Lock",
       },
     ],
     seo: {
@@ -9453,8 +9453,8 @@ export const products: Product[] = [
   },
   {
     slug: "4251",
-    name: "4251 Door Fastener Hook Type",
-    model: null,
+    name: "Door Fastener Hook Type",
+    model: "4251",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -9499,9 +9499,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/4251.jpg.webp",
-        originalSrc: "/images/products/2025/04/4251.jpg",
-        alt: "4251",
+        src: "/images/products/door-fastener-hook-type.webp",
+        originalSrc: "/images/products/door-fastener-hook-type-original.jpg",
+        alt: "Door Fastener Hook Type",
         source: "supplied SQL attachment 547",
         width: 801,
         height: 800,
@@ -9511,7 +9511,7 @@ export const products: Product[] = [
       {
         attachmentId: 547,
         file: "2025/04/4251.jpg",
-        alt: "4251",
+        alt: "Door Fastener Hook Type",
       },
     ],
     seo: {
@@ -9522,8 +9522,8 @@ export const products: Product[] = [
   },
   {
     slug: "5481",
-    name: "5481 Duplex Socket",
-    model: null,
+    name: "Duplex Socket",
+    model: "5481",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -9563,9 +9563,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/5481.jpg",
-        originalSrc: "/images/products/2025/04/5481.jpg",
-        alt: "5481",
+        src: "/images/products/duplex-socket.jpg",
+        originalSrc: "/images/products/duplex-socket-original.jpg",
+        alt: "Duplex Socket",
         source: "supplied SQL attachment 548",
         width: 208,
         height: 156,
@@ -9575,7 +9575,7 @@ export const products: Product[] = [
       {
         attachmentId: 548,
         file: "2025/04/5481.jpg",
-        alt: "5481",
+        alt: "Duplex Socket",
       },
     ],
     seo: {
@@ -9586,8 +9586,8 @@ export const products: Product[] = [
   },
   {
     slug: "5491",
-    name: "5491 Stainless Steel Sliding Door Hook Lock",
-    model: null,
+    name: "Stainless Steel Sliding Door Hook Lock",
+    model: "5491",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -9653,9 +9653,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/5491.jpg",
-        originalSrc: "/images/products/2025/04/5491.jpg",
-        alt: "5491",
+        src: "/images/products/stainless-steel-sliding-door-hook-lock.jpg",
+        originalSrc: "/images/products/stainless-steel-sliding-door-hook-lock-original.jpg",
+        alt: "Stainless Steel Sliding Door Hook Lock",
         source: "supplied SQL attachment 549",
         width: 225,
         height: 225,
@@ -9665,7 +9665,7 @@ export const products: Product[] = [
       {
         attachmentId: 549,
         file: "2025/04/5491.jpg",
-        alt: "5491",
+        alt: "Stainless Steel Sliding Door Hook Lock",
       },
     ],
     seo: {
@@ -9764,8 +9764,8 @@ export const products: Product[] = [
   },
   {
     slug: "5531",
-    name: "5531 Push-to-Close Latch",
-    model: null,
+    name: "Push-to-Close Latch",
+    model: "5531",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -9834,9 +9834,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/5531.jpg",
-        originalSrc: "/images/products/2025/04/5531.jpg",
-        alt: "5531",
+        src: "/images/products/push-to-close-latch.jpg",
+        originalSrc: "/images/products/push-to-close-latch-original.jpg",
+        alt: "Push-to-Close Latch",
         source: "supplied SQL attachment 551",
         width: 225,
         height: 225,
@@ -9846,7 +9846,7 @@ export const products: Product[] = [
       {
         attachmentId: 551,
         file: "2025/04/5531.jpg",
-        alt: "5531",
+        alt: "Push-to-Close Latch",
       },
     ],
     seo: {
@@ -9857,8 +9857,8 @@ export const products: Product[] = [
   },
   {
     slug: "5751",
-    name: "5751 Stainless Steel Cup Drink Holder",
-    model: null,
+    name: "Stainless Steel Cup Drink Holder",
+    model: "5751",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -9923,9 +9923,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/5751.png.webp",
-        originalSrc: "/images/products/2025/04/5751.png",
-        alt: "5751",
+        src: "/images/products/stainless-steel-cup-drink-holder.webp",
+        originalSrc: "/images/products/stainless-steel-cup-drink-holder-original.png",
+        alt: "Stainless Steel Cup Drink Holder",
         source: "supplied SQL attachment 552",
         width: 651,
         height: 574,
@@ -9935,7 +9935,7 @@ export const products: Product[] = [
       {
         attachmentId: 552,
         file: "2025/04/5751.png",
-        alt: "5751",
+        alt: "Stainless Steel Cup Drink Holder",
       },
     ],
     seo: {
@@ -9946,8 +9946,8 @@ export const products: Product[] = [
   },
   {
     slug: "6201",
-    name: "6201 Stainless Steel Center Stanchion Boat Hand Rail Fitting",
-    model: null,
+    name: "Stainless Steel Center Stanchion Boat Hand Rail Fitting",
+    model: "6201",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -10002,9 +10002,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/6201.jpg",
-        originalSrc: "/images/products/2025/04/6201.jpg",
-        alt: "6201",
+        src: "/images/products/stainless-steel-center-stanchion-boat-hand-rail-fitting.jpg",
+        originalSrc: "/images/products/stainless-steel-center-stanchion-boat-hand-rail-fitting-original.jpg",
+        alt: "Stainless Steel Center Stanchion Boat Hand Rail Fitting",
         source: "supplied SQL attachment 553",
         width: 785,
         height: 1000,
@@ -10014,7 +10014,7 @@ export const products: Product[] = [
       {
         attachmentId: 553,
         file: "2025/04/6201.jpg",
-        alt: "6201",
+        alt: "Stainless Steel Center Stanchion Boat Hand Rail Fitting",
       },
     ],
     seo: {},
@@ -10290,8 +10290,8 @@ export const products: Product[] = [
   },
   {
     slug: "6211",
-    name: "6211 Wall-Mounted Handrail Brackets",
-    model: null,
+    name: "Wall-Mounted Handrail Brackets",
+    model: "6211",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -10385,9 +10385,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/6211.png.webp",
-        originalSrc: "/images/products/2025/04/6211.png",
-        alt: "6211",
+        src: "/images/products/wall-mounted-handrail-brackets.webp",
+        originalSrc: "/images/products/wall-mounted-handrail-brackets-original.png",
+        alt: "Wall-Mounted Handrail Brackets",
         source: "supplied SQL attachment 557",
         width: 223,
         height: 217,
@@ -10397,7 +10397,7 @@ export const products: Product[] = [
       {
         attachmentId: 557,
         file: "2025/04/6211.png",
-        alt: "6211",
+        alt: "Wall-Mounted Handrail Brackets",
       },
     ],
     seo: {
@@ -10408,8 +10408,8 @@ export const products: Product[] = [
   },
   {
     slug: "6232",
-    name: "6232 Cup Hook",
-    model: null,
+    name: "Cup Hook",
+    model: "6232",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -10479,9 +10479,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/6232.jpg.webp",
-        originalSrc: "/images/products/2025/04/6232.jpg",
-        alt: "6232",
+        src: "/images/products/cup-hook.webp",
+        originalSrc: "/images/products/cup-hook-original.jpg",
+        alt: "Cup Hook",
         source: "supplied SQL attachment 558",
         width: 1024,
         height: 1024,
@@ -10491,7 +10491,7 @@ export const products: Product[] = [
       {
         attachmentId: 558,
         file: "2025/04/6232.jpg",
-        alt: "6232",
+        alt: "Cup Hook",
       },
     ],
     seo: {
@@ -10502,8 +10502,8 @@ export const products: Product[] = [
   },
   {
     slug: "6321",
-    name: "6321 Wall Mount",
-    model: null,
+    name: "Wall Mount",
+    model: "6321",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -10572,9 +10572,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/6321.jpg.webp",
-        originalSrc: "/images/products/2025/04/6321.jpg",
-        alt: "6321",
+        src: "/images/products/wall-mount.webp",
+        originalSrc: "/images/products/wall-mount-original.jpg",
+        alt: "Wall Mount",
         source: "supplied SQL attachment 559",
         width: 1600,
         height: 1600,
@@ -10584,7 +10584,7 @@ export const products: Product[] = [
       {
         attachmentId: 559,
         file: "2025/04/6321.jpg",
-        alt: "6321",
+        alt: "Wall Mount",
       },
     ],
     seo: {
@@ -10595,7 +10595,7 @@ export const products: Product[] = [
   },
   {
     slug: "6323",
-    name: "6323 Stainless Steel Wall Plate",
+    name: "Stainless Steel Wall Plate",
     model: "Wall Plate",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -10656,9 +10656,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/6323.png",
-        originalSrc: "/images/products/2025/04/6323.png",
-        alt: "6323",
+        src: "/images/products/stainless-steel-wall-plate.png",
+        originalSrc: "/images/products/stainless-steel-wall-plate-original.png",
+        alt: "Stainless Steel Wall Plate",
         source: "supplied SQL attachment 560",
         width: 360,
         height: 360,
@@ -10668,7 +10668,7 @@ export const products: Product[] = [
       {
         attachmentId: 560,
         file: "2025/04/6323.png",
-        alt: "6323",
+        alt: "Stainless Steel Wall Plate",
       },
     ],
     seo: {
@@ -10679,8 +10679,8 @@ export const products: Product[] = [
   },
   {
     slug: "6331",
-    name: "6331 Hammock Hanging Chain Set",
-    model: null,
+    name: "Hammock Hanging Chain Set",
+    model: "6331",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -10735,9 +10735,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/6331.png.webp",
-        originalSrc: "/images/products/2025/04/6331.png",
-        alt: "6331",
+        src: "/images/products/hammock-hanging-chain-set.webp",
+        originalSrc: "/images/products/hammock-hanging-chain-set-original.png",
+        alt: "Hammock Hanging Chain Set",
         source: "supplied SQL attachment 561",
         width: 667,
         height: 468,
@@ -10747,7 +10747,7 @@ export const products: Product[] = [
       {
         attachmentId: 561,
         file: "2025/04/6331.png",
-        alt: "6331",
+        alt: "Hammock Hanging Chain Set",
       },
     ],
     seo: {
@@ -10758,8 +10758,8 @@ export const products: Product[] = [
   },
   {
     slug: "6401",
-    name: "6401 Stainless Steel S Hook",
-    model: null,
+    name: "Stainless Steel S Hook",
+    model: "6401",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -10809,9 +10809,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/6401.png.webp",
-        originalSrc: "/images/products/2025/04/6401.png",
-        alt: "6401",
+        src: "/images/products/stainless-steel-s-hook.webp",
+        originalSrc: "/images/products/stainless-steel-s-hook-original.png",
+        alt: "Stainless Steel S Hook",
         source: "supplied SQL attachment 562",
         width: 244,
         height: 237,
@@ -10821,7 +10821,7 @@ export const products: Product[] = [
       {
         attachmentId: 562,
         file: "2025/04/6401.png",
-        alt: "6401",
+        alt: "Stainless Steel S Hook",
       },
     ],
     seo: {
@@ -10832,8 +10832,8 @@ export const products: Product[] = [
   },
   {
     slug: "7141",
-    name: "7141 Flag Hinge LHO/RHRO",
-    model: null,
+    name: "Flag Hinge LHO/RHRO",
+    model: "7141",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -10892,9 +10892,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/7141-2.png.webp",
-        originalSrc: "/images/products/2025/04/7141-2.png",
-        alt: "7141",
+        src: "/images/products/flag-hinge-lho-rhro.webp",
+        originalSrc: "/images/products/flag-hinge-lho-rhro-original.png",
+        alt: "Flag Hinge LHO/RHRO",
         source: "supplied SQL attachment 563",
         width: 206,
         height: 204,
@@ -10904,7 +10904,7 @@ export const products: Product[] = [
       {
         attachmentId: 563,
         file: "2025/04/7141-2.png",
-        alt: "7141",
+        alt: "Flag Hinge LHO/RHRO",
       },
     ],
     seo: {
@@ -10915,8 +10915,8 @@ export const products: Product[] = [
   },
   {
     slug: "82007",
-    name: "82007 Marine Double-Rod Limiter",
-    model: null,
+    name: "Marine Double-Rod Limiter",
+    model: "82007",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -10956,9 +10956,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/82007.png.webp",
-        originalSrc: "/images/products/2025/04/82007.png",
-        alt: "82007",
+        src: "/images/products/marine-double-rod-limiter.webp",
+        originalSrc: "/images/products/marine-double-rod-limiter-original.png",
+        alt: "Marine Double-Rod Limiter",
         source: "supplied SQL attachment 564",
         width: 225,
         height: 225,
@@ -10968,7 +10968,7 @@ export const products: Product[] = [
       {
         attachmentId: 564,
         file: "2025/04/82007.png",
-        alt: "82007",
+        alt: "Marine Double-Rod Limiter",
       },
     ],
     seo: {

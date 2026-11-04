@@ -18,6 +18,7 @@ export const brands: Taxonomy[] = [
   {
     slug: "kopat",
     name: "KOPAT",
+    distributorNote: "Official Distributors in the Gulf",
     source: "supplied SQL term 22",
   },
   {

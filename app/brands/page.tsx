@@ -27,6 +27,7 @@ export default function Page() {
           >
             <BrandLogo slug={b.slug} />
             {b.name}
+            {b.distributorNote && <small>{b.distributorNote}</small>}
             <span aria-hidden="true">+</span>
           </a>
         ))}

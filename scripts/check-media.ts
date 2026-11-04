@@ -28,7 +28,14 @@ async function main() {
             image.source === "supplied SQL attachment " + ref.attachmentId,
         );
         assert.ok(ref, "Image is not associated with this product in SQL");
-        assert.equal(image.originalSrc, "/images/products/" + ref.file);
+        // Renamed originals retain their SQL attachment association through source/file
+        // and must be byte-identical to the still-available original numeric path.
+        assert.ok(image.originalSrc, "Missing original image link");
+        assert.deepEqual(
+          readFileSync(resolve("public", image.originalSrc!.slice(1))),
+          readFileSync(resolve("public/images/products", ref.file)),
+          "Renamed original differs from SQL attachment " + ref.file,
+        );
         const original = readFileSync(
           resolve("public", image.originalSrc!.slice(1)),
         );

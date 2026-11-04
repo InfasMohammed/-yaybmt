@@ -157,7 +157,10 @@ export default function Home() {
                 <a
                   href={"/brand/" + b.slug + "/"}
                   key={b.slug}
-                  aria-label={b.name}
+                  aria-label={
+                    b.name +
+                    (b.distributorNote ? " — " + b.distributorNote : "")
+                  }
                   className="tw:group tw:flex tw:min-h-20 tw:flex-col tw:items-center tw:justify-center tw:gap-3 tw:border-0 tw:border-l tw:border-solid tw:border-[#eeeee8] tw:px-3 tw:py-1 tw:text-center tw:no-underline tw:hover:no-underline"
                 >
                   <img
@@ -171,6 +174,11 @@ export default function Home() {
                   <span className="tw:text-[9px] tw:tracking-wide tw:text-muted">
                     {b.name}
                   </span>
+                  {b.distributorNote && (
+                    <span className="tw:text-[10px] tw:leading-relaxed tw:text-muted">
+                      {b.distributorNote}
+                    </span>
+                  )}
                 </a>
               ))}
           </div>
