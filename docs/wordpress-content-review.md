@@ -37,3 +37,7 @@ The client requested descriptive names without leading numbers and chose to pres
 KOPAT's exact source wording is shown on its brand archive, the brand directory and the homepage brand entry. It is not applied to any other brand. No new top-of-page brand logo was added.
 
 Validation after refinements: clean Next.js static build, content integrity, 406-page export/SEO audit, 292-image checksum/redirect checks, drawing checks and catalogue/image-import tests passed. Clearing the generated .next cache resolved the earlier compiler failure; no build configuration changes were needed.
+
+## Client-confirmed identities
+
+The client manually confirmed three previously held records: 5522 → Foresti & Suardi 361.L Base, 6203 → Boat Side Stanchion Hand Rail Bracket, and 6204 → Boat Hand Rail Stanchion Bracket. These names and descriptive image links are now applied. The Foresti & Suardi model is 361.L; its existing product pathname remains /product/5522/. All previous numeric image paths remain available. This brings the updated total to 22 products (19 source-derived and three client-confirmed), with 6202 still held and 18 products awaiting descriptions/names. The earlier four-held-record list records the audit state before these client confirmations.

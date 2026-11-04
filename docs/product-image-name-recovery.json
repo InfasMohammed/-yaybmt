@@ -264,5 +264,47 @@
     "field": "originalSrc",
     "old": "/images/products/2025/04/82007.png",
     "new": "/images/products/marine-double-rod-limiter-original.png"
+  },
+  {
+    "productUrl": "/product/5522/",
+    "name": "Foresti & Suardi 361.L Base",
+    "field": "src",
+    "old": "/images/products/2025/04/5522.jpg.webp",
+    "new": "/images/products/foresti-suardi-base.webp"
+  },
+  {
+    "productUrl": "/product/5522/",
+    "name": "Foresti & Suardi 361.L Base",
+    "field": "originalSrc",
+    "old": "/images/products/2025/04/5522.jpg",
+    "new": "/images/products/foresti-suardi-base-original.jpg"
+  },
+  {
+    "productUrl": "/product/6203/",
+    "name": "Boat Side Stanchion Hand Rail Bracket",
+    "field": "src",
+    "old": "/images/products/2025/04/6203.jpg.webp",
+    "new": "/images/products/boat-side-stanchion-hand-rail-bracket.webp"
+  },
+  {
+    "productUrl": "/product/6203/",
+    "name": "Boat Side Stanchion Hand Rail Bracket",
+    "field": "originalSrc",
+    "old": "/images/products/2025/04/6203.jpg",
+    "new": "/images/products/boat-side-stanchion-hand-rail-bracket-original.jpg"
+  },
+  {
+    "productUrl": "/product/6204/",
+    "name": "Boat Hand Rail Stanchion Bracket",
+    "field": "src",
+    "old": "/images/products/2025/04/6204.jpg",
+    "new": "/images/products/boat-hand-rail-stanchion-bracket.jpg"
+  },
+  {
+    "productUrl": "/product/6204/",
+    "name": "Boat Hand Rail Stanchion Bracket",
+    "field": "originalSrc",
+    "old": "/images/products/2025/04/6204.jpg",
+    "new": "/images/products/boat-hand-rail-stanchion-bracket-original.jpg"
   }
 ]

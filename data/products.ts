@@ -9676,8 +9676,8 @@ export const products: Product[] = [
   },
   {
     slug: "5522",
-    name: "5522",
-    model: null,
+    name: "Foresti & Suardi 361.L Base",
+    model: "361.L",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -9741,9 +9741,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/5522.jpg.webp",
-        originalSrc: "/images/products/2025/04/5522.jpg",
-        alt: "5522",
+        src: "/images/products/foresti-suardi-base.webp",
+        originalSrc: "/images/products/foresti-suardi-base-original.jpg",
+        alt: "Foresti & Suardi 361.L Base",
         source: "supplied SQL attachment 550",
         width: 640,
         height: 640,
@@ -9753,7 +9753,7 @@ export const products: Product[] = [
       {
         attachmentId: 550,
         file: "2025/04/5522.jpg",
-        alt: "5522",
+        alt: "Foresti & Suardi 361.L Base",
       },
     ],
     seo: {
@@ -10099,8 +10099,8 @@ export const products: Product[] = [
   },
   {
     slug: "6203",
-    name: "6203",
-    model: null,
+    name: "Boat Side Stanchion Hand Rail Bracket",
+    model: "6203",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -10174,9 +10174,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/6203.jpg.webp",
-        originalSrc: "/images/products/2025/04/6203.jpg",
-        alt: "6203",
+        src: "/images/products/boat-side-stanchion-hand-rail-bracket.webp",
+        originalSrc: "/images/products/boat-side-stanchion-hand-rail-bracket-original.jpg",
+        alt: "Boat Side Stanchion Hand Rail Bracket",
         source: "supplied SQL attachment 555",
         width: 1024,
         height: 1024,
@@ -10186,7 +10186,7 @@ export const products: Product[] = [
       {
         attachmentId: 555,
         file: "2025/04/6203.jpg",
-        alt: "6203",
+        alt: "Boat Side Stanchion Hand Rail Bracket",
       },
     ],
     seo: {
@@ -10197,8 +10197,8 @@ export const products: Product[] = [
   },
   {
     slug: "6204",
-    name: "6204",
-    model: null,
+    name: "Boat Hand Rail Stanchion Bracket",
+    model: "6204",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
     description: [
@@ -10267,9 +10267,9 @@ export const products: Product[] = [
     status: "imported",
     images: [
       {
-        src: "/images/products/2025/04/6204.jpg",
-        originalSrc: "/images/products/2025/04/6204.jpg",
-        alt: "6204",
+        src: "/images/products/boat-hand-rail-stanchion-bracket.jpg",
+        originalSrc: "/images/products/boat-hand-rail-stanchion-bracket-original.jpg",
+        alt: "Boat Hand Rail Stanchion Bracket",
         source: "supplied SQL attachment 556",
         width: 1024,
         height: 1024,
@@ -10279,7 +10279,7 @@ export const products: Product[] = [
       {
         attachmentId: 556,
         file: "2025/04/6204.jpg",
-        alt: "6204",
+        alt: "Boat Hand Rail Stanchion Bracket",
       },
     ],
     seo: {
