@@ -2,7 +2,7 @@ import type { Product } from "./types";
 export const products: Product[] = [
   {
     slug: "dc-102",
-    name: "DC 102",
+    name: "DC 102 Flush Valve Toilet",
     model: "DC 102",
     brand: "daelim",
     categorySlugs: ["uncategorized"],
@@ -9125,7 +9125,7 @@ export const products: Product[] = [
   },
   {
     slug: "3231",
-    name: "3231",
+    name: "3231 Stainless Steel Tower Bolt Slide Lock",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -9198,7 +9198,7 @@ export const products: Product[] = [
   },
   {
     slug: "4224",
-    name: "4224",
+    name: "4224 Truck Rear Tool Box Slam Lock",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -9281,7 +9281,7 @@ export const products: Product[] = [
   },
   {
     slug: "4225",
-    name: "4225",
+    name: "4225 Cam Drawer Lock",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -9380,7 +9380,7 @@ export const products: Product[] = [
   },
   {
     slug: "4226",
-    name: "4226",
+    name: "4226 Furniture Lock",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -9453,7 +9453,7 @@ export const products: Product[] = [
   },
   {
     slug: "4251",
-    name: "4251",
+    name: "4251 Door Fastener Hook Type",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -9522,7 +9522,7 @@ export const products: Product[] = [
   },
   {
     slug: "5481",
-    name: "5481",
+    name: "5481 Duplex Socket",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -9586,7 +9586,7 @@ export const products: Product[] = [
   },
   {
     slug: "5491",
-    name: "5491",
+    name: "5491 Stainless Steel Sliding Door Hook Lock",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -9764,7 +9764,7 @@ export const products: Product[] = [
   },
   {
     slug: "5531",
-    name: "5531",
+    name: "5531 Push-to-Close Latch",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -9857,7 +9857,7 @@ export const products: Product[] = [
   },
   {
     slug: "5751",
-    name: "5751",
+    name: "5751 Stainless Steel Cup Drink Holder",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -9946,7 +9946,7 @@ export const products: Product[] = [
   },
   {
     slug: "6201",
-    name: "6201",
+    name: "6201 Stainless Steel Center Stanchion Boat Hand Rail Fitting",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -10290,7 +10290,7 @@ export const products: Product[] = [
   },
   {
     slug: "6211",
-    name: "6211",
+    name: "6211 Wall-Mounted Handrail Brackets",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -10408,7 +10408,7 @@ export const products: Product[] = [
   },
   {
     slug: "6232",
-    name: "6232",
+    name: "6232 Cup Hook",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -10502,7 +10502,7 @@ export const products: Product[] = [
   },
   {
     slug: "6321",
-    name: "6321",
+    name: "6321 Wall Mount",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -10595,7 +10595,7 @@ export const products: Product[] = [
   },
   {
     slug: "6323",
-    name: "6323",
+    name: "6323 Stainless Steel Wall Plate",
     model: "Wall Plate",
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -10679,7 +10679,7 @@ export const products: Product[] = [
   },
   {
     slug: "6331",
-    name: "6331",
+    name: "6331 Hammock Hanging Chain Set",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -10758,7 +10758,7 @@ export const products: Product[] = [
   },
   {
     slug: "6401",
-    name: "6401",
+    name: "6401 Stainless Steel S Hook",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -10832,7 +10832,7 @@ export const products: Product[] = [
   },
   {
     slug: "7141",
-    name: "7141",
+    name: "7141 Flag Hinge LHO/RHRO",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
@@ -10915,7 +10915,7 @@ export const products: Product[] = [
   },
   {
     slug: "82007",
-    name: "82007",
+    name: "82007 Marine Double-Rod Limiter",
     model: null,
     brand: null,
     categorySlugs: ["marine-furniture-fittings"],
