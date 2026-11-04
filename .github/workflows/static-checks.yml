@@ -36,5 +36,7 @@ jobs:
         if: always()
         with:
           name: catalogue-screenshots
-          path: artifacts/nextjs/
+          path: |
+            artifacts/nextjs/
+            artifacts/tailwind-homepage/
 # This workflow has no deployment job and no Firebase credentials.
