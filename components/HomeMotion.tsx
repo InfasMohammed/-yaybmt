@@ -11,7 +11,7 @@ export default function HomeMotion() {
       return;
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     const elements = document.querySelectorAll<HTMLElement>(
-      ".home-page [data-home-reveal], .home-page > section:not(.hero) > h2, .home-page > section:not(.hero) > p, .home-page .industry-card, .home-page .directory > a",
+      ".home-page [data-industry-image], .home-page [data-home-reveal], .home-page > section:not(.hero) > h2, .home-page > section:not(.hero) > p, .home-page .industry-card, .home-page .directory > a",
     );
     const animations = new Set<Animation>();
     const observer = new IntersectionObserver(
@@ -19,12 +19,23 @@ export default function HomeMotion() {
         for (const entry of entries) {
           if (!entry.isIntersecting || preference.matches) continue;
           observer.unobserve(entry.target);
+          const isIndustryImage = entry.target.hasAttribute(
+            "data-industry-image",
+          );
           const animation = entry.target.animate(
-            [
-              { opacity: 0.55, transform: "translateY(16px)" },
-              { opacity: 1, transform: "translateY(0)" },
-            ],
-            { duration: 600, easing: "cubic-bezier(0.2, 0.7, 0.2, 1)" },
+            isIndustryImage
+              ? [
+                  { opacity: 0.8, transform: "scale(1.06)" },
+                  { opacity: 1, transform: "scale(1)" },
+                ]
+              : [
+                  { opacity: 0.55, transform: "translateY(16px)" },
+                  { opacity: 1, transform: "translateY(0)" },
+                ],
+            {
+              duration: isIndustryImage ? 1000 : 600,
+              easing: "cubic-bezier(0.2, 0.7, 0.2, 1)",
+            },
           );
           animations.add(animation);
           animation.onfinish = () => animations.delete(animation);

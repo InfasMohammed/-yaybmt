@@ -234,6 +234,46 @@ async function main() {
       }
       await context.close();
     }
+    const motionContext = await browser.newContext({
+      viewport: { width: 1440, height: 1000 },
+      reducedMotion: "no-preference",
+    });
+    const motionPage = await motionContext.newPage();
+    await motionPage.goto(base + "/");
+    await motionPage.waitForLoadState("networkidle");
+    const industryImage = motionPage.locator("[data-industry-image]").first();
+    await industryImage.scrollIntoViewIfNeeded();
+    await motionPage.waitForFunction(() =>
+      document
+        .querySelector("[data-industry-image]")
+        ?.getAnimations()
+        .some((animation) =>
+          (animation.effect as KeyframeEffect)
+            .getKeyframes()
+            .some((frame) => frame.transform === "scale(1.06)"),
+        ),
+    );
+    await industryImage.evaluate(async (image) => {
+      await Promise.all(
+        image.getAnimations().map((animation) => animation.finished),
+      );
+    });
+    await industryImage.hover();
+    await motionPage.waitForFunction(
+      () =>
+        getComputedStyle(document.querySelector("[data-industry-image]")!)
+          .scale !== "none",
+    );
+    await motionPage.emulateMedia({ reducedMotion: "reduce" });
+    await motionPage.waitForFunction(() => {
+      const image = document.querySelector("[data-industry-image]")!;
+      return (
+        image.getAnimations().length === 0 &&
+        getComputedStyle(image).transform === "none" &&
+        getComputedStyle(image).scale === "none"
+      );
+    });
+    await motionContext.close();
     const compact = await browser.newContext({
       viewport: { width: 360, height: 400 },
       reducedMotion: "reduce",

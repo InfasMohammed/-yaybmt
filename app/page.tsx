@@ -340,16 +340,17 @@ export default function Home() {
               data-home-reveal
               id={"industry-" + i.slug}
               key={i.slug}
-              className="tw:min-w-0 tw:scroll-mt-6 tw:overflow-hidden tw:rounded-xl tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white"
+              className="tw:group tw:min-w-0 tw:scroll-mt-6 tw:overflow-hidden tw:rounded-xl tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white"
             >
               <div className="tw:aspect-[3/2] tw:w-full tw:overflow-hidden tw:bg-[#eeeee7]">
                 <img
+                  data-industry-image
                   src={i.src}
                   alt=""
                   width={i.width}
                   height={i.height}
                   loading="lazy"
-                  className="tw:block tw:h-full tw:w-full tw:max-w-none tw:object-cover"
+                  className="tw:block tw:h-full tw:w-full tw:max-w-none tw:object-cover tw:motion-safe:transition-transform tw:motion-safe:duration-700 tw:motion-safe:ease-out tw:motion-safe:group-hover:scale-[1.04]"
                 />
               </div>
               <div className="tw:p-5">

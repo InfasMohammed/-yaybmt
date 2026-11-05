@@ -10,3 +10,5 @@ Asset files:
 - public/images/industries/construction-illustration.webp
 
 Validation: static build and 406-route SEO/internal-link export audit passed. Homepage browser checks passed at 1440, 1024, 768, 390 and 320 pixels, including local image decoding, image sizing, reduced motion, no-JavaScript navigation and enquiries. Fresh desktop/mobile screenshots were captured for review.
+
+Industry images now have a one-time gentle scale-and-fade reveal when they enter the viewport, plus a small Tailwind hover zoom inside the clipped image frame. The existing card reveal remains. Both effects respect prefers-reduced-motion; switching that preference cancels active reveal animations. Images remain visible without JavaScript and are never hidden by default. No animation dependency was added. Browser checks exercise the actual image reveal, hover transform and live reduced-motion cancellation in addition to responsive/no-JavaScript coverage.
