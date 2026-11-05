@@ -38,7 +38,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               logo: origin + "/images/logo-header-original.jpg",
               telephone: contacts.telephone,
               email: contacts.sales,
-              sameAs: [contacts.instagram, contacts.facebook],
+              sameAs: [
+                contacts.instagram,
+                contacts.facebook,
+                contacts.linkedin,
+              ],
               location: contacts.location,
             }).replace(/</g, "\\u003c"),
           }}
@@ -90,6 +94,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <a aria-label="Facebook" href={contacts.facebook}>
               <img src="/images/icons/facebook.svg" alt="" />
             </a>
+            <a aria-label="LinkedIn" href={contacts.linkedin}>
+              <img src="/images/icons/linkedin.svg" alt="" />
+            </a>
           </div>
           <nav className="footer-navigation" aria-label="Footer navigation">
             <a href="/shop/">Catalogue</a>
@@ -103,7 +110,23 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <a href="/blog/">Articles</a>
             <a href="/contact-us/">Contact</a>
           </nav>
-          <p className="footer-note">YAYBMT · Review edition</p>
+          <div className="footer-note footer-bottom">
+            <p>YAYBMT · Review edition</p>
+            <a
+              className="powered-by"
+              href="https://maneuver.ae/"
+              aria-label="Powered by Maneuver"
+            >
+              <span>Powered by</span>
+              <img
+                src="/images/maneuver-logo-white.png"
+                alt="Maneuver"
+                width="600"
+                height="139"
+                loading="lazy"
+              />
+            </a>
+          </div>
         </footer>
         <a
           className="floating"

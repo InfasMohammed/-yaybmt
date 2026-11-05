@@ -112,10 +112,7 @@ async function main() {
       /21 imported products/,
     );
     await page.getByRole("button", { name: /Remove brand filter/ }).click();
-    await page
-      .locator("aside summary")
-      .filter({ hasText: /^Categories$/ })
-      .click();
+    assert.ok(await page.locator("aside .category-filter-open").isVisible());
     await page
       .locator("aside")
       .getByRole("checkbox", { name: /^Fasteners\b/ })
@@ -239,6 +236,33 @@ async function main() {
       (p) => p.brand === null && p.model === null,
     )!;
     await page.goto(base + "/product/" + unbranded.slug + "/");
+    assert.equal(await page.locator(".product-layout .model").innerText(), "");
+    assert.equal(
+      await page
+        .locator("dt")
+        .filter({ hasText: /^Model reference$/ })
+        .locator("+ dd")
+        .innerText(),
+      "",
+    );
+    assert.equal(
+      await page
+        .getByRole("link", { name: "LinkedIn", exact: true })
+        .getAttribute("href"),
+      "https://www.linkedin.com/company/yusuf-al-yousfi-building-material-trading-llc/",
+    );
+    assert.equal(
+      await page
+        .getByRole("link", { name: "Powered by Maneuver", exact: true })
+        .getAttribute("href"),
+      "https://maneuver.ae/",
+    );
+    await page.locator(".powered-by img").evaluate(async (image) => {
+      const img = image as HTMLImageElement;
+      img.loading = "eager";
+      await img.decode();
+    });
+
     assert.ok(
       (await page.locator("main").innerText()).includes(
         "Not recorded in the source catalogue",
@@ -307,10 +331,7 @@ async function main() {
       await page.locator(".result-bar").innerText(),
       /21 imported products/,
     );
-    await page
-      .locator("aside summary")
-      .filter({ hasText: /^Categories$/ })
-      .click();
+    assert.ok(await page.locator("aside .category-filter-open").isVisible());
     assert.equal(
       await page
         .locator("aside")
@@ -326,10 +347,7 @@ async function main() {
       .locator("aside")
       .getByRole("checkbox", { name: /^DAELIM/ })
       .check();
-    await page
-      .locator("aside summary")
-      .filter({ hasText: /^Categories$/ })
-      .click();
+    assert.ok(await page.locator("aside .category-filter-open").isVisible());
     assert.equal(
       await page
         .locator("aside")

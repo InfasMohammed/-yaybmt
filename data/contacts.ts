@@ -7,6 +7,8 @@ export const contacts = {
   whatsappNumber: "971567369803",
   sales: "sales@yaybmt.com",
   info: "info@yaybmt.com",
+  linkedin:
+    "https://www.linkedin.com/company/yusuf-al-yousfi-building-material-trading-llc/",
   instagram: "https://www.instagram.com/yaybmt/",
   facebook:
     "https://www.facebook.com/people/Yusuf-Al-Yousfi-Building-Materials-Trading-LLC/61573646427608/",

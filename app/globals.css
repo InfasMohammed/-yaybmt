@@ -2171,3 +2171,38 @@ h3,
 .primary-navigation {
   font-family: var(--font-heading);
 }
+
+.category-filter-open {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.category-filter-open h3 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-bottom p {
+  margin: 0;
+  font-size: 11px;
+}
+footer .powered-by {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 12px;
+  color: #eeeee8;
+}
+.powered-by img {
+  display: block;
+  width: 112px;
+  height: auto;
+}

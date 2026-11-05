@@ -119,7 +119,25 @@ export default function Catalogue({
       behavior: "instant",
     });
   }
-  function renderFilters() {
+  function renderFilters(alwaysOpen = false) {
+    const categoryChoices = availableCategories.map((category) => {
+      const count = categoryMatches.filter((p) =>
+        inCategory(p, category.slug),
+      ).length;
+      const selected = filters.categories.includes(category.slug);
+      return (
+        <label className="check" key={category.slug}>
+          <input
+            type="checkbox"
+            checked={selected}
+            disabled={count === 0 && !selected}
+            onChange={() => toggle("categories", category.slug)}
+          />
+          {category.name}
+          <small aria-label="Matching products">{count}</small>
+        </label>
+      );
+    });
     return (
       <>
         {scopeBrand ? (
@@ -153,29 +171,18 @@ export default function Catalogue({
             })}
           </details>
         )}
-        {availableCategories.length > 0 && (
-          <details>
-            <summary>Categories</summary>
-            {availableCategories.map((category) => {
-              const count = categoryMatches.filter((p) =>
-                inCategory(p, category.slug),
-              ).length;
-              const selected = filters.categories.includes(category.slug);
-              return (
-                <label className="check" key={category.slug}>
-                  <input
-                    type="checkbox"
-                    checked={selected}
-                    disabled={count === 0 && !selected}
-                    onChange={() => toggle("categories", category.slug)}
-                  />
-                  {category.name}
-                  <small aria-label="Matching products">{count}</small>
-                </label>
-              );
-            })}
-          </details>
-        )}
+        {availableCategories.length > 0 &&
+          (alwaysOpen ? (
+            <section className="category-filter-open" aria-label="Categories">
+              <h3>Categories</h3>
+              {categoryChoices}
+            </section>
+          ) : (
+            <details>
+              <summary>Categories</summary>
+              {categoryChoices}
+            </details>
+          ))}
         {(filters.query ||
           filters.brands.length > 0 ||
           filters.categories.length > 0) && (
@@ -221,7 +228,7 @@ export default function Catalogue({
         </button>
       </div>
       <div className="catalogue">
-        <aside aria-label="Product filters">{renderFilters()}</aside>
+        <aside aria-label="Product filters">{renderFilters(true)}</aside>
         <section aria-label="Products">
           <div className="result-bar">
             <p ref={resultsHeading} tabIndex={-1} aria-live="polite">
