@@ -239,6 +239,52 @@ async function main() {
     const motionPage = await motionContext.newPage();
     await motionPage.goto(base + "/");
     await motionPage.waitForLoadState("networkidle");
+    const brandMarquee = motionPage.locator(".brand-marquee");
+    await motionPage.waitForFunction(
+      () =>
+        document.querySelector(".brand-marquee")?.getAttribute("data-ready") ===
+        "true",
+    );
+    const brandTrack = brandMarquee.locator(".brand-marquee-track");
+    await motionPage.mouse.move(0, 0);
+    const brandTransform = await brandTrack.evaluate(
+      (el) => getComputedStyle(el).transform,
+    );
+    await motionPage.waitForTimeout(180);
+    assert.notEqual(
+      await brandTrack.evaluate((el) => getComputedStyle(el).transform),
+      brandTransform,
+    );
+    await motionPage
+      .getByRole("button", { name: "Pause brand scrolling", exact: true })
+      .click();
+    assert.equal(
+      await brandTrack.evaluate(
+        (el) => getComputedStyle(el).animationPlayState,
+      ),
+      "paused",
+    );
+    await motionPage
+      .getByRole("button", { name: "Resume brand scrolling", exact: true })
+      .click();
+    assert.equal(
+      await brandTrack.evaluate(
+        (el) => getComputedStyle(el).animationPlayState,
+      ),
+      "running",
+    );
+    await brandMarquee.locator("a").first().focus();
+    assert.equal(
+      await brandTrack.evaluate((el) => getComputedStyle(el).animationName),
+      "none",
+    );
+    assert.equal(
+      await brandMarquee.locator(".brand-marquee-copy a").count(),
+      0,
+    );
+    await motionPage
+      .getByRole("button", { name: "Pause brand scrolling", exact: true })
+      .focus();
     const industrySection = motionPage.locator(".industry-scroll");
     await motionPage.waitForFunction(
       () =>
@@ -286,6 +332,14 @@ async function main() {
           images.every((image) => getComputedStyle(image).opacity === "1"),
         ),
       true,
+    );
+    assert.equal(
+      await brandTrack.evaluate((el) => getComputedStyle(el).animationName),
+      "none",
+    );
+    assert.equal(
+      await brandMarquee.locator(".brand-marquee-copy").isVisible(),
+      false,
     );
     await motionContext.close();
     const compact = await browser.newContext({

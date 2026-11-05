@@ -2206,3 +2206,19 @@ footer .powered-by {
   width: 112px;
   height: auto;
 }
+
+.distributor-note,
+.brand-marquee-card .distributor-note,
+.brand-directory-card .distributor-note {
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  padding: 6px 9px;
+  border: 1px solid #8c4d2d;
+  border-radius: 6px;
+  background: #8c4d2d;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.45;
+}

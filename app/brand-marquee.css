@@ -1,0 +1,108 @@
+.brand-marquee-group {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 12px;
+}
+.brand-marquee-copy {
+  display: none;
+}
+.brand-marquee-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 0;
+  height: 128px;
+  padding: 12px;
+  border-left: 1px solid #eeeee8;
+  text-align: center;
+  text-decoration: none;
+}
+.brand-marquee-card:hover {
+  text-decoration: none;
+}
+.brand-marquee-card img {
+  display: block;
+  width: 100%;
+  max-width: 115px;
+  height: 48px;
+  object-fit: contain;
+}
+.brand-marquee-card span {
+  font-size: 10px;
+  color: #626760;
+}
+.brand-marquee-card small {
+  font-size: 10px;
+  line-height: 1.4;
+  color: #626760;
+}
+.brand-marquee-toggle {
+  display: none;
+  margin: 14px 0 0 auto;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 11px;
+}
+@media (max-width: 999px) {
+  .brand-marquee-group {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-width: 650px) {
+  .brand-marquee-group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@keyframes brand-scroll-up {
+  to {
+    transform: translateY(-50%);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .brand-marquee[data-ready="true"] .brand-marquee-window {
+    height: 128px;
+    overflow: hidden;
+  }
+  .brand-marquee[data-ready="true"] .brand-marquee-copy {
+    display: grid;
+  }
+  .brand-marquee[data-ready="true"] .brand-marquee-group {
+    padding-bottom: 16px;
+  }
+  .brand-marquee[data-ready="true"] .brand-marquee-track {
+    animation: brand-scroll-up 16s linear infinite;
+  }
+  .brand-marquee[data-ready="true"] .brand-marquee-toggle {
+    display: block;
+  }
+  .brand-marquee[data-paused="true"] .brand-marquee-track,
+  .brand-marquee-window:hover .brand-marquee-track {
+    animation-play-state: paused;
+  }
+  .brand-marquee[data-ready="true"] .brand-marquee-window:focus-within {
+    height: auto;
+    overflow: visible;
+  }
+  .brand-marquee-window:focus-within .brand-marquee-track {
+    animation: none;
+  }
+  .brand-marquee[data-ready="true"]
+    .brand-marquee-window:focus-within
+    .brand-marquee-copy {
+    display: none;
+  }
+}
+@media (max-width: 999px) and (prefers-reduced-motion: no-preference) {
+  .brand-marquee[data-ready="true"] .brand-marquee-window {
+    height: 272px;
+  }
+  .brand-marquee[data-ready="true"] .brand-marquee-track {
+    animation-duration: 30s;
+  }
+}

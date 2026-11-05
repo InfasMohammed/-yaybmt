@@ -1,3 +1,4 @@
+import BrandMarquee from "../components/BrandMarquee";
 import ScrollRevealContentA from "../components/ui/scroll-reveal-content-a";
 import "./tailwind-home.css";
 import HomeMotion from "../components/HomeMotion";
@@ -162,38 +163,7 @@ export default function Home() {
               View all <Arrow />
             </a>
           </div>
-          <div className="tw:grid tw:grid-cols-2 tw:gap-x-5 tw:gap-y-6 tw:sm:grid-cols-4 tw:lg:grid-cols-7">
-            {brands
-              .filter((b) => brandLogos[b.slug])
-              .map((b) => (
-                <a
-                  href={"/brand/" + b.slug + "/"}
-                  key={b.slug}
-                  aria-label={
-                    b.name +
-                    (b.distributorNote ? " — " + b.distributorNote : "")
-                  }
-                  className="tw:group tw:flex tw:min-h-20 tw:flex-col tw:items-center tw:justify-center tw:gap-3 tw:border-0 tw:border-l tw:border-solid tw:border-[#eeeee8] tw:px-3 tw:py-1 tw:text-center tw:no-underline tw:hover:no-underline"
-                >
-                  <img
-                    src={brandLogos[b.slug].src}
-                    alt=""
-                    width={brandLogos[b.slug].width}
-                    height={brandLogos[b.slug].height}
-                    loading="lazy"
-                    className="tw:h-12 tw:w-full tw:max-w-[115px] tw:object-contain tw:motion-safe:transition-transform tw:motion-safe:group-hover:scale-105"
-                  />
-                  <span className="tw:text-[9px] tw:tracking-wide tw:text-muted">
-                    {b.name}
-                  </span>
-                  {b.distributorNote && (
-                    <span className="tw:text-[10px] tw:leading-relaxed tw:text-muted">
-                      {b.distributorNote}
-                    </span>
-                  )}
-                </a>
-              ))}
-          </div>
+          <BrandMarquee />
         </div>
       </section>
       <section
