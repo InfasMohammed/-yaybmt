@@ -1,8 +1,24 @@
+@font-face {
+  font-family: "Inter Variable";
+  src: url("/fonts/inter-latin-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope Variable";
+  src: url("/fonts/manrope-latin-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
 :root {
   --ink: #252827;
   --paper: #f7f6f2;
   --copper: #a96340;
   --line: #dcdcd5;
+  --font-body: "Inter Variable", Arial, Helvetica, sans-serif;
+  --font-heading: "Manrope Variable", Arial, Helvetica, sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -11,7 +27,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
 }
 a {
@@ -22,7 +38,9 @@ a:hover {
   text-decoration: underline;
 }
 button,
-input {
+input,
+textarea,
+select {
   font: inherit;
 }
 button,
@@ -120,7 +138,7 @@ body:has(.hero) header {
   color: #e7b596;
 }
 em {
-  font-family: Georgia, serif;
+  font-family: var(--font-heading);
   font-weight: 400;
 }
 h1,
@@ -2144,4 +2162,12 @@ summary {
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+/* Shared type pairing; original logo images and content remain unchanged. */
+h1,
+h2,
+h3,
+.primary-navigation {
+  font-family: var(--font-heading);
 }

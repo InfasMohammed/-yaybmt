@@ -12,7 +12,7 @@
   --color-copper-light: #e6b996;
   --color-muted: #626760;
   --color-sand: #eae5db;
-  --font-sans: Arial, Helvetica, sans-serif;
+  --font-sans: "Inter Variable", Arial, Helvetica, sans-serif;
 }
 
 /* Shared header belongs to the layout; adjust it only for this design preview. */

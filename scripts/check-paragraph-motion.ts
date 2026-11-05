@@ -46,6 +46,33 @@ async function main() {
             },
           ),
         );
+        await page.evaluate(() => document.fonts.ready);
+        assert.ok(
+          (
+            await page
+              .locator("h1")
+              .evaluate((element) => getComputedStyle(element).fontFamily)
+          ).includes("Manrope Variable"),
+        );
+        assert.ok(
+          (
+            await page
+              .locator("main > p")
+              .last()
+              .evaluate((element) => getComputedStyle(element).fontFamily)
+          ).includes("Inter Variable"),
+        );
+        assert.ok(
+          await page.evaluate(() => {
+            const fonts = [...document.fonts].filter((face) =>
+              /Inter Variable|Manrope Variable/.test(face.family),
+            );
+            return (
+              fonts.length === 2 &&
+              fonts.every((face) => face.status === "loaded")
+            );
+          }),
+        );
         assert.deepEqual(
           await page.locator(".text-rotate-accessible").allTextContents(),
           source.paragraphs,

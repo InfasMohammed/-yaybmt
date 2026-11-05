@@ -1,4 +1,5 @@
 import CompanyValues from "./CompanyValues";
+import { TeamSection } from "./ui/team-section-1";
 import { aboutImages, team, companyFigures } from "../data/about";
 
 export default function AboutSections() {
@@ -14,33 +15,16 @@ export default function AboutSections() {
           decoding="async"
         />
       </div>
-      <section className="about-section" aria-labelledby="team-heading">
-        <p className="eyebrow">THE PEOPLE BEHIND YAYBMT</p>
-        <h2 id="team-heading">Our leadership</h2>
-        <div className="team-grid">
-          {team.map((person) => (
-            <article
-              className={
-                person === team[0] ? "team-card team-leader" : "team-card"
-              }
-              key={person.name}
-            >
-              <div className="team-photo">
-                <img
-                  src={person.image.src}
-                  alt={person.name}
-                  width={person.image.width}
-                  height={person.image.height}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <h3>{person.name}</h3>
-              <p>{person.role}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <TeamSection
+        title="Our leadership"
+        members={team.map((person) => ({
+          name: person.name,
+          designation: person.role,
+          imageSrc: person.image.src,
+          imageWidth: person.image.width,
+          imageHeight: person.image.height,
+        }))}
+      />
       <section
         className="about-section company-figures"
         aria-labelledby="figures-heading"

@@ -40,4 +40,5 @@ jobs:
             artifacts/nextjs/
             artifacts/tailwind-homepage/
             artifacts/paragraph-motion/
+            artifacts/team-section/
 # This workflow has no deployment job and no Firebase credentials.
