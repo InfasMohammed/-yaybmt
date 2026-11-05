@@ -159,10 +159,25 @@ async function main() {
             .count(),
           0,
         );
-        assert.ok(
+        assert.equal(
           await menu
-            .getByRole("link", { name: "View all brands", exact: true })
-            .isVisible(),
+            .getByRole("button", { name: "Close menu", exact: true })
+            .count(),
+          0,
+        );
+        assert.equal(
+          await menu
+            .getByRole("link", { name: "Contact", exact: true })
+            .count(),
+          0,
+        );
+        assert.equal(
+          await menu.getByRole("link", { name: "Home", exact: true }).count(),
+          0,
+        );
+        assert.equal(
+          await page.locator("body").evaluate((e) => e.style.overflow),
+          "hidden",
         );
         await menu.getByRole("button", { name: "‹ Back", exact: true }).click();
         assert.ok(
@@ -173,8 +188,14 @@ async function main() {
         await menu.locator('[data-mobile-view="products"]').click();
         assert.ok(
           await menu
-            .getByRole("link", { name: "View all products", exact: true })
+            .getByRole("link", { name: "Abrasives", exact: true })
             .isVisible(),
+        );
+        assert.equal(
+          await menu
+            .getByRole("link", { name: "Company", exact: true })
+            .count(),
+          0,
         );
         assert.equal(
           await menu.locator('[data-mobile-view="brands"]').count(),
@@ -194,7 +215,7 @@ async function main() {
           .click();
         assert.equal(await menu.getAttribute("open"), null);
         await toggle.click();
-        await page.mouse.click(8, 250);
+        await page.keyboard.press("Escape");
         assert.equal(await menu.getAttribute("open"), null);
       } else {
         assert.ok(await page.locator(".desktop-navigation").isVisible());

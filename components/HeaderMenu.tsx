@@ -15,6 +15,7 @@ export default function HeaderMenu({
   const mobileMenu = useRef<HTMLDetailsElement>(null);
   const [view, setView] = useState<"main" | "products" | "brands">("main");
   const [enhanced, setEnhanced] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const previousView = useRef(view);
   const backButton = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -32,6 +33,20 @@ export default function HeaderMenu({
     }
     previousView.current = view;
   }, [view]);
+  useEffect(() => {
+    if (!mobileOpen || !window.matchMedia("(max-width: 650px)").matches) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const media = window.matchMedia("(max-width: 650px)");
+    const resize = () => {
+      if (!media.matches && mobileMenu.current) mobileMenu.current.open = false;
+    };
+    media.addEventListener("change", resize);
+    return () => {
+      document.body.style.overflow = previous;
+      media.removeEventListener("change", resize);
+    };
+  }, [mobileOpen]);
   function closeMobile() {
     if (!mobileMenu.current) return;
     mobileMenu.current.open = false;
@@ -185,7 +200,9 @@ export default function HeaderMenu({
       <details
         className="mobile-navigation"
         ref={mobileMenu}
+        data-enhanced={enhanced || undefined}
         onToggle={(event) => {
+          setMobileOpen(event.currentTarget.open);
           if (!event.currentTarget.open) setView("main");
         }}
       >
@@ -219,7 +236,7 @@ export default function HeaderMenu({
             ) : (
               <span>Menu</span>
             )}
-            {enhanced && (
+            {enhanced && view === "main" && (
               <button
                 type="button"
                 aria-label="Close menu"
@@ -229,57 +246,50 @@ export default function HeaderMenu({
               </button>
             )}
           </div>
-          {view === "main" ? (
-            <>
-              <a href="/">Home</a>
-              <a
-                href="/shop/"
-                data-mobile-view="products"
-                onClick={(event) => {
-                  event.preventDefault();
-                  setView("products");
-                }}
-              >
-                Products <span aria-hidden="true">›</span>
-              </a>
-              <a
-                href="/brands/"
-                data-mobile-view="brands"
-                onClick={(event) => {
-                  event.preventDefault();
-                  setView("brands");
-                }}
-              >
-                Brands <span aria-hidden="true">›</span>
-              </a>
-              <a href="/about-us/">Company</a>
-              <a href="/contact-us/">Contact</a>
-            </>
-          ) : (
-            <>
-              <h2 className="mobile-menu-title">
-                {view === "products" ? "Products" : "Brands"}
-              </h2>
-              <a
-                className="mobile-view-all"
-                href={view === "products" ? "/shop/" : "/brands/"}
-              >
-                View all {view}
-              </a>
-              {(view === "products" ? categories : brands).map((entry) => (
+          <div className="mobile-menu-items" key={view}>
+            {view === "main" ? (
+              <>
+                <a href="/">Home</a>
                 <a
-                  key={entry.slug}
-                  href={
-                    (view === "products" ? "/product-category/" : "/brand/") +
-                    entry.slug +
-                    "/"
-                  }
+                  href="/shop/"
+                  data-mobile-view="products"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setView("products");
+                  }}
                 >
-                  {entry.name}
+                  Products <span aria-hidden="true">›</span>
                 </a>
-              ))}
-            </>
-          )}
+                <a
+                  href="/brands/"
+                  data-mobile-view="brands"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setView("brands");
+                  }}
+                >
+                  Brands <span aria-hidden="true">›</span>
+                </a>
+                <a href="/about-us/">Company</a>
+                <a href="/contact-us/">Contact</a>
+              </>
+            ) : (
+              <>
+                {(view === "products" ? categories : brands).map((entry) => (
+                  <a
+                    key={entry.slug}
+                    href={
+                      (view === "products" ? "/product-category/" : "/brand/") +
+                      entry.slug +
+                      "/"
+                    }
+                  >
+                    {entry.name}
+                  </a>
+                ))}
+              </>
+            )}
+          </div>
         </nav>
       </details>
     </div>
