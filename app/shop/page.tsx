@@ -7,4 +7,6 @@ export const metadata = meta(
   source.seo.description || "Browse the YAYBMT catalogue.",
   "/shop/",
 );
-export default CataloguePage;
+export default function Page() {
+  return <CataloguePage />;
+}
