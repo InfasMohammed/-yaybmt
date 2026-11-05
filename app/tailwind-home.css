@@ -35,14 +35,4 @@ body:has(.tailwind-home) header {
     width: 130px;
     height: 74px;
   }
-  body:has(.tailwind-home) .primary-navigation {
-    gap: 0;
-    justify-content: space-between;
-  }
-  body:has(.tailwind-home) .primary-navigation > a,
-  body:has(.tailwind-home) .nav-dropdown > summary {
-    font-size: 12px;
-    padding: 8px 2px;
-    gap: 3px;
-  }
 }

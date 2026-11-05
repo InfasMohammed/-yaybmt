@@ -9,7 +9,7 @@ import { brands } from "../../../data/brands";
 import { categories } from "../../../data/categories";
 import Card from "../../../components/Card";
 import Gallery from "../../../components/Gallery";
-import { metadata as meta, email, whatsapp, origin } from "../../../lib/site";
+import { metadata as meta, whatsapp, origin } from "../../../lib/site";
 export function generateStaticParams() {
   return products.map((p) => ({ slug: decodeURIComponent(p.slug) }));
 }
@@ -114,12 +114,6 @@ export default async function Product({
           )}
           <a
             className="button"
-            href={email(p.model ? p.name + " (" + p.model + ")" : p.name)}
-          >
-            Enquire by email +
-          </a>
-          <a
-            className="button outline"
             href={whatsapp(p.model ? p.name + " (" + p.model + ")" : p.name)}
           >
             Enquire on WhatsApp +

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type NavigationItem = { slug: string; name: string };
 
@@ -11,15 +11,62 @@ export default function HeaderMenu({
   categories: NavigationItem[];
   brands: NavigationItem[];
 }) {
-  const navigation = useRef<HTMLElement>(null);
+  const navigation = useRef<HTMLDivElement>(null);
+  const mobileMenu = useRef<HTMLDetailsElement>(null);
+  const [view, setView] = useState<"main" | "products" | "brands">("main");
+  const [enhanced, setEnhanced] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const previousView = useRef(view);
+  const backButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    setEnhanced(true);
+  }, []);
+  useEffect(() => {
+    if (previousView.current !== view && mobileMenu.current?.open) {
+      if (view === "main") {
+        mobileMenu.current
+          .querySelector<HTMLAnchorElement>(
+            `[data-mobile-view="${previousView.current}"]`,
+          )
+          ?.focus();
+      } else backButton.current?.focus();
+    }
+    previousView.current = view;
+  }, [view]);
+  useEffect(() => {
+    if (!mobileOpen || !window.matchMedia("(max-width: 650px)").matches) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const media = window.matchMedia("(max-width: 650px)");
+    const resize = () => {
+      if (!media.matches && mobileMenu.current) mobileMenu.current.open = false;
+    };
+    media.addEventListener("change", resize);
+    return () => {
+      document.body.style.overflow = previous;
+      media.removeEventListener("change", resize);
+    };
+  }, [mobileOpen]);
+  function closeMobile() {
+    if (!mobileMenu.current) return;
+    mobileMenu.current.open = false;
+    mobileMenu.current.querySelector("summary")?.focus();
+    setView("main");
+  }
   useEffect(() => {
     const closeOutside = (event: PointerEvent) => {
       if (!(event.target instanceof Node)) return;
       navigation.current
-        ?.querySelectorAll<HTMLDetailsElement>("details[open]")
+        ?.querySelectorAll<HTMLDetailsElement>(".nav-dropdown[open]")
         .forEach((dropdown) => {
           if (!dropdown.contains(event.target as Node)) dropdown.open = false;
         });
+      if (
+        mobileMenu.current?.open &&
+        !mobileMenu.current.contains(event.target)
+      ) {
+        mobileMenu.current.open = false;
+      }
     };
     document.addEventListener("pointerdown", closeOutside);
     return () => document.removeEventListener("pointerdown", closeOutside);
@@ -42,7 +89,7 @@ export default function HeaderMenu({
           }
           const current = event.currentTarget;
           navigation.current
-            ?.querySelectorAll<HTMLDetailsElement>("details[open]")
+            ?.querySelectorAll<HTMLDetailsElement>(".nav-dropdown[open]")
             .forEach((other) => {
               if (other !== current) other.open = false;
             });
@@ -50,7 +97,9 @@ export default function HeaderMenu({
         onPointerEnter={(event) => {
           if (
             event.pointerType === "mouse" &&
-            window.matchMedia("(hover: hover) and (pointer: fine)").matches
+            window.matchMedia(
+              "(min-width: 651px) and (hover: hover) and (pointer: fine)",
+            ).matches
           ) {
             if (!event.currentTarget.open) {
               event.currentTarget.dataset.hoverOpened = "true";
@@ -97,17 +146,44 @@ export default function HeaderMenu({
     );
   }
 
+  function links() {
+    return (
+      <>
+        <a href="/">Home</a>
+        {dropdown("Products", "/shop/", categories, "/product-category/")}
+        {dropdown("Brands", "/brands/", brands, "/brand/")}
+        <a href="/about-us/">Company</a>
+        <a href="/contact-us/">Contact</a>
+      </>
+    );
+  }
+
   return (
-    <nav
+    <div
       ref={navigation}
-      className="primary-navigation"
-      aria-label="Main navigation"
+      className="header-navigation"
+      onClick={(event) => {
+        if (
+          !event.defaultPrevented &&
+          event.target instanceof Element &&
+          event.target.closest("a") &&
+          mobileMenu.current
+        ) {
+          mobileMenu.current.open = false;
+        }
+      }}
       onKeyDown={(event) => {
         if (event.key !== "Escape") return;
+        if (mobileMenu.current?.open) {
+          if (view !== "main") setView("main");
+          else closeMobile();
+          event.preventDefault();
+          return;
+        }
         const open =
           navigation.current?.querySelector<HTMLDetailsElement>(
-            "details[open]",
-          );
+            ".nav-dropdown[open]",
+          ) || (mobileMenu.current?.open ? mobileMenu.current : null);
         if (open) {
           open.open = false;
           open.querySelector("summary")?.focus();
@@ -115,11 +191,107 @@ export default function HeaderMenu({
         }
       }}
     >
-      <a href="/">Home</a>
-      {dropdown("Products", "/shop/", categories, "/product-category/")}
-      {dropdown("Brands", "/brands/", brands, "/brand/")}
-      <a href="/about-us/">Company</a>
-      <a href="/contact-us/">Contact</a>
-    </nav>
+      <nav
+        className="primary-navigation desktop-navigation"
+        aria-label="Main navigation"
+      >
+        {links()}
+      </nav>
+      <details
+        className="mobile-navigation"
+        ref={mobileMenu}
+        data-enhanced={enhanced || undefined}
+        onToggle={(event) => {
+          setMobileOpen(event.currentTarget.open);
+          if (!event.currentTarget.open) setView("main");
+        }}
+      >
+        <summary aria-label="Menu">
+          <svg
+            aria-hidden="true"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+          >
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </summary>
+        <nav
+          className="primary-navigation mobile-menu-panel"
+          aria-label="Main navigation"
+        >
+          <div className="mobile-menu-heading">
+            {view !== "main" ? (
+              <button
+                type="button"
+                ref={backButton}
+                onClick={() => setView("main")}
+              >
+                ‹ Back
+              </button>
+            ) : (
+              <span>Menu</span>
+            )}
+            {enhanced && view === "main" && (
+              <button
+                type="button"
+                aria-label="Close menu"
+                onClick={closeMobile}
+              >
+                Close <span aria-hidden="true">×</span>
+              </button>
+            )}
+          </div>
+          <div className="mobile-menu-items" key={view}>
+            {view === "main" ? (
+              <>
+                <a href="/">Home</a>
+                <a
+                  href="/shop/"
+                  data-mobile-view="products"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setView("products");
+                  }}
+                >
+                  Products <span aria-hidden="true">›</span>
+                </a>
+                <a
+                  href="/brands/"
+                  data-mobile-view="brands"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setView("brands");
+                  }}
+                >
+                  Brands <span aria-hidden="true">›</span>
+                </a>
+                <a href="/about-us/">Company</a>
+                <a href="/contact-us/">Contact</a>
+              </>
+            ) : (
+              <>
+                {(view === "products" ? categories : brands).map((entry) => (
+                  <a
+                    key={entry.slug}
+                    href={
+                      (view === "products" ? "/product-category/" : "/brand/") +
+                      entry.slug +
+                      "/"
+                    }
+                  >
+                    {entry.name}
+                  </a>
+                ))}
+              </>
+            )}
+          </div>
+        </nav>
+      </details>
+    </div>
   );
 }

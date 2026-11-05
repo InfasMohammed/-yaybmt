@@ -157,7 +157,10 @@ export default function Home() {
                 <a
                   href={"/brand/" + b.slug + "/"}
                   key={b.slug}
-                  aria-label={b.name}
+                  aria-label={
+                    b.name +
+                    (b.distributorNote ? " — " + b.distributorNote : "")
+                  }
                   className="tw:group tw:flex tw:min-h-20 tw:flex-col tw:items-center tw:justify-center tw:gap-3 tw:border-0 tw:border-l tw:border-solid tw:border-[#eeeee8] tw:px-3 tw:py-1 tw:text-center tw:no-underline tw:hover:no-underline"
                 >
                   <img
@@ -171,6 +174,11 @@ export default function Home() {
                   <span className="tw:text-[9px] tw:tracking-wide tw:text-muted">
                     {b.name}
                   </span>
+                  {b.distributorNote && (
+                    <span className="tw:text-[10px] tw:leading-relaxed tw:text-muted">
+                      {b.distributorNote}
+                    </span>
+                  )}
                 </a>
               ))}
           </div>
@@ -332,16 +340,17 @@ export default function Home() {
               data-home-reveal
               id={"industry-" + i.slug}
               key={i.slug}
-              className="tw:min-w-0 tw:scroll-mt-6 tw:overflow-hidden tw:rounded-xl tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white"
+              className="tw:group tw:min-w-0 tw:scroll-mt-6 tw:overflow-hidden tw:rounded-xl tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white"
             >
-              <div className="tw:flex tw:h-[174px] tw:items-center tw:justify-center tw:bg-[#eeeee7] tw:p-4">
+              <div className="tw:aspect-[3/2] tw:w-full tw:overflow-hidden tw:bg-[#eeeee7]">
                 <img
+                  data-industry-image
                   src={i.src}
                   alt=""
                   width={i.width}
                   height={i.height}
                   loading="lazy"
-                  className="tw:block tw:h-auto tw:max-h-full tw:w-auto tw:max-w-[min(100%,260px)] tw:object-contain"
+                  className="tw:block tw:h-full tw:w-full tw:max-w-none tw:object-cover tw:motion-safe:transition-transform tw:motion-safe:duration-700 tw:motion-safe:ease-out tw:motion-safe:group-hover:scale-[1.04]"
                 />
               </div>
               <div className="tw:p-5">

@@ -23,7 +23,12 @@ export type Product = {
   mediaReferences: { attachmentId: number; file: string; alt: string }[];
   seo?: SEO;
 };
-export type Taxonomy = { slug: string; name: string; source: string };
+export type Taxonomy = {
+  slug: string;
+  name: string;
+  source: string;
+  distributorNote?: string;
+};
 export type Article = {
   // Exact old pathname, including nested segments and trailing slash.
   path: string;

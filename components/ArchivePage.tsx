@@ -5,7 +5,7 @@ import { catalogueItem } from "../lib/catalogue-data";
 import { products } from "../data/products";
 import { categories } from "../data/categories";
 import { inCategory } from "../lib/catalogue";
-import { email, whatsapp } from "../lib/site";
+import { whatsapp } from "../lib/site";
 import Catalogue from "./Catalogue";
 export default function ArchivePage({
   term,
@@ -49,6 +49,9 @@ export default function ArchivePage({
       />
       <p className="eyebrow">{kind === "brand" ? "BRAND" : "PRODUCT RANGE"}</p>
       <h1>{term.name}</h1>
+      {kind === "brand" && term.distributorNote && (
+        <p>{term.distributorNote}</p>
+      )}
       {items.length ? (
         <>
           <Catalogue
@@ -75,9 +78,6 @@ export default function ArchivePage({
           </p>
           <p>Tell us the models or specifications you need.</p>
           <div className="enquiry-actions">
-            <a className="button" href={email(term.name)}>
-              Enquire by email
-            </a>
             <a className="button outline" href={whatsapp(term.name)}>
               Enquire on WhatsApp
             </a>

@@ -24,6 +24,10 @@ for (const route of routes) {
   const file = localFile(route.path);
   assert.ok(existsSync(file), "Missing export " + route.path);
   const html = readFileSync(file, "utf8");
+  assert.ok(
+    !/href="mailto:/i.test(html),
+    "Unexpected email enquiry link at " + route.path,
+  );
   assert.equal(
     (html.match(/<h1(?:\s|>)/g) || []).length,
     1,

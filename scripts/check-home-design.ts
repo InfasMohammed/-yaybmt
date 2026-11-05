@@ -92,7 +92,9 @@ async function main() {
             const img = image as HTMLImageElement;
             const rect = img.getBoundingClientRect();
             return (
-              rect.width <= 261 &&
+              Math.abs(
+                rect.width - img.parentElement!.getBoundingClientRect().width,
+              ) < 1 &&
               rect.width <= img.naturalWidth &&
               rect.height <= img.naturalHeight &&
               Math.abs(
@@ -101,7 +103,7 @@ async function main() {
             );
           }),
         ),
-        "Industry photos must retain their aspect ratios without enlargement",
+        "Industry images must fill their frames and retain their aspect ratios without enlargement",
       );
       assert.equal(
         await page
@@ -134,6 +136,94 @@ async function main() {
         );
       for (const p of welcome.paragraphs)
         assert.ok(await page.getByText(p, { exact: true }).isVisible());
+      if (width <= 650) {
+        const menu = page.locator(".mobile-navigation");
+        const toggle = menu.locator(":scope > summary");
+        assert.ok(await toggle.isVisible());
+        assert.equal(await menu.getAttribute("open"), null);
+        await toggle.click();
+        assert.ok(
+          await menu
+            .getByRole("link", { name: "Company", exact: true })
+            .isVisible(),
+        );
+        await menu.locator('[data-mobile-view="brands"]').click();
+        assert.ok(
+          await menu
+            .getByRole("link", { name: "DAELIM", exact: true })
+            .isVisible(),
+        );
+        assert.equal(
+          await menu
+            .getByRole("link", { name: "Company", exact: true })
+            .count(),
+          0,
+        );
+        assert.equal(
+          await menu
+            .getByRole("button", { name: "Close menu", exact: true })
+            .count(),
+          0,
+        );
+        assert.equal(
+          await menu
+            .getByRole("link", { name: "Contact", exact: true })
+            .count(),
+          0,
+        );
+        assert.equal(
+          await menu.getByRole("link", { name: "Home", exact: true }).count(),
+          0,
+        );
+        assert.equal(
+          await page.locator("body").evaluate((e) => e.style.overflow),
+          "hidden",
+        );
+        await menu.getByRole("button", { name: "‹ Back", exact: true }).click();
+        assert.ok(
+          await menu
+            .getByRole("link", { name: "Company", exact: true })
+            .isVisible(),
+        );
+        await menu.locator('[data-mobile-view="products"]').click();
+        assert.ok(
+          await menu
+            .getByRole("link", { name: "Abrasives", exact: true })
+            .isVisible(),
+        );
+        assert.equal(
+          await menu
+            .getByRole("link", { name: "Company", exact: true })
+            .count(),
+          0,
+        );
+        assert.equal(
+          await menu.locator('[data-mobile-view="brands"]').count(),
+          0,
+        );
+        await page.keyboard.press("Escape");
+        assert.ok(
+          await menu
+            .getByRole("link", { name: "Company", exact: true })
+            .isVisible(),
+        );
+        await page.keyboard.press("Escape");
+        assert.equal(await menu.getAttribute("open"), null);
+        await toggle.click();
+        await menu
+          .getByRole("button", { name: "Close menu", exact: true })
+          .click();
+        assert.equal(await menu.getAttribute("open"), null);
+        await toggle.click();
+        await page.mouse.click(8, 250);
+        assert.equal(await menu.getAttribute("open"), null);
+      } else {
+        assert.ok(await page.locator(".desktop-navigation").isVisible());
+        assert.equal(
+          await page.locator(".mobile-navigation").isVisible(),
+          false,
+        );
+      }
       assert.equal(errors.length, 0, errors.join("\n"));
       if (width === 1440 || width === 390) {
         const name = width === 1440 ? "desktop" : "mobile";
@@ -144,11 +234,110 @@ async function main() {
       }
       await context.close();
     }
+    const motionContext = await browser.newContext({
+      viewport: { width: 1440, height: 1000 },
+      reducedMotion: "no-preference",
+    });
+    const motionPage = await motionContext.newPage();
+    await motionPage.goto(base + "/");
+    await motionPage.waitForLoadState("networkidle");
+    const industryImage = motionPage.locator("[data-industry-image]").first();
+    await industryImage.scrollIntoViewIfNeeded();
+    await motionPage.waitForFunction(() =>
+      document
+        .querySelector("[data-industry-image]")
+        ?.getAnimations()
+        .some((animation) =>
+          (animation.effect as KeyframeEffect)
+            .getKeyframes()
+            .some((frame) => frame.transform === "scale(1.06)"),
+        ),
+    );
+    await industryImage.evaluate(async (image) => {
+      await Promise.all(
+        image.getAnimations().map((animation) => animation.finished),
+      );
+    });
+    await industryImage.hover();
+    await motionPage.waitForFunction(
+      () =>
+        getComputedStyle(document.querySelector("[data-industry-image]")!)
+          .scale !== "none",
+    );
+    await motionPage.emulateMedia({ reducedMotion: "reduce" });
+    await motionPage.waitForFunction(() => {
+      const image = document.querySelector("[data-industry-image]")!;
+      return (
+        image.getAnimations().length === 0 &&
+        getComputedStyle(image).transform === "none" &&
+        getComputedStyle(image).scale === "none"
+      );
+    });
+    await motionContext.close();
+    const compact = await browser.newContext({
+      viewport: { width: 360, height: 400 },
+      reducedMotion: "reduce",
+    });
+    const compactPage = await compact.newPage();
+    await compactPage.goto(base + "/");
+    await compactPage.locator(".mobile-navigation > summary").click();
+    await compactPage.locator('[data-mobile-view="products"]').click();
+    const panelBox = await compactPage
+      .locator(".mobile-menu-panel")
+      .boundingBox();
+    assert.ok(
+      panelBox &&
+        panelBox.width < 360 &&
+        panelBox.y > 0 &&
+        panelBox.y + panelBox.height <= 400,
+      "Menu must float below the header and fit the viewport",
+    );
+    const list = compactPage.locator(".mobile-menu-items");
+    assert.ok(
+      await list.evaluate((e) => e.scrollHeight > e.clientHeight),
+      "Short-screen category list should scroll vertically",
+    );
+    assert.ok(
+      await list.evaluate((e) => e.scrollWidth <= e.clientWidth),
+      "Category list must not overflow horizontally",
+    );
+    const boxes = await list.locator(":scope > a").evaluateAll((items) =>
+      items.map((item) => {
+        const r = item.getBoundingClientRect();
+        return { x: r.x, y: r.y, width: r.width };
+      }),
+    );
+    assert.ok(
+      boxes.every(
+        (box, index) =>
+          Math.abs(box.x - boxes[0].x) < 1 &&
+          (index === 0 || box.y > boxes[index - 1].y),
+      ),
+      "All categories must stay in one vertical column",
+    );
+    await list.locator(":scope > a").last().scrollIntoViewIfNeeded();
+    assert.ok(await list.evaluate((e) => e.scrollTop > 0));
+    assert.ok(
+      await compactPage
+        .getByRole("button", { name: "‹ Back", exact: true })
+        .isVisible(),
+    );
+    assert.equal(await compactPage.evaluate(() => window.scrollY), 0);
+    await compactPage.screenshot({
+      path: join(output, "mobile-products-scroll.png"),
+    });
+    await compact.close();
     const nojs = await browser.newContext({
       javaScriptEnabled: false,
       viewport: { width: 390, height: 844 },
     });
     const page = await nojs.newPage();
+    await page.goto(base + "/");
+    await page.locator(".mobile-navigation > summary").click();
+    await page
+      .locator('.mobile-navigation [data-mobile-view="products"]')
+      .click();
+    assert.ok(page.url().endsWith("/shop/"));
     await page.goto(base + "/");
     await page
       .getByRole("link", { name: "Explore the catalogue", exact: true })

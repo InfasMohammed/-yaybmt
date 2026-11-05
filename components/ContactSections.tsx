@@ -21,14 +21,12 @@ export default function ContactSections() {
           ))}
         </section>
         <section>
-          <h2>Email Us</h2>
-          <a href={"mailto:" + contacts.sales}>{contacts.sales}</a>
-          <a href={"mailto:" + contacts.info}>{contacts.info}</a>
+          <h2>WhatsApp Us</h2>
+          <a href={whatsapp()}>WhatsApp {contacts.whatsapp}</a>
         </section>
         <section>
           <h2>Call Us</h2>
           <a href={contacts.telephoneHref}>{contacts.telephone}</a>
-          <a href={whatsapp()}>WhatsApp {contacts.whatsapp}</a>
         </section>
       </div>
       <div className="contact-enquiry-row">
@@ -43,11 +41,6 @@ export default function ContactSections() {
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
           />
-          <p>
-            <a className="text-link" href={contacts.maps}>
-              Open directions in Google Maps
-            </a>
-          </p>
         </section>
         <ContactEnquiry />
       </div>

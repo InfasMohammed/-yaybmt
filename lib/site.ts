@@ -30,8 +30,28 @@ export const whatsapp = (name = "the catalogue") =>
   encodeURIComponent(
     "Hello YAYBMT, I would like to enquire about " + name + ".",
   );
-export const email = (name: string) =>
-  "mailto:" +
-  contacts.sales +
-  "?subject=" +
-  encodeURIComponent("Product enquiry: " + name);
+export function contactWhatsApp(fields: {
+  name: string;
+  phone?: string;
+  message: string;
+}) {
+  const message = [
+    "Hello YAYBMT team,",
+    "",
+    "I would like to enquire about your products/services.",
+    "",
+    "Name: " + fields.name.trim(),
+    ...(fields.phone?.trim() ? ["Phone: " + fields.phone.trim()] : []),
+    "",
+    "Requirements:",
+    fields.message.trim(),
+    "",
+    "Please assist me with product details and a quotation. Thank you.",
+  ].join("\n");
+  return (
+    "https://wa.me/" +
+    contacts.whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message)
+  );
+}
