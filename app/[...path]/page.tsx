@@ -1,3 +1,4 @@
+import ParagraphMotion from "../../components/ParagraphMotion";
 import ContactSections from "../../components/ContactSections";
 import AboutSections from "../../components/AboutSections";
 import Breadcrumbs from "../../components/Breadcrumbs";
@@ -88,7 +89,13 @@ export default async function Page({
         </p>
       )}
       {item.paragraphs.map((text, i) => (
-        <p key={i}>{text}</p>
+        <p key={i}>
+          {pathname === "/about-us/" || pathname === "/contact-us/" ? (
+            <ParagraphMotion text={text} />
+          ) : (
+            text
+          )}
+        </p>
       ))}
       {pathname === "/about-us/" && <AboutSections />}
       {item.bodyHtml && <ContentBody html={item.bodyHtml} />}{" "}
@@ -108,8 +115,7 @@ export default async function Page({
             </a>
           </p>
           <p className="muted">
-            Email opens your email application. WhatsApp opens a draft message;
-            you choose whether to send it.
+            WhatsApp opens a draft message; you choose whether to send it.
           </p>
         </>
       ) : (

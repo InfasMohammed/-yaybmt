@@ -2111,3 +2111,37 @@ summary {
     z-index: 31;
   }
 }
+
+/* Supplied TextRotate paragraph treatment: normal reading flow, no hidden fallback. */
+.text-rotate {
+  white-space: pre-wrap;
+}
+.text-rotate-accessible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: pre-wrap;
+  border: 0;
+}
+.text-rotate-word,
+.text-rotate-element {
+  display: inline-block;
+}
+.text-rotate-word {
+  white-space: pre;
+}
+.text-rotate-visual,
+.text-rotate-static {
+  display: inline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-rotate-element {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
