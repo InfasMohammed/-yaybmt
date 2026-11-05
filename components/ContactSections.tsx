@@ -23,7 +23,6 @@ export default function ContactSections() {
         <section>
           <h2>WhatsApp Us</h2>
           <a href={whatsapp()}>WhatsApp {contacts.whatsapp}</a>
-          <p>Share your product or project requirements.</p>
         </section>
         <section>
           <h2>Call Us</h2>
@@ -42,11 +41,6 @@ export default function ContactSections() {
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
           />
-          <p>
-            <a className="text-link" href={contacts.maps}>
-              Open directions in Google Maps
-            </a>
-          </p>
         </section>
         <ContactEnquiry />
       </div>

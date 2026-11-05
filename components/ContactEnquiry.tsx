@@ -100,8 +100,7 @@ export default function ContactEnquiry() {
             </a>
             <br />
             <small>
-              If WhatsApp did not open, use this link. Your enquiry is sent only
-              when you press Send in WhatsApp.
+              If WhatsApp did not open, use this link.
             </small>
           </p>
         )}
