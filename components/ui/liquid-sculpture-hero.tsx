@@ -29,8 +29,7 @@ export default function LiquidSculptureHero() {
     };
     const limited =
       navigatorInfo.connection?.saveData ||
-      (navigatorInfo.deviceMemory ?? 8) <= 4 ||
-      (navigator.hardwareConcurrency || 8) <= 4;
+      (navigatorInfo.deviceMemory ?? 8) <= 2;
     let teardown = () => {};
     const configure = () => {
       teardown();

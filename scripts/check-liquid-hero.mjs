@@ -22,9 +22,6 @@ fs.mkdirSync(output, { recursive: true });
       viewport: { width: 1440, height: 1000 },
       reducedMotion: "no-preference",
     });
-    await context.addInitScript(() =>
-      Object.defineProperty(navigator, "hardwareConcurrency", { get: () => 8 }),
-    );
     const page = await context.newPage();
     const errors = [];
     page.on("pageerror", (e) => errors.push(e.message));
@@ -104,9 +101,6 @@ fs.mkdirSync(output, { recursive: true });
   });
   try {
     const p = await noGL.newPage({ viewport: { width: 1440, height: 1000 } });
-    await p.addInitScript(() =>
-      Object.defineProperty(navigator, "hardwareConcurrency", { get: () => 8 }),
-    );
     await p.goto(base);
     await p.locator("[data-liquid=unavailable]").waitFor();
     assert(await p.locator(".hero-liquid-layer > img").isVisible());
