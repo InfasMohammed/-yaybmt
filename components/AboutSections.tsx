@@ -1,3 +1,4 @@
+import ShowroomGallery from "./ShowroomGallery";
 import CompanyMotion from "./CompanyMotion";
 import CompanyValues from "./CompanyValues";
 import { TeamSection } from "./ui/team-section-1";
@@ -53,34 +54,7 @@ export default function AboutSections() {
       <section className="about-section" aria-labelledby="showroom-heading">
         <p className="eyebrow">SHOWROOM</p>
         <h2 id="showroom-heading">Our Gallery</h2>
-        <div className="showroom-grid">
-          {[0, 1, 2].map((column) => (
-            <div className="showroom-column" key={column}>
-              {aboutImages.gallery
-                .slice(column * 2, column * 2 + 2)
-                .map((image, offset) => {
-                  const index = column * 2 + offset;
-                  return (
-                    <a
-                      className={"showroom-image showroom-image-" + index}
-                      href={image.originalSrc}
-                      key={image.src}
-                      aria-label={"Open showroom image " + (index + 1)}
-                    >
-                      <img
-                        src={image.src}
-                        alt={"YAYBMT showroom — view " + (index + 1)}
-                        width={image.width}
-                        height={image.height}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </a>
-                  );
-                })}
-            </div>
-          ))}
-        </div>
+        <ShowroomGallery />
       </section>
     </>
   );
