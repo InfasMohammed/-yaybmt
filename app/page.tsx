@@ -342,14 +342,14 @@ export default function Home() {
               key={i.slug}
               className="tw:min-w-0 tw:scroll-mt-6 tw:overflow-hidden tw:rounded-xl tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white"
             >
-              <div className="tw:flex tw:h-[174px] tw:items-center tw:justify-center tw:bg-[#eeeee7] tw:p-4">
+              <div className="tw:aspect-[3/2] tw:w-full tw:overflow-hidden tw:bg-[#eeeee7]">
                 <img
                   src={i.src}
                   alt=""
                   width={i.width}
                   height={i.height}
                   loading="lazy"
-                  className="tw:block tw:h-auto tw:max-h-full tw:w-auto tw:max-w-[min(100%,260px)] tw:object-contain"
+                  className="tw:block tw:h-full tw:w-full tw:max-w-none tw:object-cover"
                 />
               </div>
               <div className="tw:p-5">

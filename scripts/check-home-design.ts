@@ -92,7 +92,9 @@ async function main() {
             const img = image as HTMLImageElement;
             const rect = img.getBoundingClientRect();
             return (
-              rect.width <= 261 &&
+              Math.abs(
+                rect.width - img.parentElement!.getBoundingClientRect().width,
+              ) < 1 &&
               rect.width <= img.naturalWidth &&
               rect.height <= img.naturalHeight &&
               Math.abs(
@@ -101,7 +103,7 @@ async function main() {
             );
           }),
         ),
-        "Industry photos must retain their aspect ratios without enlargement",
+        "Industry images must fill their frames and retain their aspect ratios without enlargement",
       );
       assert.equal(
         await page
