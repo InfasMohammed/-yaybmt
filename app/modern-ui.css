@@ -717,3 +717,61 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* One motion system for the homepage; no hidden-on-load content or animation library. */
+.enterprise-home .enterprise-hero > div {
+  animation: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .enterprise-category,
+  .enterprise-video,
+  .enterprise-product-grid .card {
+    transition:
+      transform 0.3s ease,
+      border-color 0.25s ease,
+      box-shadow 0.3s ease;
+  }
+  .enterprise-category:hover,
+  .enterprise-video:hover,
+  .enterprise-product-grid .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px -24px #49352866;
+  }
+  .card .image-frame > img {
+    transition: transform 0.4s ease;
+  }
+  .card:hover .image-frame > img,
+  .card:focus-within .image-frame > img {
+    transform: scale(1.045);
+  }
+  .enterprise-link svg,
+  .enterprise-button svg,
+  .enterprise-hero-link svg,
+  .enterprise-round-arrow svg {
+    transition: transform 0.25s ease;
+  }
+  .enterprise-link:hover svg,
+  .enterprise-link:focus-visible svg,
+  .enterprise-button:hover svg,
+  .enterprise-button:focus-visible svg,
+  .enterprise-hero-link:hover svg,
+  .enterprise-hero-link:focus-visible svg {
+    transform: translateX(3px);
+  }
+  .enterprise-category:hover .enterprise-round-arrow svg {
+    transform: translate(2px, -2px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .enterprise-home *,
+  .enterprise-home *::before,
+  .enterprise-home *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.enterprise-home .enterprise-hero {
+  overflow: clip;
+}

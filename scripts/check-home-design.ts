@@ -255,6 +255,39 @@ async function main() {
     const motionPage = await motionContext.newPage();
     await motionPage.goto(base + "/");
     await motionPage.waitForLoadState("networkidle");
+    await motionPage.waitForFunction(
+      () =>
+        document.querySelector<HTMLElement>("h1")?.dataset.motionRevealed ===
+        "true",
+    );
+    const productCard = motionPage
+      .locator("[data-product-spotlight] .card")
+      .first();
+    await productCard.scrollIntoViewIfNeeded();
+    await motionPage.waitForFunction(() =>
+      document
+        .querySelector("[data-product-spotlight] .card")
+        ?.getAnimations()
+        .some((animation) =>
+          (animation.effect as KeyframeEffect)
+            .getKeyframes()
+            .some((frame) => frame.transform === "translateY(20px)"),
+        ),
+    );
+    await productCard.evaluate(async (element) => {
+      await Promise.all(
+        element.getAnimations().map((animation) => animation.finished),
+      );
+    });
+    await productCard.locator(".image-frame > img").hover();
+    await motionPage.waitForFunction(
+      () =>
+        getComputedStyle(
+          document.querySelector(
+            "[data-product-spotlight] .image-frame > img",
+          )!,
+        ).transform !== "none",
+    );
     const industryImage = motionPage.locator("[data-industry-image]").first();
     await industryImage.scrollIntoViewIfNeeded();
     await motionPage.waitForFunction(() =>
