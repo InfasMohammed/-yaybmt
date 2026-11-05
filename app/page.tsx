@@ -1,4 +1,5 @@
 import "./tailwind-home.css";
+import LiquidSculptureHero from "../components/ui/liquid-sculpture-hero";
 import HomeMotion from "../components/HomeMotion";
 import ScrollVideo from "../components/ScrollVideo";
 import { brandLogos } from "../data/brand-logos";
@@ -62,14 +63,7 @@ export default function Home() {
         className="hero tw:relative tw:isolate tw:flex tw:min-h-[790px] tw:flex-col tw:justify-end tw:bg-ink tw:bg-none tw:px-0 tw:pt-[220px] tw:pb-28 tw:text-white tw:md:min-h-[800px] tw:md:pt-[210px] tw:md:pb-36"
         aria-labelledby="home-title"
       >
-        <img
-          src="/images/hero-marine.webp"
-          alt=""
-          width="1774"
-          height="887"
-          fetchPriority="high"
-          className="tw:absolute tw:inset-0 tw:-z-20 tw:h-full tw:w-full tw:object-cover tw:object-[62%_center]"
-        />
+        <LiquidSculptureHero />
         <div
           aria-hidden="true"
           className="tw:absolute tw:inset-0 tw:-z-10 tw:bg-[linear-gradient(90deg,rgba(17,25,24,0.96)_0%,rgba(17,25,24,0.73)_50%,rgba(17,25,24,0.2)_100%)]"
