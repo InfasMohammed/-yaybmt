@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type NavigationItem = { slug: string; name: string };
 
@@ -13,6 +13,31 @@ export default function HeaderMenu({
 }) {
   const navigation = useRef<HTMLDivElement>(null);
   const mobileMenu = useRef<HTMLDetailsElement>(null);
+  const [view, setView] = useState<"main" | "products" | "brands">("main");
+  const [enhanced, setEnhanced] = useState(false);
+  const previousView = useRef(view);
+  const backButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    setEnhanced(true);
+  }, []);
+  useEffect(() => {
+    if (previousView.current !== view && mobileMenu.current?.open) {
+      if (view === "main") {
+        mobileMenu.current
+          .querySelector<HTMLAnchorElement>(
+            `[data-mobile-view="${previousView.current}"]`,
+          )
+          ?.focus();
+      } else backButton.current?.focus();
+    }
+    previousView.current = view;
+  }, [view]);
+  function closeMobile() {
+    if (!mobileMenu.current) return;
+    mobileMenu.current.open = false;
+    mobileMenu.current.querySelector("summary")?.focus();
+    setView("main");
+  }
   useEffect(() => {
     const closeOutside = (event: PointerEvent) => {
       if (!(event.target instanceof Node)) return;
@@ -124,6 +149,7 @@ export default function HeaderMenu({
       className="header-navigation"
       onClick={(event) => {
         if (
+          !event.defaultPrevented &&
           event.target instanceof Element &&
           event.target.closest("a") &&
           mobileMenu.current
@@ -133,6 +159,12 @@ export default function HeaderMenu({
       }}
       onKeyDown={(event) => {
         if (event.key !== "Escape") return;
+        if (mobileMenu.current?.open) {
+          if (view !== "main") setView("main");
+          else closeMobile();
+          event.preventDefault();
+          return;
+        }
         const open =
           navigation.current?.querySelector<HTMLDetailsElement>(
             ".nav-dropdown[open]",
@@ -150,7 +182,13 @@ export default function HeaderMenu({
       >
         {links()}
       </nav>
-      <details className="mobile-navigation" ref={mobileMenu}>
+      <details
+        className="mobile-navigation"
+        ref={mobileMenu}
+        onToggle={(event) => {
+          if (!event.currentTarget.open) setView("main");
+        }}
+      >
         <summary aria-label="Menu">
           <svg
             aria-hidden="true"
@@ -165,8 +203,83 @@ export default function HeaderMenu({
             <path d="M3 6h18M3 12h18M3 18h18" />
           </svg>
         </summary>
-        <nav className="primary-navigation" aria-label="Main navigation">
-          {links()}
+        <nav
+          className="primary-navigation mobile-menu-panel"
+          aria-label="Main navigation"
+        >
+          <div className="mobile-menu-heading">
+            {view !== "main" ? (
+              <button
+                type="button"
+                ref={backButton}
+                onClick={() => setView("main")}
+              >
+                ‹ Back
+              </button>
+            ) : (
+              <span>Menu</span>
+            )}
+            {enhanced && (
+              <button
+                type="button"
+                aria-label="Close menu"
+                onClick={closeMobile}
+              >
+                Close <span aria-hidden="true">×</span>
+              </button>
+            )}
+          </div>
+          {view === "main" ? (
+            <>
+              <a href="/">Home</a>
+              <a
+                href="/shop/"
+                data-mobile-view="products"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setView("products");
+                }}
+              >
+                Products <span aria-hidden="true">›</span>
+              </a>
+              <a
+                href="/brands/"
+                data-mobile-view="brands"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setView("brands");
+                }}
+              >
+                Brands <span aria-hidden="true">›</span>
+              </a>
+              <a href="/about-us/">Company</a>
+              <a href="/contact-us/">Contact</a>
+            </>
+          ) : (
+            <>
+              <h2 className="mobile-menu-title">
+                {view === "products" ? "Products" : "Brands"}
+              </h2>
+              <a
+                className="mobile-view-all"
+                href={view === "products" ? "/shop/" : "/brands/"}
+              >
+                View all {view}
+              </a>
+              {(view === "products" ? categories : brands).map((entry) => (
+                <a
+                  key={entry.slug}
+                  href={
+                    (view === "products" ? "/product-category/" : "/brand/") +
+                    entry.slug +
+                    "/"
+                  }
+                >
+                  {entry.name}
+                </a>
+              ))}
+            </>
+          )}
         </nav>
       </details>
     </div>

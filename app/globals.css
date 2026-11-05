@@ -2011,3 +2011,38 @@ summary {
     margin: 0 0 8px;
   }
 }
+
+@media (max-width: 650px) {
+  .mobile-menu-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 4px 6px 10px;
+    border-bottom: 1px solid #ffffff26;
+  }
+  .mobile-menu-heading > span {
+    padding-left: 8px;
+  }
+  .mobile-menu-heading button {
+    min-height: 44px;
+    border: 0;
+    padding: 8px;
+    color: white;
+  }
+  .mobile-menu-heading button:hover {
+    color: #edc6aa;
+  }
+  .mobile-menu-panel > a {
+    justify-content: space-between;
+  }
+  .mobile-menu-title {
+    margin: 16px 14px 4px;
+    font-size: 20px;
+    color: white;
+  }
+  .mobile-menu-panel > .mobile-view-all {
+    color: #edc6aa;
+    border-bottom: 1px solid #ffffff26;
+  }
+}

@@ -375,17 +375,32 @@ async function main() {
         .getByRole("link", { name: "Company", exact: true })
         .isVisible(),
     );
-    const brandsDropdown = primaryNavigation
-      .locator("details")
-      .filter({ has: page.locator("summary", { hasText: /^Brands/ }) });
-    await brandsDropdown.locator("summary").click();
-    assert.ok(
-      await brandsDropdown
-        .getByRole("link", { name: "DAELIM", exact: true })
-        .isVisible(),
-    );
-    await page.keyboard.press("Escape");
-    assert.equal(await brandsDropdown.getAttribute("open"), null);
+    if (await menuToggle.isVisible()) {
+      await primaryNavigation.locator('[data-mobile-view="brands"]').click();
+      assert.ok(
+        await primaryNavigation
+          .getByRole("link", { name: "DAELIM", exact: true })
+          .isVisible(),
+      );
+      await page.keyboard.press("Escape");
+      assert.ok(
+        await primaryNavigation
+          .getByRole("link", { name: "Company", exact: true })
+          .isVisible(),
+      );
+    } else {
+      const brandsDropdown = primaryNavigation
+        .locator("details")
+        .filter({ has: page.locator("summary", { hasText: /^Brands/ }) });
+      await brandsDropdown.locator("summary").click();
+      assert.ok(
+        await brandsDropdown
+          .getByRole("link", { name: "DAELIM", exact: true })
+          .isVisible(),
+      );
+      await page.keyboard.press("Escape");
+      assert.equal(await brandsDropdown.getAttribute("open"), null);
+    }
     assert.equal(await page.locator(".welcome-section details").count(), 0);
     await primaryNavigation
       .getByRole("link", { name: "Company", exact: true })

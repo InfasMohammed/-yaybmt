@@ -147,21 +147,54 @@ async function main() {
             .getByRole("link", { name: "Company", exact: true })
             .isVisible(),
         );
-        await menu
-          .locator(".nav-dropdown > summary")
-          .filter({ hasText: "Brands" })
-          .click();
+        await menu.locator('[data-mobile-view="brands"]').click();
         assert.ok(
           await menu
             .getByRole("link", { name: "DAELIM", exact: true })
             .isVisible(),
         );
+        assert.equal(
+          await menu
+            .getByRole("link", { name: "Company", exact: true })
+            .count(),
+          0,
+        );
+        assert.ok(
+          await menu
+            .getByRole("link", { name: "View all brands", exact: true })
+            .isVisible(),
+        );
+        await menu.getByRole("button", { name: "‹ Back", exact: true }).click();
+        assert.ok(
+          await menu
+            .getByRole("link", { name: "Company", exact: true })
+            .isVisible(),
+        );
+        await menu.locator('[data-mobile-view="products"]').click();
+        assert.ok(
+          await menu
+            .getByRole("link", { name: "View all products", exact: true })
+            .isVisible(),
+        );
+        assert.equal(
+          await menu.locator('[data-mobile-view="brands"]').count(),
+          0,
+        );
         await page.keyboard.press("Escape");
-        assert.equal(await menu.locator(".nav-dropdown[open]").count(), 0);
+        assert.ok(
+          await menu
+            .getByRole("link", { name: "Company", exact: true })
+            .isVisible(),
+        );
         await page.keyboard.press("Escape");
         assert.equal(await menu.getAttribute("open"), null);
         await toggle.click();
-        await page.locator("h1").click();
+        await menu
+          .getByRole("button", { name: "Close menu", exact: true })
+          .click();
+        assert.equal(await menu.getAttribute("open"), null);
+        await toggle.click();
+        await page.mouse.click(8, 250);
         assert.equal(await menu.getAttribute("open"), null);
       } else {
         assert.ok(await page.locator(".desktop-navigation").isVisible());
@@ -188,10 +221,8 @@ async function main() {
     await page.goto(base + "/");
     await page.locator(".mobile-navigation > summary").click();
     await page
-      .locator(".mobile-navigation .nav-dropdown > summary")
-      .filter({ hasText: "Products" })
+      .locator('.mobile-navigation [data-mobile-view="products"]')
       .click();
-    await page.getByRole("link", { name: "All products", exact: true }).click();
     assert.ok(page.url().endsWith("/shop/"));
     await page.goto(base + "/");
     await page
