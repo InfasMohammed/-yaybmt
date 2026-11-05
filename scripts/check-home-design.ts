@@ -92,9 +92,7 @@ async function main() {
             const img = image as HTMLImageElement;
             const rect = img.getBoundingClientRect();
             return (
-              Math.abs(
-                rect.width - img.parentElement!.getBoundingClientRect().width,
-              ) < 1 &&
+              rect.width <= img.parentElement!.getBoundingClientRect().width &&
               rect.width <= img.naturalWidth &&
               rect.height <= img.naturalHeight &&
               Math.abs(
@@ -241,38 +239,47 @@ async function main() {
     const motionPage = await motionContext.newPage();
     await motionPage.goto(base + "/");
     await motionPage.waitForLoadState("networkidle");
-    const industryImage = motionPage.locator("[data-industry-image]").first();
-    await industryImage.scrollIntoViewIfNeeded();
-    await motionPage.waitForFunction(() =>
-      document
-        .querySelector("[data-industry-image]")
-        ?.getAnimations()
-        .some((animation) =>
-          (animation.effect as KeyframeEffect)
-            .getKeyframes()
-            .some((frame) => frame.transform === "scale(1.06)"),
-        ),
-    );
-    await industryImage.evaluate(async (image) => {
-      await Promise.all(
-        image.getAnimations().map((animation) => animation.finished),
-      );
-    });
-    await industryImage.hover();
+    const industrySection = motionPage.locator(".industry-scroll");
     await motionPage.waitForFunction(
       () =>
-        getComputedStyle(document.querySelector("[data-industry-image]")!)
-          .scale !== "none",
+        document
+          .querySelector(".industry-scroll")
+          ?.getAttribute("data-scroll-enhanced") === "true",
     );
-    await motionPage.emulateMedia({ reducedMotion: "reduce" });
-    await motionPage.waitForFunction(() => {
-      const image = document.querySelector("[data-industry-image]")!;
-      return (
-        image.getAnimations().length === 0 &&
-        getComputedStyle(image).transform === "none" &&
-        getComputedStyle(image).scale === "none"
+    for (const [progress, expected] of [
+      [0.05, "Marine"],
+      [0.5, "Engineering & Fabrication"],
+      [0.95, "Construction"],
+    ] as const) {
+      await industrySection.evaluate((el, progress) => {
+        const top = el.getBoundingClientRect().top + scrollY;
+        scrollTo(
+          0,
+          top + (el.getBoundingClientRect().height - innerHeight) * progress,
+        );
+      }, progress);
+      await motionPage.waitForFunction(
+        (expected) =>
+          document.querySelector('.industry-scroll-step[data-active="true"] h3')
+            ?.textContent === expected,
+        expected,
       );
-    });
+    }
+    await motionPage.emulateMedia({ reducedMotion: "reduce" });
+    await motionPage.waitForFunction(
+      () =>
+        document
+          .querySelector(".industry-scroll")
+          ?.getAttribute("data-scroll-enhanced") === "false",
+    );
+    assert.equal(
+      await industrySection
+        .locator("img")
+        .evaluateAll((images) =>
+          images.every((image) => getComputedStyle(image).opacity === "1"),
+        ),
+      true,
+    );
     await motionContext.close();
     const compact = await browser.newContext({
       viewport: { width: 360, height: 400 },

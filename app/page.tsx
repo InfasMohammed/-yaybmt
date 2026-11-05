@@ -1,3 +1,4 @@
+import ScrollRevealContentA from "../components/ui/scroll-reveal-content-a";
 import "./tailwind-home.css";
 import HomeMotion from "../components/HomeMotion";
 import ScrollVideo from "../components/ScrollVideo";
@@ -31,6 +32,17 @@ const industryCopy: Record<string, string> = {
     "Tools, fasteners, hardware and industrial supplies.",
   construction: "Building materials, plumbing and sanitary accessories.",
 };
+const industryContent = industries.map((industry) => ({
+  id: "industry-" + industry.slug,
+  title: industry.name,
+  description: industryCopy[industry.slug],
+  image: {
+    url: industry.src,
+    width: industry.width,
+    height: industry.height,
+    alt: "",
+  },
+}));
 function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   return (
     <svg
@@ -334,42 +346,11 @@ export default function Home() {
             Comprehensive Solutions for a Wide Range of Industries
           </p>
         </div>
-        <div className="tw:grid tw:gap-5 tw:md:grid-cols-3" data-industry-grid>
-          {industries.map((i, index) => (
-            <article
-              data-home-reveal
-              id={"industry-" + i.slug}
-              key={i.slug}
-              className="tw:group tw:min-w-0 tw:scroll-mt-6 tw:overflow-hidden tw:rounded-xl tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white"
-            >
-              <div className="tw:aspect-[3/2] tw:w-full tw:overflow-hidden tw:bg-[#eeeee7]">
-                <img
-                  data-industry-image
-                  src={i.src}
-                  alt=""
-                  width={i.width}
-                  height={i.height}
-                  loading="lazy"
-                  className="tw:block tw:h-full tw:w-full tw:max-w-none tw:object-cover tw:motion-safe:transition-transform tw:motion-safe:duration-700 tw:motion-safe:ease-out tw:motion-safe:group-hover:scale-[1.04]"
-                />
-              </div>
-              <div className="tw:p-5">
-                <span
-                  aria-hidden="true"
-                  className="tw:text-[9px] tw:tracking-[0.12em] tw:text-copper-dark"
-                >
-                  0{index + 1} / INDUSTRY
-                </span>
-                <h3 className="tw:mt-2 tw:mb-3 tw:text-[20px] tw:leading-tight tw:font-semibold tw:tracking-[-0.4px]">
-                  {i.name}
-                </h3>
-                <p className="tw:m-0 tw:text-[12px] tw:leading-[1.8] tw:text-muted">
-                  {industryCopy[i.slug]}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <ScrollRevealContentA
+          contentA={industryContent[0]}
+          contentB={industryContent[1]}
+          contentC={industryContent[2]}
+        />
         <div className="tw:mt-7 tw:flex tw:flex-wrap tw:items-center tw:justify-between tw:gap-4">
           <p className="tw:m-0 tw:text-[13px] tw:text-muted">
             Explore our specialist marine ranges.

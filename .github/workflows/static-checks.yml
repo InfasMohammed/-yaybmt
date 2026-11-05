@@ -42,4 +42,5 @@ jobs:
             artifacts/paragraph-motion/
             artifacts/team-section/
             artifacts/showroom-gallery/
+            artifacts/industry-scroll/
 # This workflow has no deployment job and no Firebase credentials.
