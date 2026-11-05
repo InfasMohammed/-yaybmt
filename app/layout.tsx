@@ -63,8 +63,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <div>
             <h2>Let’s talk about your project.</h2>
-            <a href={"mailto:" + contacts.sales}>{contacts.sales}</a>
-            <a href={"mailto:" + contacts.info}>{contacts.info}</a>
+            <a href={whatsapp()}>WhatsApp {contacts.whatsapp}</a>
             <a href={contacts.telephoneHref}>{contacts.telephone}</a>
             <a href={contacts.maps}>{contacts.location}</a>
           </div>

@@ -21,14 +21,13 @@ export default function ContactSections() {
           ))}
         </section>
         <section>
-          <h2>Email Us</h2>
-          <a href={"mailto:" + contacts.sales}>{contacts.sales}</a>
-          <a href={"mailto:" + contacts.info}>{contacts.info}</a>
+          <h2>WhatsApp Us</h2>
+          <a href={whatsapp()}>WhatsApp {contacts.whatsapp}</a>
+          <p>Share your product or project requirements.</p>
         </section>
         <section>
           <h2>Call Us</h2>
           <a href={contacts.telephoneHref}>{contacts.telephone}</a>
-          <a href={whatsapp()}>WhatsApp {contacts.whatsapp}</a>
         </section>
       </div>
       <div className="contact-enquiry-row">

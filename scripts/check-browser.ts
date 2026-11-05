@@ -190,11 +190,7 @@ async function main() {
     assert.ok(!(await page.locator("dialog").isVisible()));
     await page.goto(base + "/product/dc-102/");
     assert.match(await page.locator("main").innerText(), /6 Litres/);
-    const email = await page
-      .locator("main")
-      .getByRole("link", { name: /Enquire by email/ })
-      .getAttribute("href");
-    assert.match(email || "", /^mailto:sales@yaybmt.com\?subject=/);
+    assert.equal(await page.locator('a[href^="mailto:"]').count(), 0);
     const wa = new URL(
       (await page
         .locator("main")
@@ -417,6 +413,66 @@ async function main() {
     assert.ok(
       await page.getByText(/Our mission is to provide innovative/).isVisible(),
     );
+    const enquiryContext = await browser.newContext();
+    const enquiryPage = await enquiryContext.newPage();
+    for (const width of [1440, 390]) {
+      await enquiryPage.setViewportSize({ width, height: 900 });
+      await enquiryPage.goto(base + "/contact-us/");
+      await enquiryPage.evaluate(() => {
+        window.open = ((url?: string | URL) => {
+          (window as Window & { enquiryTestURL?: string }).enquiryTestURL =
+            String(url);
+          return null;
+        }) as typeof window.open;
+      });
+      assert.equal(await enquiryPage.locator('a[href^="mailto:"]').count(), 0);
+      await enquiryPage
+        .getByRole("button", { name: "Continue on WhatsApp", exact: true })
+        .click();
+      assert.equal(
+        await enquiryPage.evaluate(
+          () => (window as Window & { enquiryTestURL?: string }).enquiryTestURL,
+        ),
+        undefined,
+      );
+      await enquiryPage.getByLabel("Full name").fill("Test & Review");
+      await enquiryPage
+        .getByLabel("Phone number", { exact: true })
+        .fill("+971 50 000 0000");
+      await enquiryPage
+        .getByLabel("Message", { exact: false })
+        .fill("Need marine locks & valves + drawings\nQuantity: 12");
+      await enquiryPage
+        .getByRole("button", { name: "Continue on WhatsApp", exact: true })
+        .click();
+      const draftURL = new URL(
+        (await enquiryPage.locator(".enquiry-draft a").getAttribute("href"))!,
+      );
+      assert.equal(draftURL.origin, "https://wa.me");
+      assert.equal(draftURL.pathname, "/971567369803");
+      assert.equal(
+        await enquiryPage.evaluate(
+          () => (window as Window & { enquiryTestURL?: string }).enquiryTestURL,
+        ),
+        draftURL.href,
+      );
+      const message = draftURL.searchParams.get("text")!;
+      for (const expected of [
+        "Hello YAYBMT team,",
+        "Name: Test & Review",
+        "Phone: +971 50 000 0000",
+        "Requirements:\nNeed marine locks & valves + drawings\nQuantity: 12",
+      ])
+        assert.ok(message.includes(expected), expected);
+      assert.ok(!message.includes("Company:"));
+      assert.ok(!message.includes("Email:"));
+      assert.equal(await enquiryPage.locator('input[type="email"]').count(), 0);
+      await enquiryPage
+        .getByLabel("Message", { exact: false })
+        .fill("Updated requirements");
+      assert.equal(await enquiryPage.locator(".enquiry-draft a").count(), 0);
+    }
+    await enquiryContext.close();
     const nojs = await browser.newContext({ javaScriptEnabled: false });
     const plain = await nojs.newPage();
     await plain.goto(base + "/brand/daelim/");
@@ -428,7 +484,10 @@ async function main() {
     assert.equal(await plain.locator(".card").count(), 9);
     await plain.locator(".card a").first().click();
     assert.ok(
-      await plain.getByRole("link", { name: /Enquire by email/ }).isVisible(),
+      await plain
+        .locator("main")
+        .getByRole("link", { name: /Enquire on WhatsApp/ })
+        .isVisible(),
     );
     const plainImage = plain.locator(".gallery-photo img").first();
     assert.ok(await plainImage.isVisible());
@@ -438,6 +497,19 @@ async function main() {
       ),
       true,
     );
+    await plain.goto(base + "/contact-us/");
+    assert.equal(
+      await plain.locator(".contact-enquiry-form").isVisible(),
+      false,
+    );
+    const fallback = new URL(
+      (await plain
+        .locator(".contact-enquiry")
+        .getByRole("link", { name: "Enquire on WhatsApp", exact: true })
+        .getAttribute("href"))!,
+    );
+    assert.equal(fallback.origin, "https://wa.me");
+    assert.equal(fallback.pathname, "/971567369803");
     await nojs.close();
     await page.emulateMedia({ reducedMotion: "reduce" });
     await page.goto(base + "/shop/");

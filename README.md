@@ -31,7 +31,7 @@ Browser checks use the pinned Playwright package. They use `/usr/bin/chromium` w
 - `/blog/` and original root article slugs — all ten imported articles.
 - `/about-us/`, `/contact-us/` — original company/contact routes using confirmed business details.
 
-Native page links work without JavaScript; search/filter enhancements keep selections in the URL. Filter and sort variants retain the canonical of their static archive document. Each static pagination page has its own canonical. Email links open an email application; WhatsApp opens an unsent product-specific draft.
+Native page links work without JavaScript; search/filter enhancements keep selections in the URL. Filter and sort variants retain the canonical of their static archive document. Each static pagination page has its own canonical. Enquiry actions use WhatsApp, opening an unsent product-specific draft. The contact form includes customer contact details in a WhatsApp template; it does not send email. See [WhatsApp enquiries](docs/whatsapp-enquiries.md).
 
 `/cart/`, `/checkout/` and `/my-account/` retain their URLs as **noindexed retirement information**, with enquiry links. They provide no commerce or account functionality and are excluded from the production sitemap.
 

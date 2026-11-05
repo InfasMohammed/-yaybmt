@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { contacts } from "../data/contacts";
+import { contactWhatsApp } from "../lib/site";
 
 export default function ContactEnquiry() {
   const [draft, setDraft] = useState("");
@@ -17,10 +17,13 @@ export default function ContactEnquiry() {
         onSubmit={(event) => {
           event.preventDefault();
           const fields = new FormData(event.currentTarget);
-          const body = `Name: ${fields.get("name")}\nPhone: ${fields.get("phone")}\nEmail: ${fields.get("email")}\n\n${fields.get("message")}`;
-          setDraft(
-            `mailto:${contacts.sales}?subject=${encodeURIComponent("Website enquiry")}&body=${encodeURIComponent(body)}`,
-          );
+          const url = contactWhatsApp({
+            name: String(fields.get("name") || ""),
+            phone: String(fields.get("phone") || ""),
+            message: String(fields.get("message") || ""),
+          });
+          setDraft(url);
+          window.open(url, "_blank", "noopener,noreferrer");
         }}
       >
         <label htmlFor="contact-name">
@@ -50,23 +53,6 @@ export default function ContactEnquiry() {
             maxLength={50}
           />
         </label>
-        <label htmlFor="contact-email">
-          <span>
-            Email address{" "}
-            <span className="required-mark" aria-hidden="true">
-              *
-            </span>
-          </span>
-          <input
-            id="contact-email"
-            name="email"
-            placeholder="you@example.com"
-            type="email"
-            autoComplete="email"
-            required
-            maxLength={254}
-          />
-        </label>
         <label htmlFor="contact-message">
           <span>
             Message{" "}
@@ -84,30 +70,38 @@ export default function ContactEnquiry() {
           />
         </label>
         <button className="button" type="submit">
-          Prepare enquiry email
+          Continue on WhatsApp
         </button>
       </form>
       <p id="enquiry-help" className="enquiry-help">
-        * Required fields. This form prepares an email draft for you to send
-        from your email application.
+        * Required fields. WhatsApp opens with your enquiry filled in. Review
+        the message and press Send in WhatsApp.
       </p>
       <noscript>
         <style>{`.contact-enquiry-form{display:none}`}</style>
         <p>
-          Email us at <a href={"mailto:" + contacts.sales}>{contacts.sales}</a>{" "}
-          with your name, contact details and message.
+          <a
+            className="button"
+            href={contactWhatsApp({
+              name: "Your name",
+              message:
+                "Please enter your product or project requirements here.",
+            })}
+          >
+            Enquire on WhatsApp
+          </a>
         </p>
       </noscript>
       <div className={draft ? "enquiry-draft" : undefined} aria-live="polite">
         {draft && (
           <p>
             <a className="button" href={draft}>
-              Open email draft
+              Open WhatsApp enquiry
             </a>
             <br />
             <small>
-              Your message is not sent until you send it from your email
-              application.
+              If WhatsApp did not open, use this link. Your enquiry is sent only
+              when you press Send in WhatsApp.
             </small>
           </p>
         )}
