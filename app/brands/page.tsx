@@ -1,6 +1,5 @@
-import BrandLogo from "../../components/BrandLogo";
+import { LogoCloud } from "../../components/ui/logo-cloud";
 import Breadcrumbs from "../../components/Breadcrumbs";
-import { brands } from "../../data/brands";
 import { metadata as meta } from "../../lib/site";
 export const metadata = meta(
   "Browse brands",
@@ -18,22 +17,7 @@ export default function Page() {
       />
       <p className="eyebrow">EXPLORE THE CATALOGUE</p>
       <h1>Browse by brand.</h1>
-      <div className="directory">
-        {brands.map((b) => (
-          <a
-            className="brand-directory-card"
-            href={"/brand/" + b.slug + "/"}
-            key={b.slug}
-          >
-            <BrandLogo slug={b.slug} />
-            {b.name}
-            {b.distributorNote && (
-              <small className="distributor-note">{b.distributorNote}</small>
-            )}
-            <span aria-hidden="true">+</span>
-          </a>
-        ))}
-      </div>
+      <LogoCloud />
     </main>
   );
 }

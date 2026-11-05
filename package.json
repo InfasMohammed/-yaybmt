@@ -7,7 +7,7 @@
     "build": "next build",
     "typecheck": "next typegen && tsc --noEmit",
     "preview": "python3 scripts/serve-export.py",
-    "test:browser": "node --import tsx scripts/check-browser.ts && node --import tsx scripts/check-drawings-browser.ts && npm run test:home && npm run test:paragraphs && npm run test:team && npm run test:company && npm run test:gallery",
+    "test:browser": "node --import tsx scripts/check-browser.ts && node --import tsx scripts/check-drawings-browser.ts && npm run test:home && npm run test:paragraphs && npm run test:team && npm run test:company && npm run test:gallery && npm run test:brands",
     "check:content": "node --import tsx scripts/check-content.ts",
     "check:export": "node --import tsx scripts/check-export.ts",
     "manifest": "node --import tsx scripts/generate-manifest.ts",
@@ -22,7 +22,8 @@
     "test:paragraphs": "node --import tsx scripts/check-paragraph-motion.ts",
     "test:team": "node --import tsx scripts/check-team-section.ts",
     "test:company": "node --import tsx scripts/check-company-motion.ts",
-    "test:gallery": "node --import tsx scripts/check-showroom-gallery.ts"
+    "test:gallery": "node --import tsx scripts/check-showroom-gallery.ts",
+    "test:brands": "node --import tsx scripts/check-brand-cloud.ts"
   },
   "dependencies": {
     "motion": "12.40.0",
