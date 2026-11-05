@@ -3,6 +3,7 @@ import { brands } from "../data/brands";
 import { cataloguePDF } from "../lib/catalogue-file";
 import HeaderMenu from "../components/HeaderMenu";
 import "./globals.css";
+import "./modern-ui.css";
 import { origin } from "../lib/site";
 import { whatsapp } from "../lib/site";
 import { contacts } from "../data/contacts";

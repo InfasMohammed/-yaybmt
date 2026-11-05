@@ -43,8 +43,22 @@ async function main() {
       );
       assert.equal(await page.locator("h1").count(), 1);
       assert.equal(
+        await page.locator("[data-product-spotlight] .card").count(),
+        4,
+      );
+      for (const slug of ["5600", "kl-200", "dc-102", "fc-110cs"]) {
+        assert.equal(
+          await page
+            .locator(
+              '[data-product-spotlight] a[href="/product/' + slug + '/"]',
+            )
+            .count(),
+          1,
+        );
+      }
+      assert.equal(
         await page.locator("h1").innerText(),
-        "Strong foundations.\nLasting connections.",
+        "Marine hardware &\nbuilding materials\nin Dubai.",
       );
       assert.ok(
         await page.evaluate(

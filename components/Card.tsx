@@ -35,9 +35,7 @@ export default function Card({ product: p }: { product: CatalogueItem }) {
             {brands.find((b) => b.slug === p.brand)?.name || "PRODUCT"}
           </small>
           <h3>{p.name}</h3>
-          <p className="model">
-            {p.model ? "Model · " + p.model : "Model reference not recorded"}
-          </p>
+          {p.model && <p className="model">Model · {p.model}</p>}
         </div>
         <div className="card-bottom">
           View product <span aria-hidden="true">+</span>
