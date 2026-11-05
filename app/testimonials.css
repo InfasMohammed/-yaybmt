@@ -111,3 +111,29 @@
     padding-block: 44px 52px;
   }
 }
+.testimonial-rating {
+  display: block;
+  margin-top: 20px;
+  color: #8c4d2d;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.testimonial-rating + blockquote {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+.testimonial-card blockquote p {
+  white-space: pre-line;
+}
+.testimonial-rating-only {
+  margin: 16px 0 0;
+  color: #626760;
+  font-size: 14px;
+}
+.testimonials-source {
+  display: inline-block;
+  margin-top: 24px;
+  color: #8c4d2d;
+  font-size: 13px;
+  text-underline-offset: 4px;
+}
