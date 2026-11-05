@@ -159,54 +159,8 @@
   }
 }
 
-.company-motion-toggle {
-  display: none;
-}
 .company-figures [data-count-up] {
   display: inline-block;
   min-width: 4ch;
   font-variant-numeric: tabular-nums;
-}
-@keyframes company-gentle-float {
-  0%,
-  100% {
-    translate: 0 0;
-  }
-  50% {
-    translate: 0 -7px;
-  }
-}
-@media (prefers-reduced-motion: no-preference) {
-  .company-motion[data-motion-ready] .company-motion-toggle {
-    display: block;
-    margin: 20px 0 12px auto;
-    padding: 8px 12px;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    background: var(--paper);
-    color: var(--ink);
-    cursor: pointer;
-    font-size: 13px;
-  }
-  .leadership-heading,
-  .leadership-card,
-  .company-figures > .eyebrow,
-  .company-figures > h2,
-  .company-figures dl > div {
-    animation: company-gentle-float 5s ease-in-out infinite;
-  }
-  .leadership-card:nth-child(2),
-  .company-figures dl > div:nth-child(2) {
-    animation-delay: -1.6s;
-  }
-  .leadership-card:nth-child(3),
-  .company-figures dl > div:nth-child(3) {
-    animation-delay: -3.2s;
-  }
-  .company-figures dl > div:nth-child(4) {
-    animation-delay: -4s;
-  }
-  .company-motion-paused * {
-    animation-play-state: paused !important;
-  }
 }

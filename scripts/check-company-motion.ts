@@ -27,26 +27,21 @@ async function main() {
       await cards
         .first()
         .evaluate((el) => el.scrollIntoView({ block: "center" }));
-      await page.waitForFunction(
-        () =>
-          document
-            .querySelector(".company-motion-toggle")
-            ?.getAttribute("aria-pressed") === "false",
-      );
-      assert.equal(
-        await cards
-          .first()
-          .evaluate((el) => getComputedStyle(el).animationName),
-        "company-gentle-float",
-      );
-      const before = await cards
-        .first()
-        .evaluate((el) => getComputedStyle(el).translate);
-      await page.waitForTimeout(180);
-      assert.notEqual(
-        await cards.first().evaluate((el) => getComputedStyle(el).translate),
-        before,
-      );
+      for (const selector of [
+        ".leadership-card",
+        ".leadership-heading",
+        ".company-figures > h2",
+        ".company-figures dl > div",
+      ]) {
+        assert.equal(
+          await page
+            .locator(selector)
+            .first()
+            .evaluate((el) => getComputedStyle(el).animationName),
+          "none",
+        );
+      }
+      assert.equal(await page.locator(".company-motion-toggle").count(), 0);
       const counters = page.locator("[data-count-up]");
       await page.locator(".company-figures").scrollIntoViewIfNeeded();
       await page.waitForFunction(() =>
@@ -67,24 +62,6 @@ async function main() {
         path: `${output}/figures-${width}.png`,
         animations: "disabled",
       });
-      await page
-        .getByRole("button", { name: "Pause animations", exact: true })
-        .click();
-      assert.equal(
-        await cards
-          .first()
-          .evaluate((el) => getComputedStyle(el).animationPlayState),
-        "paused",
-      );
-      await page
-        .getByRole("button", { name: "Resume animations", exact: true })
-        .click();
-      assert.equal(
-        await cards
-          .first()
-          .evaluate((el) => getComputedStyle(el).animationPlayState),
-        "running",
-      );
       await page.emulateMedia({ reducedMotion: "reduce" });
       assert.equal(
         await cards
@@ -114,7 +91,7 @@ async function main() {
     assert.equal(await page.locator(".leadership-card").count(), 3);
     await page.close();
     console.log(
-      "PASS Company motion: floating cards, live count-up to source figures, pause/resume, reduced motion, no-JS and desktop/mobile overflow.",
+      "PASS Company motion: stationary cards/headings, live count-up to source figures, reduced motion, no-JS and desktop/mobile overflow.",
     );
   } finally {
     await browser.close();

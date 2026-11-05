@@ -1,17 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 /** Static source values stay available to assistive technology and without JS. */
 export default function CompanyMotion({ children }: { children: ReactNode }) {
   const root = useRef<HTMLDivElement>(null);
   const counted = useRef(new WeakSet<Element>());
-  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     const container = root.current;
     if (!container) return;
-    container.dataset.motionReady = "true";
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     const counters = [
       ...container.querySelectorAll<HTMLElement>("[data-count-up]"),
@@ -54,30 +52,17 @@ export default function CompanyMotion({ children }: { children: ReactNode }) {
       },
       { threshold: 0.7 },
     );
-    if (!paused && !preference.matches)
-      counters.forEach((el) => observer.observe(el));
+    if (!preference.matches) counters.forEach((el) => observer.observe(el));
     preference.addEventListener("change", finish);
     return () => {
-      delete container.dataset.motionReady;
       observer.disconnect();
       finish();
       preference.removeEventListener("change", finish);
     };
-  }, [paused]);
+  }, []);
 
   return (
-    <div
-      ref={root}
-      className={`company-motion${paused ? " company-motion-paused" : ""}`}
-    >
-      <button
-        type="button"
-        className="company-motion-toggle"
-        aria-pressed={paused}
-        onClick={() => setPaused(!paused)}
-      >
-        {paused ? "Resume animations" : "Pause animations"}
-      </button>
+    <div ref={root} className="company-motion">
       {children}
     </div>
   );

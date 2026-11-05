@@ -18,10 +18,10 @@ YAYBMT_TEST_URL=http://127.0.0.1:8080 node --import tsx scripts/check-team-secti
 
 The check covers 1440/768/390/320px layouts, genuine source data, exact images, natural display sizing/aspect ratio, a single H1, no fabricated links, reduced-motion hover, no-JavaScript content and horizontal overflow. It writes desktop/mobile screenshots to `artifacts/team-section/`, configurable with `YAYBMT_TEAM_SCREENSHOTS`. Parent runs this with the integrated font/paragraph changes and the normal build/export checks; no independent build was started during parallel editing.
 
-## Company floating and count-up motion
+## Company count-up motion
 
-Leadership cards and their section heading float by 7px over five-second staggered cycles. The track-record heading and four statistic panels use the same subtle movement. A keyboard-accessible Pause/Resume animations button controls the continuous movement and ends any running count-up.
+Floating motion was removed following client review. Leadership cards, section headings and track-record panels stay stationary; the previous subtle pointer hover styling remains. No pause/resume control is needed.
 
-The original figures (500+, 20+, 100+ and 7) are unchanged. Visible counters animate once, over 1.6 seconds, when each enters the viewport. Complete source values are server rendered and exposed once to screen readers; only the aria-hidden visual copy changes. Reduced-motion preferences disable floating/count-up and a preference change immediately restores the final values. JavaScript is only needed for count-up/pause; all content stays available without it, and the control is hidden until hydrated.
+The original figures (500+, 20+, 100+ and 7) are unchanged. Visible counters animate once, over 1.6 seconds, when entering the viewport. Complete source values are server rendered and exposed once to screen readers; only the aria-hidden visual copy changes. Reduced-motion preferences disable count-up and a preference change immediately restores the final values. All content stays available without JavaScript.
 
-`npm run test:company` checks actual motion/counting, pause/resume, live reduced motion, desktop/mobile overflow and no-JavaScript values. It is included in `test:browser`. This update also wraps the catalogue route's component in a prop-free Next page to satisfy the webpack route type checker; catalogue behavior and URLs are unchanged. In restricted environments where Turbopack cannot bind its local worker port, `npm run build -- --webpack` uses the same static-export configuration.
+`npm run test:company` checks stationary panels/headings, actual count-up, reduced motion, desktop/mobile overflow and no-JavaScript values. It is included in `test:browser`. The catalogue route uses a prop-free Next page wrapper to satisfy route type checking, preserving catalogue behavior and URLs. In restricted environments where Turbopack cannot bind its local worker port, use `npm run build -- --webpack`.
