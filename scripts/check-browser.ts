@@ -403,13 +403,9 @@ async function main() {
       .click();
     assert.ok(page.url().endsWith("/about-us/"));
     assert.equal(
-      await page.locator(".company-values-panels details").count(),
+      await page.locator(".company-values-cards article").count(),
       3,
     );
-    await page
-      .locator(".company-values-panels summary")
-      .filter({ hasText: /^Mission$/ })
-      .click();
     assert.ok(
       await page.getByText(/Our mission is to provide innovative/).isVisible(),
     );
