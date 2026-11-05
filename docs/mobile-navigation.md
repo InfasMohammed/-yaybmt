@@ -7,3 +7,5 @@ The mobile menu fills the viewport rather than opening a floating panel. Its roo
 Without JavaScript, native details/summary opens/closes the menu. Products and Brands remain regular links to complete static directories; JavaScript-only controls are not rendered. The native toggle stays above the full-screen panel in this fallback.
 
 Validation: static build and 406-route SEO audit passed. Five-width homepage checks verify main-menu links are absent from subviews, body scroll locking, brand/category access, Back/Close, Escape, desktop navigation and no-JavaScript fallback. Fresh root/Brands screenshots captured.
+
+The mobile panel and list explicitly disable flex wrapping so excess items cannot move into a second column. List items occupy the full available width and long names wrap. Only vertical list scrolling is enabled; horizontal overflow is disabled. A 360×400 regression check verifies all categories share one column, no horizontal overflow, the final category is reachable by vertical scrolling, Back remains visible and the page behind does not scroll.

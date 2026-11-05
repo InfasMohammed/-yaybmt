@@ -234,6 +234,49 @@ async function main() {
       }
       await context.close();
     }
+    const compact = await browser.newContext({
+      viewport: { width: 360, height: 400 },
+      reducedMotion: "reduce",
+    });
+    const compactPage = await compact.newPage();
+    await compactPage.goto(base + "/");
+    await compactPage.locator(".mobile-navigation > summary").click();
+    await compactPage.locator('[data-mobile-view="products"]').click();
+    const list = compactPage.locator(".mobile-menu-items");
+    assert.ok(
+      await list.evaluate((e) => e.scrollHeight > e.clientHeight),
+      "Short-screen category list should scroll vertically",
+    );
+    assert.ok(
+      await list.evaluate((e) => e.scrollWidth <= e.clientWidth),
+      "Category list must not overflow horizontally",
+    );
+    const boxes = await list.locator(":scope > a").evaluateAll((items) =>
+      items.map((item) => {
+        const r = item.getBoundingClientRect();
+        return { x: r.x, y: r.y, width: r.width };
+      }),
+    );
+    assert.ok(
+      boxes.every(
+        (box, index) =>
+          Math.abs(box.x - boxes[0].x) < 1 &&
+          (index === 0 || box.y > boxes[index - 1].y),
+      ),
+      "All categories must stay in one vertical column",
+    );
+    await list.locator(":scope > a").last().scrollIntoViewIfNeeded();
+    assert.ok(await list.evaluate((e) => e.scrollTop > 0));
+    assert.ok(
+      await compactPage
+        .getByRole("button", { name: "‹ Back", exact: true })
+        .isVisible(),
+    );
+    assert.equal(await compactPage.evaluate(() => window.scrollY), 0);
+    await compactPage.screenshot({
+      path: join(output, "mobile-products-scroll.png"),
+    });
+    await compact.close();
     const nojs = await browser.newContext({
       javaScriptEnabled: false,
       viewport: { width: 390, height: 844 },
