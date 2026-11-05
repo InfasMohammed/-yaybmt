@@ -365,7 +365,8 @@ async function main() {
     );
     await page.keyboard.press("Escape");
     await page.goto(base + "/");
-    assert.equal(await page.locator(".header-menu").count(), 0);
+    const menuToggle = page.locator(".mobile-navigation > summary");
+    if (await menuToggle.isVisible()) await menuToggle.click();
     const primaryNavigation = page.getByRole("navigation", {
       name: "Main navigation",
     });

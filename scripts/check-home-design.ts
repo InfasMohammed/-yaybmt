@@ -136,6 +136,40 @@ async function main() {
         );
       for (const p of welcome.paragraphs)
         assert.ok(await page.getByText(p, { exact: true }).isVisible());
+      if (width <= 650) {
+        const menu = page.locator(".mobile-navigation");
+        const toggle = menu.locator(":scope > summary");
+        assert.ok(await toggle.isVisible());
+        assert.equal(await menu.getAttribute("open"), null);
+        await toggle.click();
+        assert.ok(
+          await menu
+            .getByRole("link", { name: "Company", exact: true })
+            .isVisible(),
+        );
+        await menu
+          .locator(".nav-dropdown > summary")
+          .filter({ hasText: "Brands" })
+          .click();
+        assert.ok(
+          await menu
+            .getByRole("link", { name: "DAELIM", exact: true })
+            .isVisible(),
+        );
+        await page.keyboard.press("Escape");
+        assert.equal(await menu.locator(".nav-dropdown[open]").count(), 0);
+        await page.keyboard.press("Escape");
+        assert.equal(await menu.getAttribute("open"), null);
+        await toggle.click();
+        await page.locator("h1").click();
+        assert.equal(await menu.getAttribute("open"), null);
+      } else {
+        assert.ok(await page.locator(".desktop-navigation").isVisible());
+        assert.equal(
+          await page.locator(".mobile-navigation").isVisible(),
+          false,
+        );
+      }
       assert.equal(errors.length, 0, errors.join("\n"));
       if (width === 1440 || width === 390) {
         const name = width === 1440 ? "desktop" : "mobile";
@@ -151,6 +185,14 @@ async function main() {
       viewport: { width: 390, height: 844 },
     });
     const page = await nojs.newPage();
+    await page.goto(base + "/");
+    await page.locator(".mobile-navigation > summary").click();
+    await page
+      .locator(".mobile-navigation .nav-dropdown > summary")
+      .filter({ hasText: "Products" })
+      .click();
+    await page.getByRole("link", { name: "All products", exact: true }).click();
+    assert.ok(page.url().endsWith("/shop/"));
     await page.goto(base + "/");
     await page
       .getByRole("link", { name: "Explore the catalogue", exact: true })
