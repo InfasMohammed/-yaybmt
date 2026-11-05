@@ -49,3 +49,14 @@
     border-color: var(--copper);
   }
 }
+
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page .eyebrow,
+.about-page .leadership-section .leadership-heading {
+  text-align: center;
+}
+.about-page > .eyebrow {
+  max-width: none;
+}

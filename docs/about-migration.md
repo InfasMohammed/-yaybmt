@@ -31,3 +31,7 @@ Following the client's Al Fareed reference screenshot, the Company purpose/story
 ## About introduction card
 
 The four original Company introduction paragraphs now share a rounded white card with a light copper border. A restrained 550ms shake runs once on pointer hover or keyboard focus, then returns to rest; it is disabled for reduced motion. The card is a named keyboard-focusable region, its source copy and existing word reveal are preserved, and no animation hides static/no-JavaScript content. Mission/Vision/History, leadership and track-record panels do not inherit this shake.
+
+## Heading alignment
+
+The visible page title and breadcrumb now read “About Us”. The original /about-us/ URL, source SEO metadata and canonical remain unchanged. All H1/H2/H3 headings and eyebrow labels on this page are centred, including leadership and track record; introduction paragraphs remain left-aligned for readability.
