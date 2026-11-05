@@ -1,3 +1,4 @@
+import { TestimonialsSection } from "../components/ui/testimonials-section";
 import BrandMarquee from "../components/BrandMarquee";
 import ScrollRevealContentA from "../components/ui/scroll-reveal-content-a";
 import "./tailwind-home.css";
@@ -341,6 +342,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <TestimonialsSection />
       <section
         className="tw:relative tw:isolate tw:overflow-hidden tw:border-0 tw:border-y tw:border-solid tw:border-[#dedfd6] tw:bg-sand tw:py-14 tw:text-ink tw:md:py-16"
         aria-labelledby="home-enquiry-heading"

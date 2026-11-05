@@ -45,4 +45,5 @@ jobs:
             artifacts/industry-scroll/
             artifacts/brand-marquee/
             artifacts/brand-cloud/
+            artifacts/testimonials/
 # This workflow has no deployment job and no Firebase credentials.
