@@ -1,0 +1,51 @@
+.about-intro-card {
+  margin: 28px 0 48px;
+  padding: clamp(24px, 4vw, 48px);
+  border: 1px solid #a9634038;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 30px #25282706;
+  transform-origin: center;
+}
+.about-intro-card p {
+  margin: 0 0 20px;
+  color: #565c57;
+  font-size: 16px;
+  line-height: 1.85;
+}
+.about-intro-card p:last-child {
+  margin-bottom: 0;
+}
+.about-intro-card:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 4px;
+}
+@keyframes about-card-shake {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+  20% {
+    transform: translateX(-2px) rotate(-0.2deg);
+  }
+  40% {
+    transform: translateX(2px) rotate(0.2deg);
+  }
+  60% {
+    transform: translateX(-1px) rotate(-0.1deg);
+  }
+  80% {
+    transform: translateX(1px) rotate(0.1deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .about-intro-card:focus-visible {
+    animation: about-card-shake 550ms ease-in-out 1;
+  }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .about-intro-card:hover {
+    animation: about-card-shake 550ms ease-in-out 1;
+    border-color: var(--copper);
+  }
+}

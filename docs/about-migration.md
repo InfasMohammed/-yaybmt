@@ -27,3 +27,7 @@ The client rejected the earlier masonry/tilt treatment and supplied an Expandabl
 ## Mission, Vision and History cards
 
 Following the client's Al Fareed reference screenshot, the Company purpose/story accordion is replaced with three equal-height desktop cards. Each has a centred decorative line icon, heading, complete existing source paragraphs, rounded white frame, light copper border and restrained border/shadow hover. Cards stack at 760px and below. No floating or expanding motion is introduced; all text is visible without JavaScript and there are no truncated paragraphs. Original Company URL, page metadata and source copy are preserved.
+
+## About introduction card
+
+The four original Company introduction paragraphs now share a rounded white card with a light copper border. A restrained 550ms shake runs once on pointer hover or keyboard focus, then returns to rest; it is disabled for reduced motion. The card is a named keyboard-focusable region, its source copy and existing word reveal are preserved, and no animation hides static/no-JavaScript content. Mission/Vision/History, leadership and track-record panels do not inherit this shake.

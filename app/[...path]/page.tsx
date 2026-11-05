@@ -1,3 +1,4 @@
+import AboutIntroCard from "../../components/AboutIntroCard";
 import ParagraphMotion from "../../components/ParagraphMotion";
 import ContactSections from "../../components/ContactSections";
 import AboutSections from "../../components/AboutSections";
@@ -88,15 +89,19 @@ export default async function Page({
           <time dateTime={item.publishedAt}>{item.publishedAt}</time>
         </p>
       )}
-      {item.paragraphs.map((text, i) => (
-        <p key={i}>
-          {pathname === "/about-us/" || pathname === "/contact-us/" ? (
-            <ParagraphMotion text={text} />
-          ) : (
-            text
-          )}
-        </p>
-      ))}
+      {pathname === "/about-us/" ? (
+        <AboutIntroCard paragraphs={item.paragraphs} />
+      ) : (
+        item.paragraphs.map((text, i) => (
+          <p key={i}>
+            {pathname === "/contact-us/" ? (
+              <ParagraphMotion text={text} />
+            ) : (
+              text
+            )}
+          </p>
+        ))
+      )}
       {pathname === "/about-us/" && <AboutSections />}
       {item.bodyHtml && <ContentBody html={item.bodyHtml} />}{" "}
       {pathname === "/contact-us/" ? (
