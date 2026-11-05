@@ -215,7 +215,7 @@ async function main() {
           .click();
         assert.equal(await menu.getAttribute("open"), null);
         await toggle.click();
-        await page.keyboard.press("Escape");
+        await page.mouse.click(8, 250);
         assert.equal(await menu.getAttribute("open"), null);
       } else {
         assert.ok(await page.locator(".desktop-navigation").isVisible());
@@ -242,6 +242,16 @@ async function main() {
     await compactPage.goto(base + "/");
     await compactPage.locator(".mobile-navigation > summary").click();
     await compactPage.locator('[data-mobile-view="products"]').click();
+    const panelBox = await compactPage
+      .locator(".mobile-menu-panel")
+      .boundingBox();
+    assert.ok(
+      panelBox &&
+        panelBox.width < 360 &&
+        panelBox.y > 0 &&
+        panelBox.y + panelBox.height <= 400,
+      "Menu must float below the header and fit the viewport",
+    );
     const list = compactPage.locator(".mobile-menu-items");
     assert.ok(
       await list.evaluate((e) => e.scrollHeight > e.clientHeight),
