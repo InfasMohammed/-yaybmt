@@ -46,9 +46,9 @@
   object-fit: cover;
   border-radius: 12px;
 }
-@media (min-width: 1000px) and (min-height: 700px) and (prefers-reduced-motion: no-preference) {
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
   .industry-scroll[data-scroll-enhanced="true"] {
-    height: 240svh;
+    height: 300svh;
   }
   [data-scroll-enhanced="true"] .industry-scroll-frame {
     display: flex;
@@ -56,9 +56,9 @@
     justify-content: center;
     gap: 36px;
     position: sticky;
-    top: 60px;
-    height: calc(100svh - 80px);
-    min-height: 580px;
+    top: 20px;
+    height: calc(100svh - 40px);
+    min-height: 0;
   }
   [data-scroll-enhanced="true"] .industry-scroll-step {
     width: 43%;
@@ -67,12 +67,13 @@
     background: transparent;
   }
   [data-scroll-enhanced="true"] .industry-scroll-text {
-    transition: border-color 350ms ease;
+    position: relative;
+    border-color: #a9634030;
   }
   [data-scroll-enhanced="true"]
     .industry-scroll-step[data-active="true"]
     .industry-scroll-text {
-    border-color: var(--copper);
+    border-color: #a9634030;
   }
   [data-scroll-enhanced="true"] .industry-scroll-step img {
     position: absolute;
@@ -98,5 +99,34 @@
 @media (max-width: 760px) {
   .industry-scroll-frame {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+  [data-scroll-enhanced="true"] .industry-scroll-text::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 2px;
+    height: clamp(
+      0%,
+      calc(var(--industry-progress, 0%) - var(--step-offset)),
+      100%
+    );
+    background: var(--copper);
+  }
+}
+@media (min-width: 901px) and (max-height: 699px) {
+  [data-scroll-enhanced="true"] .industry-scroll-frame {
+    gap: 22px;
+  }
+  [data-scroll-enhanced="true"] .industry-scroll-text h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  [data-scroll-enhanced="true"] .industry-scroll-text p {
+    font-size: 14px;
+    line-height: 1.5;
   }
 }

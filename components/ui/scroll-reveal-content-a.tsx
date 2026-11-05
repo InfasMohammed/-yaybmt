@@ -1,6 +1,11 @@
 "use client";
 
-import { useRef, useState, useSyncExternalStore } from "react";
+import {
+  useRef,
+  useState,
+  useSyncExternalStore,
+  type CSSProperties,
+} from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import "../../app/industry-scroll.css";
 
@@ -10,8 +15,7 @@ export interface ItemContent {
   description: string;
   image: { url: string; width: number; height: number; alt: string };
 }
-const query =
-  "(min-width: 1000px) and (min-height: 700px) and (prefers-reduced-motion: no-preference)";
+const query = "(min-width: 901px) and (prefers-reduced-motion: no-preference)";
 const subscribe = (callback: () => void) => {
   const media = window.matchMedia(query);
   media.addEventListener("change", callback);
@@ -38,6 +42,7 @@ export default function ScrollRevealContentA({
     offset: ["start start", "end end"],
   });
   useMotionValueEvent(scrollYProgress, "change", (value) => {
+    ref.current?.style.setProperty("--industry-progress", `${value * 300}%`);
     const next = Math.min(2, Math.max(0, Math.floor(value * 3)));
     setActive((current) => (current === next ? current : next));
   });
@@ -54,6 +59,7 @@ export default function ScrollRevealContentA({
             id={item.id}
             key={item.id}
             className="industry-scroll-step"
+            style={{ "--step-offset": `${index * 100}%` } as CSSProperties}
             data-active={active === index ? "true" : "false"}
           >
             <div className="industry-scroll-copy">

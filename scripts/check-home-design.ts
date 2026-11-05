@@ -233,7 +233,7 @@ async function main() {
       await context.close();
     }
     const motionContext = await browser.newContext({
-      viewport: { width: 1440, height: 1000 },
+      viewport: { width: 1366, height: 600 },
       reducedMotion: "no-preference",
     });
     const motionPage = await motionContext.newPage();
@@ -263,6 +263,13 @@ async function main() {
           document.querySelector('.industry-scroll-step[data-active="true"] h3')
             ?.textContent === expected,
         expected,
+      );
+      const pinned = await industrySection
+        .locator(".industry-scroll-frame")
+        .boundingBox();
+      assert.ok(
+        pinned && Math.abs(pinned.y - 20) < 2,
+        "Industry content stays pinned in a short laptop viewport",
       );
     }
     await motionPage.emulateMedia({ reducedMotion: "reduce" });
