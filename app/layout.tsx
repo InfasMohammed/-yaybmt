@@ -111,7 +111,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <a href="/contact-us/">Contact</a>
           </nav>
           <div className="footer-note footer-bottom">
-            <p>YAYBMT · Review edition</p>
+            <p>
+              © 2026{" "}
+              <strong>Yusuf Al Yousfi Building Materials Trading LLC</strong>.
+              All rights reserved.
+            </p>
             <a
               className="powered-by"
               href="https://maneuver.ae/"
