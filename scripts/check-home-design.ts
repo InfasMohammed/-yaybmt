@@ -122,7 +122,13 @@ async function main() {
       );
       for (const b of brands)
         assert.equal(
-          await page.locator('main a[href="/brand/' + b.slug + '/"]').count(),
+          await page
+            .locator(
+              'main a[href="/brand/' +
+                b.slug +
+                '/"]:not(.brand-marquee-copy a)',
+            )
+            .count(),
           1,
         );
       for (const c of categories.filter((c) => categoryImages[c.slug]))
@@ -255,18 +261,24 @@ async function main() {
       await brandTrack.evaluate((el) => getComputedStyle(el).transform),
       brandTransform,
     );
-    await motionPage
-      .getByRole("button", { name: "Pause brand scrolling", exact: true })
-      .click();
+    const direction = await brandTrack.evaluate((el, previous) => {
+      const before = new DOMMatrixReadOnly(previous);
+      const after = new DOMMatrixReadOnly(getComputedStyle(el).transform);
+      return after.e < before.e && after.f === 0;
+    }, brandTransform);
+    assert.ok(
+      direction,
+      "Brand logos roll right to left without vertical movement",
+    );
+    assert.equal(await brandMarquee.locator("button").count(), 0);
+    await brandMarquee.locator(".brand-marquee-window").hover();
     assert.equal(
       await brandTrack.evaluate(
         (el) => getComputedStyle(el).animationPlayState,
       ),
       "paused",
     );
-    await motionPage
-      .getByRole("button", { name: "Resume brand scrolling", exact: true })
-      .click();
+    await motionPage.mouse.move(0, 0);
     assert.equal(
       await brandTrack.evaluate(
         (el) => getComputedStyle(el).animationPlayState,
@@ -274,17 +286,22 @@ async function main() {
       "running",
     );
     await brandMarquee.locator("a").first().focus();
+    await motionPage.keyboard.press("Tab");
     assert.equal(
       await brandTrack.evaluate((el) => getComputedStyle(el).animationName),
       "none",
     );
     assert.equal(
-      await brandMarquee.locator(".brand-marquee-copy a").count(),
-      0,
+      await brandMarquee
+        .locator(".brand-marquee-copy a")
+        .evaluateAll((links) =>
+          links.every((link) => link.getAttribute("tabindex") === "-1"),
+        ),
+      true,
     );
-    await motionPage
-      .getByRole("button", { name: "Pause brand scrolling", exact: true })
-      .focus();
+    await motionPage.evaluate(() =>
+      (document.activeElement as HTMLElement)?.blur(),
+    );
     const industrySection = motionPage.locator(".industry-scroll");
     await motionPage.waitForFunction(
       () =>

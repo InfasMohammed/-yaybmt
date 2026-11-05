@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useSyncExternalStore } from "react";
 import { brands } from "../data/brands";
 import { brandLogos } from "../data/brand-logos";
 import "../app/brand-marquee.css";
@@ -12,7 +12,6 @@ const logoBrands = brands.filter((brand) => brandLogos[brand.slug]);
 
 export default function BrandMarquee() {
   const ready = useSyncExternalStore(subscribe, clientSnapshot, serverSnapshot);
-  const [paused, setPaused] = useState(false);
   const items = (duplicate: boolean) =>
     logoBrands.map((brand) => {
       const logo = brandLogos[brand.slug];
@@ -33,9 +32,15 @@ export default function BrandMarquee() {
         </>
       );
       return duplicate ? (
-        <div className="brand-marquee-card" key={brand.slug}>
+        <a
+          className="brand-marquee-card"
+          href={`/brand/${brand.slug}/`}
+          tabIndex={-1}
+          onMouseDown={(event) => event.preventDefault()}
+          key={brand.slug}
+        >
           {content}
-        </div>
+        </a>
       ) : (
         <a
           className="brand-marquee-card"
@@ -51,29 +56,18 @@ export default function BrandMarquee() {
       );
     });
   return (
-    <div className="brand-marquee" data-ready={ready} data-paused={paused}>
+    <div className="brand-marquee" data-ready={ready}>
       <div className="brand-marquee-window">
         <div className="brand-marquee-track">
           <div className="brand-marquee-group">{items(false)}</div>
           <div
             className="brand-marquee-group brand-marquee-copy"
             aria-hidden="true"
-            inert
           >
             {items(true)}
           </div>
         </div>
       </div>
-      {ready && (
-        <button
-          className="brand-marquee-toggle"
-          type="button"
-          aria-pressed={paused}
-          onClick={() => setPaused((value) => !value)}
-        >
-          {paused ? "Resume brand scrolling" : "Pause brand scrolling"}
-        </button>
-      )}
     </div>
   );
 }
