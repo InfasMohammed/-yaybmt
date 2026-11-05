@@ -20,7 +20,7 @@ async function main() {
       const errors: string[] = [];
       page.on("pageerror", (error) => errors.push(error.message));
       await page.goto(base + "/about-us/");
-      const gallery = page.locator(".showroom-masonry");
+      const gallery = page.locator(".showroom-expandable-strip");
       await gallery.scrollIntoViewIfNeeded();
       assert.equal(await gallery.locator("a").count(), 6);
       for (let index = 0; index < 6; index++) {
@@ -43,26 +43,54 @@ async function main() {
         false,
       );
       if (width === 1440) {
-        const frame = gallery.locator(".showroom-masonry-item").first();
-        await frame.evaluate((el) => el.scrollIntoView({ block: "center" }));
-        const box = await frame.boundingBox();
-        assert.ok(box);
-        await page.mouse.move(box.x + box.width * 0.8, box.y + 35);
-        await page.waitForTimeout(150);
-        assert.notEqual(
-          await frame
-            .locator(".showroom-masonry-tilt")
-            .evaluate((el) => getComputedStyle(el).transform),
-          "none",
-        );
+        const photo = gallery.locator("a").first();
+        const before = (await photo.boundingBox())!.width;
+        await photo.hover();
+        await page.waitForTimeout(600);
+        assert.ok((await photo.boundingBox())!.width > before * 1.5);
       }
+      await gallery.locator("a").first().click();
+      const viewer = page.getByRole("dialog", {
+        name: "Showroom image viewer",
+      });
+      await viewer.waitFor({ state: "visible" });
+      assert.equal(
+        await viewer.locator("img").getAttribute("src"),
+        aboutImages.gallery[0].originalSrc,
+      );
+      await page
+        .getByRole("button", { name: "Next image", exact: true })
+        .click();
+      assert.equal(
+        await viewer.locator("img").getAttribute("src"),
+        aboutImages.gallery[1].originalSrc,
+      );
+      await page.keyboard.press("ArrowLeft");
+      assert.equal(
+        await viewer.locator("img").getAttribute("src"),
+        aboutImages.gallery[0].originalSrc,
+      );
+      await page.keyboard.press("ArrowLeft");
+      assert.equal(
+        await viewer.locator("img").getAttribute("src"),
+        aboutImages.gallery[5].originalSrc,
+      );
+      await page.keyboard.press("Escape");
+      await viewer.waitFor({ state: "hidden" });
+      assert.equal(
+        await gallery
+          .locator("a")
+          .first()
+          .evaluate((el) => el === document.activeElement),
+        true,
+      );
       await page.emulateMedia({ reducedMotion: "reduce" });
       assert.equal(
         await gallery
-          .locator(".showroom-masonry-tilt")
+          .locator("a")
           .first()
-          .evaluate((el) => getComputedStyle(el).transform),
-        "none",
+          .evaluate((el) => getComputedStyle(el).transitionDuration),
+        "0s",
       );
       if (width === 1440 || width === 390)
         await gallery.screenshot({
@@ -76,18 +104,18 @@ async function main() {
       viewport: { width: 320, height: 1000 },
     });
     await page.goto(base + "/about-us/");
-    assert.equal(await page.locator(".showroom-masonry a").count(), 6);
+    assert.equal(await page.locator(".showroom-expandable-strip a").count(), 6);
     assert.equal(
       await page
-        .locator(".showroom-masonry img")
+        .locator(".showroom-expandable-strip img")
         .first()
         .evaluate((el) => getComputedStyle(el).opacity),
       "1",
     );
-    await page.locator(".showroom-masonry a").first().click();
+    await page.locator(".showroom-expandable-strip a").first().click();
     assert.ok(page.url().endsWith(aboutImages.gallery[0].originalSrc));
     console.log(
-      "PASS showroom masonry: original local photos/links, responsive columns, desktop pointer tilt, reduced motion, no-JS navigation and no overflow.",
+      "PASS expandable showroom gallery: local photos, desktop expansion, mobile grid, modal next/previous/wraparound/Escape/focus return, reduced motion and no-JS links.",
     );
   } finally {
     await browser.close();

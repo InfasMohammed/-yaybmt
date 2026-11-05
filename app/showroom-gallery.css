@@ -1,57 +1,159 @@
-.showroom-masonry {
-  columns: 3;
-  column-gap: 20px;
+.showroom-expandable-strip {
+  display: flex;
+  gap: 12px;
+  height: 390px;
+  width: 100%;
 }
-.showroom-masonry-item {
-  break-inside: avoid;
-  margin: 0 0 20px;
-  padding: 5px;
-  perspective: 1000px;
-}
-.showroom-masonry-tilt {
-  transform-style: preserve-3d;
-}
-.showroom-masonry-photo {
+.showroom-expandable-photo {
+  position: relative;
   display: block;
+  flex: 1;
+  min-width: 0;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: white;
-  box-shadow: 0 5px 18px #2528270d;
+  background: var(--ink);
 }
-.showroom-masonry-photo img {
+.showroom-expandable-photo img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
-.showroom-masonry-photo:focus-visible {
+.showroom-expandable-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0003;
+  pointer-events: none;
+}
+.showroom-expandable-photo:focus-visible {
   outline: 3px solid var(--copper);
   outline-offset: 4px;
 }
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .showroom-masonry-photo {
-    transition:
-      box-shadow 250ms ease,
-      border-color 250ms ease;
+.showroom-viewer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 60px 64px;
+  border: 0;
+  background: #171b19f5;
+  color: white;
+  overflow: hidden;
+}
+.showroom-viewer::backdrop {
+  background: #171b19;
+}
+.showroom-viewer[open] {
+  display: grid;
+  place-items: center;
+}
+.showroom-viewer-content {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  pointer-events: none;
+}
+.showroom-viewer-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: auto;
+}
+.showroom-viewer button {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid #ffffff66;
+  border-radius: 50%;
+  background: #171b19cc;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+.showroom-viewer button:focus-visible {
+  outline: 3px solid var(--copper);
+  outline-offset: 3px;
+}
+.showroom-viewer-close {
+  top: 12px;
+  right: 16px;
+}
+.showroom-viewer-prev {
+  left: 8px;
+  top: calc(50% - 24px);
+}
+.showroom-viewer-next {
+  right: 8px;
+  top: calc(50% - 24px);
+}
+.showroom-viewer-counter {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: white;
+}
+body:has(.showroom-viewer[open]) {
+  overflow: hidden;
+}
+@media (min-width: 901px) and (hover: hover) {
+  .showroom-expandable-strip:has(.showroom-expandable-photo:hover)
+    .showroom-expandable-photo:not(:hover):not(:focus-visible) {
+    flex: 0.65;
   }
-  .showroom-masonry-photo:hover {
-    border-color: var(--copper);
-    box-shadow: 0 12px 26px #2528271a;
+  .showroom-expandable-strip .showroom-expandable-photo:hover,
+  .showroom-expandable-strip .showroom-expandable-photo:focus-visible {
+    flex: 3;
+  }
+  .showroom-expandable-photo:hover::after,
+  .showroom-expandable-photo:focus-visible::after {
+    background: transparent;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .showroom-expandable-photo {
+    transition: flex 500ms ease-in-out;
+  }
+  .showroom-expandable-photo::after {
+    transition: background 300ms ease;
+  }
+  .showroom-viewer[open] .showroom-viewer-image {
+    animation: showroom-viewer-enter 200ms ease-out;
+  }
+  @keyframes showroom-viewer-enter {
+    from {
+      opacity: 0.5;
+      scale: 0.98;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
   }
 }
 @media (max-width: 900px) {
-  .showroom-masonry {
-    columns: 2;
+  .showroom-expandable-strip {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: auto;
   }
-}
-@media (max-width: 650px) {
-  .showroom-masonry {
-    columns: 1;
+  .showroom-expandable-photo {
+    aspect-ratio: 4 / 3;
   }
-}
-@media (prefers-reduced-motion: reduce) {
-  .showroom-masonry-item div {
-    transform: none !important;
-    opacity: 1 !important;
+  .showroom-expandable-photo::after {
+    background: transparent;
+  }
+  .showroom-viewer {
+    padding: 68px 56px;
   }
 }
