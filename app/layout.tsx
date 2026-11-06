@@ -1,6 +1,6 @@
 import { categories } from "../data/categories";
 import { brands } from "../data/brands";
-import { cataloguePDF } from "../lib/catalogue-file";
+import SiteFooter from "../components/SiteFooter";
 import PageScrollAnimation from "../components/ui/page-scroll-animation";
 import HeaderMenu from "../components/HeaderMenu";
 import "./globals.css";
@@ -70,70 +70,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </header>
         <PageScrollAnimation />
         {children}
-        <footer id="contact">
-          <div>
-            <img
-              className="logo"
-              src="/images/logo-footer-original.png"
-              alt="Yusuf Al Yousfi Building Materials Trading LLC"
-            />
-            <p>
-              Building connections.
-              <br />
-              Supplying possibilities.
-            </p>
-          </div>
-          <div>
-            <h2>Let’s talk about your project.</h2>
-            <a href={whatsapp()}>WhatsApp {contacts.whatsapp}</a>
-            <a href={contacts.telephoneHref}>{contacts.telephone}</a>
-            <a href={contacts.maps}>{contacts.location}</a>
-          </div>
-          <div className="social">
-            <a aria-label="Instagram" href={contacts.instagram}>
-              <img src="/images/icons/instagram.svg" alt="" />
-            </a>
-            <a aria-label="Facebook" href={contacts.facebook}>
-              <img src="/images/icons/facebook.svg" alt="" />
-            </a>
-            <a aria-label="LinkedIn" href={contacts.linkedin}>
-              <img src="/images/icons/linkedin.svg" alt="" />
-            </a>
-          </div>
-          <nav className="footer-navigation" aria-label="Footer navigation">
-            <a href="/shop/">Catalogue</a>
-            <a href={cataloguePDF.href} download={cataloguePDF.filename}>
-              Original catalogue (PDF)
-            </a>
-            <a href="/brands/">Brands</a>
-            <a href="/categories/">Categories</a>
-            <a href="/brand/marine-locks/">Marine locks</a>
-            <a href="/about-us/">Company</a>
-            <a href="/blog/">Articles</a>
-            <a href="/contact-us/">Contact</a>
-          </nav>
-          <div className="footer-note footer-bottom">
-            <p>
-              © 2026{" "}
-              <strong>Yusuf Al Yousfi Building Materials Trading LLC</strong>.
-              All rights reserved.
-            </p>
-            <a
-              className="powered-by"
-              href="https://maneuver.ae/"
-              aria-label="Powered by Maneuver"
-            >
-              <span>Powered by</span>
-              <img
-                src="/images/maneuver-logo-white.png"
-                alt="Maneuver"
-                width="600"
-                height="139"
-                loading="lazy"
-              />
-            </a>
-          </div>
-        </footer>
+        <SiteFooter />
         <a
           className="floating"
           href={whatsapp()}
