@@ -7,3 +7,5 @@ Homepage and inner-page controllers use identical motion. Paragraphs remain stat
 Reduced-motion/no-JavaScript content is visible; keyboard focus reveals targets immediately; new filter results are discovered. Forms, navigation, gallery controls and all text/URLs remain intact.
 
 Checks: static build, SEO export audit, home-drop/page-scroll/paragraph/testimonial browser scripts. Existing script names/data attributes are retained for compatibility; their assertions now verify subtle reveals rather than large falls.
+
+Page navigation also uses native cross-document view transitions: 180ms fade-out and 240ms fade-in, without position/scale changes or scroll interception. It is enabled only for no-preference motion settings. Reduced-motion and unsupported browsers use normal native navigation. No router, loading overlay, JavaScript dependency or URL changes. Browser checks confirm a real cross-document transition at desktop/mobile widths, reduced-motion opt-out and working no-JavaScript page links.
