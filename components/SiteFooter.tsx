@@ -22,7 +22,7 @@ const footerCategories = categorySlugs.map((slug) =>
 export default function SiteFooter() {
   return (
     <footer id="contact" className="site-footer">
-      <div className="footer-identity">
+      <div className="footer-top">
         <a href="/" aria-label="YAYBMT home">
           <img
             className="logo"
@@ -30,6 +30,17 @@ export default function SiteFooter() {
             alt="Yusuf Al Yousfi Building Materials Trading LLC"
           />
         </a>
+        <nav className="footer-navigation" aria-label="Footer navigation">
+          <a href="/">Home</a>
+          <a href="/shop/">Catalogue</a>
+          <a href="/brands/">Brands</a>
+          <a href="/about-us/">Company</a>
+          <a href="/blog/">Articles</a>
+          <a href="/contact-us/">Contact</a>
+        </nav>
+      </div>
+      <div className="footer-identity footer-column">
+        <h2>Our company</h2>
         <p>
           Marine hardware, sanitary fittings and building materials in Deira,
           Dubai. Serving our customers since 2004.
@@ -46,21 +57,6 @@ export default function SiteFooter() {
           ))}
         </div>
       </div>
-      <nav
-        className="footer-navigation footer-column"
-        aria-labelledby="footer-links-heading"
-      >
-        <h2 id="footer-links-heading">Quick links</h2>
-        <a href="/">Home</a>
-        <a href="/shop/">Catalogue</a>
-        <a href="/brands/">Brands</a>
-        <a href="/about-us/">Company</a>
-        <a href="/blog/">Articles</a>
-        <a href="/contact-us/">Contact</a>
-        <a href={cataloguePDF.href} download={cataloguePDF.filename}>
-          Original catalogue (PDF)
-        </a>
-      </nav>
       <nav
         className="footer-categories footer-column"
         aria-labelledby="footer-categories-heading"
@@ -137,6 +133,9 @@ export default function SiteFooter() {
           >
             <path d="M6 18 18 6M6 6h12v12" />
           </svg>
+        </a>
+        <a href={cataloguePDF.href} download={cataloguePDF.filename}>
+          Original catalogue (PDF)
         </a>
       </div>
       <div className="footer-note footer-bottom">

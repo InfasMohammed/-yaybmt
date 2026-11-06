@@ -1,7 +1,9 @@
-# Shared footer
+# Architectural footer
 
-The reference informs the content hierarchy, while YAYBMT uses its own three-column identity/navigation/contact layout above an inline category rail: original white logo and factual business summary/social icons, quick links, product categories and inline contact icons. Charcoal/off-white/copper styling, Maneuver credit and copyright remain. Eight populated top-level categories cover marine furniture/hardware fittings, CP fittings, fasteners, general hardware, industrial pipe fittings, PPR/UPVC fittings and abrasives. Names and routes come from typed local categories; no keyword lists or alternate URLs are introduced.
+User selected option 3, the Laviza architectural reference, from the internet shortlist. YAYBMT adapts its horizontal logo/navigation masthead, fine divider lines and spacious column layout to charcoal, off-white and copper. Original white logo, confirmed contact/social links, copyright and Maneuver credit are retained. There is no newsletter or email form.
 
-Native links render on every exported page without JavaScript. Mobile places quick links and contacts side by side, with identity and the wrapping category rail spanning the width. Contacts retain confirmed phone/WhatsApp/Maps details; enquiries remain WhatsApp-only.
+Below the masthead, Our company, Product categories and Get in touch form three desktop columns. Eight populated core category links resolve to their existing source URLs. Mobile stacks the masthead/company introduction and places category/contact columns side by side. No chip rail or copied reference content remains.
 
-Checks: static build, 406-route SEO export audit, scripts/check-footer.ts (eight category destinations return 200, four responsive widths, local original logo, three social links, no-JavaScript navigation). Screenshots: artifacts/footer/.
+Checks: npm run build -- --webpack; npm run check:export; node --import tsx scripts/check-footer.ts (eight category destinations return 200, four responsive widths, original logo/social links, no-JavaScript links). Fresh screenshots: artifacts/footer/.
+
+Reference: https://themeforest.net/item/laviza-modern-architecture-interior-design-template-kit/36623450
