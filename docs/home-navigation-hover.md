@@ -1,0 +1,7 @@
+# Supplied homepage navigation hover
+
+The supplied menu-hover-effects component is adapted in components/ui/menu-hover-effects.tsx. Its two animated border lines and scaling background-fill layers wrap real header navigation labels, including Products/Brands controls and their real submenu links. The source's demo Home/About/Services/Team/Portfolio/Contact # links and full-screen white nav background are excluded. Original routes and existing HeaderMenu dropdown/outside-click/Escape/mobile Back behavior remain intact. Native links/details keep no-JavaScript navigation available.
+
+Effects are scoped to the homepage. The original white logo and white navigation remain directly over the photograph. Hover/focus uses an off-white fill with dark text for legibility over the hero, adapting the source's inverted black/white treatment. On open dropdowns the trigger remains highlighted. The three mobile hamburger lines morph into a close mark when the native details opens. Motion uses the source's 300ms border/fill timings and is disabled under reduced motion; keyboard focus gets the same visible treatment. Accessible labels retain readable original casing while visual labels use the supplied uppercase style. Other pages retain their header appearance.
+
+TypeScript, components/ui and Tailwind already exist. The component reuses scoped CSS to work with the project's prefixed Tailwind setup and needs no new packages or UI scaffold.
