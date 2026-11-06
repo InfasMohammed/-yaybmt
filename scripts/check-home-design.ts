@@ -246,22 +246,11 @@ async function main() {
     await motionPage.goto(base + "/");
     await motionPage.waitForLoadState("networkidle");
     const brandAssembly = motionPage.locator(".brand-scroll");
-    await motionPage.waitForFunction(
-      () =>
-        document.querySelector(".brand-scroll")?.getAttribute("data-motion") ===
-        "scroll",
-    );
     const firstLogo = brandAssembly.locator("img").first();
-    const before = await firstLogo.evaluate(
-      (el) => getComputedStyle(el).transform,
-    );
-    await brandAssembly.evaluate((el) =>
-      el.scrollIntoView({ block: "center" }),
-    );
-    await motionPage.waitForTimeout(1200);
-    assert.notEqual(
+    assert.equal(await brandAssembly.getAttribute("data-motion"), "static");
+    assert.equal(
       await firstLogo.evaluate((el) => getComputedStyle(el).transform),
-      before,
+      "none",
     );
     assert.equal(await brandAssembly.locator("a").count(), 7);
     assert.equal(await brandAssembly.locator("button").count(), 0);

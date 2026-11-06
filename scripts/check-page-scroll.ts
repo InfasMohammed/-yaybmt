@@ -7,15 +7,15 @@ async function main() {
     args: ["--no-sandbox"],
   });
   const base = process.env.YAYBMT_TEST_URL || "http://127.0.0.1:8103";
-  mkdirSync("artifacts/page-scroll", { recursive: true });
+  mkdirSync("artifacts/page-drop", { recursive: true });
   try {
     for (const width of [1440, 390]) {
       const page = await browser.newPage({
-        viewport: { width, height: 900 },
+        viewport: { width, height: 800 },
         reducedMotion: "no-preference",
       });
       const errors: string[] = [];
-      page.on("pageerror", (error) => errors.push(error.message));
+      page.on("pageerror", (e) => errors.push(e.message));
       for (const route of [
         "/shop/",
         "/brands/",
@@ -25,60 +25,72 @@ async function main() {
         "/blog/",
         "/product/dc-102/",
       ]) {
+        console.log(width, route);
         await page.goto(base + route);
-        await page.waitForFunction(() =>
-          document.querySelector("[data-page-scroll]"),
-        );
-        await page.waitForLoadState("networkidle");
+        await page.waitForSelector("[data-page-drop]", { state: "attached" });
+        // Hidden targets keep their geometry, so scroll directly instead of waiting for actionability.
+        const pending = page.locator("[data-page-drop]").last();
         if (
-          route === "/shop/" ||
-          route === "/brands/" ||
-          route === "/about-us/"
+          (await pending.count()) &&
+          (await pending.getAttribute("data-page-drop")) === "pending"
         ) {
-          assert.ok(
-            (await page.locator('[data-page-scroll="card"]').count()) > 0,
-            route + " cards animate",
+          assert.equal(
+            await pending.evaluate((el) => getComputedStyle(el).opacity),
+            "0",
           );
-          assert.ok(
-            (await page.locator('[data-page-scroll="image"]').count()) > 0,
-            route + " images animate",
+          await pending.evaluate((el) =>
+            el.scrollIntoView({ block: "center" }),
+          );
+          await page.waitForFunction(() =>
+            [...document.querySelectorAll('[data-page-drop="played"]')].some(
+              (el) =>
+                el
+                  .getAnimations()
+                  .some((a) =>
+                    a.effect
+                      ?.getKeyframes()
+                      .some((k) => String(k.translate).includes("-140px")),
+                  ),
+            ),
+          );
+          await page.waitForTimeout(1300);
+          assert.equal(
+            await pending.evaluate((el) => getComputedStyle(el).opacity),
+            "1",
+          );
+          assert.equal(
+            await pending.evaluate((el) => el.getAnimations().length),
+            0,
+          );
+          await page.evaluate(() => scrollTo(0, 0));
+          await pending.evaluate((el) =>
+            el.scrollIntoView({ block: "center" }),
+          );
+          assert.equal(
+            await pending.evaluate((el) => el.getAnimations().length),
+            0,
+            "does not replay",
           );
         }
-        const target = page.locator("[data-page-scroll]").last();
-        const before = await target.evaluate(
-          (el) => el.getAnimations()[0]?.currentTime,
-        );
-        await target.evaluate((el) => el.scrollIntoView({ block: "center" }));
-        await page.waitForTimeout(100);
-        const after = await target.evaluate(
-          (el) => el.getAnimations()[0]?.currentTime,
-        );
-        assert.ok(
-          Number(after) >= Number(before),
-          route + " assembles on scroll",
+        await page.emulateMedia({ reducedMotion: "reduce" });
+        await page.waitForFunction(() =>
+          [...document.querySelectorAll("[data-page-drop]")].every(
+            (el) => getComputedStyle(el).opacity === "1",
+          ),
         );
         assert.equal(
           await page.evaluate(
-            () => document.documentElement.scrollWidth <= innerWidth,
+            () => document.documentElement.scrollWidth > innerWidth,
           ),
-          true,
-          route + " no horizontal overflow",
+          false,
         );
-        await page.emulateMedia({ reducedMotion: "reduce" });
-        await page.waitForFunction(() =>
-          [...document.querySelectorAll("[data-page-scroll]")].every(
-            (el) => el.getAnimations().length === 0,
-          ),
-        );
+        if (route === "/brands/")
+          await page.screenshot({
+            path: `artifacts/page-drop/brands-${width}.png`,
+            fullPage: true,
+          });
         await page.emulateMedia({ reducedMotion: "no-preference" });
       }
-      await page.goto(base + "/brands/");
-      await page.locator(".logo-cloud").scrollIntoViewIfNeeded();
-      await page.waitForTimeout(300);
-      await page.screenshot({
-        path: `artifacts/page-scroll/brands-${width}.png`,
-        fullPage: true,
-      });
       assert.deepEqual(errors, []);
       await page.close();
     }
@@ -90,13 +102,13 @@ async function main() {
       "1",
     );
     console.log(
-      "PASS seven page types at desktop/mobile: scroll assembly, reduced-motion cancellation, no overflow/errors, no-JS catalogue.",
+      "PASS one-time downward fall on seven page types at desktop/mobile: hidden entry, 140px keyframes, settles once, reduced-motion restoration, no overflow/errors and no-JS visibility.",
     );
   } finally {
     await browser.close();
   }
 }
-main().catch((error) => {
-  console.error(error);
+main().catch((e) => {
+  console.error(e);
   process.exitCode = 1;
 });
