@@ -1,6 +1,7 @@
 import { categories } from "../data/categories";
 import { brands } from "../data/brands";
 import { cataloguePDF } from "../lib/catalogue-file";
+import PageScrollAnimation from "../components/ui/page-scroll-animation";
 import HeaderMenu from "../components/HeaderMenu";
 import "./globals.css";
 import { origin } from "../lib/site";
@@ -67,6 +68,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             brands={brands.map(({ slug, name }) => ({ slug, name }))}
           />
         </header>
+        <PageScrollAnimation />
         {children}
         <footer id="contact">
           <div>

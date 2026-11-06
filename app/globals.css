@@ -2222,3 +2222,8 @@ footer .powered-by {
   font-weight: 600;
   line-height: 1.45;
 }
+
+/* Scroll-assembly fan-out must never create sideways page scrolling. */
+body {
+  overflow-x: clip;
+}
