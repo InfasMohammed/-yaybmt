@@ -2227,3 +2227,9 @@ footer .powered-by {
 body {
   overflow-x: clip;
 }
+html {
+  overflow-x: clip;
+}
+.page {
+  overflow-x: clip;
+}

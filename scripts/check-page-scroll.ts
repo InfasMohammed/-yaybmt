@@ -29,6 +29,21 @@ async function main() {
         await page.waitForFunction(() =>
           document.querySelector("[data-page-scroll]"),
         );
+        await page.waitForLoadState("networkidle");
+        if (
+          route === "/shop/" ||
+          route === "/brands/" ||
+          route === "/about-us/"
+        ) {
+          assert.ok(
+            (await page.locator('[data-page-scroll="card"]').count()) > 0,
+            route + " cards animate",
+          );
+          assert.ok(
+            (await page.locator('[data-page-scroll="image"]').count()) > 0,
+            route + " images animate",
+          );
+        }
         const target = page.locator("[data-page-scroll]").last();
         const before = await target.evaluate(
           (el) => el.getAnimations()[0]?.currentTime,
