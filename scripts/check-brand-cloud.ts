@@ -55,6 +55,24 @@ async function main() {
       }
       assert.equal(await cloud.locator(".distributor-note").count(), 1);
       assert.equal(
+        await cloud
+          .locator(".distributor-note")
+          .evaluate((el) => el.closest("a")),
+        null,
+      );
+      assert.equal(
+        await cloud
+          .locator(".distributor-note")
+          .evaluate((el) => getComputedStyle(el).backgroundColor),
+        "rgba(0, 0, 0, 0)",
+      );
+      assert.equal(
+        await cloud
+          .locator(".distributor-note")
+          .evaluate((el) => getComputedStyle(el).borderTopWidth),
+        "0px",
+      );
+      assert.equal(
         await page.evaluate(
           () => document.documentElement.scrollWidth > innerWidth,
         ),
@@ -108,7 +126,7 @@ async function main() {
     await page.locator(".logo-cloud a").first().click();
     await page.waitForURL("**/brand/bn-cosmo/");
     console.log(
-      "PASS brand LogoCloud: nine original links, seven local logos, two text-only brands, KOPAT badge, responsive layouts, pointer effects, reduced motion, focus and no-JS navigation.",
+      "PASS brand LogoCloud: nine original links, seven local logos, two text-only brands, plain non-link KOPAT note, responsive layouts, pointer effects, reduced motion, focus and no-JS navigation.",
     );
   } finally {
     await browser.close();

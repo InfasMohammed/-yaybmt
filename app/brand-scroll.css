@@ -63,3 +63,17 @@
     transform: none !important;
   }
 }
+.brand-scroll-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+.brand-scroll-link:focus-visible {
+  outline: 2px solid #8c4d2d;
+  outline-offset: 3px;
+}
+.brand-scroll-card .distributor-note {
+  font-size: 10px;
+}
