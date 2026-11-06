@@ -7,7 +7,7 @@
     "build": "next build",
     "typecheck": "next typegen && tsc --noEmit",
     "preview": "python3 scripts/serve-export.py",
-    "test:browser": "node --import tsx scripts/check-browser.ts && node --import tsx scripts/check-drawings-browser.ts && npm run test:home && npm run test:paragraphs && npm run test:team && npm run test:company && npm run test:gallery && npm run test:brands && npm run test:testimonials && npm run test:menu",
+    "test:browser": "node --import tsx scripts/check-browser.ts && node --import tsx scripts/check-drawings-browser.ts && npm run test:home && npm run test:paragraphs && npm run test:team && npm run test:company && npm run test:gallery && npm run test:brands && npm run test:testimonials && npm run test:menu && npm run test:home-drop",
     "check:content": "node --import tsx scripts/check-content.ts",
     "check:export": "node --import tsx scripts/check-export.ts",
     "manifest": "node --import tsx scripts/generate-manifest.ts",
@@ -25,7 +25,8 @@
     "test:gallery": "node --import tsx scripts/check-showroom-gallery.ts",
     "test:brands": "node --import tsx scripts/check-brand-cloud.ts",
     "test:testimonials": "node --import tsx scripts/check-testimonials.ts",
-    "test:menu": "node --import tsx scripts/check-menu-hover.ts"
+    "test:menu": "node --import tsx scripts/check-menu-hover.ts",
+    "test:home-drop": "node --import tsx scripts/check-home-drop.ts"
   },
   "dependencies": {
     "motion": "12.40.0",

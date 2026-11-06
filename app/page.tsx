@@ -1,5 +1,5 @@
 import { TestimonialsSection } from "../components/ui/testimonials-section";
-import BrandMarquee from "../components/BrandMarquee";
+import ScrollLogoAssembly from "../components/ui/text-scroll-animation";
 import ScrollRevealContentA from "../components/ui/scroll-reveal-content-a";
 import "./tailwind-home.css";
 import HomeMotion from "../components/HomeMotion";
@@ -90,7 +90,7 @@ export default function Home() {
         />
         <div className={container}>
           <div className="tw:grid tw:gap-12 tw:lg:grid-cols-[1fr_250px] tw:lg:items-end">
-            <div>
+            <div className="hero-intro">
               <p className="tw:m-0 tw:flex tw:items-center tw:gap-3 tw:text-[10px] tw:font-bold tw:tracking-[0.22em] tw:text-copper-light">
                 <span
                   aria-hidden="true"
@@ -124,7 +124,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="tw:hidden tw:border-0 tw:border-l tw:border-solid tw:border-white/25 tw:pl-7 tw:lg:block">
+            <div className="hero-industry-links tw:hidden tw:border-0 tw:border-l tw:border-solid tw:border-white/25 tw:pl-7 tw:lg:block">
               <p className="tw:mt-0 tw:mb-6 tw:text-[9px] tw:tracking-[0.2em] tw:text-white/60">
                 BUILT AROUND YOUR INDUSTRY
               </p>
@@ -149,7 +149,10 @@ export default function Home() {
         aria-labelledby="home-brands-heading"
         className={container + " tw:relative tw:z-1 tw:-mt-12"}
       >
-        <div className="tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white tw:px-6 tw:py-7 tw:shadow-[0_16px_45px_-30px_rgba(37,40,39,0.3)] tw:md:px-9">
+        <div
+          data-home-reveal
+          className="tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white tw:px-6 tw:py-7 tw:shadow-[0_16px_45px_-30px_rgba(37,40,39,0.3)] tw:md:px-9"
+        >
           <div className="tw:mb-6 tw:flex tw:items-center tw:justify-between tw:gap-5">
             <h2
               id="home-brands-heading"
@@ -164,7 +167,7 @@ export default function Home() {
               View all <Arrow />
             </a>
           </div>
-          <BrandMarquee />
+          <ScrollLogoAssembly />
         </div>
       </section>
       <section
@@ -283,7 +286,10 @@ export default function Home() {
                 </a>
               ))}
           </div>
-          <div className="tw:mt-8 tw:flex tw:flex-wrap tw:items-center tw:justify-between tw:gap-x-8 tw:gap-y-2 tw:border-0 tw:border-t tw:border-solid tw:border-[#d1d1c6] tw:pt-5">
+          <div
+            data-home-reveal
+            className="tw:mt-8 tw:flex tw:flex-wrap tw:items-center tw:justify-between tw:gap-x-8 tw:gap-y-2 tw:border-0 tw:border-t tw:border-solid tw:border-[#d1d1c6] tw:pt-5"
+          >
             <p className="tw:m-0 tw:text-[13px] tw:text-muted">
               Looking for a particular product or model?
             </p>
@@ -322,7 +328,10 @@ export default function Home() {
           contentB={industryContent[1]}
           contentC={industryContent[2]}
         />
-        <div className="tw:mt-7 tw:flex tw:flex-wrap tw:items-center tw:justify-between tw:gap-4">
+        <div
+          data-home-reveal
+          className="tw:mt-7 tw:flex tw:flex-wrap tw:items-center tw:justify-between tw:gap-4"
+        >
           <p className="tw:m-0 tw:text-[13px] tw:text-muted">
             Explore our specialist marine ranges.
           </p>

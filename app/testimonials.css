@@ -217,3 +217,11 @@
     font-weight: 800;
   }
 }
+
+.testimonial-reveal-slot {
+  display: grid;
+  min-width: 0;
+}
+.testimonial-reveal-slot > .testimonial-card {
+  height: 100%;
+}

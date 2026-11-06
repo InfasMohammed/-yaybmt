@@ -6,7 +6,7 @@ import {
   useSyncExternalStore,
   type CSSProperties,
 } from "react";
-import { useMotionValueEvent, useScroll } from "motion/react";
+import { useMotionValueEvent, useScroll, useInView } from "motion/react";
 import "../../app/industry-scroll.css";
 
 export interface ItemContent {
@@ -35,6 +35,8 @@ export default function ScrollRevealContentA({
   contentC: ItemContent;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const frame = useRef<HTMLDivElement>(null);
+  const inView = useInView(frame, { once: true, amount: 0.5 });
   const enhanced = useSyncExternalStore(subscribe, snapshot, serverSnapshot);
   const [active, setActive] = useState(0);
   const { scrollYProgress } = useScroll({
@@ -51,9 +53,10 @@ export default function ScrollRevealContentA({
       ref={ref}
       className="industry-scroll"
       data-scroll-enhanced={enhanced ? "true" : "false"}
+      data-industry-in-view={inView}
       data-industry-grid
     >
-      <div className="industry-scroll-frame">
+      <div ref={frame} className="industry-scroll-frame">
         {[contentA, contentB, contentC].map((item, index) => (
           <article
             id={item.id}
@@ -72,6 +75,7 @@ export default function ScrollRevealContentA({
               </div>
             </div>
             <img
+              data-home-reveal-image
               src={item.image.url}
               alt={item.image.alt}
               width={item.image.width}

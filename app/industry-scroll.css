@@ -89,7 +89,9 @@
     transition: opacity 450ms ease;
     pointer-events: none;
   }
-  [data-scroll-enhanced="true"] .industry-scroll-step[data-active="true"] img {
+  [data-scroll-enhanced="true"][data-industry-in-view="true"]
+    .industry-scroll-step[data-active="true"]
+    img {
     opacity: 1;
   }
   [data-scroll-enhanced="true"] .industry-scroll-step[data-active="true"] h3 {
@@ -128,5 +130,31 @@
   [data-scroll-enhanced="true"] .industry-scroll-text p {
     font-size: 14px;
     line-height: 1.5;
+  }
+}
+
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+  [data-scroll-enhanced="true"][data-industry-in-view="true"]
+    .industry-scroll-step[data-active="true"]
+    img {
+    animation: industry-full-drop 950ms ease-out both;
+  }
+  @keyframes industry-full-drop {
+    0% {
+      opacity: 0;
+      translate: 0 -140px;
+    }
+    82% {
+      opacity: 1;
+      translate: 0 12px;
+    }
+    94% {
+      opacity: 1;
+      translate: 0 -4px;
+    }
+    100% {
+      opacity: 1;
+      translate: 0 0;
+    }
   }
 }

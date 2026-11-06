@@ -245,63 +245,26 @@ async function main() {
     const motionPage = await motionContext.newPage();
     await motionPage.goto(base + "/");
     await motionPage.waitForLoadState("networkidle");
-    const brandMarquee = motionPage.locator(".brand-marquee");
+    const brandAssembly = motionPage.locator(".brand-scroll");
     await motionPage.waitForFunction(
       () =>
-        document.querySelector(".brand-marquee")?.getAttribute("data-ready") ===
-        "true",
+        document.querySelector(".brand-scroll")?.getAttribute("data-motion") ===
+        "scroll",
     );
-    const brandTrack = brandMarquee.locator(".brand-marquee-track");
-    await motionPage.mouse.move(0, 0);
-    const brandTransform = await brandTrack.evaluate(
+    const firstLogo = brandAssembly.locator("img").first();
+    const before = await firstLogo.evaluate(
       (el) => getComputedStyle(el).transform,
     );
-    await motionPage.waitForTimeout(180);
+    await brandAssembly.evaluate((el) =>
+      el.scrollIntoView({ block: "center" }),
+    );
+    await motionPage.waitForTimeout(1200);
     assert.notEqual(
-      await brandTrack.evaluate((el) => getComputedStyle(el).transform),
-      brandTransform,
+      await firstLogo.evaluate((el) => getComputedStyle(el).transform),
+      before,
     );
-    const direction = await brandTrack.evaluate((el, previous) => {
-      const before = new DOMMatrixReadOnly(previous);
-      const after = new DOMMatrixReadOnly(getComputedStyle(el).transform);
-      return after.e < before.e && after.f === 0;
-    }, brandTransform);
-    assert.ok(
-      direction,
-      "Brand logos roll right to left without vertical movement",
-    );
-    assert.equal(await brandMarquee.locator("button").count(), 0);
-    await brandMarquee.locator(".brand-marquee-window").hover();
-    assert.equal(
-      await brandTrack.evaluate(
-        (el) => getComputedStyle(el).animationPlayState,
-      ),
-      "paused",
-    );
-    await motionPage.mouse.move(0, 0);
-    assert.equal(
-      await brandTrack.evaluate(
-        (el) => getComputedStyle(el).animationPlayState,
-      ),
-      "running",
-    );
-    await brandMarquee.locator("a").first().focus();
-    await motionPage.keyboard.press("Tab");
-    assert.equal(
-      await brandTrack.evaluate((el) => getComputedStyle(el).animationName),
-      "none",
-    );
-    assert.equal(
-      await brandMarquee
-        .locator(".brand-marquee-copy a")
-        .evaluateAll((links) =>
-          links.every((link) => link.getAttribute("tabindex") === "-1"),
-        ),
-      true,
-    );
-    await motionPage.evaluate(() =>
-      (document.activeElement as HTMLElement)?.blur(),
-    );
+    assert.equal(await brandAssembly.locator("a").count(), 7);
+    assert.equal(await brandAssembly.locator("button").count(), 0);
     const industrySection = motionPage.locator(".industry-scroll");
     await motionPage.waitForFunction(
       () =>
@@ -350,13 +313,14 @@ async function main() {
         ),
       true,
     );
-    assert.equal(
-      await brandTrack.evaluate((el) => getComputedStyle(el).animationName),
-      "none",
+    await motionPage.waitForFunction(
+      () =>
+        document.querySelector(".brand-scroll")?.getAttribute("data-motion") ===
+        "static",
     );
     assert.equal(
-      await brandMarquee.locator(".brand-marquee-copy").isVisible(),
-      false,
+      await firstLogo.evaluate((el) => getComputedStyle(el).transform),
+      "none",
     );
     await motionContext.close();
     const compact = await browser.newContext({
