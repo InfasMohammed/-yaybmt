@@ -35,7 +35,7 @@
   pointer-events: none;
 }
 .brand-scroll-card .distributor-note {
-  font-size: 0.6rem;
+  font-size: 10px;
 }
 .brand-scroll-card:focus-visible {
   outline: 2px solid var(--copper, #8c4d2d);
