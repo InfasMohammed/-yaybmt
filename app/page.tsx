@@ -205,8 +205,10 @@ export default function Home() {
             </span>
           </figcaption>
         </figure>
-        <div data-home-reveal className="tw:min-w-0">
-          <p className={eyebrow}>{welcome.heading}</p>
+        <div data-home-reveal className="welcome-story-card tw:min-w-0">
+          <p className={eyebrow + " welcome-story-eyebrow"}>
+            {welcome.heading}
+          </p>
           <h2
             id="welcome-heading"
             className="tw:mt-5 tw:mb-6 tw:text-[32px] tw:leading-[1.13] tw:font-semibold tw:tracking-[-1.3px] tw:md:text-[40px]"
@@ -220,7 +222,7 @@ export default function Home() {
               </p>
             ))}
           </div>
-          <a href="/about-us/" className={link + " tw:mt-5"}>
+          <a href="/about-us/" className={link + " welcome-story-link tw:mt-5"}>
             Discover our company <Arrow />
           </a>
         </div>

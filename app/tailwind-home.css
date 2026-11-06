@@ -36,3 +36,39 @@ body:has(.tailwind-home) header {
     height: 74px;
   }
 }
+
+/* Editorial welcome card: a quiet copper accent and a clear reading surface. */
+.welcome-story-card {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(26px, 3vw, 44px);
+  border: 1px solid #ded9d0;
+  border-radius: 24px 24px 6px 24px;
+  background: linear-gradient(145deg, #fff 65%, #f7f1e8);
+  box-shadow: 0 20px 50px -36px #25282755;
+}
+.welcome-story-card::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 38px;
+  width: 3px;
+  height: 70px;
+  border-radius: 0 3px 3px 0;
+  background: #a96340;
+}
+.welcome-story-eyebrow {
+  max-width: 36ch;
+}
+.welcome-story-link {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ded9d0;
+  padding-top: 22px;
+  width: 100%;
+}
+@media (max-width: 650px) {
+  .welcome-story-card {
+    border-radius: 18px 18px 5px 18px;
+  }
+}
