@@ -21,7 +21,9 @@ async function main() {
     args: ["--no-sandbox"],
   });
   try {
-    const context = await browser.newContext();
+    // Catalogue geometry/flows need stationary frames. Dedicated motion checks
+    // separately exercise the full falling animations with motion enabled.
+    const context = await browser.newContext({ reducedMotion: "reduce" });
     await context.route("**/*", (route) =>
       new URL(route.request().url()).origin === base
         ? route.continue()
