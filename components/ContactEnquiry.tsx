@@ -6,10 +6,16 @@ import { contactWhatsApp } from "../lib/site";
 export default function ContactEnquiry() {
   const [draft, setDraft] = useState("");
   return (
-    <section className="contact-enquiry" aria-labelledby="enquiry-heading">
-      <p className="eyebrow">CONTACT OUR TEAM</p>
-      <h2 id="enquiry-heading">Send an enquiry</h2>
-      <p>Share your product or project requirements with our team.</p>
+    <section
+      className="contact-enquiry contact-panel"
+      data-page-reveal
+      aria-labelledby="enquiry-heading"
+    >
+      <div className="contact-panel-heading">
+        <p className="eyebrow">CONTACT OUR TEAM</p>
+        <h2 id="enquiry-heading">Send an enquiry</h2>
+        <p>Share your product or project requirements with our team.</p>
+      </div>
       <form
         className="contact-enquiry-form"
         aria-describedby="enquiry-help"
@@ -70,7 +76,19 @@ export default function ContactEnquiry() {
           />
         </label>
         <button className="button" type="submit">
+          <img src="/images/icons/whatsapp.svg" width="19" height="19" alt="" />
           Continue on WhatsApp
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            aria-hidden="true"
+          >
+            <path d="M5 19 19 5M5 5h14v14" />
+          </svg>
         </button>
       </form>
       <p id="enquiry-help" className="enquiry-help">
@@ -99,9 +117,7 @@ export default function ContactEnquiry() {
               Open WhatsApp enquiry
             </a>
             <br />
-            <small>
-              If WhatsApp did not open, use this link.
-            </small>
+            <small>If WhatsApp did not open, use this link.</small>
           </p>
         )}
       </div>

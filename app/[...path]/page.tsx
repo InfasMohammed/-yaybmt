@@ -1,5 +1,5 @@
 import AboutIntroCard from "../../components/AboutIntroCard";
-import ParagraphMotion from "../../components/ParagraphMotion";
+import ContactIntroCard from "../../components/ContactIntroCard";
 import ContactSections from "../../components/ContactSections";
 import AboutSections from "../../components/AboutSections";
 import Breadcrumbs from "../../components/Breadcrumbs";
@@ -91,16 +91,10 @@ export default async function Page({
       )}
       {pathname === "/about-us/" ? (
         <AboutIntroCard paragraphs={item.paragraphs} />
+      ) : pathname === "/contact-us/" ? (
+        <ContactIntroCard paragraphs={item.paragraphs} />
       ) : (
-        item.paragraphs.map((text, i) => (
-          <p key={i}>
-            {pathname === "/contact-us/" ? (
-              <ParagraphMotion text={text} />
-            ) : (
-              text
-            )}
-          </p>
-        ))
+        item.paragraphs.map((text, i) => <p key={i}>{text}</p>)
       )}
       {pathname === "/about-us/" && <AboutSections />}
       {item.bodyHtml && <ContentBody html={item.bodyHtml} />}{" "}

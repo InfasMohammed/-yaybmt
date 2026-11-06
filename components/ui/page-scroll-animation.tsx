@@ -16,7 +16,7 @@ export default function PageScrollAnimation() {
       return;
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     const cards =
-      ".card, .logo-cloud-card, .company-value-card, .about-intro-card, .leadership-card, .directory > a, .showroom-expandable-photo, .gallery-photo";
+      ".card, .logo-cloud-card, .company-value-card, .about-intro-card, .leadership-card, .directory > a, .showroom-expandable-photo, .gallery-photo, [data-page-reveal], .contact-intro-card, .contact-detail-card, .contact-panel";
     const elements: HTMLElement[] = [];
     const tracked = new WeakSet<HTMLElement>();
     const candidates = () =>
