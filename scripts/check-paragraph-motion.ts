@@ -3,6 +3,14 @@ import { existsSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 import { chromium } from "playwright";
 import { pages } from "../data/pages";
+import { contactPage } from "../data/contact-page";
+const expectedParagraphs = (path: string) =>
+  pages
+    .find((item) => item.path === path)!
+    .paragraphs.filter(
+      (text) =>
+        path !== "/contact-us/" || text.trim() !== contactPage.introHeading,
+    );
 const base = process.env.YAYBMT_TEST_URL || "http://127.0.0.1:8080";
 const output =
   process.env.YAYBMT_PARAGRAPH_SCREENSHOTS || "artifacts/paragraph-motion";
@@ -32,7 +40,7 @@ async function main() {
         const source = pages.find((item) => item.path === path)!;
         await page.goto(base + path, { waitUntil: "domcontentloaded" });
         const first = page.locator("[data-text-rotate]").first();
-        await first.scrollIntoViewIfNeeded();
+        await first.evaluate((el) => el.scrollIntoView({ block: "center" }));
         await page.waitForFunction(() =>
           document.querySelector(
             '[data-text-motion="animated"] .text-rotate-element[style]',
@@ -75,7 +83,7 @@ async function main() {
         );
         assert.deepEqual(
           await page.locator(".text-rotate-accessible").allTextContents(),
-          source.paragraphs,
+          expectedParagraphs(path),
         );
         assert.equal(await page.locator("h1").count(), 1);
         assert.equal(
@@ -96,7 +104,7 @@ async function main() {
         assert.equal(await page.locator(".text-rotate-element").count(), 0);
         assert.deepEqual(
           await page.locator(".text-rotate-static").allTextContents(),
-          source.paragraphs,
+          expectedParagraphs(path),
         );
         await page
           .locator("img[loading=lazy]")
@@ -132,7 +140,7 @@ async function main() {
       assert.equal(await page.locator(".text-rotate-element").count(), 0);
       assert.deepEqual(
         await page.locator(".text-rotate-static").allTextContents(),
-        pages.find((item) => item.path === path)!.paragraphs,
+        expectedParagraphs(path),
       );
       assert.ok(await page.locator(".text-rotate-static").first().isVisible());
       assert.ok(

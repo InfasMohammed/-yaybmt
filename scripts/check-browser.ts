@@ -164,7 +164,16 @@ async function main() {
       await page.locator("link[rel=canonical]").getAttribute("href"),
       "https://yaybmt.com/shop/page/2/",
     );
+    // Pagination performs a full static navigation; wait for the catalogue to hydrate.
+    await page.waitForFunction(() =>
+      document
+        .querySelector(".result-bar span")
+        ?.textContent?.startsWith("Page "),
+    );
     await page.getByRole("searchbox").fill("nonexistentcatalogueitem");
+    await page.waitForFunction(
+      () => document.querySelectorAll(".card").length === 0,
+    );
     assert.equal(await page.locator(".card").count(), 0);
     assert.ok(page.url().includes("/shop/page/2/?q="));
     assert.equal(
