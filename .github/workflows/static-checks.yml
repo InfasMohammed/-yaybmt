@@ -23,6 +23,8 @@ jobs:
       - run: npm run check:export
       - run: npx playwright install --with-deps chromium
       - name: Check static browser flows
+        env:
+          YAYBMT_TEST_URL: http://127.0.0.1:8080
         run: |
           npm run preview > /tmp/yaybmt-preview.log 2>&1 &
           PREVIEW_PID=$!

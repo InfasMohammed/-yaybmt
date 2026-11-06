@@ -8,7 +8,7 @@ async function main() {
     executablePath: "/usr/bin/chromium",
     args: ["--no-sandbox"],
   });
-  const base = process.env.YAYBMT_TEST_URL || "http://127.0.0.1:8103";
+  const base = process.env.YAYBMT_TEST_URL || "http://127.0.0.1:8080";
   mkdirSync("artifacts/contact-cards", { recursive: true });
   try {
     for (const width of [1440, 900, 390, 320]) {
