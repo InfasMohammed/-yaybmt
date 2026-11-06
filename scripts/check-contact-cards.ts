@@ -27,6 +27,12 @@ async function main() {
         "center",
       );
       assert.equal(await page.locator(".contact-intro-card").count(), 1);
+      assert.equal(
+        await page
+          .locator(".contact-intro-card > h2")
+          .evaluate((el) => getComputedStyle(el).textAlign),
+        "center",
+      );
       assert.equal(await page.locator(".contact-detail-card").count(), 4);
       assert.equal(await page.locator(".contact-panel").count(), 2);
       assert.equal(
@@ -49,6 +55,7 @@ async function main() {
       const map = await page.locator(".contact-map").boundingBox();
       const form = await page.locator(".contact-enquiry").boundingBox();
       assert.ok(map && form);
+      if (width > 1000) assert.ok(form.width <= 481, "Desktop form is compact");
       if (width > 800) {
         assert.ok(
           Math.abs(map.y - form.y) < 2,

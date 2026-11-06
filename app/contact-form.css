@@ -113,3 +113,12 @@
     transform: translateX(3px);
   }
 }
+
+@media (min-width: 1001px) {
+  .contact-page .contact-enquiry-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
+  }
+  .contact-page .contact-enquiry.contact-form-modern {
+    padding: 28px;
+  }
+}
