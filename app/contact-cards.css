@@ -210,3 +210,8 @@
     gap: 20px;
   }
 }
+
+.contact-page > .eyebrow,
+.contact-page > h1 {
+  text-align: center;
+}

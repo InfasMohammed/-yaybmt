@@ -20,6 +20,12 @@ async function main() {
       page.on("pageerror", (error) => errors.push(error.message));
       await page.goto(base + "/contact-us/");
       assert.equal(await page.locator("h1").count(), 1);
+      assert.equal(
+        await page
+          .locator("h1")
+          .evaluate((el) => getComputedStyle(el).textAlign),
+        "center",
+      );
       assert.equal(await page.locator(".contact-intro-card").count(), 1);
       assert.equal(await page.locator(".contact-detail-card").count(), 4);
       assert.equal(await page.locator(".contact-panel").count(), 2);
