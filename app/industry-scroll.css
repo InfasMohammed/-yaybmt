@@ -137,24 +137,14 @@
   [data-scroll-enhanced="true"][data-industry-in-view="true"]
     .industry-scroll-step[data-active="true"]
     img {
-    animation: industry-full-drop 950ms ease-out both;
+    animation: industry-fade 400ms ease-out both;
   }
-  @keyframes industry-full-drop {
-    0% {
+  @keyframes industry-fade {
+    from {
       opacity: 0;
-      translate: 0 -140px;
     }
-    82% {
+    to {
       opacity: 1;
-      translate: 0 12px;
-    }
-    94% {
-      opacity: 1;
-      translate: 0 -4px;
-    }
-    100% {
-      opacity: 1;
-      translate: 0 0;
     }
   }
 }

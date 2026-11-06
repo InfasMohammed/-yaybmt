@@ -36,18 +36,18 @@ export function TestimonialCard({
         animate={
           reveal
             ? {
-                filter: ["blur(4px)", "blur(0px)"],
-                y: [-140, 12, -4, 0],
+                filter: "none",
+                y: [12, 0],
                 opacity: [0, 1],
               }
             : reduced
               ? { filter: "blur(0px)", y: 0, opacity: 1 }
-              : { filter: "blur(4px)", y: -140, opacity: 0 }
+              : { filter: "none", y: 12, opacity: 0 }
         }
         transition={{
-          duration: reduced ? 0 : 0.8,
-          delay: reduced ? 0 : index * 0.1 + 0.1,
-          ease: "easeOut",
+          duration: reduced ? 0 : 0.5,
+          delay: reduced ? 0 : index * 0.04,
+          ease: [0.22, 1, 0.36, 1],
         }}
       >
         {children}

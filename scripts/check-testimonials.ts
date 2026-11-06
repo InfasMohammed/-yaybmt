@@ -84,10 +84,7 @@ async function main() {
       [...document.querySelectorAll(".testimonial-card")].some((el) => {
         const style = getComputedStyle(el);
         return (
-          parseFloat(style.opacity) > 0 &&
-          parseFloat(style.opacity) < 0.99 &&
-          style.filter !== "none" &&
-          style.filter !== "blur(0px)"
+          parseFloat(style.opacity) > 0 && parseFloat(style.opacity) < 0.99
         );
       }),
     );
@@ -115,7 +112,7 @@ async function main() {
     );
     await staticPage.close();
     console.log(
-      "PASS supplied testimonial design: compact 3/2/1-column layout, original heading, exact review copy, grid pattern, actual staggered blur reveal, live reduced motion and no-JS visibility.",
+      "PASS supplied testimonial design: compact 3/2/1-column layout, original heading, exact review copy, grid pattern, subtle staggered fade reveal, live reduced motion and no-JS visibility.",
     );
   } finally {
     await browser.close();

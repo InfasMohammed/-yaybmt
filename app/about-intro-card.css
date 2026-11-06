@@ -20,32 +20,13 @@
   outline: 2px solid var(--copper);
   outline-offset: 4px;
 }
-@keyframes about-card-shake {
-  0%,
-  100% {
-    transform: translateX(0) rotate(0);
-  }
-  20% {
-    transform: translateX(-2px) rotate(-0.2deg);
-  }
-  40% {
-    transform: translateX(2px) rotate(0.2deg);
-  }
-  60% {
-    transform: translateX(-1px) rotate(-0.1deg);
-  }
-  80% {
-    transform: translateX(1px) rotate(0.1deg);
-  }
-}
 @media (prefers-reduced-motion: no-preference) {
-  .about-intro-card:focus-visible {
-    animation: about-card-shake 550ms ease-in-out 1;
+  .about-intro-card {
+    transition: border-color 220ms ease;
   }
 }
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+@media (hover: hover) {
   .about-intro-card:hover {
-    animation: about-card-shake 550ms ease-in-out 1;
     border-color: var(--copper);
   }
 }

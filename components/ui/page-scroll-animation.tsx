@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-/** Same one-time 140px downward fall as the homepage; no scroll scrubbing or rotation. */
+/** Subtle one-time fade and 12px movement; no bounce, rotation or scroll scrubbing. */
 export default function PageScrollAnimation() {
   const pathname = usePathname();
   useEffect(() => {
@@ -54,22 +54,15 @@ export default function PageScrollAnimation() {
           element.dataset.pageDrop = "played";
           const animation = element.animate(
             [
-              {
-                opacity: 0,
-                translate: "0 -140px",
-                offset: 0,
-                easing: "cubic-bezier(0.32, 0, 0.67, 1)",
-              },
-              {
-                opacity: 1,
-                translate: "0 12px",
-                offset: 0.82,
-                easing: "ease-out",
-              },
-              { opacity: 1, translate: "0 -4px", offset: 0.94 },
-              { opacity: 1, translate: "0 0", offset: 1 },
+              { opacity: 0, translate: "0 12px" },
+              { opacity: 1, translate: "0 0" },
             ],
-            { duration: 950, delay: Math.min(index * 65, 195), fill: "both" },
+            {
+              duration: 500,
+              delay: Math.min(index * 35, 90),
+              fill: "both",
+              easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+            },
           );
           restore(element);
           animations.add(animation);

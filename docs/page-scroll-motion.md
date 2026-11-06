@@ -1,11 +1,9 @@
-# Sitewide one-time falling reveal
+# Smooth sitewide reveals
 
-Every inner page uses the same effect as HomeMotion: content starts hidden, falls from 140px above, overshoots to 12px, settles via -4px to zero, then stays visible. Duration 950ms with short stagger. There is no scroll-scrubbed translation, rotation or scaling. Scrolling back does not replay it.
+Team-review feedback replaces the dramatic falling animation with a restrained one-time fade: 12px upward movement, 500ms duration, cubic-bezier(0.22,1,0.36,1), and at most 90ms stagger. No bounce, rotation, continuous floating or scroll-scrubbed movement. Headings/cards/images keep reserved layout and stay visible after first entry.
 
-Targets include headings, catalogue/related cards, brand cards, company and leadership cards, article/category cards, gallery frames and standalone content images. Images inside a card fall with the card rather than duplicating the effect. Modal images, thumbnail controls, forms and navigation remain usable. Newly filtered cards are discovered. Reduced-motion restores visibility immediately; no-JavaScript content is visible; keyboard focus reveals its containing card.
+Homepage and inner-page controllers use identical motion. Paragraphs remain stationary and readable inside their card rather than animating word by word. Testimonials use the same short fade/12px movement without blur; desktop industry images crossfade without falling. The company intro no longer shakes on hover.
 
-Homepage retains its established full-drop components, industry active-step fall and testimonial fall/blur. The separate rotating logo-assembly effect has been removed; original local logos and brand links remain in the homepage panel, which falls as a unit.
+Reduced-motion/no-JavaScript content is visible; keyboard focus reveals targets immediately; new filter results are discovered. Forms, navigation, gallery controls and all text/URLs remain intact.
 
-Navigation uses the reviewed shared hover/fill design on every route. Homepage retains its transparent hero header; inner pages retain charcoal headers.
-
-Verify: npm run build -- --webpack; npm run check:export; YAYBMT_TEST_URL=http://127.0.0.1:8103 node --import tsx scripts/check-page-scroll.ts; npm run test:home.
+Checks: static build, SEO export audit, home-drop/page-scroll/paragraph/testimonial browser scripts. Existing script names/data attributes are retained for compatibility; their assertions now verify subtle reveals rather than large falls.

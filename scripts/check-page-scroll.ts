@@ -49,7 +49,7 @@ async function main() {
                   .some((a) =>
                     (a.effect as KeyframeEffect | null)
                       ?.getKeyframes()
-                      .some((k) => String(k.translate).includes("-140px")),
+                      .some((k) => String(k.translate).includes("12px")),
                   ),
             ),
           );
@@ -102,7 +102,7 @@ async function main() {
       "1",
     );
     console.log(
-      "PASS one-time downward fall on seven page types at desktop/mobile: hidden entry, 140px keyframes, settles once, reduced-motion restoration, no overflow/errors and no-JS visibility.",
+      "PASS one-time smooth reveal on seven page types at desktop/mobile: hidden entry, 12px keyframes, settles once, reduced-motion restoration, no overflow/errors and no-JS visibility.",
     );
   } finally {
     await browser.close();
