@@ -470,7 +470,7 @@ async function main() {
         .getByLabel("Phone number", { exact: true })
         .fill("+971 50 000 0000");
       await enquiryPage
-        .getByLabel("Message", { exact: false })
+        .getByRole("textbox", { name: /^Message/ })
         .fill("Need marine locks & valves + drawings\nQuantity: 12");
       await enquiryPage
         .getByRole("button", { name: "Continue on WhatsApp", exact: true })
@@ -498,7 +498,7 @@ async function main() {
       assert.ok(!message.includes("Email:"));
       assert.equal(await enquiryPage.locator('input[type="email"]').count(), 0);
       await enquiryPage
-        .getByLabel("Message", { exact: false })
+        .getByRole("textbox", { name: /^Message/ })
         .fill("Updated requirements");
       assert.equal(await enquiryPage.locator(".enquiry-draft a").count(), 0);
     }

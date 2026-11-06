@@ -89,7 +89,7 @@ async function main() {
         .getByLabel("Phone number", { exact: true })
         .fill("+971 50 000 0000");
       await page
-        .getByLabel("Message", { exact: false })
+        .getByRole("textbox", { name: /^Message/ })
         .fill("Need marine fittings & drawings\nQuantity: 12");
       await page
         .getByRole("button", { name: "Continue on WhatsApp", exact: true })
@@ -110,7 +110,7 @@ async function main() {
           ),
       );
       assert.ok(!draft.searchParams.get("text")?.includes("Email:"));
-      await page.getByLabel("Message", { exact: false }).fill("");
+      await page.getByRole("textbox", { name: /^Message/ }).fill("");
       await page.getByLabel("Full name").fill("");
       await page.getByLabel("Phone number", { exact: true }).fill("");
       await page
