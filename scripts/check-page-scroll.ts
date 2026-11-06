@@ -47,7 +47,7 @@ async function main() {
                 el
                   .getAnimations()
                   .some((a) =>
-                    a.effect
+                    (a.effect as KeyframeEffect | null)
                       ?.getKeyframes()
                       .some((k) => String(k.translate).includes("-140px")),
                   ),
