@@ -1,5 +1,6 @@
 import { visibleTestimonials } from "../../data/testimonials";
 import { contacts } from "../../data/contacts";
+import { TestimonialCard } from "./testimonial-card";
 import { GridPattern } from "./grid-pattern";
 import "../../app/testimonials.css";
 
@@ -12,21 +13,25 @@ export function TestimonialsSection() {
       className="testimonials-section"
       aria-labelledby="testimonials-heading"
     >
+      <div className="testimonials-light-rays" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
       <div className="testimonials-inner">
-        <div className="testimonials-heading" data-home-reveal>
-          <p className="eyebrow">CUSTOMER FEEDBACK</p>
-          <h2 id="testimonials-heading">Customer reviews</h2>
+        <div className="testimonials-heading">
+          <h2 id="testimonials-heading">Real Results, Real Voices</h2>
           <p className="testimonials-preview-note">
             {hasSamples
               ? "Design preview — sample content only, not real customer testimonials."
-              : "Google reviews preserved from our previous website."}
+              : "Feedback shared by our customers on Google."}
           </p>
         </div>
         <div className="testimonials-grid">
-          {items.map((item) => (
-            <figure key={item.id} className="testimonial-card" data-home-reveal>
+          {items.map((item, index) => (
+            <TestimonialCard key={item.id} index={index} name={item.name}>
               <GridPattern className="testimonial-pattern" />
-              <div className="testimonial-person">
+              <figcaption className="testimonial-person">
                 <span className="testimonial-avatar" aria-hidden="true">
                   {item.name
                     .split(/\s+/)
@@ -35,7 +40,7 @@ export function TestimonialsSection() {
                     .join("")
                     .toUpperCase()}
                 </span>
-                <figcaption>
+                <span className="testimonial-person-copy">
                   <strong>{item.name}</strong>
                   <span>
                     {item.source?.kind}
@@ -56,29 +61,31 @@ export function TestimonialsSection() {
                       </>
                     )}
                   </span>
-                </figcaption>
-              </div>
-              {item.rating !== undefined && (
-                <span
-                  className="testimonial-rating"
-                  role="img"
-                  aria-label={`${item.rating} out of 5 stars`}
-                >
-                  {"★".repeat(item.rating)}
-                  {"☆".repeat(5 - item.rating)}
                 </span>
-              )}
-              {item.quote ? (
-                <blockquote>
-                  <p>{item.quote}</p>
-                </blockquote>
-              ) : (
-                <p className="testimonial-rating-only">No written comment.</p>
-              )}
-              {item.status === "sample" && (
-                <span className="testimonial-sample">SAMPLE</span>
-              )}
-            </figure>
+              </figcaption>
+              <div className="testimonial-body">
+                {item.rating !== undefined && (
+                  <span
+                    className="testimonial-rating"
+                    role="img"
+                    aria-label={`${item.rating} out of 5 stars`}
+                  >
+                    {"★".repeat(item.rating)}
+                    {"☆".repeat(5 - item.rating)}
+                  </span>
+                )}
+                {item.quote ? (
+                  <blockquote>
+                    <p>{item.quote}</p>
+                  </blockquote>
+                ) : (
+                  <p className="testimonial-rating-only">No written comment.</p>
+                )}
+                {item.status === "sample" && (
+                  <span className="testimonial-sample">SAMPLE</span>
+                )}
+              </div>
+            </TestimonialCard>
           ))}
         </div>
         <a className="testimonials-source" href={contacts.maps}>
