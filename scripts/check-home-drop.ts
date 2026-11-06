@@ -44,7 +44,8 @@ async function main() {
         return (
           Number(s.opacity) > 0 &&
           Number(s.opacity) < 1 &&
-          parseFloat(s.translate.split(" ").at(-1)!) < -20
+          parseFloat(s.translate.split(" ").at(-1)!) > 0 &&
+          parseFloat(s.translate.split(" ").at(-1)!) <= 12
         );
       });
       assert.ok(
@@ -56,7 +57,7 @@ async function main() {
                 .getKeyframes()
                 .some(
                   (frame) =>
-                    String(frame.translate).includes("-140px") &&
+                    String(frame.translate).includes("12px") &&
                     Number(frame.opacity) === 0,
                 ),
             ),
@@ -119,7 +120,7 @@ async function main() {
       "1",
     );
     console.log(
-      "PASS homepage full drop: fully hidden before entry, actual 140px downward fall/settle, reserved layout, one reveal, live reduced-motion restoration and no-JS visible content.",
+      "PASS homepage full drop: fully hidden before entry, actual smooth 12px fade, no bounce, reserved layout, one reveal, live reduced-motion restoration and no-JS visible content.",
     );
   } finally {
     await browser.close();

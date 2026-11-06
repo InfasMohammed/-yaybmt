@@ -13,28 +13,26 @@ export default function ScrollLogoAssembly() {
         {logoBrands.map((brand) => {
           const logo = brandLogos[brand.slug];
           return (
-            <a
-              key={brand.slug}
-              href={`/brand/${brand.slug}/`}
-              className="brand-scroll-card"
-            >
-              <div className="brand-scroll-image">
-                <img
-                  src={logo.src}
-                  width={logo.width}
-                  height={logo.height}
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <span>{brand.name}</span>
+            <div key={brand.slug} className="brand-scroll-card">
+              <a href={`/brand/${brand.slug}/`} className="brand-scroll-link">
+                <div className="brand-scroll-image">
+                  <img
+                    src={logo.src}
+                    width={logo.width}
+                    height={logo.height}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <span>{brand.name}</span>
+              </a>
               {brand.distributorNote && (
                 <small className="distributor-note">
                   {brand.distributorNote}
                 </small>
               )}
-            </a>
+            </div>
           );
         })}
       </div>

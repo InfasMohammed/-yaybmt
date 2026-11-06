@@ -151,9 +151,9 @@ export default function Home() {
       >
         <div
           data-home-reveal
-          className="tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white tw:px-6 tw:py-7 tw:shadow-[0_16px_45px_-30px_rgba(37,40,39,0.3)] tw:md:px-9"
+          className="tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white tw:px-6 tw:py-4 tw:shadow-[0_16px_45px_-30px_rgba(37,40,39,0.3)] tw:md:px-9"
         >
-          <div className="tw:mb-6 tw:flex tw:items-center tw:justify-between tw:gap-5">
+          <div className="tw:mb-3 tw:flex tw:items-center tw:justify-between tw:gap-5">
             <h2
               id="home-brands-heading"
               className="tw:m-0 tw:text-[10px] tw:font-bold tw:tracking-[0.18em] tw:uppercase"

@@ -1,3 +1,4 @@
+import { LocationMap } from "./ui/location-map";
 import { contacts } from "../data/contacts";
 import { contactPage } from "../data/contact-page";
 import { whatsapp } from "../lib/site";
@@ -84,15 +85,12 @@ export default function ContactSections() {
             <p className="eyebrow">VISIT OUR STORE</p>
             <h2 id="contact-map-heading">Find us in Deira</h2>
           </div>
-          <div className="contact-map-frame">
-            <iframe
-              src={contactPage.mapEmbed}
-              title="Yusuf Al Yousfi Building Materials Trading LLC location in Deira, Dubai"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
-          </div>
+          <LocationMap
+            location={contacts.location}
+            address={contactPage.address}
+            mapEmbed={contactPage.mapEmbed}
+            mapHref={contacts.maps}
+          />
         </section>
         <ContactEnquiry />
       </div>

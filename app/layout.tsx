@@ -7,6 +7,18 @@ import "./globals.css";
 import { origin } from "../lib/site";
 import { whatsapp } from "../lib/site";
 import { contacts } from "../data/contacts";
+export const metadata = {
+  icons: {
+    icon: [
+      { url: "/favicon.ico?v=1", sizes: "any" },
+      { url: "/favicon-32x32.png?v=1", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png?v=1", sizes: "180x180", type: "image/png" },
+    ],
+  },
+};
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">

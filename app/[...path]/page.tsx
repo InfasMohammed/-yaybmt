@@ -100,7 +100,7 @@ export default async function Page({
       {item.bodyHtml && <ContentBody html={item.bodyHtml} />}{" "}
       {pathname === "/contact-us/" ? (
         <ContactSections />
-      ) : "kind" in item ? (
+      ) : pathname === "/about-us/" ? null : "kind" in item ? (
         <>
           <h2>
             {item.kind === "contact"

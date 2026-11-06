@@ -1,0 +1,124 @@
+/* Form-only adaptation of the supplied ContactWithGlobe design. */
+.contact-page .contact-enquiry.contact-form-modern {
+  border-color: #dedfd7;
+  border-radius: 20px;
+  padding: clamp(24px, 3vw, 36px);
+  box-shadow: none;
+}
+.contact-page .contact-form-modern .contact-panel-heading {
+  margin-bottom: 0;
+}
+.contact-page .contact-form-modern .contact-panel-heading h2 {
+  font-size: 25px;
+  letter-spacing: -0.6px;
+}
+.contact-page
+  .contact-form-modern
+  .contact-panel-heading
+  > p:last-child:not(.eyebrow) {
+  font-size: 13px;
+  margin-top: 8px;
+}
+.contact-form-dots {
+  width: 100%;
+  height: 4px;
+  margin: 26px 0;
+  background-image: radial-gradient(circle, #9b9f96 0.8px, transparent 0.8px);
+  background-size: 6px 4px;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+}
+.contact-page .contact-form-modern .contact-enquiry-form {
+  gap: 22px 18px;
+}
+.contact-page .contact-form-modern .contact-enquiry-form label {
+  gap: 10px;
+  color: #626760;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+.contact-page .contact-form-modern .contact-enquiry-form input,
+.contact-page .contact-form-modern .contact-enquiry-form textarea {
+  border: 1px solid #e2e3dd;
+  border-radius: 12px;
+  padding: 13px 15px;
+  background: #f7f7f4;
+  color: #252827;
+  font-size: 14px;
+  letter-spacing: normal;
+  text-transform: none;
+  box-shadow: none;
+}
+.contact-page
+  .contact-form-modern
+  .contact-enquiry-form
+  :is(input, textarea)::placeholder {
+  color: #7b8078;
+  opacity: 1;
+}
+.contact-page .contact-form-modern .contact-enquiry-form textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+.contact-page
+  .contact-form-modern
+  .contact-enquiry-form
+  :is(input, textarea):focus-visible {
+  border-color: #a96340;
+  outline: 2px solid #a9634033;
+  outline-offset: 1px;
+  background: #fff;
+}
+.contact-page .contact-form-modern .contact-enquiry-form button {
+  justify-self: start;
+  width: fit-content;
+  min-height: 46px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  gap: 12px;
+  background: #252827;
+  font-size: 13px;
+}
+.contact-page .contact-form-modern .contact-enquiry-form button img,
+.contact-page .contact-form-modern .contact-enquiry-form button > svg {
+  flex-shrink: 0;
+  margin: 0;
+}
+.contact-page .contact-form-modern .contact-enquiry-form button > svg {
+  color: #e6b996;
+}
+.contact-page .contact-form-modern .enquiry-help {
+  font-size: 11px;
+  margin-top: 18px;
+  max-width: 58ch;
+  color: #6b7068;
+}
+@media (hover: hover) {
+  .contact-page .contact-form-modern .contact-enquiry-form button:hover {
+    background: #393d39;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .contact-page .contact-form-modern .contact-enquiry-form button > svg {
+    transition: transform 180ms ease;
+  }
+  .contact-page .contact-form-modern .contact-enquiry-form button:hover > svg {
+    transform: translateX(3px);
+  }
+}
+
+@media (min-width: 1001px) {
+  .contact-page .contact-enquiry-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
+  }
+  .contact-page .contact-enquiry.contact-form-modern {
+    padding: 28px;
+  }
+}

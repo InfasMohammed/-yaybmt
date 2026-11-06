@@ -1,21 +1,23 @@
 "use client";
 
 import { useState } from "react";
+import "../app/contact-form.css";
 import { contactWhatsApp } from "../lib/site";
 
 export default function ContactEnquiry() {
   const [draft, setDraft] = useState("");
   return (
     <section
-      className="contact-enquiry contact-panel"
+      className="contact-enquiry contact-panel contact-form-modern"
       data-page-reveal
       aria-labelledby="enquiry-heading"
     >
       <div className="contact-panel-heading">
         <p className="eyebrow">CONTACT OUR TEAM</p>
-        <h2 id="enquiry-heading">Send an enquiry</h2>
+        <h2 id="enquiry-heading">Send a message</h2>
         <p>Share your product or project requirements with our team.</p>
       </div>
+      <div className="contact-form-dots" aria-hidden="true" />
       <form
         className="contact-enquiry-form"
         aria-describedby="enquiry-help"

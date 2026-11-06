@@ -40,47 +40,50 @@ export function LogoCloud() {
         {brands.map((brand, index) => {
           const logo = brandLogos[brand.slug];
           return (
-            <a
-              className="logo-cloud-card"
-              href={`/brand/${brand.slug}/`}
-              key={brand.slug}
-              onPointerMove={spotlight}
-              onPointerLeave={reset}
-            >
-              <span className="logo-cloud-index" aria-hidden="true">
-                {String(index + 1).padStart(2, "0")} / BRAND
-              </span>
-              <div className="logo-cloud-mark">
-                {logo ? (
-                  <img
-                    src={logo.src}
-                    alt=""
-                    width={logo.width}
-                    height={logo.height}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                ) : (
-                  <span className="logo-cloud-wordmark" aria-hidden="true">
+            <div className="logo-cloud-shell" key={brand.slug}>
+              <a
+                className="logo-cloud-card"
+                href={`/brand/${brand.slug}/`}
+                onPointerMove={spotlight}
+                onPointerLeave={reset}
+              >
+                <span className="logo-cloud-index" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")} / BRAND
+                </span>
+                <div className="logo-cloud-mark">
+                  {logo ? (
+                    <img
+                      src={logo.src}
+                      alt=""
+                      width={logo.width}
+                      height={logo.height}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <span className="logo-cloud-wordmark" aria-hidden="true">
+                      {brand.name}
+                    </span>
+                  )}
+                </div>
+                <div className="logo-cloud-info">
+                  <h2 className={!logo ? "sr-only" : undefined}>
                     {brand.name}
-                  </span>
-                )}
-              </div>
-              <div className="logo-cloud-info">
-                <h2 className={!logo ? "sr-only" : undefined}>{brand.name}</h2>
-                {brand.distributorNote && (
-                  <small className="distributor-note">
-                    {brand.distributorNote}
-                  </small>
-                )}
-              </div>
-              <span className="logo-cloud-link">
-                View products <span aria-hidden="true">→</span>
-              </span>
-              <span className="logo-cloud-corner" aria-hidden="true">
-                +
-              </span>
-            </a>
+                  </h2>
+                </div>
+                <span className="logo-cloud-link">
+                  View products <span aria-hidden="true">→</span>
+                </span>
+                <span className="logo-cloud-corner" aria-hidden="true">
+                  +
+                </span>
+              </a>
+              {brand.distributorNote && (
+                <small className="distributor-note">
+                  {brand.distributorNote}
+                </small>
+              )}
+            </div>
           );
         })}
       </div>

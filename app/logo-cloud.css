@@ -183,3 +183,23 @@
     transform: none;
   }
 }
+.logo-cloud-shell {
+  position: relative;
+  min-width: 0;
+}
+.logo-cloud-shell > .logo-cloud-card {
+  height: 100%;
+}
+.logo-cloud-shell > .distributor-note {
+  position: absolute;
+  z-index: 2;
+  left: 18px;
+  right: 18px;
+  bottom: 14px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.logo-cloud-shell:has(> .distributor-note) > .logo-cloud-card {
+  padding-bottom: 62px;
+}

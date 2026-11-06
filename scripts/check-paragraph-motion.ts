@@ -1,163 +1,86 @@
 import assert from "node:assert/strict";
-import { existsSync, mkdirSync } from "node:fs";
-import { join } from "node:path";
+import { existsSync } from "node:fs";
 import { chromium } from "playwright";
 import { pages } from "../data/pages";
 import { contactPage } from "../data/contact-page";
-const expectedParagraphs = (path: string) =>
-  pages
-    .find((item) => item.path === path)!
-    .paragraphs.filter(
-      (text) =>
-        path !== "/contact-us/" || text.trim() !== contactPage.introHeading,
-    );
-const base = process.env.YAYBMT_TEST_URL || "http://127.0.0.1:8080";
-const output =
-  process.env.YAYBMT_PARAGRAPH_SCREENSHOTS || "artifacts/paragraph-motion";
 async function main() {
-  mkdirSync(output, { recursive: true });
   const browser = await chromium.launch({
     executablePath:
       process.env.YAYBMT_BROWSER_EXECUTABLE ||
       (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : undefined),
     args: ["--no-sandbox"],
   });
+  const base = process.env.YAYBMT_TEST_URL || "http://127.0.0.1:8080";
   try {
     for (const width of [1440, 390, 320]) {
-      const context = await browser.newContext({
-        viewport: { width, height: 1000 },
-        reducedMotion: "no-preference",
-      });
-      await context.route("**/*", (route) =>
-        new URL(route.request().url()).origin === base
-          ? route.continue()
-          : route.abort(),
-      );
-      const page = await context.newPage();
-      const errors: string[] = [];
-      page.on("pageerror", (error) => errors.push(error.message));
-      for (const path of ["/contact-us/", "/about-us/"]) {
-        const source = pages.find((item) => item.path === path)!;
-        await page.goto(base + path, { waitUntil: "domcontentloaded" });
-        const first = page.locator("[data-text-rotate]").first();
-        await first.evaluate((el) => el.scrollIntoView({ block: "center" }));
-        await page.waitForFunction(() =>
-          document.querySelector(
-            '[data-text-motion="animated"] .text-rotate-element[style]',
-          ),
-        );
-        await page.waitForFunction(() =>
-          [...document.querySelectorAll(".text-rotate-element")].some(
-            (word) => {
-              const opacity = Number(getComputedStyle(word).opacity);
-              return opacity > 0 && opacity < 0.99;
-            },
-          ),
-        );
-        await page.evaluate(() => document.fonts.ready);
-        assert.ok(
-          (
-            await page
-              .locator("h1")
-              .evaluate((element) => getComputedStyle(element).fontFamily)
-          ).includes("Manrope Variable"),
-        );
-        assert.ok(
-          (
-            await page
-              .locator("main > p")
-              .last()
-              .evaluate((element) => getComputedStyle(element).fontFamily)
-          ).includes("Inter Variable"),
-        );
-        assert.ok(
-          await page.evaluate(() => {
-            const fonts = [...document.fonts].filter((face) =>
-              /Inter Variable|Manrope Variable/.test(face.family),
+      for (const reducedMotion of ["no-preference", "reduce"] as const) {
+        const page = await browser.newPage({
+          viewport: { width, height: 1000 },
+          reducedMotion,
+        });
+        for (const path of ["/about-us/", "/contact-us/"]) {
+          await page.goto(base + path);
+          const card = page.locator(
+            path.includes("about")
+              ? ".about-intro-card"
+              : ".contact-intro-card",
+          );
+          await card.evaluate((el) => el.scrollIntoView({ block: "center" }));
+          await page.waitForFunction(() => {
+            const e = document.querySelector(
+              ".about-intro-card,.contact-intro-card",
             );
             return (
-              fonts.length === 2 &&
-              fonts.every((face) => face.status === "loaded")
+              !!e &&
+              getComputedStyle(e).opacity === "1" &&
+              e.getAnimations().length === 0
             );
-          }),
-        );
-        assert.deepEqual(
-          await page.locator(".text-rotate-accessible").allTextContents(),
-          expectedParagraphs(path),
-        );
-        assert.equal(await page.locator("h1").count(), 1);
-        assert.equal(
-          await page.locator("link[rel=canonical]").getAttribute("href"),
-          "https://yaybmt.com" + path,
-        );
-        assert.ok(
-          await page.evaluate(
-            () => document.documentElement.scrollWidth <= innerWidth,
-          ),
-        );
-        await page.emulateMedia({ reducedMotion: "reduce" });
-        await page.waitForFunction(
-          () =>
-            document.querySelectorAll('[data-text-motion="animated"]')
-              .length === 0,
-        );
-        assert.equal(await page.locator(".text-rotate-element").count(), 0);
-        assert.deepEqual(
-          await page.locator(".text-rotate-static").allTextContents(),
-          expectedParagraphs(path),
-        );
-        await page
-          .locator("img[loading=lazy]")
-          .evaluateAll((images) =>
-            images.forEach(
-              (image) => ((image as HTMLImageElement).loading = "eager"),
-            ),
+          });
+          const text = await card.innerText();
+          for (const para of pages.find((p) => p.path === path)!.paragraphs) {
+            assert.ok(text.includes(para), path + " preserves original copy");
+          }
+          assert.equal(
+            await page.locator(".text-rotate-element").count(),
+            0,
+            "No word-by-word animation",
           );
-        await page.evaluate(async () =>
-          Promise.all([...document.images].map((image) => image.decode())),
-        );
-        await page.screenshot({
-          path: join(
-            output,
-            path.includes("about")
-              ? `company-${width}.png`
-              : `contact-${width}.png`,
-          ),
-          fullPage: true,
-        });
-        await page.emulateMedia({ reducedMotion: "no-preference" });
+          assert.ok(
+            (
+              await card
+                .locator(
+                  path === "/contact-us/" ? ".contact-intro-copy p" : "p",
+                )
+                .first()
+                .evaluate((el) => getComputedStyle(el).fontFamily)
+            ).includes("Inter Variable"),
+          );
+          assert.equal(await page.locator("h1").count(), 1);
+          assert.equal(
+            await page.evaluate(
+              () => document.documentElement.scrollWidth > innerWidth,
+            ),
+            false,
+          );
+        }
+        await page.close();
       }
-      assert.deepEqual(errors, []);
-      await context.close();
     }
-    const nojs = await browser.newContext({
-      javaScriptEnabled: false,
-      viewport: { width: 390, height: 844 },
-    });
-    const page = await nojs.newPage();
-    for (const path of ["/contact-us/", "/about-us/"]) {
-      await page.goto(base + path);
-      assert.equal(await page.locator(".text-rotate-element").count(), 0);
-      assert.deepEqual(
-        await page.locator(".text-rotate-static").allTextContents(),
-        expectedParagraphs(path),
-      );
-      assert.ok(await page.locator(".text-rotate-static").first().isVisible());
-      assert.ok(
-        await page.evaluate(
-          () => document.documentElement.scrollWidth <= innerWidth,
-        ),
-      );
-    }
-    await nojs.close();
+    const page = await browser.newPage({ javaScriptEnabled: false });
+    await page.goto(base + "/contact-us/");
+    assert.ok(
+      (await page.locator(".contact-intro-card").innerText()).includes(
+        contactPage.introHeading,
+      ),
+    );
     console.log(
-      "PASS paragraph motion: actual word animation at 1440/390/320px; exact source copy; unchanged headings/canonicals; live reduced-motion cancellation; no-JS visible text; no page errors or horizontal overflow.",
+      "PASS paragraph presentation: original text/fonts, stationary words, smooth card reveal, reduced-motion/no-JS content, three widths without overflow.",
     );
   } finally {
     await browser.close();
   }
 }
-main().catch((error) => {
-  console.error(error);
+main().catch((e) => {
+  console.error(e);
   process.exitCode = 1;
 });

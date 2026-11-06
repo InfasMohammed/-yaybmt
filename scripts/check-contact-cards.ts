@@ -27,15 +27,35 @@ async function main() {
         "center",
       );
       assert.equal(await page.locator(".contact-intro-card").count(), 1);
+      assert.equal(
+        await page
+          .locator(".contact-intro-card > h2")
+          .evaluate((el) => getComputedStyle(el).textAlign),
+        "center",
+      );
       assert.equal(await page.locator(".contact-detail-card").count(), 4);
       assert.equal(await page.locator(".contact-panel").count(), 2);
       assert.equal(
         await page.locator(".contact-map iframe").getAttribute("src"),
         contactPage.mapEmbed,
       );
+      const mapToggle = page.locator(".location-map-preview");
+      await mapToggle.focus();
+      await page.keyboard.press("Enter");
+      assert.equal(
+        await page.locator(".location-map-details").getAttribute("open"),
+        "",
+      );
+      assert.ok(await page.locator(".location-map iframe").isVisible());
+      await page.keyboard.press("Enter");
+      assert.equal(
+        await page.locator(".location-map-details").getAttribute("open"),
+        null,
+      );
       const map = await page.locator(".contact-map").boundingBox();
       const form = await page.locator(".contact-enquiry").boundingBox();
       assert.ok(map && form);
+      if (width > 1000) assert.ok(form.width <= 481, "Desktop form is compact");
       if (width > 800) {
         assert.ok(
           Math.abs(map.y - form.y) < 2,
@@ -76,7 +96,7 @@ async function main() {
         .getByLabel("Phone number", { exact: true })
         .fill("+971 50 000 0000");
       await page
-        .getByLabel("Message", { exact: false })
+        .getByRole("textbox", { name: /^Message/ })
         .fill("Need marine fittings & drawings\nQuantity: 12");
       await page
         .getByRole("button", { name: "Continue on WhatsApp", exact: true })
@@ -97,7 +117,7 @@ async function main() {
           ),
       );
       assert.ok(!draft.searchParams.get("text")?.includes("Email:"));
-      await page.getByLabel("Message", { exact: false }).fill("");
+      await page.getByRole("textbox", { name: /^Message/ }).fill("");
       await page.getByLabel("Full name").fill("");
       await page.getByLabel("Phone number", { exact: true }).fill("");
       await page
@@ -129,6 +149,8 @@ async function main() {
         .isVisible(),
     );
     assert.equal(await plain.locator(".contact-intro-card").isVisible(), true);
+    await plain.locator(".location-map-preview").click();
+    await plain.locator(".location-map iframe").waitFor({ state: "visible" });
     console.log(
       "PASS contact cards: four widths, equal desktop map/form row, mobile stack, no overflow/errors, source map/contacts, validated WhatsApp-only unsent draft and no-JS fallback.",
     );
