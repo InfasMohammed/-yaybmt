@@ -234,7 +234,12 @@ async function main() {
       secondOrigin,
       "Zoom follows the pointer across image areas",
     );
-    assert.equal((await zoomFrame.boundingBox())?.height, frameBounds.height);
+    const afterZoomBounds = await zoomFrame.boundingBox();
+    assert.ok(afterZoomBounds);
+    assert.ok(
+      Math.abs(afterZoomBounds.height - frameBounds.height) < 0.01,
+      "Pointer zoom preserves frame height within browser subpixel precision",
+    );
     await page.mouse.move(0, 0);
     assert.equal(
       await zoomImage.evaluate((img) => img.style.transformOrigin),
