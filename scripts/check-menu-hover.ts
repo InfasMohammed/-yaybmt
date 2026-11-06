@@ -75,14 +75,35 @@ async function main() {
         .evaluate((el) => getComputedStyle(el).transitionDuration),
       "0s",
     );
-    await page.goto(base + "/brands/");
-    assert.equal(
-      await page
-        .locator(".desktop-navigation .menu-hover-fill")
-        .first()
-        .evaluate((el) => getComputedStyle(el).display),
-      "none",
-    );
+    for (const route of [
+      "/brands/",
+      "/shop/",
+      "/categories/",
+      "/about-us/",
+      "/contact-us/",
+      "/blog/",
+      "/product/dc-102/",
+    ]) {
+      await page.goto(base + route);
+      const link = page.locator(".desktop-navigation > a").first();
+      await link.hover();
+      assert.equal(
+        await link
+          .locator(".menu-hover-fill")
+          .evaluate((el) => getComputedStyle(el).display),
+        "block",
+      );
+      assert.equal(
+        await link
+          .locator(".menu-hover-fill")
+          .evaluate((el) => getComputedStyle(el).opacity),
+        "1",
+      );
+      if (route === "/brands/")
+        await page
+          .locator("header")
+          .screenshot({ path: `${output}/desktop-inner.png` });
+    }
     assert.deepEqual(errors, []);
     await page.close();
     for (const width of [768, 651, 390, 320]) {
@@ -90,7 +111,7 @@ async function main() {
         viewport: { width, height: 900 },
         reducedMotion: "reduce",
       });
-      await p.goto(base + "/");
+      await p.goto(base + "/contact-us/");
       if (width <= 650) {
         const mobile = p.locator(".mobile-navigation");
         await mobile.locator(":scope > summary").click();
@@ -135,7 +156,7 @@ async function main() {
       .click();
     await staticPage.waitForURL("**/about-us/");
     console.log(
-      "PASS supplied menu hover: actual border/fill animation, real URLs, keyboard/dropdowns/Escape/outside click, mobile Back/hamburger, no-JS links, reduced motion and homepage-only styling.",
+      "PASS supplied menu hover: actual border/fill animation, real URLs, keyboard/dropdowns/Escape/outside click, mobile Back/hamburger, no-JS links, reduced motion and sitewide styling.",
     );
   } finally {
     await browser.close();
