@@ -48,8 +48,10 @@ async function main() {
           assert.ok(
             (
               await card
-                .locator("p")
-                .last()
+                .locator(
+                  path === "/contact-us/" ? ".contact-intro-copy p" : "p",
+                )
+                .first()
                 .evaluate((el) => getComputedStyle(el).fontFamily)
             ).includes("Inter Variable"),
           );

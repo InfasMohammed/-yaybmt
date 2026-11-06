@@ -4,9 +4,9 @@ import { chromium } from "playwright";
 import { aboutImages } from "../data/about";
 async function main() {
   const browser = await chromium.launch({
-    executablePath: existsSync("/usr/bin/chromium")
-      ? "/usr/bin/chromium"
-      : undefined,
+    executablePath:
+      process.env.YAYBMT_BROWSER_EXECUTABLE ||
+      (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : undefined),
     args: ["--no-sandbox"],
   });
   const base = process.env.YAYBMT_TEST_URL || "http://127.0.0.1:8080";

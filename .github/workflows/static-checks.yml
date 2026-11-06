@@ -21,7 +21,13 @@ jobs:
       - run: npm run check
       - run: npm run build
       - run: npm run check:export
-      - run: npx playwright install --with-deps chromium
+      - name: Prepare browser
+        run: |
+          if command -v google-chrome > /dev/null; then
+            echo "YAYBMT_BROWSER_EXECUTABLE=$(command -v google-chrome)" >> "$GITHUB_ENV"
+          else
+            npx playwright install --with-deps chromium
+          fi
       - name: Check static browser flows
         env:
           YAYBMT_TEST_URL: http://127.0.0.1:8080
