@@ -33,6 +33,19 @@ async function main() {
         await page.locator(".contact-map iframe").getAttribute("src"),
         contactPage.mapEmbed,
       );
+      const mapToggle = page.locator(".location-map-preview");
+      await mapToggle.focus();
+      await page.keyboard.press("Enter");
+      assert.equal(
+        await page.locator(".location-map-details").getAttribute("open"),
+        "",
+      );
+      assert.ok(await page.locator(".location-map iframe").isVisible());
+      await page.keyboard.press("Enter");
+      assert.equal(
+        await page.locator(".location-map-details").getAttribute("open"),
+        null,
+      );
       const map = await page.locator(".contact-map").boundingBox();
       const form = await page.locator(".contact-enquiry").boundingBox();
       assert.ok(map && form);
@@ -129,6 +142,8 @@ async function main() {
         .isVisible(),
     );
     assert.equal(await plain.locator(".contact-intro-card").isVisible(), true);
+    await plain.locator(".location-map-preview").click();
+    await plain.locator(".location-map iframe").waitFor({ state: "visible" });
     console.log(
       "PASS contact cards: four widths, equal desktop map/form row, mobile stack, no overflow/errors, source map/contacts, validated WhatsApp-only unsent draft and no-JS fallback.",
     );
