@@ -21,7 +21,9 @@ async function main() {
     args: ["--no-sandbox"],
   });
   try {
-    const context = await browser.newContext();
+    // Catalogue geometry/flows need stationary frames. Dedicated motion checks
+    // separately exercise the full falling animations with motion enabled.
+    const context = await browser.newContext({ reducedMotion: "reduce" });
     await context.route("**/*", (route) =>
       new URL(route.request().url()).origin === base
         ? route.continue()
@@ -112,10 +114,7 @@ async function main() {
       /21 imported products/,
     );
     await page.getByRole("button", { name: /Remove brand filter/ }).click();
-    await page
-      .locator("aside summary")
-      .filter({ hasText: /^Categories$/ })
-      .click();
+    assert.ok(await page.locator("aside .category-filter-open").isVisible());
     await page
       .locator("aside")
       .getByRole("checkbox", { name: /^Fasteners\b/ })
@@ -167,7 +166,16 @@ async function main() {
       await page.locator("link[rel=canonical]").getAttribute("href"),
       "https://yaybmt.com/shop/page/2/",
     );
+    // Pagination performs a full static navigation; wait for the catalogue to hydrate.
+    await page.waitForFunction(() =>
+      document
+        .querySelector(".result-bar span")
+        ?.textContent?.startsWith("Page "),
+    );
     await page.getByRole("searchbox").fill("nonexistentcatalogueitem");
+    await page.waitForFunction(
+      () => document.querySelectorAll(".card").length === 0,
+    );
     assert.equal(await page.locator(".card").count(), 0);
     assert.ok(page.url().includes("/shop/page/2/?q="));
     assert.equal(
@@ -228,7 +236,12 @@ async function main() {
       secondOrigin,
       "Zoom follows the pointer across image areas",
     );
-    assert.equal((await zoomFrame.boundingBox())?.height, frameBounds.height);
+    const afterZoomBounds = await zoomFrame.boundingBox();
+    assert.ok(afterZoomBounds);
+    assert.ok(
+      Math.abs(afterZoomBounds.height - frameBounds.height) < 0.01,
+      "Pointer zoom preserves frame height within browser subpixel precision",
+    );
     await page.mouse.move(0, 0);
     assert.equal(
       await zoomImage.evaluate((img) => img.style.transformOrigin),
@@ -239,6 +252,33 @@ async function main() {
       (p) => p.brand === null && p.model === null,
     )!;
     await page.goto(base + "/product/" + unbranded.slug + "/");
+    assert.equal(await page.locator(".product-layout .model").innerText(), "");
+    assert.equal(
+      await page
+        .locator("dt")
+        .filter({ hasText: /^Model reference$/ })
+        .locator("+ dd")
+        .innerText(),
+      "",
+    );
+    assert.equal(
+      await page
+        .getByRole("link", { name: "LinkedIn", exact: true })
+        .getAttribute("href"),
+      "https://www.linkedin.com/company/yusuf-al-yousfi-building-material-trading-llc/",
+    );
+    assert.equal(
+      await page
+        .getByRole("link", { name: "Powered by Maneuver", exact: true })
+        .getAttribute("href"),
+      "https://maneuver.ae/",
+    );
+    await page.locator(".powered-by img").evaluate(async (image) => {
+      const img = image as HTMLImageElement;
+      img.loading = "eager";
+      await img.decode();
+    });
+
     assert.ok(
       (await page.locator("main").innerText()).includes(
         "Not recorded in the source catalogue",
@@ -307,10 +347,7 @@ async function main() {
       await page.locator(".result-bar").innerText(),
       /21 imported products/,
     );
-    await page
-      .locator("aside summary")
-      .filter({ hasText: /^Categories$/ })
-      .click();
+    assert.ok(await page.locator("aside .category-filter-open").isVisible());
     assert.equal(
       await page
         .locator("aside")
@@ -326,10 +363,7 @@ async function main() {
       .locator("aside")
       .getByRole("checkbox", { name: /^DAELIM/ })
       .check();
-    await page
-      .locator("aside summary")
-      .filter({ hasText: /^Categories$/ })
-      .click();
+    assert.ok(await page.locator("aside .category-filter-open").isVisible());
     assert.equal(
       await page
         .locator("aside")
@@ -403,13 +437,9 @@ async function main() {
       .click();
     assert.ok(page.url().endsWith("/about-us/"));
     assert.equal(
-      await page.locator(".company-values-panels details").count(),
+      await page.locator(".company-values-cards article").count(),
       3,
     );
-    await page
-      .locator(".company-values-panels summary")
-      .filter({ hasText: /^Mission$/ })
-      .click();
     assert.ok(
       await page.getByText(/Our mission is to provide innovative/).isVisible(),
     );

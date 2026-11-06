@@ -1,6 +1,7 @@
 import { categories } from "../data/categories";
 import { brands } from "../data/brands";
-import { cataloguePDF } from "../lib/catalogue-file";
+import SiteFooter from "../components/SiteFooter";
+import PageScrollAnimation from "../components/ui/page-scroll-animation";
 import HeaderMenu from "../components/HeaderMenu";
 import "./globals.css";
 import { origin } from "../lib/site";
@@ -9,6 +10,22 @@ import { contacts } from "../data/contacts";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/inter-latin-variable.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/manrope-latin-variable.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <script
           type="application/ld+json"
@@ -22,7 +39,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               logo: origin + "/images/logo-header-original.jpg",
               telephone: contacts.telephone,
               email: contacts.sales,
-              sameAs: [contacts.instagram, contacts.facebook],
+              sameAs: [
+                contacts.instagram,
+                contacts.facebook,
+                contacts.linkedin,
+              ],
               location: contacts.location,
             }).replace(/</g, "\\u003c"),
           }}
@@ -47,48 +68,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             brands={brands.map(({ slug, name }) => ({ slug, name }))}
           />
         </header>
+        <PageScrollAnimation />
         {children}
-        <footer id="contact">
-          <div>
-            <img
-              className="logo"
-              src="/images/logo-footer-original.png"
-              alt="Yusuf Al Yousfi Building Materials Trading LLC"
-            />
-            <p>
-              Building connections.
-              <br />
-              Supplying possibilities.
-            </p>
-          </div>
-          <div>
-            <h2>Let’s talk about your project.</h2>
-            <a href={whatsapp()}>WhatsApp {contacts.whatsapp}</a>
-            <a href={contacts.telephoneHref}>{contacts.telephone}</a>
-            <a href={contacts.maps}>{contacts.location}</a>
-          </div>
-          <div className="social">
-            <a aria-label="Instagram" href={contacts.instagram}>
-              <img src="/images/icons/instagram.svg" alt="" />
-            </a>
-            <a aria-label="Facebook" href={contacts.facebook}>
-              <img src="/images/icons/facebook.svg" alt="" />
-            </a>
-          </div>
-          <nav className="footer-navigation" aria-label="Footer navigation">
-            <a href="/shop/">Catalogue</a>
-            <a href={cataloguePDF.href} download={cataloguePDF.filename}>
-              Original catalogue (PDF)
-            </a>
-            <a href="/brands/">Brands</a>
-            <a href="/categories/">Categories</a>
-            <a href="/brand/marine-locks/">Marine locks</a>
-            <a href="/about-us/">Company</a>
-            <a href="/blog/">Articles</a>
-            <a href="/contact-us/">Contact</a>
-          </nav>
-          <p className="footer-note">YAYBMT · Review edition</p>
-        </footer>
+        <SiteFooter />
         <a
           className="floating"
           href={whatsapp()}

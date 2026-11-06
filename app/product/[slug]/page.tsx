@@ -97,9 +97,7 @@ export default async function Product({
             {p.status === "sample" ? "PRODUCT SAMPLE" : "PRODUCT INFORMATION"}
           </p>
           <h1>{p.name}</h1>
-          <p className="model">
-            {p.model ? "MODEL " + p.model : "Model reference not recorded"}
-          </p>
+          <p className="model">{p.model ? "MODEL " + p.model : ""}</p>
           {p.description.length ? (
             p.description.map((text, i) => (
               <p className="product-copy" key={i}>
@@ -135,7 +133,7 @@ export default async function Product({
                 )}
               </dd>
               <dt>Model reference</dt>
-              <dd>{p.model || "Not recorded in the source catalogue"}</dd>
+              <dd>{p.model || ""}</dd>
             </dl>
             {p.categorySlugs.length > 0 && (
               <p>

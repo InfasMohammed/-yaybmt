@@ -23,6 +23,8 @@ jobs:
       - run: npm run check:export
       - run: npx playwright install --with-deps chromium
       - name: Check static browser flows
+        env:
+          YAYBMT_TEST_URL: http://127.0.0.1:8080
         run: |
           npm run preview > /tmp/yaybmt-preview.log 2>&1 &
           PREVIEW_PID=$!
@@ -39,4 +41,13 @@ jobs:
           path: |
             artifacts/nextjs/
             artifacts/tailwind-homepage/
+            artifacts/paragraph-motion/
+            artifacts/team-section/
+            artifacts/showroom-gallery/
+            artifacts/industry-scroll/
+            artifacts/brand-marquee/
+            artifacts/brand-cloud/
+            artifacts/testimonials/
+            artifacts/menu-hover/
+            artifacts/home-drop/
 # This workflow has no deployment job and no Firebase credentials.

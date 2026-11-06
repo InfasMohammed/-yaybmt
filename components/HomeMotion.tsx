@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 
+/** Full hidden-to-drop homepage reveals, with progressive/no-motion fallbacks. */
 export default function HomeMotion() {
   useEffect(() => {
     if (
@@ -10,52 +11,108 @@ export default function HomeMotion() {
     )
       return;
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const elements = document.querySelectorAll<HTMLElement>(
-      ".home-page [data-industry-image], .home-page [data-home-reveal], .home-page > section:not(.hero) > h2, .home-page > section:not(.hero) > p, .home-page .industry-card, .home-page .directory > a",
-    );
+    const desktop = window.matchMedia("(min-width: 901px)");
+    const elements = [
+      ...document.querySelectorAll<HTMLElement>(
+        ".home-page [data-home-reveal], .home-page .hero-intro > *, .home-page .hero-industry-links > *, .home-page .industry-scroll-copy, .home-page [data-home-reveal-image], .home-page .testimonials-heading, body:has(.home-page) > header > *, body:has(.home-page) > footer > *",
+      ),
+    ];
+    const played = new WeakSet<HTMLElement>();
+    const hidden = new Map<HTMLElement, { value: string; priority: string }>();
     const animations = new Set<Animation>();
+    const restore = (element: HTMLElement) => {
+      const original = hidden.get(element);
+      if (!original) return;
+      if (original.value)
+        element.style.setProperty("opacity", original.value, original.priority);
+      else element.style.removeProperty("opacity");
+      hidden.delete(element);
+    };
     const observer = new IntersectionObserver(
       (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting || preference.matches) continue;
-          observer.unobserve(entry.target);
-          const isIndustryImage = entry.target.hasAttribute(
-            "data-industry-image",
+        entries.forEach((entry, index) => {
+          const element = entry.target as HTMLElement;
+          if (!entry.isIntersecting || preference.matches) return;
+          observer.unobserve(element);
+          if (played.has(element)) {
+            restore(element);
+            return;
+          }
+          played.add(element);
+          element.dataset.homeDrop = "played";
+          const animation = element.animate(
+            [
+              {
+                opacity: 0,
+                translate: "0 -140px",
+                offset: 0,
+                easing: "cubic-bezier(0.32, 0, 0.67, 1)",
+              },
+              {
+                opacity: 1,
+                translate: "0 12px",
+                offset: 0.82,
+                easing: "ease-out",
+              },
+              { opacity: 1, translate: "0 -4px", offset: 0.94 },
+              { opacity: 1, translate: "0 0", offset: 1 },
+            ],
+            { duration: 950, delay: Math.min(index * 65, 195), fill: "both" },
           );
-          const animation = entry.target.animate(
-            isIndustryImage
-              ? [
-                  { opacity: 0.8, transform: "scale(1.06)" },
-                  { opacity: 1, transform: "scale(1)" },
-                ]
-              : [
-                  { opacity: 0.55, transform: "translateY(16px)" },
-                  { opacity: 1, transform: "translateY(0)" },
-                ],
-            {
-              duration: isIndustryImage ? 1000 : 600,
-              easing: "cubic-bezier(0.2, 0.7, 0.2, 1)",
-            },
-          );
+          restore(element);
           animations.add(animation);
-          animation.onfinish = () => animations.delete(animation);
-        }
+          animation.onfinish = () => {
+            animation.cancel();
+            animations.delete(animation);
+          };
+          animation.oncancel = () => animations.delete(animation);
+        });
       },
       { threshold: 0.12 },
     );
-    const updatePreference = () => {
+    const update = () => {
       observer.disconnect();
-      for (const animation of animations) animation.cancel();
+      animations.forEach((animation) => animation.cancel());
       animations.clear();
-      if (!preference.matches)
-        elements.forEach((element) => observer.observe(element));
+      [...hidden.keys()].forEach(restore);
+      if (preference.matches) return;
+      elements.forEach((element) => {
+        // Desktop industry images have their own active-step drop, preserving crossfades.
+        if (
+          played.has(element) ||
+          (element.hasAttribute("data-home-reveal-image") && desktop.matches)
+        )
+          return;
+        hidden.set(element, {
+          value: element.style.getPropertyValue("opacity"),
+          priority: element.style.getPropertyPriority("opacity"),
+        });
+        element.style.setProperty("opacity", "0");
+        observer.observe(element);
+      });
     };
-    updatePreference();
-    preference.addEventListener("change", updatePreference);
+    const revealFocused = (event: FocusEvent) => {
+      if (!(event.target instanceof Node)) return;
+      elements
+        .filter((element) => element.contains(event.target as Node))
+        .forEach((element) => {
+          restore(element);
+          observer.unobserve(element);
+          played.add(element);
+          element.getAnimations().forEach((animation) => animation.cancel());
+        });
+    };
+    update();
+    preference.addEventListener("change", update);
+    desktop.addEventListener("change", update);
+    document.addEventListener("focusin", revealFocused);
     return () => {
       observer.disconnect();
-      preference.removeEventListener("change", updatePreference);
-      for (const animation of animations) animation.cancel();
+      preference.removeEventListener("change", update);
+      desktop.removeEventListener("change", update);
+      document.removeEventListener("focusin", revealFocused);
+      animations.forEach((animation) => animation.cancel());
+      [...hidden.keys()].forEach(restore);
     };
   }, []);
   return null;

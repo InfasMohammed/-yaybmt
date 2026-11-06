@@ -1,3 +1,6 @@
+import { TestimonialsSection } from "../components/ui/testimonials-section";
+import ScrollLogoAssembly from "../components/ui/text-scroll-animation";
+import ScrollRevealContentA from "../components/ui/scroll-reveal-content-a";
 import "./tailwind-home.css";
 import HomeMotion from "../components/HomeMotion";
 import ScrollVideo from "../components/ScrollVideo";
@@ -31,6 +34,17 @@ const industryCopy: Record<string, string> = {
     "Tools, fasteners, hardware and industrial supplies.",
   construction: "Building materials, plumbing and sanitary accessories.",
 };
+const industryContent = industries.map((industry) => ({
+  id: "industry-" + industry.slug,
+  title: industry.name,
+  description: industryCopy[industry.slug],
+  image: {
+    url: industry.src,
+    width: industry.width,
+    height: industry.height,
+    alt: "",
+  },
+}));
 function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   return (
     <svg
@@ -76,7 +90,7 @@ export default function Home() {
         />
         <div className={container}>
           <div className="tw:grid tw:gap-12 tw:lg:grid-cols-[1fr_250px] tw:lg:items-end">
-            <div>
+            <div className="hero-intro">
               <p className="tw:m-0 tw:flex tw:items-center tw:gap-3 tw:text-[10px] tw:font-bold tw:tracking-[0.22em] tw:text-copper-light">
                 <span
                   aria-hidden="true"
@@ -110,7 +124,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="tw:hidden tw:border-0 tw:border-l tw:border-solid tw:border-white/25 tw:pl-7 tw:lg:block">
+            <div className="hero-industry-links tw:hidden tw:border-0 tw:border-l tw:border-solid tw:border-white/25 tw:pl-7 tw:lg:block">
               <p className="tw:mt-0 tw:mb-6 tw:text-[9px] tw:tracking-[0.2em] tw:text-white/60">
                 BUILT AROUND YOUR INDUSTRY
               </p>
@@ -135,7 +149,10 @@ export default function Home() {
         aria-labelledby="home-brands-heading"
         className={container + " tw:relative tw:z-1 tw:-mt-12"}
       >
-        <div className="tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white tw:px-6 tw:py-7 tw:shadow-[0_16px_45px_-30px_rgba(37,40,39,0.3)] tw:md:px-9">
+        <div
+          data-home-reveal
+          className="tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white tw:px-6 tw:py-7 tw:shadow-[0_16px_45px_-30px_rgba(37,40,39,0.3)] tw:md:px-9"
+        >
           <div className="tw:mb-6 tw:flex tw:items-center tw:justify-between tw:gap-5">
             <h2
               id="home-brands-heading"
@@ -150,38 +167,7 @@ export default function Home() {
               View all <Arrow />
             </a>
           </div>
-          <div className="tw:grid tw:grid-cols-2 tw:gap-x-5 tw:gap-y-6 tw:sm:grid-cols-4 tw:lg:grid-cols-7">
-            {brands
-              .filter((b) => brandLogos[b.slug])
-              .map((b) => (
-                <a
-                  href={"/brand/" + b.slug + "/"}
-                  key={b.slug}
-                  aria-label={
-                    b.name +
-                    (b.distributorNote ? " — " + b.distributorNote : "")
-                  }
-                  className="tw:group tw:flex tw:min-h-20 tw:flex-col tw:items-center tw:justify-center tw:gap-3 tw:border-0 tw:border-l tw:border-solid tw:border-[#eeeee8] tw:px-3 tw:py-1 tw:text-center tw:no-underline tw:hover:no-underline"
-                >
-                  <img
-                    src={brandLogos[b.slug].src}
-                    alt=""
-                    width={brandLogos[b.slug].width}
-                    height={brandLogos[b.slug].height}
-                    loading="lazy"
-                    className="tw:h-12 tw:w-full tw:max-w-[115px] tw:object-contain tw:motion-safe:transition-transform tw:motion-safe:group-hover:scale-105"
-                  />
-                  <span className="tw:text-[9px] tw:tracking-wide tw:text-muted">
-                    {b.name}
-                  </span>
-                  {b.distributorNote && (
-                    <span className="tw:text-[10px] tw:leading-relaxed tw:text-muted">
-                      {b.distributorNote}
-                    </span>
-                  )}
-                </a>
-              ))}
-          </div>
+          <ScrollLogoAssembly />
         </div>
       </section>
       <section
@@ -219,8 +205,10 @@ export default function Home() {
             </span>
           </figcaption>
         </figure>
-        <div data-home-reveal className="tw:min-w-0">
-          <p className={eyebrow}>{welcome.heading}</p>
+        <div data-home-reveal className="welcome-story-card tw:min-w-0">
+          <p className={eyebrow + " welcome-story-eyebrow"}>
+            {welcome.heading}
+          </p>
           <h2
             id="welcome-heading"
             className="tw:mt-5 tw:mb-6 tw:text-[32px] tw:leading-[1.13] tw:font-semibold tw:tracking-[-1.3px] tw:md:text-[40px]"
@@ -234,7 +222,7 @@ export default function Home() {
               </p>
             ))}
           </div>
-          <a href="/about-us/" className={link + " tw:mt-5"}>
+          <a href="/about-us/" className={link + " welcome-story-link tw:mt-5"}>
             Discover our company <Arrow />
           </a>
         </div>
@@ -300,7 +288,10 @@ export default function Home() {
                 </a>
               ))}
           </div>
-          <div className="tw:mt-8 tw:flex tw:flex-wrap tw:items-center tw:justify-between tw:gap-x-8 tw:gap-y-2 tw:border-0 tw:border-t tw:border-solid tw:border-[#d1d1c6] tw:pt-5">
+          <div
+            data-home-reveal
+            className="tw:mt-8 tw:flex tw:flex-wrap tw:items-center tw:justify-between tw:gap-x-8 tw:gap-y-2 tw:border-0 tw:border-t tw:border-solid tw:border-[#d1d1c6] tw:pt-5"
+          >
             <p className="tw:m-0 tw:text-[13px] tw:text-muted">
               Looking for a particular product or model?
             </p>
@@ -334,43 +325,15 @@ export default function Home() {
             Comprehensive Solutions for a Wide Range of Industries
           </p>
         </div>
-        <div className="tw:grid tw:gap-5 tw:md:grid-cols-3" data-industry-grid>
-          {industries.map((i, index) => (
-            <article
-              data-home-reveal
-              id={"industry-" + i.slug}
-              key={i.slug}
-              className="tw:group tw:min-w-0 tw:scroll-mt-6 tw:overflow-hidden tw:rounded-xl tw:border tw:border-solid tw:border-[#dedfd6] tw:bg-white"
-            >
-              <div className="tw:aspect-[3/2] tw:w-full tw:overflow-hidden tw:bg-[#eeeee7]">
-                <img
-                  data-industry-image
-                  src={i.src}
-                  alt=""
-                  width={i.width}
-                  height={i.height}
-                  loading="lazy"
-                  className="tw:block tw:h-full tw:w-full tw:max-w-none tw:object-cover tw:motion-safe:transition-transform tw:motion-safe:duration-700 tw:motion-safe:ease-out tw:motion-safe:group-hover:scale-[1.04]"
-                />
-              </div>
-              <div className="tw:p-5">
-                <span
-                  aria-hidden="true"
-                  className="tw:text-[9px] tw:tracking-[0.12em] tw:text-copper-dark"
-                >
-                  0{index + 1} / INDUSTRY
-                </span>
-                <h3 className="tw:mt-2 tw:mb-3 tw:text-[20px] tw:leading-tight tw:font-semibold tw:tracking-[-0.4px]">
-                  {i.name}
-                </h3>
-                <p className="tw:m-0 tw:text-[12px] tw:leading-[1.8] tw:text-muted">
-                  {industryCopy[i.slug]}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-        <div className="tw:mt-7 tw:flex tw:flex-wrap tw:items-center tw:justify-between tw:gap-4">
+        <ScrollRevealContentA
+          contentA={industryContent[0]}
+          contentB={industryContent[1]}
+          contentC={industryContent[2]}
+        />
+        <div
+          data-home-reveal
+          className="tw:mt-7 tw:flex tw:flex-wrap tw:items-center tw:justify-between tw:gap-4"
+        >
           <p className="tw:m-0 tw:text-[13px] tw:text-muted">
             Explore our specialist marine ranges.
           </p>
@@ -390,6 +353,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <TestimonialsSection />
       <section
         className="tw:relative tw:isolate tw:overflow-hidden tw:border-0 tw:border-y tw:border-solid tw:border-[#dedfd6] tw:bg-sand tw:py-14 tw:text-ink tw:md:py-16"
         aria-labelledby="home-enquiry-heading"

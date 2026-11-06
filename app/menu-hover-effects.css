@@ -1,0 +1,111 @@
+.menu-hover-effect,
+.menu-hover-label {
+  display: contents;
+}
+.menu-hover-borders,
+.menu-hover-fill {
+  display: none;
+  pointer-events: none;
+}
+.menu-hover-navigation a:has(> .menu-hover-effect),
+.menu-hover-navigation summary:has(> .menu-hover-effect) {
+  padding: 0;
+  text-decoration: none;
+}
+.menu-hover-effect {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  width: 100%;
+  padding: 10px 12px;
+  color: #fff;
+}
+.menu-hover-label {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.menu-hover-borders {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  border-top: 2px solid #fafafa;
+  border-bottom: 2px solid #fafafa;
+  transform: scaleY(2);
+  opacity: 0;
+  transform-origin: center;
+}
+.menu-hover-fill {
+  position: absolute;
+  inset: 2px 0;
+  z-index: 0;
+  display: block;
+  background: #fafafa;
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: top;
+}
+.menu-hover-navigation
+  :is(a, summary):is(:hover, :focus-visible)
+  > .menu-hover-effect,
+.menu-hover-navigation details[open] > summary > .menu-hover-effect {
+  color: #262626;
+}
+.menu-hover-navigation
+  :is(a, summary):is(:hover, :focus-visible)
+  .menu-hover-borders,
+.menu-hover-navigation details[open] > summary .menu-hover-borders {
+  transform: scaleY(1);
+  opacity: 1;
+}
+.menu-hover-navigation
+  :is(a, summary):is(:hover, :focus-visible)
+  .menu-hover-fill,
+.menu-hover-navigation details[open] > summary .menu-hover-fill {
+  transform: scale(1);
+  opacity: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .menu-hover-effect {
+    transition: color 300ms ease;
+  }
+  .menu-hover-borders,
+  .menu-hover-fill {
+    transition:
+      transform 300ms ease,
+      opacity 300ms ease;
+  }
+  .menu-toggle-line {
+    transition:
+      transform 300ms ease,
+      opacity 300ms ease;
+  }
+}
+.mobile-navigation[open] > summary .menu-toggle-line:nth-child(1) {
+  transform-origin: 12px 6px;
+  transform: translateY(6px) rotate(45deg);
+}
+.mobile-navigation[open] > summary .menu-toggle-line:nth-child(2) {
+  opacity: 0;
+}
+.mobile-navigation[open] > summary .menu-toggle-line:nth-child(3) {
+  transform-origin: 12px 18px;
+  transform: translateY(-6px) rotate(-45deg);
+}
+@media (min-width: 651px) and (max-width: 1000px) {
+  .desktop-navigation .menu-hover-label {
+    font-size: 13px;
+  }
+  .desktop-navigation .menu-hover-effect {
+    padding-inline: 8px;
+  }
+}

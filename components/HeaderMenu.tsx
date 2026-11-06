@@ -1,5 +1,7 @@
 "use client";
 
+import NavMenu, { MenuHoverLabel } from "./ui/menu-hover-effects";
+
 import { useEffect, useRef, useState } from "react";
 
 type NavigationItem = { slug: string; name: string };
@@ -118,6 +120,7 @@ export default function HeaderMenu({
         }}
       >
         <summary
+          aria-label={label}
           onClick={(event) => {
             const element = event.currentTarget
               .parentElement as HTMLDetailsElement;
@@ -127,18 +130,28 @@ export default function HeaderMenu({
             }
           }}
         >
-          {label}
-          <span className="nav-chevron" aria-hidden="true">
-            ⌄
-          </span>
+          <MenuHoverLabel>
+            {label}
+            <span className="nav-chevron" aria-hidden="true">
+              ⌄
+            </span>
+          </MenuHoverLabel>
         </summary>
         <div className="nav-dropdown-links">
-          <a className="nav-view-all" href={path}>
-            All {label.toLowerCase()}
+          <a
+            className="nav-view-all"
+            href={path}
+            aria-label={`All ${label.toLowerCase()}`}
+          >
+            <MenuHoverLabel>All {label.toLowerCase()}</MenuHoverLabel>
           </a>
           {entries.map((entry) => (
-            <a href={prefix + entry.slug + "/"} key={entry.slug}>
-              {entry.name}
+            <a
+              href={prefix + entry.slug + "/"}
+              aria-label={entry.name}
+              key={entry.slug}
+            >
+              <MenuHoverLabel>{entry.name}</MenuHoverLabel>
             </a>
           ))}
         </div>
@@ -149,11 +162,17 @@ export default function HeaderMenu({
   function links() {
     return (
       <>
-        <a href="/">Home</a>
+        <a href="/" aria-label="Home">
+          <MenuHoverLabel>Home</MenuHoverLabel>
+        </a>
         {dropdown("Products", "/shop/", categories, "/product-category/")}
         {dropdown("Brands", "/brands/", brands, "/brand/")}
-        <a href="/about-us/">Company</a>
-        <a href="/contact-us/">Contact</a>
+        <a href="/about-us/" aria-label="Company">
+          <MenuHoverLabel>Company</MenuHoverLabel>
+        </a>
+        <a href="/contact-us/" aria-label="Contact">
+          <MenuHoverLabel>Contact</MenuHoverLabel>
+        </a>
       </>
     );
   }
@@ -191,12 +210,12 @@ export default function HeaderMenu({
         }
       }}
     >
-      <nav
+      <NavMenu
         className="primary-navigation desktop-navigation"
         aria-label="Main navigation"
       >
         {links()}
-      </nav>
+      </NavMenu>
       <details
         className="mobile-navigation"
         ref={mobileMenu}
@@ -217,10 +236,12 @@ export default function HeaderMenu({
             strokeWidth="1.8"
             strokeLinecap="round"
           >
-            <path d="M3 6h18M3 12h18M3 18h18" />
+            <path className="menu-toggle-line" d="M3 6h18" />
+            <path className="menu-toggle-line" d="M3 12h18" />
+            <path className="menu-toggle-line" d="M3 18h18" />
           </svg>
         </summary>
-        <nav
+        <NavMenu
           className="primary-navigation mobile-menu-panel"
           aria-label="Main navigation"
         >
@@ -249,48 +270,61 @@ export default function HeaderMenu({
           <div className="mobile-menu-items" key={view}>
             {view === "main" ? (
               <>
-                <a href="/">Home</a>
+                <a href="/" aria-label="Home">
+                  <MenuHoverLabel>Home</MenuHoverLabel>
+                </a>
                 <a
                   href="/shop/"
+                  aria-label="Products"
                   data-mobile-view="products"
                   onClick={(event) => {
                     event.preventDefault();
                     setView("products");
                   }}
                 >
-                  Products <span aria-hidden="true">›</span>
+                  <MenuHoverLabel>
+                    Products <span aria-hidden="true">›</span>
+                  </MenuHoverLabel>
                 </a>
                 <a
                   href="/brands/"
+                  aria-label="Brands"
                   data-mobile-view="brands"
                   onClick={(event) => {
                     event.preventDefault();
                     setView("brands");
                   }}
                 >
-                  Brands <span aria-hidden="true">›</span>
+                  <MenuHoverLabel>
+                    Brands <span aria-hidden="true">›</span>
+                  </MenuHoverLabel>
                 </a>
-                <a href="/about-us/">Company</a>
-                <a href="/contact-us/">Contact</a>
+                <a href="/about-us/" aria-label="Company">
+                  <MenuHoverLabel>Company</MenuHoverLabel>
+                </a>
+                <a href="/contact-us/" aria-label="Contact">
+                  <MenuHoverLabel>Contact</MenuHoverLabel>
+                </a>
               </>
             ) : (
               <>
                 {(view === "products" ? categories : brands).map((entry) => (
                   <a
                     key={entry.slug}
+                    aria-label={entry.name}
                     href={
                       (view === "products" ? "/product-category/" : "/brand/") +
                       entry.slug +
                       "/"
                     }
                   >
-                    {entry.name}
+                    <MenuHoverLabel>{entry.name}</MenuHoverLabel>
                   </a>
                 ))}
               </>
             )}
           </div>
-        </nav>
+        </NavMenu>
       </details>
     </div>
   );

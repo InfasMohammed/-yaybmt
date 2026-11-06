@@ -1,0 +1,65 @@
+.brand-scroll {
+  position: relative;
+  overflow: clip;
+  padding: 72px 8px 24px;
+}
+.brand-scroll-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 16px;
+  perspective: 500px;
+}
+.brand-scroll-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 0;
+  border-radius: 8px;
+  padding: 8px 4px;
+}
+.brand-scroll-image {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 92px;
+}
+.brand-scroll-image img {
+  width: 100%;
+  max-width: 120px;
+  height: 80px;
+  object-fit: contain;
+  pointer-events: none;
+}
+.brand-scroll-card .distributor-note {
+  font-size: 0.6rem;
+}
+.brand-scroll-card:focus-visible {
+  outline: 2px solid var(--copper, #8c4d2d);
+  outline-offset: 2px;
+}
+.brand-scroll-card:focus-visible img {
+  transform: none !important;
+}
+@media (max-width: 900px) {
+  .brand-scroll-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-width: 540px) {
+  .brand-scroll-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 12px;
+  }
+  .brand-scroll {
+    padding-top: 64px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-scroll-image img {
+    transform: none !important;
+  }
+}

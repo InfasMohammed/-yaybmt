@@ -92,9 +92,7 @@ async function main() {
             const img = image as HTMLImageElement;
             const rect = img.getBoundingClientRect();
             return (
-              Math.abs(
-                rect.width - img.parentElement!.getBoundingClientRect().width,
-              ) < 1 &&
+              rect.width <= img.parentElement!.getBoundingClientRect().width &&
               rect.width <= img.naturalWidth &&
               rect.height <= img.naturalHeight &&
               Math.abs(
@@ -124,7 +122,13 @@ async function main() {
       );
       for (const b of brands)
         assert.equal(
-          await page.locator('main a[href="/brand/' + b.slug + '/"]').count(),
+          await page
+            .locator(
+              'main a[href="/brand/' +
+                b.slug +
+                '/"]:not(.brand-marquee-copy a)',
+            )
+            .count(),
           1,
         );
       for (const c of categories.filter((c) => categoryImages[c.slug]))
@@ -235,44 +239,78 @@ async function main() {
       await context.close();
     }
     const motionContext = await browser.newContext({
-      viewport: { width: 1440, height: 1000 },
+      viewport: { width: 1366, height: 600 },
       reducedMotion: "no-preference",
     });
     const motionPage = await motionContext.newPage();
     await motionPage.goto(base + "/");
     await motionPage.waitForLoadState("networkidle");
-    const industryImage = motionPage.locator("[data-industry-image]").first();
-    await industryImage.scrollIntoViewIfNeeded();
-    await motionPage.waitForFunction(() =>
-      document
-        .querySelector("[data-industry-image]")
-        ?.getAnimations()
-        .some((animation) =>
-          (animation.effect as KeyframeEffect)
-            .getKeyframes()
-            .some((frame) => frame.transform === "scale(1.06)"),
-        ),
+    const brandAssembly = motionPage.locator(".brand-scroll");
+    const firstLogo = brandAssembly.locator("img").first();
+    assert.equal(await brandAssembly.getAttribute("data-motion"), "static");
+    assert.equal(
+      await firstLogo.evaluate((el) => getComputedStyle(el).transform),
+      "none",
     );
-    await industryImage.evaluate(async (image) => {
-      await Promise.all(
-        image.getAnimations().map((animation) => animation.finished),
-      );
-    });
-    await industryImage.hover();
+    assert.equal(await brandAssembly.locator("a").count(), 7);
+    assert.equal(await brandAssembly.locator("button").count(), 0);
+    const industrySection = motionPage.locator(".industry-scroll");
     await motionPage.waitForFunction(
       () =>
-        getComputedStyle(document.querySelector("[data-industry-image]")!)
-          .scale !== "none",
+        document
+          .querySelector(".industry-scroll")
+          ?.getAttribute("data-scroll-enhanced") === "true",
     );
-    await motionPage.emulateMedia({ reducedMotion: "reduce" });
-    await motionPage.waitForFunction(() => {
-      const image = document.querySelector("[data-industry-image]")!;
-      return (
-        image.getAnimations().length === 0 &&
-        getComputedStyle(image).transform === "none" &&
-        getComputedStyle(image).scale === "none"
+    for (const [progress, expected] of [
+      [0.05, "Marine"],
+      [0.5, "Engineering & Fabrication"],
+      [0.95, "Construction"],
+    ] as const) {
+      await industrySection.evaluate((el, progress) => {
+        const top = el.getBoundingClientRect().top + scrollY;
+        scrollTo(
+          0,
+          top + (el.getBoundingClientRect().height - innerHeight) * progress,
+        );
+      }, progress);
+      await motionPage.waitForFunction(
+        (expected) =>
+          document.querySelector('.industry-scroll-step[data-active="true"] h3')
+            ?.textContent === expected,
+        expected,
       );
-    });
+      const pinned = await industrySection
+        .locator(".industry-scroll-frame")
+        .boundingBox();
+      assert.ok(
+        pinned && Math.abs(pinned.y - 20) < 2,
+        "Industry content stays pinned in a short laptop viewport",
+      );
+    }
+    await motionPage.emulateMedia({ reducedMotion: "reduce" });
+    await motionPage.waitForFunction(
+      () =>
+        document
+          .querySelector(".industry-scroll")
+          ?.getAttribute("data-scroll-enhanced") === "false",
+    );
+    assert.equal(
+      await industrySection
+        .locator("img")
+        .evaluateAll((images) =>
+          images.every((image) => getComputedStyle(image).opacity === "1"),
+        ),
+      true,
+    );
+    await motionPage.waitForFunction(
+      () =>
+        document.querySelector(".brand-scroll")?.getAttribute("data-motion") ===
+        "static",
+    );
+    assert.equal(
+      await firstLogo.evaluate((el) => getComputedStyle(el).transform),
+      "none",
+    );
     await motionContext.close();
     const compact = await browser.newContext({
       viewport: { width: 360, height: 400 },

@@ -1,3 +1,5 @@
+import AboutIntroCard from "../../components/AboutIntroCard";
+import ContactIntroCard from "../../components/ContactIntroCard";
 import ContactSections from "../../components/ContactSections";
 import AboutSections from "../../components/AboutSections";
 import Breadcrumbs from "../../components/Breadcrumbs";
@@ -87,9 +89,13 @@ export default async function Page({
           <time dateTime={item.publishedAt}>{item.publishedAt}</time>
         </p>
       )}
-      {item.paragraphs.map((text, i) => (
-        <p key={i}>{text}</p>
-      ))}
+      {pathname === "/about-us/" ? (
+        <AboutIntroCard paragraphs={item.paragraphs} />
+      ) : pathname === "/contact-us/" ? (
+        <ContactIntroCard paragraphs={item.paragraphs} />
+      ) : (
+        item.paragraphs.map((text, i) => <p key={i}>{text}</p>)
+      )}
       {pathname === "/about-us/" && <AboutSections />}
       {item.bodyHtml && <ContentBody html={item.bodyHtml} />}{" "}
       {pathname === "/contact-us/" ? (
@@ -108,8 +114,7 @@ export default async function Page({
             </a>
           </p>
           <p className="muted">
-            Email opens your email application. WhatsApp opens a draft message;
-            you choose whether to send it.
+            WhatsApp opens a draft message; you choose whether to send it.
           </p>
         </>
       ) : (

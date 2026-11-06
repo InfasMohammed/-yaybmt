@@ -1,0 +1,201 @@
+/* Architectural footer: horizontal masthead, three quiet columns, fine rules. */
+.site-footer {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.85fr;
+  gap: 42px 80px;
+  padding: 40px max(24px, calc((100vw - 1280px) / 2)) 26px;
+  background: #252827;
+  color: #eeeee8;
+}
+.site-footer .footer-top {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #ffffff26;
+}
+.site-footer .footer-top > a {
+  margin: 0;
+  flex-shrink: 0;
+}
+.site-footer .logo {
+  width: 164px;
+  height: 92px;
+}
+.site-footer .footer-navigation {
+  grid-column: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: none;
+  gap: 18px 30px;
+}
+.site-footer .footer-navigation a {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+}
+.site-footer .footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+  max-width: none;
+  font-weight: 400;
+}
+.site-footer .footer-column h2 {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #e6b996;
+  line-height: 1.5;
+}
+.site-footer .footer-column a {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #c8cbc4;
+}
+.site-footer .footer-identity p {
+  max-width: 30ch;
+  line-height: 1.85;
+  margin: 0 0 12px;
+  color: #bdbfb6;
+}
+.site-footer .social {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+.site-footer .social a {
+  display: grid;
+  place-items: center;
+  min-width: 28px;
+  min-height: 36px;
+  margin: 0;
+}
+.site-footer .social img {
+  width: 18px;
+  height: 18px;
+}
+.site-footer .footer-categories {
+  justify-content: flex-start;
+}
+.site-footer .footer-contact {
+  gap: 18px;
+}
+.site-footer .footer-contact > a {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.site-footer .footer-contact svg,
+.site-footer .footer-contact > a > img {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+}
+.site-footer .footer-contact > a > img {
+  filter: invert(1);
+}
+.site-footer .footer-contact strong {
+  display: block;
+  color: #eeeee8;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.site-footer .footer-arrow {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+.site-footer .footer-contact .footer-arrow {
+  width: 14px;
+  height: 14px;
+}
+.site-footer .footer-column .footer-all-categories,
+.site-footer .footer-column .footer-specialist-link {
+  color: #e6b996;
+}
+.site-footer .footer-all-categories {
+  margin-top: 6px;
+}
+.site-footer .footer-bottom {
+  grid-column: 1/-1;
+  margin-top: 0;
+  padding-top: 24px;
+  border-top: 1px solid #ffffff26;
+}
+.site-footer a:hover {
+  color: #e6b996;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.site-footer a:focus-visible {
+  outline: 2px solid #e6b996;
+  outline-offset: 5px;
+}
+@media (max-width: 1050px) {
+  .site-footer {
+    gap: 36px 32px;
+  }
+  .site-footer .footer-navigation {
+    gap: 16px 22px;
+  }
+}
+@media (max-width: 700px) {
+  .site-footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 26px;
+    padding-top: 30px;
+  }
+  .site-footer .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .site-footer .footer-navigation {
+    justify-content: flex-start;
+    gap: 16px 24px;
+  }
+  .site-footer .footer-identity {
+    grid-column: 1/-1;
+  }
+  .site-footer .footer-identity p {
+    max-width: 44ch;
+  }
+  .site-footer .footer-column h2 {
+    font-size: 11px;
+    letter-spacing: 0.09em;
+  }
+  .site-footer .footer-column a {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+  .site-footer .footer-contact > a {
+    gap: 8px;
+  }
+  .site-footer .footer-contact > a > svg,
+  .site-footer .footer-contact > a > img {
+    width: 15px;
+    height: 15px;
+  }
+  .site-footer .footer-bottom {
+    gap: 20px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .site-footer a {
+    transition: color 180ms ease;
+  }
+}

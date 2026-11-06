@@ -1,0 +1,166 @@
+/* Client-supplied three-card team format; all selectors are locally scoped. */
+.leadership-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 40px 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+}
+.leadership-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(var(--ink) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ink) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.leadership-section .leadership-heading {
+  display: block;
+  position: static;
+  min-height: 0;
+  margin: 0 0 32px;
+  padding: 0;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+}
+.leadership-heading .eyebrow {
+  margin: 0 0 12px;
+}
+.leadership-heading h2 {
+  margin: 0;
+  font-size: clamp(30px, 3.4vw, 44px);
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+.leadership-description {
+  max-width: 700px;
+  margin: 16px 0 0;
+  color: #626760;
+  line-height: 1.7;
+}
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.leadership-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 36px 20px 30px;
+  border: 1px solid #dfd8cf;
+  border-radius: 14px;
+  background: #f0e5dc;
+  text-align: center;
+  box-shadow: 0 8px 20px -18px #25282766;
+}
+.leadership-card:nth-child(2) {
+  background: #eeefeb;
+}
+.leadership-card:nth-child(3) {
+  background: #f1ebdf;
+}
+.leadership-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -10% 0;
+  z-index: -1;
+  height: 60%;
+  border-radius: 50% 50% 0 0;
+  background: #a9634014;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+.leadership-portrait {
+  display: grid;
+  width: 152px;
+  height: 152px;
+  flex: 0 0 auto;
+  place-items: center;
+  overflow: hidden;
+  border: 4px solid #ffffffa6;
+  border-radius: 50%;
+  background: white;
+}
+.leadership-portrait img {
+  display: block;
+  width: 144px;
+  height: 144px;
+  max-width: 100%;
+  object-fit: contain;
+}
+.leadership-card h3 {
+  position: relative;
+  margin: 24px 0 8px;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.leadership-card > p {
+  position: relative;
+  margin: 0;
+  color: #565f58;
+  font-size: 14px;
+  line-height: 1.6;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .leadership-card {
+    transition:
+      transform 240ms ease,
+      border-color 240ms ease,
+      box-shadow 240ms ease;
+  }
+  .leadership-card::before {
+    transition: transform 400ms ease;
+  }
+  .leadership-portrait,
+  .leadership-portrait img {
+    transition:
+      border-color 300ms ease,
+      transform 300ms ease;
+  }
+  .leadership-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--copper);
+    box-shadow: 0 14px 28px -22px #25282788;
+  }
+  .leadership-card:hover::before {
+    transform: scaleY(1);
+  }
+  .leadership-card:hover .leadership-portrait {
+    border-color: var(--copper);
+  }
+  .leadership-card:hover .leadership-portrait img {
+    transform: scale(1.035);
+  }
+}
+@media (max-width: 760px) {
+  .leadership-section {
+    padding: 28px 18px;
+  }
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .leadership-card {
+    padding-block: 30px;
+  }
+}
+
+.company-figures [data-count-up] {
+  display: inline-block;
+  min-width: 4ch;
+  font-variant-numeric: tabular-nums;
+}

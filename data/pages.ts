@@ -5,7 +5,7 @@ const source = (path: string) => sourcePages.find((p) => p.path === path)!;
 export const pages: ContentPage[] = [
   {
     path: "/about-us/",
-    title: "About YAYBMT",
+    title: "About Us",
     description:
       source("/about-us/").seo.description ||
       "Yusuf Al Yousfi Building Materials Trading LLC in Deira, Dubai.",

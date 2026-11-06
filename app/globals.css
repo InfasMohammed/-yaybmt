@@ -1,8 +1,24 @@
+@font-face {
+  font-family: "Inter Variable";
+  src: url("/fonts/inter-latin-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope Variable";
+  src: url("/fonts/manrope-latin-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
 :root {
   --ink: #252827;
   --paper: #f7f6f2;
   --copper: #a96340;
   --line: #dcdcd5;
+  --font-body: "Inter Variable", Arial, Helvetica, sans-serif;
+  --font-heading: "Manrope Variable", Arial, Helvetica, sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -11,7 +27,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
 }
 a {
@@ -22,7 +38,9 @@ a:hover {
   text-decoration: underline;
 }
 button,
-input {
+input,
+textarea,
+select {
   font: inherit;
 }
 button,
@@ -120,7 +138,7 @@ body:has(.hero) header {
   color: #e7b596;
 }
 em {
-  font-family: Georgia, serif;
+  font-family: var(--font-heading);
   font-weight: 400;
 }
 h1,
@@ -1552,7 +1570,7 @@ summary {
     animation: none;
   }
   .home-page .hero > div > * {
-    animation: home-welcome 0.7s ease-out both;
+    animation: none;
   }
   .home-page .hero h1 {
     animation-delay: 0.08s;
@@ -2110,4 +2128,108 @@ summary {
     position: relative;
     z-index: 31;
   }
+}
+
+/* Supplied TextRotate paragraph treatment: normal reading flow, no hidden fallback. */
+.text-rotate {
+  white-space: pre-wrap;
+}
+.text-rotate-accessible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: pre-wrap;
+  border: 0;
+}
+.text-rotate-word,
+.text-rotate-element {
+  display: inline-block;
+}
+.text-rotate-word {
+  white-space: pre;
+}
+.text-rotate-visual,
+.text-rotate-static {
+  display: inline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-rotate-element {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Shared type pairing; original logo images and content remain unchanged. */
+h1,
+h2,
+h3,
+.primary-navigation {
+  font-family: var(--font-heading);
+}
+
+.category-filter-open {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.category-filter-open h3 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-bottom p {
+  margin: 0;
+  font-size: 11px;
+}
+footer .powered-by {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 12px;
+  color: #eeeee8;
+}
+.powered-by img {
+  display: block;
+  width: 112px;
+  height: auto;
+}
+
+.distributor-note,
+.brand-marquee-card .distributor-note,
+.brand-directory-card .distributor-note {
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  padding: 6px 9px;
+  border: 1px solid #8c4d2d;
+  border-radius: 6px;
+  background: #8c4d2d;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* Scroll-assembly fan-out must never create sideways page scrolling. */
+body {
+  overflow-x: clip;
+}
+html {
+  overflow-x: clip;
+}
+.page {
+  overflow-x: clip;
 }

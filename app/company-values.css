@@ -1,0 +1,86 @@
+.company-values.about-section {
+  max-width: none;
+  padding: 42px 0;
+}
+.company-values-heading {
+  text-align: center;
+  margin-bottom: 44px;
+}
+.company-values-heading .eyebrow {
+  margin-top: 0;
+}
+.company-values-heading h2 {
+  margin: 12px 0 0;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.2;
+}
+.company-values-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+.company-value-card {
+  min-width: 0;
+  padding: 42px 26px 32px;
+  border: 1px solid #a963402b;
+  border-radius: 18px;
+  background: white;
+  color: var(--ink);
+  text-align: center;
+  box-shadow: 0 6px 24px #25282703;
+}
+.company-value-icon {
+  display: block;
+  margin: 0 auto 28px;
+}
+.company-value-card h3 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 650;
+}
+.company-value-card p {
+  margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #565c57;
+  overflow-wrap: break-word;
+}
+.company-value-card p:last-child {
+  margin-bottom: 0;
+}
+@media (hover: hover) {
+  .company-value-card:hover {
+    border-color: var(--copper);
+    box-shadow: 0 10px 28px #2528270a;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .company-value-card {
+    transition:
+      border-color 220ms ease,
+      box-shadow 220ms ease;
+  }
+}
+@media (max-width: 1000px) {
+  .company-values-cards {
+    gap: 18px;
+  }
+  .company-value-card {
+    padding: 32px 18px;
+  }
+}
+@media (max-width: 760px) {
+  .company-values-cards {
+    grid-template-columns: 1fr;
+  }
+  .company-values-heading {
+    margin-bottom: 28px;
+  }
+  .company-values.about-section {
+    padding: 20px 0;
+  }
+  .company-value-card {
+    padding: 32px 24px;
+  }
+}
